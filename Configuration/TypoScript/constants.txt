@@ -4,111 +4,119 @@
  */
 plugin.tx_adxtwitterbootstrap {
 
+	common {
+
+		# customsubcategory=00_common=LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_conf.xlf:plugin.tx_adxtwitterbootstrap.common
+
+		# cat=adx_twitter_bootstrap common/00_common/1; type=string; label=LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_conf.xlf:plugin.tx_adxtwitterbootstrap.common.viewport
+		viewport = width=device-width, initial-scale=1.0
+	}
+
 	components {
 
 		# customsubcategory=01_scaffolding=LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_conf.xlf:plugin.tx_adxtwitterbootstrap.components.scaffolding
 
 		scaffolding {
-			# cat=adx_twitter_bootstrap components/1_scaffolding/1; type=boolean; label=LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_conf.xlf:plugin.tx_adxtwitterbootstrap.components.scaffolding.normalize
+			# cat=adx_twitter_bootstrap components/01_scaffolding/1; type=boolean; label=LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_conf.xlf:plugin.tx_adxtwitterbootstrap.components.scaffolding.normalize
 			normalize = 1
-			# cat=adx_twitter_bootstrap components/1_scaffolding/2; type=boolean; label=LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_conf.xlf:plugin.tx_adxtwitterbootstrap.components.scaffolding.bodyTypeAndLinks
+			# cat=adx_twitter_bootstrap components/01_scaffolding/2; type=boolean; label=LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_conf.xlf:plugin.tx_adxtwitterbootstrap.components.scaffolding.bodyTypeAndLinks
 			bodyTypeAndLinks = 1
-			# cat=adx_twitter_bootstrap components/1_scaffolding/3; type=boolean; label=LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_conf.xlf:plugin.tx_adxtwitterbootstrap.components.scaffolding.gridSystem
+			# cat=adx_twitter_bootstrap components/01_scaffolding/3; type=boolean; label=LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_conf.xlf:plugin.tx_adxtwitterbootstrap.components.scaffolding.gridSystem
 			gridSystem = 1
-			# cat=adx_twitter_bootstrap components/1_scaffolding/4; type=boolean; label=LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_conf.xlf:plugin.tx_adxtwitterbootstrap.components.scaffolding.layouts
+			# cat=adx_twitter_bootstrap components/01_scaffolding/4; type=boolean; label=LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_conf.xlf:plugin.tx_adxtwitterbootstrap.components.scaffolding.layouts
 			layouts = 1
 		}
 
 		# customsubcategory=02_baseCSS=LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_conf.xlf:plugin.tx_adxtwitterbootstrap.components.baseCSS
 
 		baseCSS {
-			# cat=adx_twitter_bootstrap components/2_baseCSS/1; type=boolean; label=LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_conf.xlf:plugin.tx_adxtwitterbootstrap.components.baseCSS.type
+			# cat=adx_twitter_bootstrap components/02_baseCSS/1; type=boolean; label=LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_conf.xlf:plugin.tx_adxtwitterbootstrap.components.baseCSS.type
 			type = 1
-			# cat=adx_twitter_bootstrap components/2_baseCSS/2; type=boolean; label=LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_conf.xlf:plugin.tx_adxtwitterbootstrap.components.baseCSS.codeAndPre
+			# cat=adx_twitter_bootstrap components/02_baseCSS/2; type=boolean; label=LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_conf.xlf:plugin.tx_adxtwitterbootstrap.components.baseCSS.codeAndPre
 			codeAndPre = 1
-			# cat=adx_twitter_bootstrap components/2_baseCSS/3; type=boolean; label=LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_conf.xlf:plugin.tx_adxtwitterbootstrap.components.baseCSS.labelsAndBadges
+			# cat=adx_twitter_bootstrap components/02_baseCSS/3; type=boolean; label=LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_conf.xlf:plugin.tx_adxtwitterbootstrap.components.baseCSS.labelsAndBadges
 			labelsAndBadges = 1
-			# cat=adx_twitter_bootstrap components/2_baseCSS/4; type=boolean; label=LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_conf.xlf:plugin.tx_adxtwitterbootstrap.components.baseCSS.tables
+			# cat=adx_twitter_bootstrap components/02_baseCSS/4; type=boolean; label=LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_conf.xlf:plugin.tx_adxtwitterbootstrap.components.baseCSS.tables
 			tables = 1
-			# cat=adx_twitter_bootstrap components/2_baseCSS/5; type=boolean; label=LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_conf.xlf:plugin.tx_adxtwitterbootstrap.components.baseCSS.forms
+			# cat=adx_twitter_bootstrap components/02_baseCSS/5; type=boolean; label=LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_conf.xlf:plugin.tx_adxtwitterbootstrap.components.baseCSS.forms
 			forms = 1
-			# cat=adx_twitter_bootstrap components/2_baseCSS/6; type=boolean; label=LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_conf.xlf:plugin.tx_adxtwitterbootstrap.components.baseCSS.buttons
+			# cat=adx_twitter_bootstrap components/02_baseCSS/6; type=boolean; label=LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_conf.xlf:plugin.tx_adxtwitterbootstrap.components.baseCSS.buttons
 			buttons = 1
-			# cat=adx_twitter_bootstrap components/2_baseCSS/7; type=boolean; label=LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_conf.xlf:plugin.tx_adxtwitterbootstrap.components.baseCSS.icons
+			# cat=adx_twitter_bootstrap components/02_baseCSS/7; type=boolean; label=LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_conf.xlf:plugin.tx_adxtwitterbootstrap.components.baseCSS.icons
 			icons = 1
 		}
 
 		# customsubcategory=03_components=LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_conf.xlf:plugin.tx_adxtwitterbootstrap.components.components
 
 		components {
-			# cat=adx_twitter_bootstrap components/3_components/1; type=boolean; label=LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_conf.xlf:plugin.tx_adxtwitterbootstrap.components.components.buttonGroupsAndDropdowns
+			# cat=adx_twitter_bootstrap components/03_components/1; type=boolean; label=LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_conf.xlf:plugin.tx_adxtwitterbootstrap.components.components.buttonGroupsAndDropdowns
 			buttonGroupsAndDropdowns = 1
-			# cat=adx_twitter_bootstrap components/3_components/2; type=boolean; label=LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_conf.xlf:plugin.tx_adxtwitterbootstrap.components.components.navsTabsAndPills
+			# cat=adx_twitter_bootstrap components/03_components/2; type=boolean; label=LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_conf.xlf:plugin.tx_adxtwitterbootstrap.components.components.navsTabsAndPills
 			navsTabsAndPills = 1
-			# cat=adx_twitter_bootstrap components/3_components/3; type=boolean; label=LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_conf.xlf:plugin.tx_adxtwitterbootstrap.components.components.navbar
+			# cat=adx_twitter_bootstrap components/03_components/3; type=boolean; label=LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_conf.xlf:plugin.tx_adxtwitterbootstrap.components.components.navbar
 			navbar = 1
-			# cat=adx_twitter_bootstrap components/3_components/4; type=boolean; label=LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_conf.xlf:plugin.tx_adxtwitterbootstrap.components.components.breadcrumbs
+			# cat=adx_twitter_bootstrap components/03_components/4; type=boolean; label=LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_conf.xlf:plugin.tx_adxtwitterbootstrap.components.components.breadcrumbs
 			breadcrumbs = 1
-			# cat=adx_twitter_bootstrap components/3_components/5; type=boolean; label=LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_conf.xlf:plugin.tx_adxtwitterbootstrap.components.components.pagination
+			# cat=adx_twitter_bootstrap components/03_components/5; type=boolean; label=LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_conf.xlf:plugin.tx_adxtwitterbootstrap.components.components.pagination
 			pagination = 1
-			# cat=adx_twitter_bootstrap components/3_components/6; type=boolean; label=LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_conf.xlf:plugin.tx_adxtwitterbootstrap.components.components.pager
+			# cat=adx_twitter_bootstrap components/03_components/6; type=boolean; label=LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_conf.xlf:plugin.tx_adxtwitterbootstrap.components.components.pager
 			pager = 1
-			# cat=adx_twitter_bootstrap components/3_components/7; type=boolean; label=LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_conf.xlf:plugin.tx_adxtwitterbootstrap.components.components.thumbnails
+			# cat=adx_twitter_bootstrap components/03_components/7; type=boolean; label=LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_conf.xlf:plugin.tx_adxtwitterbootstrap.components.components.thumbnails
 			thumbnails = 1
-			# cat=adx_twitter_bootstrap components/3_components/8; type=boolean; label=LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_conf.xlf:plugin.tx_adxtwitterbootstrap.components.components.alerts
+			# cat=adx_twitter_bootstrap components/03_components/8; type=boolean; label=LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_conf.xlf:plugin.tx_adxtwitterbootstrap.components.components.alerts
 			alerts = 1
-			# cat=adx_twitter_bootstrap components/3_components/9; type=boolean; label=LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_conf.xlf:plugin.tx_adxtwitterbootstrap.components.components.progressBars
+			# cat=adx_twitter_bootstrap components/03_components/9; type=boolean; label=LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_conf.xlf:plugin.tx_adxtwitterbootstrap.components.components.progressBars
 			progressBars = 1
-			# cat=adx_twitter_bootstrap components/3_components/10; type=boolean; label=LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_conf.xlf:plugin.tx_adxtwitterbootstrap.components.components.heroUnit
+			# cat=adx_twitter_bootstrap components/03_components/10; type=boolean; label=LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_conf.xlf:plugin.tx_adxtwitterbootstrap.components.components.heroUnit
 			heroUnit = 1
-			# cat=adx_twitter_bootstrap components/3_components/11; type=boolean; label=LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_conf.xlf:plugin.tx_adxtwitterbootstrap.components.components.mediaComponent
+			# cat=adx_twitter_bootstrap components/03_components/11; type=boolean; label=LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_conf.xlf:plugin.tx_adxtwitterbootstrap.components.components.mediaComponent
 			mediaComponent = 1
 		}
 
 		# customsubcategory=04_responsive=LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_conf.xlf:plugin.tx_adxtwitterbootstrap.components.responsive
 
 		responsive {
-			# cat=adx_twitter_bootstrap components/4_responsive/1; type=boolean; label=LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_conf.xlf:plugin.tx_adxtwitterbootstrap.components.responsive.visibleHiddenClasses
+			# cat=adx_twitter_bootstrap components/04_responsive/1; type=boolean; label=LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_conf.xlf:plugin.tx_adxtwitterbootstrap.components.responsive.visibleHiddenClasses
 			visibleHiddenClasses = 1
-			# cat=adx_twitter_bootstrap components/4_responsive/2; type=boolean; label=LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_conf.xlf:plugin.tx_adxtwitterbootstrap.components.responsive.narrowTabletsAndBelow
+			# cat=adx_twitter_bootstrap components/04_responsive/2; type=boolean; label=LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_conf.xlf:plugin.tx_adxtwitterbootstrap.components.responsive.narrowTabletsAndBelow
 			narrowTabletsAndBelow = 1
-			# cat=adx_twitter_bootstrap components/4_responsive/3; type=boolean; label=LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_conf.xlf:plugin.tx_adxtwitterbootstrap.components.responsive.tabletsToDesktops
+			# cat=adx_twitter_bootstrap components/04_responsive/3; type=boolean; label=LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_conf.xlf:plugin.tx_adxtwitterbootstrap.components.responsive.tabletsToDesktops
 			tabletsToDesktops = 1
-			# cat=adx_twitter_bootstrap components/4_responsive/4; type=boolean; label=LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_conf.xlf:plugin.tx_adxtwitterbootstrap.components.responsive.largeDesktops
+			# cat=adx_twitter_bootstrap components/04_responsive/4; type=boolean; label=LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_conf.xlf:plugin.tx_adxtwitterbootstrap.components.responsive.largeDesktops
 			largeDesktops = 1
-			# cat=adx_twitter_bootstrap components/4_responsive/5; type=boolean; label=LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_conf.xlf:plugin.tx_adxtwitterbootstrap.components.responsive.navbar
+			# cat=adx_twitter_bootstrap components/04_responsive/5; type=boolean; label=LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_conf.xlf:plugin.tx_adxtwitterbootstrap.components.responsive.navbar
 			navbar = 1
 		}
 
 		# customsubcategory=05_miscellaneous=LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_conf.xlf:plugin.tx_adxtwitterbootstrap.components.miscellaneous
 
 		miscellaneous {
-			# cat=adx_twitter_bootstrap components/5_miscellaneous/1; type=boolean; label=LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_conf.xlf:plugin.tx_adxtwitterbootstrap.components.miscellaneous.mediaObject
+			# cat=adx_twitter_bootstrap components/05_miscellaneous/1; type=boolean; label=LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_conf.xlf:plugin.tx_adxtwitterbootstrap.components.miscellaneous.mediaObject
 			mediaObject = 1
-			# cat=adx_twitter_bootstrap components/5_miscellaneous/2; type=boolean; label=LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_conf.xlf:plugin.tx_adxtwitterbootstrap.components.miscellaneous.wells
+			# cat=adx_twitter_bootstrap components/05_miscellaneous/2; type=boolean; label=LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_conf.xlf:plugin.tx_adxtwitterbootstrap.components.miscellaneous.wells
 			wells = 1
-			# cat=adx_twitter_bootstrap components/5_miscellaneous/3; type=boolean; label=LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_conf.xlf:plugin.tx_adxtwitterbootstrap.components.miscellaneous.closeIcon
+			# cat=adx_twitter_bootstrap components/05_miscellaneous/3; type=boolean; label=LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_conf.xlf:plugin.tx_adxtwitterbootstrap.components.miscellaneous.closeIcon
 			closeIcon = 1
-			# cat=adx_twitter_bootstrap components/5_miscellaneous/4; type=boolean; label=LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_conf.xlf:plugin.tx_adxtwitterbootstrap.components.miscellaneous.utilities
+			# cat=adx_twitter_bootstrap components/05_miscellaneous/4; type=boolean; label=LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_conf.xlf:plugin.tx_adxtwitterbootstrap.components.miscellaneous.utilities
 			utilities = 1
-			# cat=adx_twitter_bootstrap components/5_miscellaneous/5; type=boolean; label=LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_conf.xlf:plugin.tx_adxtwitterbootstrap.components.miscellaneous.componentAnimations
+			# cat=adx_twitter_bootstrap components/05_miscellaneous/5; type=boolean; label=LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_conf.xlf:plugin.tx_adxtwitterbootstrap.components.miscellaneous.componentAnimations
 			componentAnimations = 1
 		}
 
 		# customsubcategory=06_jsComponents=LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_conf.xlf:plugin.tx_adxtwitterbootstrap.components.jsComponents
 
 		jsComponents {
-			# cat=adx_twitter_bootstrap components/6_jsComponents/1; type=boolean; label=LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_conf.xlf:plugin.tx_adxtwitterbootstrap.components.jsComponents.tooltips
+			# cat=adx_twitter_bootstrap components/06_jsComponents/1; type=boolean; label=LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_conf.xlf:plugin.tx_adxtwitterbootstrap.components.jsComponents.tooltips
 			tooltips = 1
-			# cat=adx_twitter_bootstrap components/6_jsComponents/2; type=boolean; label=LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_conf.xlf:plugin.tx_adxtwitterbootstrap.components.jsComponents.popovers
+			# cat=adx_twitter_bootstrap components/06_jsComponents/2; type=boolean; label=LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_conf.xlf:plugin.tx_adxtwitterbootstrap.components.jsComponents.popovers
 			popovers = 1
-			# cat=adx_twitter_bootstrap components/6_jsComponents/3; type=boolean; label=LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_conf.xlf:plugin.tx_adxtwitterbootstrap.components.jsComponents.modals
+			# cat=adx_twitter_bootstrap components/06_jsComponents/3; type=boolean; label=LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_conf.xlf:plugin.tx_adxtwitterbootstrap.components.jsComponents.modals
 			modals = 1
-			# cat=adx_twitter_bootstrap components/6_jsComponents/4; type=boolean; label=LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_conf.xlf:plugin.tx_adxtwitterbootstrap.components.jsComponents.dropdowns
+			# cat=adx_twitter_bootstrap components/06_jsComponents/4; type=boolean; label=LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_conf.xlf:plugin.tx_adxtwitterbootstrap.components.jsComponents.dropdowns
 			dropdowns = 1
-			# cat=adx_twitter_bootstrap components/6_jsComponents/5; type=boolean; label=LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_conf.xlf:plugin.tx_adxtwitterbootstrap.components.jsComponents.collapse
+			# cat=adx_twitter_bootstrap components/06_jsComponents/5; type=boolean; label=LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_conf.xlf:plugin.tx_adxtwitterbootstrap.components.jsComponents.collapse
 			collapse = 1
-			# cat=adx_twitter_bootstrap components/6_jsComponents/6; type=boolean; label=LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_conf.xlf:plugin.tx_adxtwitterbootstrap.components.jsComponents.carousel
+			# cat=adx_twitter_bootstrap components/06_jsComponents/6; type=boolean; label=LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_conf.xlf:plugin.tx_adxtwitterbootstrap.components.jsComponents.carousel
 			carousel = 1
 		}
 	}

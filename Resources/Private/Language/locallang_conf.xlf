@@ -3,6 +3,13 @@
 	<file source-language="en" datatype="plaintext" original="messages" date="2012-06-13T20:22:32Z" product-name="adx_less">
 		<header/>
 		<body>
+			<trans-unit id="plugin.tx_adxtwitterbootstrap.common" xml:space="preserve">
+				<source>Header</source>
+			</trans-unit>
+			<trans-unit id="plugin.tx_adxtwitterbootstrap.common.viewport" xml:space="preserve">
+				<source>Viewport</source>
+			</trans-unit>
+
 			<trans-unit id="plugin.tx_adxtwitterbootstrap.components.scaffolding" xml:space="preserve">
 				<source>Scaffolding</source>
 			</trans-unit>
