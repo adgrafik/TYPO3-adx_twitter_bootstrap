@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2012-06-13T20:22:32Z" product-name="adx_less">
+		<header/>
+		<body>
+			<trans-unit id="plugin.tx_adxtwitterbootstrap.components.scaffolding" xml:space="preserve">
+				<source>Scaffolding</source>
+			</trans-unit>
+			<trans-unit id="plugin.tx_adxtwitterbootstrap.components.scaffolding.normalize" xml:space="preserve">
+				<source>Normalize and reset</source>
+			</trans-unit>
+			<trans-unit id="plugin.tx_adxtwitterbootstrap.components.scaffolding.bodyTypeAndLinks" xml:space="preserve">
+				<source>Body type and links</source>
+			</trans-unit>
+			<trans-unit id="plugin.tx_adxtwitterbootstrap.components.scaffolding.gridSystem" xml:space="preserve">
+				<source>Grid system</source>
+			</trans-unit>
+			<trans-unit id="plugin.tx_adxtwitterbootstrap.components.scaffolding.layouts" xml:space="preserve">
+				<source>Layouts</source>
+			</trans-unit>
+
+			<trans-unit id="plugin.tx_adxtwitterbootstrap.components.baseCSS" xml:space="preserve">
+				<source>Base CSS</source>
+			</trans-unit>
+			<trans-unit id="plugin.tx_adxtwitterbootstrap.components.baseCSS.type" xml:space="preserve">
+				<source>Headings, body, etc</source>
+			</trans-unit>
+			<trans-unit id="plugin.tx_adxtwitterbootstrap.components.baseCSS.codeAndPre" xml:space="preserve">
+				<source>Code and pre</source>
+			</trans-unit>
+			<trans-unit id="plugin.tx_adxtwitterbootstrap.components.baseCSS.labelsAndBadges" xml:space="preserve">
+				<source>Labels and badges</source>
+			</trans-unit>
+			<trans-unit id="plugin.tx_adxtwitterbootstrap.components.baseCSS.tables" xml:space="preserve">
+				<source>Tables</source>
+			</trans-unit>
+			<trans-unit id="plugin.tx_adxtwitterbootstrap.components.baseCSS.forms" xml:space="preserve">
+				<source>Forms</source>
+			</trans-unit>
+			<trans-unit id="plugin.tx_adxtwitterbootstrap.components.baseCSS.buttons" xml:space="preserve">
+				<source>Buttons</source>
+			</trans-unit>
+			<trans-unit id="plugin.tx_adxtwitterbootstrap.components.baseCSS.icons" xml:space="preserve">
+				<source>Icons</source>
+			</trans-unit>
+
+			<trans-unit id="plugin.tx_adxtwitterbootstrap.components.components" xml:space="preserve">
+				<source>Components</source>
+			</trans-unit>
+			<trans-unit id="plugin.tx_adxtwitterbootstrap.components.components.buttonGroupsAndDropdowns" xml:space="preserve">
+				<source>Button groups and dropdowns</source>
+			</trans-unit>
+			<trans-unit id="plugin.tx_adxtwitterbootstrap.components.components.navsTabsAndPills" xml:space="preserve">
+				<source>Navs, tabs, and pills</source>
+			</trans-unit>
+			<trans-unit id="plugin.tx_adxtwitterbootstrap.components.components.navbar" xml:space="preserve">
+				<source>Navbar</source>
+			</trans-unit>
+			<trans-unit id="plugin.tx_adxtwitterbootstrap.components.components.breadcrumbs" xml:space="preserve">
+				<source>Breadcrumbs</source>
+			</trans-unit>
+			<trans-unit id="plugin.tx_adxtwitterbootstrap.components.components.pagination" xml:space="preserve">
+				<source>Pagination</source>
+			</trans-unit>
+			<trans-unit id="plugin.tx_adxtwitterbootstrap.components.components.pager" xml:space="preserve">
+				<source>Pager</source>
+			</trans-unit>
+			<trans-unit id="plugin.tx_adxtwitterbootstrap.components.components.thumbnails" xml:space="preserve">
+				<source>Thumbnails</source>
+			</trans-unit>
+			<trans-unit id="plugin.tx_adxtwitterbootstrap.components.components.alerts" xml:space="preserve">
+				<source>Alerts</source>
+			</trans-unit>
+			<trans-unit id="plugin.tx_adxtwitterbootstrap.components.components.progressBars" xml:space="preserve">
+				<source>Progress bars</source>
+			</trans-unit>
+			<trans-unit id="plugin.tx_adxtwitterbootstrap.components.components.heroUnit" xml:space="preserve">
+				<source>Hero unit</source>
+			</trans-unit>
+			<trans-unit id="plugin.tx_adxtwitterbootstrap.components.components.mediaComponent" xml:space="preserve">
+				<source>Media component</source>
+			</trans-unit>
+
+			<trans-unit id="plugin.tx_adxtwitterbootstrap.components.responsive" xml:space="preserve">
+				<source>Responsive</source>
+			</trans-unit>
+			<trans-unit id="plugin.tx_adxtwitterbootstrap.components.responsive.visibleHiddenClasses" xml:space="preserve">
+				<source>Visible/hidden classes</source>
+			</trans-unit>
+			<trans-unit id="plugin.tx_adxtwitterbootstrap.components.responsive.narrowTabletsAndBelow" xml:space="preserve">
+				<source>Narrow tablets and below (&lt;767px)</source>
+			</trans-unit>
+			<trans-unit id="plugin.tx_adxtwitterbootstrap.components.responsive.tabletsToDesktops" xml:space="preserve">
+				<source>Tablets to desktops (767-979px)</source>
+			</trans-unit>
+			<trans-unit id="plugin.tx_adxtwitterbootstrap.components.responsive.largeDesktops" xml:space="preserve">
+				<source>Large desktops (&gt;1200px)</source>
+			</trans-unit>
+			<trans-unit id="plugin.tx_adxtwitterbootstrap.components.responsive.navbar" xml:space="preserve">
+				<source>Responsive navbar</source>
+			</trans-unit>
+
+			<trans-unit id="plugin.tx_adxtwitterbootstrap.components.miscellaneous" xml:space="preserve">
+				<source>Miscellaneous</source>
+			</trans-unit>
+			<trans-unit id="plugin.tx_adxtwitterbootstrap.components.miscellaneous.mediaObject" xml:space="preserve">
+				<source>Media object</source>
+			</trans-unit>
+			<trans-unit id="plugin.tx_adxtwitterbootstrap.components.miscellaneous.wells" xml:space="preserve">
+				<source>Wells</source>
+			</trans-unit>
+			<trans-unit id="plugin.tx_adxtwitterbootstrap.components.miscellaneous.closeIcon" xml:space="preserve">
+				<source>Close icon</source>
+			</trans-unit>
+			<trans-unit id="plugin.tx_adxtwitterbootstrap.components.miscellaneous.utilities" xml:space="preserve">
+				<source>Utilities</source>
+			</trans-unit>
+			<trans-unit id="plugin.tx_adxtwitterbootstrap.components.miscellaneous.componentAnimations" xml:space="preserve">
+				<source>Component animations</source>
+			</trans-unit>
+
+			<trans-unit id="plugin.tx_adxtwitterbootstrap.components.jsComponents" xml:space="preserve">
+				<source>JS Components</source>
+			</trans-unit>
+			<trans-unit id="plugin.tx_adxtwitterbootstrap.components.jsComponents.tooltips" xml:space="preserve">
+				<source>Tooltips</source>
+			</trans-unit>
+			<trans-unit id="plugin.tx_adxtwitterbootstrap.components.jsComponents.popovers" xml:space="preserve">
+				<source>Popovers</source>
+			</trans-unit>
+			<trans-unit id="plugin.tx_adxtwitterbootstrap.components.jsComponents.modals" xml:space="preserve">
+				<source>Modals</source>
+			</trans-unit>
+			<trans-unit id="plugin.tx_adxtwitterbootstrap.components.jsComponents.dropdowns" xml:space="preserve">
+				<source>Dropdowns</source>
+			</trans-unit>
+			<trans-unit id="plugin.tx_adxtwitterbootstrap.components.jsComponents.collapse" xml:space="preserve">
+				<source>Collapse</source>
+			</trans-unit>
+			<trans-unit id="plugin.tx_adxtwitterbootstrap.components.jsComponents.carousel" xml:space="preserve">
+				<source>Carousel</source>
+			</trans-unit>
+
+			<trans-unit id="plugin.tx_adxtwitterbootstrap.variables.scaffolding" xml:space="preserve">
+				<source>Scaffolding</source>
+			</trans-unit>
+
+			<trans-unit id="plugin.tx_adxtwitterbootstrap.variables.colors" xml:space="preserve">
+				<source>Colors</source>
+			</trans-unit>
+
+			<trans-unit id="plugin.tx_adxtwitterbootstrap.variables.typography" xml:space="preserve">
+				<source>Typography</source>
+			</trans-unit>
+
+			<trans-unit id="plugin.tx_adxtwitterbootstrap.variables.links" xml:space="preserve">
+				<source>Links</source>
+			</trans-unit>
+
+			<trans-unit id="plugin.tx_adxtwitterbootstrap.variables.tables" xml:space="preserve">
+				<source>Tables</source>
+			</trans-unit>
+
+			<trans-unit id="plugin.tx_adxtwitterbootstrap.variables.forms" xml:space="preserve">
+				<source>Forms</source>
+			</trans-unit>
+
+			<trans-unit id="plugin.tx_adxtwitterbootstrap.variables.formStatesAndAlerts" xml:space="preserve">
+				<source>Form states &amp; alerts</source>
+			</trans-unit>
+
+			<trans-unit id="plugin.tx_adxtwitterbootstrap.variables.navbar" xml:space="preserve">
+				<source>Navbar</source>
+			</trans-unit>
+
+			<trans-unit id="plugin.tx_adxtwitterbootstrap.variables.dropdowns" xml:space="preserve">
+				<source>Dropdowns</source>
+			</trans-unit>
+
+			<trans-unit id="plugin.tx_adxtwitterbootstrap.variables.gridSystem" xml:space="preserve">
+				<source>Grid system</source>
+			</trans-unit>
+
+			<trans-unit id="plugin.tx_adxtwitterbootstrap.variables.sprites" xml:space="preserve">
+				<source>Sprites</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

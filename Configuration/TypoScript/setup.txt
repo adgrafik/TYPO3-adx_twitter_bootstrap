@@ -1,0 +1,67 @@
+
+/**
+ * plugin.tx_adxless
+ */
+plugin.tx_adxless {
+
+	lessphp {
+
+		variables {
+
+			classPrefix = {$plugin.tx_adxtwitterbootstrap.cssClassPrefix}
+
+			gridColumns = {$plugin.tx_adxtwitterbootstrap.columns}
+
+			// default (940px grid)
+			gridDefaultColumnWidth = {$plugin.tx_adxtwitterbootstrap.default.columnWidth}
+			gridDefaultGutterWidth = {$plugin.tx_adxtwitterbootstrap.default.gutter}
+			gridDefaultRowWidth = (@gridColumns * @gridDefaultColumnWidth) + (@gridDefaultGutterWidth * (@gridColumns - 1))
+
+			// large (1200px min)
+			gridLargeColumnWidth = {$plugin.tx_adxtwitterbootstrap.large.columnWidth}
+			gridLargeGutterWidth = {$plugin.tx_adxtwitterbootstrap.large.gutter}
+			gridLargeBreakpointMin = {$plugin.tx_adxtwitterbootstrap.large.breakpointMin}
+			gridLargeRowWidth = (@gridColumns * @gridLargeColumnWidth) + (@gridLargeGutterWidth * (@gridColumns - 1))
+
+			// medium (768px-979px)
+			gridMediumColumnWidth = {$plugin.tx_adxtwitterbootstrap.medium.columnWidth}
+			gridMediumGutterWidth = {$plugin.tx_adxtwitterbootstrap.medium.gutter}
+			gridMediumBreakpointMin = {$plugin.tx_adxtwitterbootstrap.medium.breakpointMin}
+			gridMediumBreakpointMax = {$plugin.tx_adxtwitterbootstrap.medium.breakpointMax}
+			gridMediumRowWidth = (@gridColumns * @gridMediumColumnWidth) + (@gridMediumGutterWidth * (@gridColumns - 1))
+
+			// fluid default
+			fluidGridDefaultColumnWidth = percentage(@gridDefaultColumnWidth / @gridDefaultRowWidth)
+			fluidGridDefaultGutterWidth = percentage(@gridDefaultGutterWidth / @gridDefaultRowWidth)
+
+			// fluid large (1200px min)
+			fluidGridLargeColumnWidth = percentage(@gridLargeColumnWidth / @gridLargeRowWidth)
+			fluidGridLargeGutterWidth = percentage(@gridLargeGutterWidth / @gridLargeRowWidth)
+
+			// fluid medium (768px-979px)
+			fluidGridMediumColumnWidth = percentage(@gridMediumColumnWidth / @gridMediumRowWidth)
+			fluidGridMediumGutterWidth = percentage(@gridMediumGutterWidth / @gridMediumRowWidth)
+		}
+	}
+}
+
+
+// Page: includes
+page {
+
+	includeCSS {
+		tx_adxtwitterbootstrap_common = EXT:adx_twitter_bootstrap/Resources/Private/CSS/Common.less
+	}
+
+	headerData.1352997637 = TEXT
+	headerData.1352997637 {
+
+		value = {$plugin.tx_adxtwitterbootstrap.viewport}
+		required = 1
+
+		wrap = <meta name="viewport" content=" | ">
+
+		prepend = TEXT
+		prepend.char = 10
+	}
+}
