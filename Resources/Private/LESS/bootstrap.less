@@ -9,55 +9,86 @@
  */
 
 // CSS Reset
-@import "reset.less";
+
+.importComponent(@component, @import) when (@import = 1) {
+	@import @component;
+}
+
+.importComponent('reset.less', @bcReset);
 
 // Core variables and mixins
-@import "variables.less"; // Modify this for custom colors, font-sizes, etc
-@import "mixins.less";
+//@import 'variables.less'; // defined by TypoScript
+@import 'mixins.less';
 
 // Grid system and page structure
-@import "scaffolding.less";
-@import "grid.less";
-@import "layouts.less";
+.importComponent('scaffolding.less', @bcScaffolding);
+.importComponent('grid.less', @bcGrid);
+.importComponent('layouts.less', @bcLayouts);
 
 // Base CSS
-@import "type.less";
-@import "code.less";
-@import "forms.less";
-@import "tables.less";
+.importComponent('type.less', @bcType);
+.importComponent('code.less', @bcCode);
+.importComponent('forms.less', @bcForms);
+.importComponent('tables.less', @bcTables);
 
 // Components: common
-@import "sprites.less";
-@import "dropdowns.less";
-@import "wells.less";
-@import "component-animations.less";
-@import "close.less";
+.importComponent('sprites.less', @bcSprites);
+.importComponent('dropdowns.less', @bcDropdowns);
+.importComponent('wells.less', @bcWells);
+.importComponent('component-animations.less', @bcComponentAnimations);
+.importComponent('close.less', @bcClose);
 
 // Components: Buttons & Alerts
-@import "buttons.less";
-@import "button-groups.less";
-@import "alerts.less"; // Note: alerts share common CSS with buttons and thus have styles in buttons.less
+.importComponent('buttons.less', @bcButtons);
+.importComponent('button-groups.less', @bcButtonGroups);
+.importComponent('alerts.less', @bcAlerts);
 
 // Components: Nav
-@import "navs.less";
-@import "navbar.less";
-@import "breadcrumbs.less";
-@import "pagination.less";
-@import "pager.less";
+.importComponent('navs.less', @bcNavs);
+.importComponent('navbar.less', @bcNavbar);
+.importComponent('breadcrumbs.less', @bcBreadcrumbs);
+.importComponent('pagination.less', @bcPagination);
+.importComponent('pager.less', @bcPager);
 
 // Components: Popovers
-@import "modals.less";
-@import "tooltip.less";
-@import "popovers.less";
+.importComponent('modals.less', @bcModals);
+.importComponent('tooltip.less', @bcTooltips);
+.importComponent('popovers.less', @bcPopovers);
 
 // Components: Misc
-@import "thumbnails.less";
-@import "media.less";
-@import "labels-badges.less";
-@import "progress-bars.less";
-@import "accordion.less";
-@import "carousel.less";
-@import "hero-unit.less";
+.importComponent('thumbnails.less', @bcThumbnails);
+.importComponent('media.less', @bcMedia);
+.importComponent('labels-badges.less', @bcLabelsBadges);
+.importComponent('progress-bars.less', @bcProgressBars);
+.importComponent('accordion.less', @bcAccordion);
+.importComponent('carousel.less', @bcCarousel);
+.importComponent('hero-unit.less', @bcHeroUnit);
 
 // Utility classes
-@import "utilities.less"; // Has to be last to override when necessary
+.importComponent('utilities.less', @bcUtilities);
+
+
+// RESPONSIVE CLASSES
+// ------------------
+
+.importComponent('responsive-utilities.less', @bcResponsiveUtilities);
+
+
+// MEDIA QUERIES
+// ------------------
+
+// Large desktops
+.importComponent('responsive-1200px-min.less', @bcResponsive1200pxMin);
+
+// Tablets to regular desktops
+.importComponent('responsive-768px-979px.less', @bcResponsive768px979px);
+
+// Phones to portrait tablets and narrow desktops
+.importComponent('responsive-767px-max.less', @bcResponsive767pxMax);
+
+
+// RESPONSIVE NAVBAR
+// ------------------
+
+// From 979px and below, show a button to toggle navbar contents
+.importComponent('responsive-navbar.less', @bcResponsiveNavbar);
