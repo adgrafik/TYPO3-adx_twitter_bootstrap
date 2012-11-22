@@ -47,7 +47,7 @@
 			<trans-unit id="plugin.tx_adxtwitterbootstrap.components.buttons" xml:space="preserve">
 				<source>Buttons</source>
 			</trans-unit>
-			<trans-unit id="plugin.tx_adxtwitterbootstrap.components.icons" xml:space="preserve">
+			<trans-unit id="plugin.tx_adxtwitterbootstrap.components.sprites" xml:space="preserve">
 				<source>Icons</source>
 			</trans-unit>
 

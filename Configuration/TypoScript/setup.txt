@@ -27,7 +27,7 @@ plugin.tx_adxless {
 			bcTables = {$plugin.tx_adxtwitterbootstrap.components.tables}
 			bcForms = {$plugin.tx_adxtwitterbootstrap.components.forms}
 			bcButtons = {$plugin.tx_adxtwitterbootstrap.components.buttons}
-			bcIcons = {$plugin.tx_adxtwitterbootstrap.components.icons}
+			bcSprites = {$plugin.tx_adxtwitterbootstrap.components.sprites}
 
 			# components
 			bcButtonGroups = {$plugin.tx_adxtwitterbootstrap.components.buttonGroups}
@@ -88,6 +88,8 @@ plugin.tx_adxless {
 			baseFontSize = {$plugin.tx_adxtwitterbootstrap.variables.baseFontSize}
 			baseFontFamily = {$plugin.tx_adxtwitterbootstrap.variables.baseFontFamily}
 			baseFontFamily = {$plugin.tx_adxtwitterbootstrap.variables.baseFontFamily}
+			baseLineHeight = {$plugin.tx_adxtwitterbootstrap.variables.baseLineHeight}
+			inputHeight = @baseLineHeight + 10px  // base line-height + 8px vertical padding + 2px top/bottom border
 			altFontFamily = {$plugin.tx_adxtwitterbootstrap.variables.altFontFamily}
 			headingsFontFamily = {$plugin.tx_adxtwitterbootstrap.variables.headingsFontFamily}
 			headingsFontWeight = {$plugin.tx_adxtwitterbootstrap.variables.headingsFontWeight}
@@ -182,7 +184,7 @@ plugin.tx_adxless {
 
 			# fluid medium (768px-979px)
 			fluidGridColumnWidth768 = percentage(@gridColumnWidth768 / @gridRowWidth768)
-			fluidGridMediumGutterWidth = percentage(@gridGutterWidth768 / @gridRowWidth768)
+			fluidGridGutterWidth768 = percentage(@gridGutterWidth768 / @gridRowWidth768)
 
 			# sprites
 			iconSpritePath = {$plugin.tx_adxtwitterbootstrap.variables.iconSpritePath}

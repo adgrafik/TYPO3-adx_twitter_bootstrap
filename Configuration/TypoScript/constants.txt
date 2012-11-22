@@ -45,8 +45,8 @@ plugin.tx_adxtwitterbootstrap {
 		forms = 0
 		# cat=adx_twitter_bootstrap components/02_baseCSS/6; type=boolean; label=LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_conf.xlf:plugin.tx_adxtwitterbootstrap.components.buttons
 		buttons = 0
-		# cat=adx_twitter_bootstrap components/02_baseCSS/7; type=boolean; label=LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_conf.xlf:plugin.tx_adxtwitterbootstrap.components.icons
-		icons = 0
+		# cat=adx_twitter_bootstrap components/02_baseCSS/7; type=boolean; label=LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_conf.xlf:plugin.tx_adxtwitterbootstrap.components.sprites
+		sprites = 0
 
 		#
 		# components
@@ -133,7 +133,7 @@ plugin.tx_adxtwitterbootstrap {
 		#
 
 		# cat=adx_twitter_bootstrap plugins/01_plugins/01; type=boolean; label=LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_conf.xlf:plugin.tx_adxtwitterbootstrap.plugins.transitions
-		transitions = 0
+		transition = 0
 		# cat=adx_twitter_bootstrap plugins/01_plugins/02; type=boolean; label=LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_conf.xlf:plugin.tx_adxtwitterbootstrap.plugins.modal
 		modal = 0
 		# cat=adx_twitter_bootstrap plugins/01_plugins/03; type=boolean; label=LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_conf.xlf:plugin.tx_adxtwitterbootstrap.plugins.dropdown
@@ -208,7 +208,7 @@ plugin.tx_adxtwitterbootstrap {
 		# cat=adx_twitter_bootstrap variables/03_typography/5; type=string; label=@baseFontFamily
 		baseFontFamily = @sansFontFamily
 		# cat=adx_twitter_bootstrap variables/03_typography/6; type=string; label=@baseLineHeight
-		baseFontFamily = 20px
+		baseLineHeight = 20px
 		# cat=adx_twitter_bootstrap variables/03_typography/7; type=string; label=@altFontFamily
 		altFontFamily = @serifFontFamily
 		# cat=adx_twitter_bootstrap variables/03_typography/8; type=string; label=@headingsFontFamily
