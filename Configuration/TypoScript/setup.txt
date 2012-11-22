@@ -1,0 +1,264 @@
+
+/**
+ * plugin.tx_adxless
+ */
+plugin.tx_adxless {
+
+	lessphp {
+
+		importDirectories := addToList( EXT:adx_twitter_bootstrap/Resources/Private/LESS/ )
+
+		variables {
+
+			#
+			# bootstrap components
+			#
+
+			# scaffolding
+			bcReset = {$plugin.tx_adxtwitterbootstrap.components.reset}
+			bcScaffolding = {$plugin.tx_adxtwitterbootstrap.components.scaffolding}
+			bcGrid = {$plugin.tx_adxtwitterbootstrap.components.grid}
+			bcLayouts = {$plugin.tx_adxtwitterbootstrap.components.layouts}
+
+			# baseCSS
+			bcType = {$plugin.tx_adxtwitterbootstrap.components.type}
+			bcCode = {$plugin.tx_adxtwitterbootstrap.components.code}
+			bcLabelsBadges = {$plugin.tx_adxtwitterbootstrap.components.labelsBadges}
+			bcTables = {$plugin.tx_adxtwitterbootstrap.components.tables}
+			bcForms = {$plugin.tx_adxtwitterbootstrap.components.forms}
+			bcButtons = {$plugin.tx_adxtwitterbootstrap.components.buttons}
+			bcIcons = {$plugin.tx_adxtwitterbootstrap.components.icons}
+
+			# components
+			bcButtonGroups = {$plugin.tx_adxtwitterbootstrap.components.buttonGroups}
+			bcNavs = {$plugin.tx_adxtwitterbootstrap.components.navs}
+			bcNavbar = {$plugin.tx_adxtwitterbootstrap.components.navbar}
+			bcBreadcrumbs = {$plugin.tx_adxtwitterbootstrap.components.breadcrumbs}
+			bcPagination = {$plugin.tx_adxtwitterbootstrap.components.pagination}
+			bcPager = {$plugin.tx_adxtwitterbootstrap.components.pager}
+			bcThumbnails = {$plugin.tx_adxtwitterbootstrap.components.thumbnails}
+			bcAlerts = {$plugin.tx_adxtwitterbootstrap.components.alerts}
+			bcProgressBars = {$plugin.tx_adxtwitterbootstrap.components.progressBars}
+			bcHeroUnit = {$plugin.tx_adxtwitterbootstrap.components.heroUnit}
+
+			# responsive
+			bcResponsiveUtilities = {$plugin.tx_adxtwitterbootstrap.components.responsiveUtilities}
+			bcResponsive767pxMax = {$plugin.tx_adxtwitterbootstrap.components.responsive767pxMax}
+			bcResponsive768px979px = {$plugin.tx_adxtwitterbootstrap.components.responsive768px979px}
+			bcResponsive1200pxMin = {$plugin.tx_adxtwitterbootstrap.components.responsive1200pxMin}
+			bcResponsiveNavbar = {$plugin.tx_adxtwitterbootstrap.components.responsiveNavbar}
+
+			# miscellaneous
+			bcMedia = {$plugin.tx_adxtwitterbootstrap.components.media}
+			bcWells = {$plugin.tx_adxtwitterbootstrap.components.wells}
+			bcClose = {$plugin.tx_adxtwitterbootstrap.components.close}
+			bcUtilities = {$plugin.tx_adxtwitterbootstrap.components.utilities}
+			bcComponentAnimations = {$plugin.tx_adxtwitterbootstrap.components.componentAnimations}
+
+			# jsComponents
+			bcTooltips = {$plugin.tx_adxtwitterbootstrap.components.tooltips}
+			bcPopovers = {$plugin.tx_adxtwitterbootstrap.components.popovers}
+			bcModals = {$plugin.tx_adxtwitterbootstrap.components.modals}
+			bcDropdowns = {$plugin.tx_adxtwitterbootstrap.components.dropdowns}
+			bcAccordion = {$plugin.tx_adxtwitterbootstrap.components.accordion}
+			bcCarousel = {$plugin.tx_adxtwitterbootstrap.components.carousel}
+
+
+			#
+			# bootstrap variables
+			#
+
+			# scaffolding
+			bodyBackground = {$plugin.tx_adxtwitterbootstrap.variables.bodyBackground}
+			textColor = {$plugin.tx_adxtwitterbootstrap.variables.textColor}
+
+			# colors
+			blue = {$plugin.tx_adxtwitterbootstrap.variables.blue}
+			green = {$plugin.tx_adxtwitterbootstrap.variables.green}
+			red = {$plugin.tx_adxtwitterbootstrap.variables.red}
+			yellow = {$plugin.tx_adxtwitterbootstrap.variables.yellow}
+			orange = {$plugin.tx_adxtwitterbootstrap.variables.orange}
+			pink = {$plugin.tx_adxtwitterbootstrap.variables.pink}
+			purple = {$plugin.tx_adxtwitterbootstrap.variables.purple}
+
+			# typography
+			sansFontFamily = {$plugin.tx_adxtwitterbootstrap.variables.sansFontFamily}
+			serifFontFamily = {$plugin.tx_adxtwitterbootstrap.variables.serifFontFamily}
+			monoFontFamily = {$plugin.tx_adxtwitterbootstrap.variables.monoFontFamily}
+			baseFontSize = {$plugin.tx_adxtwitterbootstrap.variables.baseFontSize}
+			baseFontFamily = {$plugin.tx_adxtwitterbootstrap.variables.baseFontFamily}
+			baseFontFamily = {$plugin.tx_adxtwitterbootstrap.variables.baseFontFamily}
+			altFontFamily = {$plugin.tx_adxtwitterbootstrap.variables.altFontFamily}
+			headingsFontFamily = {$plugin.tx_adxtwitterbootstrap.variables.headingsFontFamily}
+			headingsFontWeight = {$plugin.tx_adxtwitterbootstrap.variables.headingsFontWeight}
+			headingsColor = {$plugin.tx_adxtwitterbootstrap.variables.headingsColor}
+			fontSizeLarge = {$plugin.tx_adxtwitterbootstrap.variables.fontSizeLarge}
+			fontSizeSmall = {$plugin.tx_adxtwitterbootstrap.variables.fontSizeSmall}
+			fontSizeMini = {$plugin.tx_adxtwitterbootstrap.variables.fontSizeMini}
+			paddingLarge = {$plugin.tx_adxtwitterbootstrap.variables.paddingLarge}
+			paddingSmall = {$plugin.tx_adxtwitterbootstrap.variables.paddingSmall}
+			paddingMini = {$plugin.tx_adxtwitterbootstrap.variables.paddingMini}
+			baseBorderRadius = {$plugin.tx_adxtwitterbootstrap.variables.baseBorderRadius}
+			borderRadiusLarge = {$plugin.tx_adxtwitterbootstrap.variables.borderRadiusLarge}
+			borderRadiusSmall = {$plugin.tx_adxtwitterbootstrap.variables.borderRadiusSmall}
+			heroUnitBackground = {$plugin.tx_adxtwitterbootstrap.variables.heroUnitBackground}
+			heroUnitHeadingColor = {$plugin.tx_adxtwitterbootstrap.variables.heroUnitHeadingColor}
+			heroUnitLeadColor = {$plugin.tx_adxtwitterbootstrap.variables.heroUnitLeadColor}
+
+			# links
+			linkColor = {$plugin.tx_adxtwitterbootstrap.variables.linkColor}
+			linkColorHover = {$plugin.tx_adxtwitterbootstrap.variables.linkColorHover}
+
+			# tables
+			tableBackground = {$plugin.tx_adxtwitterbootstrap.variables.tableBackground}
+			tableBackgroundAccent = {$plugin.tx_adxtwitterbootstrap.variables.tableBackgroundAccent}
+			tableBackgroundHover = {$plugin.tx_adxtwitterbootstrap.variables.tableBackgroundHover}
+			tableBorder = {$plugin.tx_adxtwitterbootstrap.variables.tableBorder}
+
+			# forms
+			placeholderText = {$plugin.tx_adxtwitterbootstrap.variables.placeholderText}
+			inputBackground = {$plugin.tx_adxtwitterbootstrap.variables.inputBackground}
+			inputBorder = {$plugin.tx_adxtwitterbootstrap.variables.inputBorder}
+			inputBorderRadius = {$plugin.tx_adxtwitterbootstrap.variables.inputBorderRadius}
+			inputDisabledBackground = {$plugin.tx_adxtwitterbootstrap.variables.inputDisabledBackground}
+			formActionsBackground = {$plugin.tx_adxtwitterbootstrap.variables.formActionsBackground}
+			btnPrimaryBackground = {$plugin.tx_adxtwitterbootstrap.variables.btnPrimaryBackground}
+			btnPrimaryBackgroundHighlight = {$plugin.tx_adxtwitterbootstrap.variables.btnPrimaryBackgroundHighlight}
+
+			# formStatesAndAlerts
+			warningText = {$plugin.tx_adxtwitterbootstrap.variables.warningText}
+			warningBackground = {$plugin.tx_adxtwitterbootstrap.variables.warningBackground}
+			errorText = {$plugin.tx_adxtwitterbootstrap.variables.errorText}
+			errorBackground = {$plugin.tx_adxtwitterbootstrap.variables.errorBackground}
+			successText = {$plugin.tx_adxtwitterbootstrap.variables.successText}
+			successBackground = {$plugin.tx_adxtwitterbootstrap.variables.successBackground}
+			infoText = {$plugin.tx_adxtwitterbootstrap.variables.infoText}
+			infoBackground = {$plugin.tx_adxtwitterbootstrap.variables.infoBackground}
+
+			# navbar
+			navbarHeight = {$plugin.tx_adxtwitterbootstrap.variables.navbarHeight}
+			navbarBackground = {$plugin.tx_adxtwitterbootstrap.variables.navbarBackground}
+			navbarBackgroundHighlight = {$plugin.tx_adxtwitterbootstrap.variables.navbarBackgroundHighlight}
+			navbarText = {$plugin.tx_adxtwitterbootstrap.variables.navbarText}
+			navbarBrandColor = {$plugin.tx_adxtwitterbootstrap.variables.navbarBrandColor}
+			navbarLinkColor = {$plugin.tx_adxtwitterbootstrap.variables.navbarLinkColor}
+			navbarLinkColorHover = {$plugin.tx_adxtwitterbootstrap.variables.navbarLinkColorHover}
+			navbarLinkColorActive = {$plugin.tx_adxtwitterbootstrap.variables.navbarLinkColorActive}
+			navbarLinkBackgroundHover = {$plugin.tx_adxtwitterbootstrap.variables.navbarLinkBackgroundHover}
+			navbarLinkBackgroundActive = {$plugin.tx_adxtwitterbootstrap.variables.navbarLinkBackgroundActive}
+			navbarSearchBackground = {$plugin.tx_adxtwitterbootstrap.variables.navbarSearchBackground}
+			navbarSearchBackgroundFocus = {$plugin.tx_adxtwitterbootstrap.variables.navbarSearchBackgroundFocus}
+			navbarSearchBorder = {$plugin.tx_adxtwitterbootstrap.variables.navbarSearchBorder}
+			navbarSearchPlaceholderColor = {$plugin.tx_adxtwitterbootstrap.variables.navbarSearchPlaceholderColor}
+			navbarCollapseWidth = {$plugin.tx_adxtwitterbootstrap.variables.navbarCollapseWidth}
+			navbarCollapseDesktopWidth = {$plugin.tx_adxtwitterbootstrap.variables.navbarCollapseDesktopWidth}
+
+			# dropdowns
+			dropdownBackground = {$plugin.tx_adxtwitterbootstrap.variables.dropdownBackground}
+			dropdownBorder = {$plugin.tx_adxtwitterbootstrap.variables.dropdownBorder}
+			dropdownLinkColor = {$plugin.tx_adxtwitterbootstrap.variables.dropdownLinkColor}
+			dropdownLinkColorHover = {$plugin.tx_adxtwitterbootstrap.variables.dropdownLinkColorHover}
+			dropdownLinkBackgroundHover = {$plugin.tx_adxtwitterbootstrap.variables.dropdownLinkBackgroundHover}
+
+			# gridSystem
+			gridColumns = {$plugin.tx_adxtwitterbootstrap.variables.gridColumns}
+			gridColumnWidth = {$plugin.tx_adxtwitterbootstrap.variables.gridColumnWidth}
+			gridGutterWidth = {$plugin.tx_adxtwitterbootstrap.variables.gridGutterWidth}
+			gridRowWidth = (@gridColumns * @gridColumnWidth) + (@gridGutterWidth * (@gridColumns - 1))
+			gridColumnWidth1200 = {$plugin.tx_adxtwitterbootstrap.variables.gridColumnWidth1200}
+			gridGutterWidth1200 = {$plugin.tx_adxtwitterbootstrap.variables.gridGutterWidth1200}
+			gridRowWidth1200 = (@gridColumns * @gridColumnWidth1200) + (@gridGutterWidth1200 * (@gridColumns - 1))
+			gridColumnWidth768 = {$plugin.tx_adxtwitterbootstrap.variables.gridColumnWidth768}
+			gridGutterWidth768 = {$plugin.tx_adxtwitterbootstrap.variables.gridGutterWidth768}
+			gridRowWidth768 = (@gridColumns * @gridColumnWidth768) + (@gridGutterWidth768 * (@gridColumns - 1))
+
+			# fluid default
+			fluidGridColumnWidth = percentage(@gridColumnWidth / @gridRowWidth)
+			fluidGridGutterWidth = percentage(@gridGutterWidth / @gridRowWidth)
+
+			# fluid large (1200px min)
+			fluidGridColumnWidth1200 = percentage(@gridColumnWidth1200 / @gridRowWidth1200)
+			fluidGridGutterWidth1200 = percentage(@gridGutterWidth1200 / @gridRowWidth1200)
+
+			# fluid medium (768px-979px)
+			fluidGridColumnWidth768 = percentage(@gridColumnWidth768 / @gridRowWidth768)
+			fluidGridMediumGutterWidth = percentage(@gridGutterWidth768 / @gridRowWidth768)
+
+			# sprites
+			iconSpritePath = {$plugin.tx_adxtwitterbootstrap.variables.iconSpritePath}
+			iconWhiteSpritePath = {$plugin.tx_adxtwitterbootstrap.variables.iconWhiteSpritePath}
+		}
+	}
+}
+
+
+# page includes
+page {
+
+	includeCSS.tx_adxtwitterbootstrap = EXT:adx_twitter_bootstrap/Resources/Private/LESS/bootstrap.less
+
+	headerData.1352997637 = TEXT
+	headerData.1352997637 {
+
+		value = {$plugin.tx_adxtwitterbootstrap.common.viewport}
+		required = 1
+
+		wrap = <meta name="viewport" content=" | ">
+
+		prepend = TEXT
+		prepend.char = 10
+	}
+}
+
+# jQuery plugins
+[globalVar = LIT:1 = {$plugin.tx_adxtwitterbootstrap.plugins.transition}]
+page.includeJSFooter.tx_adxtwitterbootstrap_transitions = EXT:adx_twitter_bootstrap/Resources/Public/JavaScript/bootstrap-transition.js
+[end]
+
+[globalVar = LIT:1 = {$plugin.tx_adxtwitterbootstrap.plugins.modal}]
+page.includeJSFooter.tx_adxtwitterbootstrap_modal = EXT:adx_twitter_bootstrap/Resources/Public/JavaScript/bootstrap-modal.js
+[end]
+
+[globalVar = LIT:1 = {$plugin.tx_adxtwitterbootstrap.plugins.dropdown}]
+page.includeJSFooter.tx_adxtwitterbootstrap_dropdown = EXT:adx_twitter_bootstrap/Resources/Public/JavaScript/bootstrap-dropdown.js
+[end]
+
+[globalVar = LIT:1 = {$plugin.tx_adxtwitterbootstrap.plugins.scrollspy}]
+page.includeJSFooter.tx_adxtwitterbootstrap_scrollspy = EXT:adx_twitter_bootstrap/Resources/Public/JavaScript/bootstrap-scrollspy.js
+[end]
+
+[globalVar = LIT:1 = {$plugin.tx_adxtwitterbootstrap.plugins.tab}]
+page.includeJSFooter.tx_adxtwitterbootstrap_tab = EXT:adx_twitter_bootstrap/Resources/Public/JavaScript/bootstrap-tab.js
+[end]
+
+[globalVar = LIT:1 = {$plugin.tx_adxtwitterbootstrap.plugins.tooltip}]
+page.includeJSFooter.tx_adxtwitterbootstrap_tooltip = EXT:adx_twitter_bootstrap/Resources/Public/JavaScript/bootstrap-tooltip.js
+[end]
+
+[globalVar = LIT:1 = {$plugin.tx_adxtwitterbootstrap.plugins.popover}]
+page.includeJSFooter.tx_adxtwitterbootstrap_popover = EXT:adx_twitter_bootstrap/Resources/Public/JavaScript/bootstrap-popover.js
+[end]
+
+[globalVar = LIT:1 = {$plugin.tx_adxtwitterbootstrap.plugins.affix}]
+page.includeJSFooter.tx_adxtwitterbootstrap_affix = EXT:adx_twitter_bootstrap/Resources/Public/JavaScript/bootstrap-affix.js
+[end]
+
+[globalVar = LIT:1 = {$plugin.tx_adxtwitterbootstrap.plugins.alert}]
+page.includeJSFooter.tx_adxtwitterbootstrap_alert = EXT:adx_twitter_bootstrap/Resources/Public/JavaScript/bootstrap-alert.js
+[end]
+
+[globalVar = LIT:1 = {$plugin.tx_adxtwitterbootstrap.plugins.button}]
+page.includeJSFooter.tx_adxtwitterbootstrap_button = EXT:adx_twitter_bootstrap/Resources/Public/JavaScript/bootstrap-button.js
+[end]
+
+[globalVar = LIT:1 = {$plugin.tx_adxtwitterbootstrap.plugins.collapse}]
+page.includeJSFooter.tx_adxtwitterbootstrap_collapse = EXT:adx_twitter_bootstrap/Resources/Public/JavaScript/bootstrap-collapse.js
+[end]
+
+[globalVar = LIT:1 = {$plugin.tx_adxtwitterbootstrap.plugins.carousel}]
+page.includeJSFooter.tx_adxtwitterbootstrap_carousel = EXT:adx_twitter_bootstrap/Resources/Public/JavaScript/bootstrap-carousel.js
+[end]
+
+[globalVar = LIT:1 = {$plugin.tx_adxtwitterbootstrap.plugins.typeahead}]
+page.includeJSFooter.tx_adxtwitterbootstrap_typeahead = EXT:adx_twitter_bootstrap/Resources/Public/JavaScript/bootstrap-typeahead.js
+[end]

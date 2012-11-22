@@ -1,0 +1,94 @@
+/*!
+ * Bootstrap v2.2.1
+ *
+ * Copyright 2012 Twitter, Inc
+ * Licensed under the Apache License v2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Designed and built with all the love in the world @twitter by @mdo and @fat.
+ */
+
+// CSS Reset
+
+.importComponent(@component, @import) when (@import = 1) {
+	@import @component;
+}
+
+.importComponent('reset.less', @bcReset);
+
+// Core variables and mixins
+//@import 'variables.less'; // defined by TypoScript
+@import 'mixins.less';
+
+// Grid system and page structure
+.importComponent('scaffolding.less', @bcScaffolding);
+.importComponent('grid.less', @bcGrid);
+.importComponent('layouts.less', @bcLayouts);
+
+// Base CSS
+.importComponent('type.less', @bcType);
+.importComponent('code.less', @bcCode);
+.importComponent('forms.less', @bcForms);
+.importComponent('tables.less', @bcTables);
+
+// Components: common
+.importComponent('sprites.less', @bcSprites);
+.importComponent('dropdowns.less', @bcDropdowns);
+.importComponent('wells.less', @bcWells);
+.importComponent('component-animations.less', @bcComponentAnimations);
+.importComponent('close.less', @bcClose);
+
+// Components: Buttons & Alerts
+.importComponent('buttons.less', @bcButtons);
+.importComponent('button-groups.less', @bcButtonGroups);
+.importComponent('alerts.less', @bcAlerts);
+
+// Components: Nav
+.importComponent('navs.less', @bcNavs);
+.importComponent('navbar.less', @bcNavbar);
+.importComponent('breadcrumbs.less', @bcBreadcrumbs);
+.importComponent('pagination.less', @bcPagination);
+.importComponent('pager.less', @bcPager);
+
+// Components: Popovers
+.importComponent('modals.less', @bcModals);
+.importComponent('tooltip.less', @bcTooltips);
+.importComponent('popovers.less', @bcPopovers);
+
+// Components: Misc
+.importComponent('thumbnails.less', @bcThumbnails);
+.importComponent('media.less', @bcMedia);
+.importComponent('labels-badges.less', @bcLabelsBadges);
+.importComponent('progress-bars.less', @bcProgressBars);
+.importComponent('accordion.less', @bcAccordion);
+.importComponent('carousel.less', @bcCarousel);
+.importComponent('hero-unit.less', @bcHeroUnit);
+
+// Utility classes
+.importComponent('utilities.less', @bcUtilities);
+
+
+// RESPONSIVE CLASSES
+// ------------------
+
+.importComponent('responsive-utilities.less', @bcResponsiveUtilities);
+
+
+// MEDIA QUERIES
+// ------------------
+
+// Large desktops
+.importComponent('responsive-1200px-min.less', @bcResponsive1200pxMin);
+
+// Tablets to regular desktops
+.importComponent('responsive-768px-979px.less', @bcResponsive768px979px);
+
+// Phones to portrait tablets and narrow desktops
+.importComponent('responsive-767px-max.less', @bcResponsive767pxMax);
+
+
+// RESPONSIVE NAVBAR
+// ------------------
+
+// From 979px and below, show a button to toggle navbar contents
+.importComponent('responsive-navbar.less', @bcResponsiveNavbar);
