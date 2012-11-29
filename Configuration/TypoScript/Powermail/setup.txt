@@ -1,0 +1,142 @@
+
+/**
+ * plugin.powermail
+ */
+plugin.tx_powermail {
+
+	view {
+		templateRootPath = EXT:adx_twitter_bootstrap/Resources/Private/PowermailTemplates/Templates/
+		partialRootPath = EXT:adx_twitter_bootstrap/Resources/Private/PowermailTemplates/Partials/
+		layoutRootPath = EXT:adx_twitter_bootstrap/Resources/Private/PowermailTemplates/Layouts/
+	}
+}
+
+lib.tx_adxtwitterbootstrap {
+
+	powermail {
+
+		spanCalculate = CASE
+		spanCalculate {
+
+			key.field = css
+
+			default = TEXT
+			default.value = 0
+
+			columnFull = TEXT
+			columnFull {
+				value = {$plugin.tx_adxtwitterbootstrap.variables.gridColumns}
+			}
+
+			columnHalf = TEXT
+			columnHalf {
+				value = {$plugin.tx_adxtwitterbootstrap.variables.gridColumns} / 2
+				prioriCalc = 1
+			}
+
+			columnHalfSingleRow < .columnHalf
+
+			columnThird = TEXT
+			columnThird {
+				value = {$plugin.tx_adxtwitterbootstrap.variables.gridColumns} / 3
+				prioriCalc = 1
+			}
+
+			columnThirdSingleRow < .columnThird
+
+			columnTwoThird = TEXT
+			columnTwoThird {
+				value = {$plugin.tx_adxtwitterbootstrap.variables.gridColumns} / 3 * 2
+				prioriCalc = 1
+			}
+
+			columnTwoThirdSingleRow < .columnTwoThird
+
+			columnQuarter = TEXT
+			columnQuarter {
+				value = {$plugin.tx_adxtwitterbootstrap.variables.gridColumns} / 4
+				prioriCalc = 1
+			}
+
+			columnQuarterSingleRow < .columnQuarter
+
+			columnTwoQuarter = TEXT
+			columnTwoQuarter {
+				value = {$plugin.tx_adxtwitterbootstrap.variables.gridColumns} / 4 * 2
+				prioriCalc = 1
+			}
+
+			columnTwoQuarterSingleRow < .columnTwoQuarter
+
+			columnThreeQuarter = TEXT
+			columnThreeQuarter {
+				value = {$plugin.tx_adxtwitterbootstrap.variables.gridColumns} / 4 * 3
+				prioriCalc = 1
+			}
+
+			columnThreeQuarterSingleRow < .columnThreeQuarter
+/*
+				columnInnerInline = LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db_powermail.xlf:tx_powermail_domain_model_fields.columnInnerInline
+				columnInnerHalf = LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db_powermail.xlf:tx_powermail_domain_model_fields.columnInnerHalf
+				columnInnerThird = LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db_powermail.xlf:tx_powermail_domain_model_fields.columnInnerThird
+				columnInnerQuarter = LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db_powermail.xlf:tx_powermail_domain_model_fields.columnInnerQuarter
+*/
+		}
+
+		fieldSpan =< lib.tx_adxtwitterbootstrap.powermail.spanCalculate
+		fieldSpan.stdWrap.ifEmpty = 
+		fieldSpan.stdWrap.required = 1
+		fieldSpan.stdWrap.noTrimWrap = | span||
+
+		itemSpan = TEXT
+		itemSpan {
+
+			value = {$plugin.tx_adxtwitterbootstrap.variables.gridColumns}
+			required = 1
+
+			if.isTrue.field = css
+
+			noTrimWrap = | span||
+		}
+
+		isRowOpen = COA
+		isRowOpen {
+
+			10 = TEXT
+			10 {
+
+				value = 0
+
+				override = 1
+				override.if.isFalse.data = register: countSpan
+
+				override.override = 1
+				override.override.if.inList = ,columnFull,columnHalfSingleRow,columnThirdSingleRow,columnTwoThirdSingleRow,columnQuarterSingleRow,columnTwoQuarterSingleRow,columnThreeQuarterSingleRow
+			}
+
+			20 = LOAD_REGISTER
+			20.countSpan.cObject =< lib.tx_adxtwitterbootstrap.powermail.spanCalculate
+			20.countSpan.cObject.stdWrap {
+				stdWrap.dataWrap = | + {register: countSpan}
+				prioriCalc = 1
+			}
+
+			30 = TEXT
+			30 {
+				if.value = {$plugin.tx_adxtwitterbootstrap.variables.gridColumns} - 1
+				if.value.prioriCalc = 1
+				if.isGreaterThan.data = register: countSpan
+
+				append = LOAD_REGISTER
+				append.countSpan = 0
+			}
+		}
+
+		isRowEnd = TEXT
+		isRowEnd {
+			value = 0
+			override = 1
+			override.if.isFalse.data = register: countSpan
+		}
+	}
+}

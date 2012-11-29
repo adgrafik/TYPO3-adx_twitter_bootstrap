@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="messages" date="2012-06-13T20:22:32Z" product-name="adx_less">
+	<file source-language="en" datatype="plaintext" original="messages" date="2012-06-13T20:22:32Z" product-name="adx_twitter_bootstrap">
 		<header/>
 		<body>
 			<trans-unit id="plugin.tx_adxtwitterbootstrap.common" xml:space="preserve">
