@@ -99,19 +99,18 @@ lib.tx_adxtwitterbootstrap {
 			noTrimWrap = | span||
 		}
 
-		isRowOpen = COA
-		isRowOpen {
+		controlsRowStartTag = COA
+		controlsRowStartTag {
 
 			10 = TEXT
 			10 {
 
-				value = 0
+				value = <div class="controls-row">
+				if.isFalse.data = register: countSpan
 
-				override = 1
-				override.if.isFalse.data = register: countSpan
-
-				override.override = 1
-				override.override.if.inList = ,columnFull,columnHalfSingleRow,columnThirdSingleRow,columnTwoThirdSingleRow,columnQuarterSingleRow,columnTwoQuarterSingleRow,columnThreeQuarterSingleRow
+				override = <div class="controls-row">
+				override.if.value = columnFull,columnHalfSingleRow,columnThirdSingleRow,columnTwoThirdSingleRow,columnQuarterSingleRow,columnTwoQuarterSingleRow,columnThreeQuarterSingleRow
+				override.if.isInList.field = css
 			}
 
 			20 = LOAD_REGISTER
@@ -125,18 +124,22 @@ lib.tx_adxtwitterbootstrap {
 			30 {
 				if.value = {$plugin.tx_adxtwitterbootstrap.variables.gridColumns} - 1
 				if.value.prioriCalc = 1
+
 				if.isGreaterThan.data = register: countSpan
+
+				if.isGreaterThan.override = {$plugin.tx_adxtwitterbootstrap.variables.gridColumns}
+				if.isGreaterThan.override.if.value = columnFull,columnHalfSingleRow,columnThirdSingleRow,columnTwoThirdSingleRow,columnQuarterSingleRow,columnTwoQuarterSingleRow,columnThreeQuarterSingleRow
+				if.isGreaterThan.override.if.isInList.field = css
 
 				append = LOAD_REGISTER
 				append.countSpan = 0
 			}
 		}
 
-		isRowEnd = TEXT
-		isRowEnd {
-			value = 0
-			override = 1
-			override.if.isFalse.data = register: countSpan
+		controlsRowEndTag = TEXT
+		controlsRowEndTag {
+			value = </div>
+			if.isFalse.data = register: countSpan
 		}
 	}
 }

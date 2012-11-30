@@ -29,6 +29,9 @@ plugin.tx_adxless {
 			pink = #c3325f
 			purple = #7a43b6
 
+			# misc
+			wellBackground = #f5f5f5
+
 			#
 			# bootstrap components
 			#
