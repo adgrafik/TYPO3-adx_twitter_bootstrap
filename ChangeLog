@@ -1,5 +1,6 @@
-1.0.1
-	[BUGFIX] Fix some missing variables of constants and setup.
+1.0.2
+	[BUGFIX] Fix some typos of constants and setup.
+	[TASK] Added all missing variables of constants and setup.
 	[FEATURE] Include powermail form support for grid system.
 
 1.0.1

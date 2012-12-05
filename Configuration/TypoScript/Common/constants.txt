@@ -163,97 +163,113 @@ plugin.tx_adxtwitterbootstrap {
 	variables {
 
 		#
-		# scaffolding
-		# customsubcategory=01_scaffolding=LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_conf.xlf:plugin.tx_adxtwitterbootstrap.variables.label.scaffolding
+		# Colors
+		# customsubcategory=01_colors=LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_conf.xlf:plugin.tx_adxtwitterbootstrap.variables.label.colors
 		#
 
-		# cat=adx_twitter_bootstrap variables/01_scaffolding/1; type=string; label=@bodyBackground
-		bodyBackground = @white
-		# cat=adx_twitter_bootstrap variables/01_scaffolding/2; type=string; label=@textColor
-		textColor = @grayDark
+		# cat=adx_twitter_bootstrap variables/01_colors/01; type=color; label=@black
+		black = #000
+		# cat=adx_twitter_bootstrap variables/01_colors/02; type=color; label=@grayDarker
+		grayDarker = #222
+		# cat=adx_twitter_bootstrap variables/01_colors/03; type=color; label=@grayDark
+		grayDark = #333
+		# cat=adx_twitter_bootstrap variables/01_colors/04; type=color; label=@gray
+		gray = #555
+		# cat=adx_twitter_bootstrap variables/01_colors/05; type=color; label=@grayLight
+		grayLight = #999
+		# cat=adx_twitter_bootstrap variables/01_colors/06; type=color; label=@grayLighter
+		grayLighter = #eee
+		# cat=adx_twitter_bootstrap variables/01_colors/07; type=color; label=@white
+		white = #fff
 
-		#
-		# colors
-		# customsubcategory=02_colors=LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_conf.xlf:plugin.tx_adxtwitterbootstrap.variables.label.colors
-		#
-
-		# cat=adx_twitter_bootstrap variables/02_colors/1; type=color; label=@blue
+		# cat=adx_twitter_bootstrap variables/01_colors/08; type=color; label=@blue
 		blue = #049cdb
-		# cat=adx_twitter_bootstrap variables/02_colors/2; type=color; label=@green
+		# cat=adx_twitter_bootstrap variables/01_colors/09; type=color; label=@blueDark
+		blueDark = #0064cd
+		# cat=adx_twitter_bootstrap variables/01_colors/10; type=color; label=@green
 		green = #46a546
-		# cat=adx_twitter_bootstrap variables/02_colors/3; type=color; label=@red
+		# cat=adx_twitter_bootstrap variables/01_colors/11; type=color; label=@red
 		red = #9d261d
-		# cat=adx_twitter_bootstrap variables/02_colors/4; type=color; label=@yellow
+		# cat=adx_twitter_bootstrap variables/01_colors/12; type=color; label=@yellow
 		yellow = #ffc40d
-		# cat=adx_twitter_bootstrap variables/02_colors/5; type=color; label=@orange
+		# cat=adx_twitter_bootstrap variables/01_colors/13; type=color; label=@orange
 		orange = #f89406
-		# cat=adx_twitter_bootstrap variables/02_colors/6; type=color; label=@pink
+		# cat=adx_twitter_bootstrap variables/01_colors/14; type=color; label=@pink
 		pink = #c3325f
-		# cat=adx_twitter_bootstrap variables/02_colors/7; type=color; label=@purple
+		# cat=adx_twitter_bootstrap variables/01_colors/15; type=color; label=@purple
 		purple = #7a43b6
 
 		#
-		# typography
-		# customsubcategory=03_typography=LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_conf.xlf:plugin.tx_adxtwitterbootstrap.variables.label.typography
+		# Scaffolding
+		# customsubcategory=02_scaffolding=LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_conf.xlf:plugin.tx_adxtwitterbootstrap.variables.label.scaffolding
 		#
 
-		# cat=adx_twitter_bootstrap variables/03_typography/1; type=string; label=@sansFontFamily
-		sansFontFamily = 'Helvetica Neue', Helvetica, Arial, sans-serif
-		# cat=adx_twitter_bootstrap variables/03_typography/2; type=string; label=@serifFontFamily
-		serifFontFamily = Georgia, 'Times New Roman', Times, serif
-		# cat=adx_twitter_bootstrap variables/03_typography/3; type=string; label=@monoFontFamily
-		monoFontFamily = Menlo, Monaco, 'Courier New', monospace
-		# cat=adx_twitter_bootstrap variables/03_typography/4; type=string; label=@baseFontSize
-		baseFontSize = 14px
-		# cat=adx_twitter_bootstrap variables/03_typography/5; type=string; label=@baseFontFamily
-		baseFontFamily = @sansFontFamily
-		# cat=adx_twitter_bootstrap variables/03_typography/6; type=string; label=@baseLineHeight
-		baseLineHeight = 20px
-		# cat=adx_twitter_bootstrap variables/03_typography/7; type=string; label=@altFontFamily
-		altFontFamily = @serifFontFamily
-		# cat=adx_twitter_bootstrap variables/03_typography/8; type=string; label=@headingsFontFamily
-		headingsFontFamily = inherit
-		# cat=adx_twitter_bootstrap variables/03_typography/9; type=string; label=@headingsFontWeight
-		headingsFontWeight = bold
-		# cat=adx_twitter_bootstrap variables/03_typography/10; type=string; label=@headingsColor
-		headingsColor = inherit
-		# cat=adx_twitter_bootstrap variables/03_typography/11; type=string; label=@fontSizeLarge
-		fontSizeLarge = @baseFontSize * 1.25
-		# cat=adx_twitter_bootstrap variables/03_typography/12; type=string; label=@fontSizeSmall
-		fontSizeSmall = @baseFontSize * 0.85
-		# cat=adx_twitter_bootstrap variables/03_typography/13; type=string; label=@fontSizeMini
-		fontSizeMini = @baseFontSize * 0.75
-		# cat=adx_twitter_bootstrap variables/03_typography/14; type=string; label=@paddingLarge
-		paddingLarge = 11px 19px
-		# cat=adx_twitter_bootstrap variables/03_typography/15; type=string; label=@paddingSmall
-		paddingSmall = 2px 10px
-		# cat=adx_twitter_bootstrap variables/03_typography/16; type=string; label=@paddingMini
-		paddingMini = 1px 6px
-		# cat=adx_twitter_bootstrap variables/03_typography/17; type=string; label=@baseBorderRadius
-		baseBorderRadius = 4px
-		# cat=adx_twitter_bootstrap variables/03_typography/18; type=string; label=@borderRadiusLarge
-		borderRadiusLarge = 6px
-		# cat=adx_twitter_bootstrap variables/03_typography/19; type=string; label=@borderRadiusSmall
-		borderRadiusSmall = 3px
-		# cat=adx_twitter_bootstrap variables/03_typography/20; type=string; label=@heroUnitBackground
-		heroUnitBackground = @grayLighter
-		# cat=adx_twitter_bootstrap variables/03_typography/21; type=string; label=@heroUnitHeadingColor
-		heroUnitHeadingColor = inherit
-		# cat=adx_twitter_bootstrap variables/03_typography/22; type=string; label=@heroUnitLeadColor
-		heroUnitLeadColor = inherit
+		# cat=adx_twitter_bootstrap variables/02_scaffolding/1; type=string; label=@bodyBackground
+		bodyBackground = @white
+		# cat=adx_twitter_bootstrap variables/02_scaffolding/2; type=string; label=@textColor
+		textColor = @grayDark
 
 		#
-		# links
-		# customsubcategory=04_links=LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_conf.xlf:plugin.tx_adxtwitterbootstrap.variables.label.links
+		# Links
+		# customsubcategory=03_links=LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_conf.xlf:plugin.tx_adxtwitterbootstrap.variables.label.links
 		#
 
-		# cat=adx_twitter_bootstrap variables/04_links/1; type=string; label=@linkColor
+		# cat=adx_twitter_bootstrap variables/03_links/1; type=string; label=@linkColor
 		linkColor = #08c
-		# cat=adx_twitter_bootstrap variables/04_links/2; type=string; label=@linkColorHover
+		# cat=adx_twitter_bootstrap variables/03_links/2; type=string; label=@linkColorHover
 		linkColorHover = darken(@linkColor, 15%)
 
 		#
-		# tables
+		# Typography
+		# customsubcategory=04_typography=LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_conf.xlf:plugin.tx_adxtwitterbootstrap.variables.label.typography
+		#
+
+		# cat=adx_twitter_bootstrap variables/04_typography/01; type=string; label=@sansFontFamily
+		sansFontFamily = 'Helvetica Neue', Helvetica, Arial, sans-serif
+		# cat=adx_twitter_bootstrap variables/04_typography/02; type=string; label=@serifFontFamily
+		serifFontFamily = Georgia, 'Times New Roman', Times, serif
+		# cat=adx_twitter_bootstrap variables/04_typography/03; type=string; label=@monoFontFamily
+		monoFontFamily = Menlo, Monaco, 'Courier New', monospace
+
+		# cat=adx_twitter_bootstrap variables/04_typography/04; type=string; label=@baseFontSize
+		baseFontSize = 14px
+		# cat=adx_twitter_bootstrap variables/04_typography/05; type=string; label=@baseFontFamily
+		baseFontFamily = @sansFontFamily
+		# cat=adx_twitter_bootstrap variables/04_typography/06; type=string; label=@baseLineHeight
+		baseLineHeight = 20px
+		# cat=adx_twitter_bootstrap variables/04_typography/07; type=string; label=@altFontFamily
+		altFontFamily = @serifFontFamily
+
+		# cat=adx_twitter_bootstrap variables/04_typography/08; type=string; label=@headingsFontFamily
+		headingsFontFamily = inherit
+		# cat=adx_twitter_bootstrap variables/04_typography/09; type=string; label=@headingsFontWeight
+		headingsFontWeight = bold
+		# cat=adx_twitter_bootstrap variables/04_typography/10; type=string; label=@headingsColor
+		headingsColor = inherit
+
+		# cat=adx_twitter_bootstrap variables/04_typography/11; type=string; label=@fontSizeLarge
+		fontSizeLarge = @baseFontSize * 1.25
+		# cat=adx_twitter_bootstrap variables/04_typography/12; type=string; label=@fontSizeSmall
+		fontSizeSmall = @baseFontSize * 0.85
+		# cat=adx_twitter_bootstrap variables/04_typography/13; type=string; label=@fontSizeMini
+		fontSizeMini = @baseFontSize * 0.75
+
+		# cat=adx_twitter_bootstrap variables/04_typography/14; type=string; label=@paddingLarge
+		paddingLarge = 11px 19px
+		# cat=adx_twitter_bootstrap variables/04_typography/15; type=string; label=@paddingSmall
+		paddingSmall = 2px 10px
+		# cat=adx_twitter_bootstrap variables/04_typography/16; type=string; label=@paddingMini
+		paddingMini = 1px 6px
+
+		# cat=adx_twitter_bootstrap variables/04_typography/17; type=string; label=@baseBorderRadius
+		baseBorderRadius = 4px
+		# cat=adx_twitter_bootstrap variables/04_typography/18; type=string; label=@borderRadiusLarge
+		borderRadiusLarge = 6px
+		# cat=adx_twitter_bootstrap variables/04_typography/19; type=string; label=@borderRadiusSmall
+		borderRadiusSmall = 3px
+
+		#
+		# Tables
 		# customsubcategory=05_tables=LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_conf.xlf:plugin.tx_adxtwitterbootstrap.variables.label.tables
 		#
 
@@ -267,131 +283,361 @@ plugin.tx_adxtwitterbootstrap {
 		tableBorder = #ddd
 
 		#
-		# forms
-		# customsubcategory=06_forms=LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_conf.xlf:plugin.tx_adxtwitterbootstrap.variables.label.forms
+		# Buttons
+		# customsubcategory=06_buttons=LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_conf.xlf:plugin.tx_adxtwitterbootstrap.variables.label.buttons
 		#
 
-		# cat=adx_twitter_bootstrap variables/06_forms/1; type=string; label=@placeholderText
-		placeholderText = @grayLight
-		# cat=adx_twitter_bootstrap variables/06_forms/2; type=string; label=@inputBackground
-		inputBackground = @white
-		# cat=adx_twitter_bootstrap variables/06_forms/3; type=string; label=@inputBorder
-		inputBorder = #ccc
-		# cat=adx_twitter_bootstrap variables/06_forms/4; type=string; label=@inputBorderRadius
-		inputBorderRadius = 3px
-		# cat=adx_twitter_bootstrap variables/06_forms/5; type=string; label=@inputDisabledBackground
-		inputDisabledBackground = @grayLighter
-		# cat=adx_twitter_bootstrap variables/06_forms/6; type=string; label=@formActionsBackground
-		formActionsBackground = #f5f5f5
-		# cat=adx_twitter_bootstrap variables/06_forms/7; type=string; label=@btnPrimaryBackground
+		# cat=adx_twitter_bootstrap variables/06_buttons/01; type=string; label=@btnBackground
+		btnBackground = @white
+		# cat=adx_twitter_bootstrap variables/06_buttons/02; type=string; label=@btnBackgroundHighlight
+		btnBackgroundHighlight = darken(@white, 10%)
+		# cat=adx_twitter_bootstrap variables/06_buttons/03; type=string; label=@btnBorder
+		btnBorder = #bbb
+
+		# cat=adx_twitter_bootstrap variables/06_buttons/04; type=string; label=@btnPrimaryBackground
 		btnPrimaryBackground = @linkColor
-		# cat=adx_twitter_bootstrap variables/06_forms/8; type=string; label=@btnPrimaryBackgroundHighlight
+		# cat=adx_twitter_bootstrap variables/06_buttons/05; type=string; label=@btnPrimaryBackgroundHighlight
 		btnPrimaryBackgroundHighlight = darken(@white, 10%)
 
-		#
-		# formStatesAndAlerts
-		# customsubcategory=07_formStatesAndAlerts=LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_conf.xlf:plugin.tx_adxtwitterbootstrap.variables.label.formStatesAndAlerts
-		#
+		# cat=adx_twitter_bootstrap variables/06_buttons/06; type=string; label=@btnInfoBackground
+		btnInfoBackground = #5bc0de
+		# cat=adx_twitter_bootstrap variables/06_buttons/07; type=string; label=@btnInfoBackgroundHighlight
+		btnInfoBackgroundHighlight = #2f96b4
 
-		# cat=adx_twitter_bootstrap variables/07_formStatesAndAlerts/1; type=string; label=@warningText
-		warningText = #c09853
-		# cat=adx_twitter_bootstrap variables/07_formStatesAndAlerts/2; type=string; label=@warningBackground
-		warningBackground = #fcf8e3
-		# cat=adx_twitter_bootstrap variables/07_formStatesAndAlerts/3; type=string; label=@errorText
-		errorText = #b94a48
-		# cat=adx_twitter_bootstrap variables/07_formStatesAndAlerts/4; type=string; label=@errorBackground
-		errorBackground = #f2dede
-		# cat=adx_twitter_bootstrap variables/07_formStatesAndAlerts/5; type=string; label=@successText
-		successText = #468847
-		# cat=adx_twitter_bootstrap variables/07_formStatesAndAlerts/6; type=string; label=@successBackground
-		successBackground = #dff0d8
-		# cat=adx_twitter_bootstrap variables/07_formStatesAndAlerts/7; type=string; label=@infoText
-		infoText = #3a87ad
-		# cat=adx_twitter_bootstrap variables/07_formStatesAndAlerts/8; type=string; label=@infoBackground
-		infoBackground = #d9edf7
+		# cat=adx_twitter_bootstrap variables/06_buttons/08; type=string; label=@btnSuccessBackground
+		btnSuccessBackground = #62c462
+		# cat=adx_twitter_bootstrap variables/06_buttons/09; type=string; label=@btnSuccessBackgroundHighlight
+		btnSuccessBackgroundHighlight = #51a351
 
-		#
-		# navbar
-		# customsubcategory=08_navbar=LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_conf.xlf:plugin.tx_adxtwitterbootstrap.variables.label.navbar
-		#
+		# cat=adx_twitter_bootstrap variables/06_buttons/10; type=string; label=@btnWarningBackground
+		btnWarningBackground = lighten(@orange, 15%)
+		# cat=adx_twitter_bootstrap variables/06_buttons/11; type=string; label=@btnWarningBackgroundHighlight
+		btnWarningBackgroundHighlight = @orange
 
-		# cat=adx_twitter_bootstrap variables/08_navbar/1; type=string; label=@navbarHeight
-		navbarHeight = 40px
-		# cat=adx_twitter_bootstrap variables/08_navbar/2; type=string; label=@navbarBackground
-		navbarBackground = @grayDarker
-		# cat=adx_twitter_bootstrap variables/08_navbar/3; type=string; label=@navbarBackgroundHighlight
-		navbarBackgroundHighlight = @grayDark
-		# cat=adx_twitter_bootstrap variables/08_navbar/4; type=string; label=@navbarText
-		navbarText = @grayLight
-		# cat=adx_twitter_bootstrap variables/08_navbar/5; type=string; label=@navbarBrandColor
-		navbarBrandColor = @navbarLinkColor
-		# cat=adx_twitter_bootstrap variables/08_navbar/6; type=string; label=@navbarLinkColor
-		navbarLinkColor = @grayLight
-		# cat=adx_twitter_bootstrap variables/08_navbar/7; type=string; label=@navbarLinkColorHover
-		navbarLinkColorHover = @white
-		# cat=adx_twitter_bootstrap variables/08_navbar/8; type=string; label=@navbarLinkColorActive
-		navbarLinkColorActive = @navbarLinkColorHover
-		# cat=adx_twitter_bootstrap variables/08_navbar/9; type=string; label=@navbarLinkBackgroundHover
-		navbarLinkBackgroundHover = transparent
-		# cat=adx_twitter_bootstrap variables/08_navbar/10; type=string; label=@navbarLinkBackgroundActive
-		navbarLinkBackgroundActive = @navbarBackground
-		# cat=adx_twitter_bootstrap variables/08_navbar/11; type=string; label=@navbarSearchBackground
-		navbarSearchBackground = lighten(@navbarBackground, 25%)
-		# cat=adx_twitter_bootstrap variables/08_navbar/12; type=string; label=@navbarSearchBackgroundFocus
-		navbarSearchBackgroundFocus = @white
-		# cat=adx_twitter_bootstrap variables/08_navbar/13; type=string; label=@navbarSearchBorder
-		navbarSearchBorder = darken(@navbarSearchBackground, 30%)
-		# cat=adx_twitter_bootstrap variables/08_navbar/14; type=string; label=@navbarSearchPlaceholderColor
-		navbarSearchPlaceholderColor = #ccc
-		# cat=adx_twitter_bootstrap variables/08_navbar/15; type=string; label=@navbarCollapseWidth
-		navbarCollapseWidth = 979px
-		# cat=adx_twitter_bootstrap variables/08_navbar/16; type=string; label=@navbarCollapseDesktopWidth
-		navbarCollapseDesktopWidth = @navbarCollapseWidth + 1
+		# cat=adx_twitter_bootstrap variables/06_buttons/12; type=string; label=@btnDangerBackground
+		btnDangerBackground = #ee5f5b
+		# cat=adx_twitter_bootstrap variables/06_buttons/13; type=string; label=@btnDangerBackgroundHighlight
+		btnDangerBackgroundHighlight = #bd362f
+
+		# cat=adx_twitter_bootstrap variables/06_buttons/14; type=string; label=@btnInverseBackground
+		btnInverseBackground = #444
+		# cat=adx_twitter_bootstrap variables/06_buttons/15; type=string; label=@btnInverseBackgroundHighlight
+		btnInverseBackgroundHighlight = @grayDarker
 
 		#
-		# dropdowns
-		# customsubcategory=09_dropdowns=LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_conf.xlf:plugin.tx_adxtwitterbootstrap.variables.label.dropdowns
+		# Forms
+		# customsubcategory=07_forms=LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_conf.xlf:plugin.tx_adxtwitterbootstrap.variables.label.forms
 		#
 
-		# cat=adx_twitter_bootstrap variables/09_dropdowns/1; type=string; label=@dropdownBackground
+		# cat=adx_twitter_bootstrap variables/07_forms/1; type=string; label=@inputBackground
+		inputBackground = @white
+		# cat=adx_twitter_bootstrap variables/07_forms/2; type=string; label=@inputBorder
+		inputBorder = #ccc
+		# cat=adx_twitter_bootstrap variables/07_forms/3; type=string; label=@inputBorderRadius
+		inputBorderRadius = 3px
+		# cat=adx_twitter_bootstrap variables/07_forms/4; type=string; label=@inputDisabledBackground
+		inputDisabledBackground = @grayLighter
+		# cat=adx_twitter_bootstrap variables/07_forms/5; type=string; label=@formActionsBackground
+		formActionsBackground = #f5f5f5
+		# cat=adx_twitter_bootstrap variables/07_forms/6; type=string; label=@inputHeight
+		inputHeight = @baseLineHeight + 10px  // base line-height + 8px vertical padding + 2px top/bottom border
+		# cat=adx_twitter_bootstrap variables/07_forms/7; type=string; label=@placeholderText
+		placeholderText = @grayLight
+
+		#
+		# Dropdowns
+		# customsubcategory=08_dropdowns=LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_conf.xlf:plugin.tx_adxtwitterbootstrap.variables.label.dropdowns
+		#
+
+		# cat=adx_twitter_bootstrap variables/08_dropdowns/01; type=string; label=@dropdownDividerTop
+		dropdownDividerTop = #e5e5e5
+		# cat=adx_twitter_bootstrap variables/08_dropdowns/02; type=string; label=@dropdownDividerBottom
+		dropdownDividerBottom = @white
+		# cat=adx_twitter_bootstrap variables/08_dropdowns/03; type=string; label=@dropdownBackground
 		dropdownBackground = @white
-		# cat=adx_twitter_bootstrap variables/09_dropdowns/2; type=string; label=@dropdownBorder
+		# cat=adx_twitter_bootstrap variables/08_dropdowns/04; type=string; label=@dropdownBorder
 		dropdownBorder = rgba(0,0,0,.2)
-		# cat=adx_twitter_bootstrap variables/09_dropdowns/3; type=string; label=@dropdownLinkColor
+		# cat=adx_twitter_bootstrap variables/08_dropdowns/05; type=string; label=@dropdownLinkColor
 		dropdownLinkColor = @grayDark
-		# cat=adx_twitter_bootstrap variables/09_dropdowns/4; type=string; label=@dropdownLinkColorHover
+		# cat=adx_twitter_bootstrap variables/08_dropdowns/06; type=string; label=@dropdownLinkColorHover
 		dropdownLinkColorHover = @white
-		# cat=adx_twitter_bootstrap variables/09_dropdowns/5; type=string; label=@dropdownLinkBackgroundHover
+		# cat=adx_twitter_bootstrap variables/08_dropdowns/07; type=string; label=@dropdownLinkColorActive
+		dropdownLinkColorActive =  @dropdownLinkColor
+		# cat=adx_twitter_bootstrap variables/08_dropdowns/08; type=string; label=@dropdownLinkBackgroundActive
+		dropdownLinkBackgroundActive = @linkColor
+		# cat=adx_twitter_bootstrap variables/08_dropdowns/09; type=string; label=@dropdownLinkBackgroundHover
 		dropdownLinkBackgroundHover = @linkColor
 
 		#
-		# grid
-		# customsubcategory=10_gridSystem=LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_conf.xlf:plugin.tx_adxtwitterbootstrap.variables.label.grid
+		# Z-index master list
+		# customsubcategory=09_zindex=LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_conf.xlf:plugin.tx_adxtwitterbootstrap.variables.label.zindex
 		#
 
-		# cat=adx_twitter_bootstrap variables/10_gridSystem/1; type=string; label=@gridColumns
-		gridColumns = 12
-		# cat=adx_twitter_bootstrap variables/10_gridSystem/2; type=string; label=@gridColumnWidth
-		gridColumnWidth = 60px
-		# cat=adx_twitter_bootstrap variables/10_gridSystem/3; type=string; label=@gridGutterWidth
-		gridGutterWidth = 20px
-		# cat=adx_twitter_bootstrap variables/10_gridSystem/4; type=string; label=@gridColumnWidth1200
-		gridColumnWidth1200 = 70px
-		# cat=adx_twitter_bootstrap variables/10_gridSystem/5; type=string; label=@gridGutterWidth1200
-		gridGutterWidth1200 = 30px
-		# cat=adx_twitter_bootstrap variables/10_gridSystem/6; type=string; label=@gridColumnWidth768
-		gridColumnWidth768 = 42px
-		# cat=adx_twitter_bootstrap variables/10_gridSystem/7; type=string; label=@gridGutterWidth768
-		gridGutterWidth768 = 20px
+		# cat=adx_twitter_bootstrap variables/09_zindex/1; type=string; label=@zindexDropdown
+		zindexDropdown = 1000
+		# cat=adx_twitter_bootstrap variables/09_zindex/2; type=string; label=@zindexPopover
+		zindexPopover = 1010
+		# cat=adx_twitter_bootstrap variables/09_zindex/3; type=string; label=@zindexTooltip
+		zindexTooltip = 1030
+		# cat=adx_twitter_bootstrap variables/09_zindex/4; type=string; label=@zindexFixedNavbar
+		zindexFixedNavbar = 1030
+		# cat=adx_twitter_bootstrap variables/09_zindex/5; type=string; label=@zindexModalBackdrop
+		zindexModalBackdrop = 1040
+		# cat=adx_twitter_bootstrap variables/09_zindex/6; type=string; label=@zindexModal
+		zindexModal = 1050
 
 		#
-		# sprites
-		# customsubcategory=11_sprites=LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_conf.xlf:plugin.tx_adxtwitterbootstrap.variables.label.sprites
+		# Sprites
+		# customsubcategory=10_sprites=LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_conf.xlf:plugin.tx_adxtwitterbootstrap.variables.label.sprites
 		#
 
-		# cat=adx_twitter_bootstrap variables/11_sprites/1; type=string; label=@iconSpritePath
+		# cat=adx_twitter_bootstrap variables/10_sprites/1; type=string; label=@iconSpritePath
 		iconSpritePath = '../../typo3conf/ext/adx_twitter_bootstrap/Resources/Public/Images/glyphicons-halflings.png'
-		# cat=adx_twitter_bootstrap variables/11_sprites/2; type=string; label=@iconWhiteSpritePath
+		# cat=adx_twitter_bootstrap variables/10_sprites/2; type=string; label=@iconWhiteSpritePath
 		iconWhiteSpritePath = '../../typo3conf/ext/adx_twitter_bootstrap/Resources/Public/Images/glyphicons-halflings-white.png'
+
+		#
+		# Hr border color
+		# customsubcategory=11_hr=LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_conf.xlf:plugin.tx_adxtwitterbootstrap.variables.label.hr
+		#
+
+		# cat=adx_twitter_bootstrap variables/11_hr/1; type=string; label=@hrBorder
+		hrBorder = @grayLighter
+
+		#
+		# Horizontal forms & lists
+		# customsubcategory=12_horizontalFormsAndLists=LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_conf.xlf:plugin.tx_adxtwitterbootstrap.variables.label.horizontalFormsAndLists
+		#
+
+		# cat=adx_twitter_bootstrap variables/12_horizontalFormsAndLists/1; type=string; label=@horizontalComponentOffset
+		horizontalComponentOffset = 180px
+
+		#
+		# Wells
+		# customsubcategory=13_wells=LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_conf.xlf:plugin.tx_adxtwitterbootstrap.variables.label.wells
+		#
+
+		# cat=adx_twitter_bootstrap variables/13_wells/1; type=string; label=@wellBackground
+		wellBackground = #f5f5f5
+
+		#
+		# Navbar
+		# customsubcategory=14_navbar=LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_conf.xlf:plugin.tx_adxtwitterbootstrap.variables.label.navbar
+		#
+
+		# cat=adx_twitter_bootstrap variables/14_navbar/01; type=string; label=@navbarCollapseWidth
+		navbarCollapseWidth = 979px
+		# cat=adx_twitter_bootstrap variables/14_navbar/02; type=string; label=@navbarCollapseDesktopWidth
+		navbarCollapseDesktopWidth = @navbarCollapseWidth + 1
+
+		# cat=adx_twitter_bootstrap variables/14_navbar/03; type=string; label=@navbarHeight
+		navbarHeight = 40px
+		# cat=adx_twitter_bootstrap variables/14_navbar/04; type=string; label=@navbarBackground
+		navbarBackground = @grayDarker
+		# cat=adx_twitter_bootstrap variables/14_navbar/05; type=string; label=@navbarBackgroundHighlight
+		navbarBackgroundHighlight = @grayDark
+		# cat=adx_twitter_bootstrap variables/14_navbar/06; type=string; label=@navbarBorder
+		navbarBorder = darken(@navbarBackground, 12%)
+
+		# cat=adx_twitter_bootstrap variables/14_navbar/07; type=string; label=@navbarText
+		navbarText = @grayLight
+		# cat=adx_twitter_bootstrap variables/14_navbar/08; type=string; label=@navbarLinkColor
+		navbarLinkColor = @grayLight
+		# cat=adx_twitter_bootstrap variables/14_navbar/09; type=string; label=@navbarLinkColorHover
+		navbarLinkColorHover = @white
+		# cat=adx_twitter_bootstrap variables/14_navbar/10; type=string; label=@navbarLinkColorActive
+		navbarLinkColorActive = @navbarLinkColorHover
+		# cat=adx_twitter_bootstrap variables/14_navbar/11; type=string; label=@navbarLinkBackgroundHover
+		navbarLinkBackgroundHover = transparent
+		# cat=adx_twitter_bootstrap variables/14_navbar/12; type=string; label=@navbarLinkBackgroundActive
+		navbarLinkBackgroundActive = @navbarBackground
+
+		# cat=adx_twitter_bootstrap variables/14_navbar/13; type=string; label=@navbarBrandColor
+		navbarBrandColor = @navbarLinkColor
+
+		# cat=adx_twitter_bootstrap variables/14_navbar/14; type=string; label=@navbarInverseBackground
+		navbarInverseBackground = #111111
+		# cat=adx_twitter_bootstrap variables/14_navbar/15; type=string; label=@navbarInverseBackgroundHighlight
+		navbarInverseBackgroundHighlight = #222222
+		# cat=adx_twitter_bootstrap variables/14_navbar/16; type=string; label=@navbarInverseBorder
+		navbarInverseBorder = #252525
+
+		# cat=adx_twitter_bootstrap variables/14_navbar/17; type=string; label=@navbarInverseText
+		navbarInverseText = @grayLight
+		# cat=adx_twitter_bootstrap variables/14_navbar/18; type=string; label=@navbarInverseLinkColor
+		navbarInverseLinkColor = @grayLight
+		# cat=adx_twitter_bootstrap variables/14_navbar/19; type=string; label=@navbarInverseLinkColorHover
+		navbarInverseLinkColorHover = @white
+		# cat=adx_twitter_bootstrap variables/14_navbar/20; type=string; label=@navbarInverseLinkColorActive
+		navbarInverseLinkColorActive = @navbarInverseLinkColorHover
+		# cat=adx_twitter_bootstrap variables/14_navbar/21; type=string; label=@navbarInverseLinkBackgroundHover
+		navbarInverseLinkBackgroundHover = transparent
+		# cat=adx_twitter_bootstrap variables/14_navbar/22; type=string; label=@navbarInverseLinkBackgroundActive
+		navbarInverseLinkBackgroundActive = @navbarInverseBackground
+
+		# cat=adx_twitter_bootstrap variables/14_navbar/23; type=string; label=@navbarInverseSearchBackground
+		navbarInverseSearchBackground = lighten(@navbarInverseBackground, 25%)
+		# cat=adx_twitter_bootstrap variables/14_navbar/24; type=string; label=@navbarInverseSearchBackgroundFocus
+		navbarInverseSearchBackgroundFocus = @white
+		# cat=adx_twitter_bootstrap variables/14_navbar/25; type=string; label=@navbarInverseSearchBorder
+		navbarInverseSearchBorder = @navbarInverseBackground
+		# cat=adx_twitter_bootstrap variables/14_navbar/26; type=string; label=@navbarInverseSearchPlaceholderColor
+		navbarInverseSearchPlaceholderColor = #ccc
+
+		# cat=adx_twitter_bootstrap variables/14_navbar/27; type=string; label=@navbarInverseBrandColor
+		navbarInverseBrandColor = @navbarInverseLinkColor
+
+		#
+		# Pagination
+		# customsubcategory=15_pagination=LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_conf.xlf:plugin.tx_adxtwitterbootstrap.variables.label.pagination
+		#
+
+		# cat=adx_twitter_bootstrap variables/15_pagination/1; type=string; label=@paginationBackground
+		paginationBackground = #fff
+		# cat=adx_twitter_bootstrap variables/15_pagination/2; type=string; label=@paginationBorder
+		paginationBorder = #ddd
+		# cat=adx_twitter_bootstrap variables/15_pagination/3; type=string; label=@paginationActiveBackground
+		paginationActiveBackground = #f5f5f5
+
+		#
+		# Hero unit
+		# customsubcategory=16_heroUnit=LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_conf.xlf:plugin.tx_adxtwitterbootstrap.variables.label.heroUnit
+		#
+
+		# cat=adx_twitter_bootstrap variables/16_heroUnit/1; type=string; label=@heroUnitBackground
+		heroUnitBackground = @grayLighter
+		# cat=adx_twitter_bootstrap variables/16_heroUnit/2; type=string; label=@heroUnitHeadingColor
+		heroUnitHeadingColor = inherit
+		# cat=adx_twitter_bootstrap variables/16_heroUnit/3; type=string; label=@heroUnitLeadColor
+		heroUnitLeadColor = inherit
+
+		#
+		# Form states and alerts
+		# customsubcategory=17_formStatesAndAlerts=LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_conf.xlf:plugin.tx_adxtwitterbootstrap.variables.label.formStatesAndAlerts
+		#
+
+		# cat=adx_twitter_bootstrap variables/17_formStatesAndAlerts/01; type=string; label=@warningText
+		warningText = #c09853
+		# cat=adx_twitter_bootstrap variables/17_formStatesAndAlerts/02; type=string; label=@warningBackground
+		warningBackground = #fcf8e3
+		# cat=adx_twitter_bootstrap variables/17_formStatesAndAlerts/03; type=string; label=@warningBorder
+		warningBorder = darken(spin(@warningBackground, -10), 3%)
+
+		# cat=adx_twitter_bootstrap variables/17_formStatesAndAlerts/04; type=string; label=@errorText
+		errorText = #b94a48
+		# cat=adx_twitter_bootstrap variables/17_formStatesAndAlerts/05; type=string; label=@errorBackground
+		errorBackground = #f2dede
+		# cat=adx_twitter_bootstrap variables/17_formStatesAndAlerts/06; type=string; label=@errorBorder
+		errorBorder = darken(spin(@errorBackground, -10), 3%)
+
+		# cat=adx_twitter_bootstrap variables/17_formStatesAndAlerts/07; type=string; label=@successText
+		successText = #468847
+		# cat=adx_twitter_bootstrap variables/17_formStatesAndAlerts/08; type=string; label=@successBackground
+		successBackground = #dff0d8
+		# cat=adx_twitter_bootstrap variables/17_formStatesAndAlerts/09; type=string; label=@successBorder
+		successBorder = darken(spin(@successBackground, -10), 5%)
+
+		# cat=adx_twitter_bootstrap variables/17_formStatesAndAlerts/10; type=string; label=@infoText
+		infoText = #3a87ad
+		# cat=adx_twitter_bootstrap variables/17_formStatesAndAlerts/11; type=string; label=@infoBackground
+		infoBackground = #d9edf7
+		# cat=adx_twitter_bootstrap variables/17_formStatesAndAlerts/12; type=string; label=@infoBorder
+		infoBorder = darken(spin(@infoBackground, -10), 7%)
+
+		#
+		# Tooltips and popovers
+		# customsubcategory=18_tooltipsAndPopovers=LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_conf.xlf:plugin.tx_adxtwitterbootstrap.variables.label.tooltipsAndPopovers
+		#
+
+		# cat=adx_twitter_bootstrap variables/18_tooltipsAndPopovers/01; type=string; label=@tooltipColor
+		tooltipColor = #fff
+		# cat=adx_twitter_bootstrap variables/18_tooltipsAndPopovers/02; type=string; label=@tooltipBackground
+		tooltipBackground = #000
+		# cat=adx_twitter_bootstrap variables/18_tooltipsAndPopovers/03; type=string; label=@tooltipArrowWidth
+		tooltipArrowWidth = 5px
+		# cat=adx_twitter_bootstrap variables/18_tooltipsAndPopovers/04; type=string; label=@tooltipArrowColor
+		tooltipArrowColor = @tooltipBackground
+
+		# cat=adx_twitter_bootstrap variables/18_tooltipsAndPopovers/05; type=string; label=@popoverBackground
+		popoverBackground = #fff
+		# cat=adx_twitter_bootstrap variables/18_tooltipsAndPopovers/06; type=string; label=@popoverArrowWidth
+		popoverArrowWidth = 10px
+		# cat=adx_twitter_bootstrap variables/18_tooltipsAndPopovers/07; type=string; label=@popoverArrowColor
+		popoverArrowColor = #fff
+		# cat=adx_twitter_bootstrap variables/18_tooltipsAndPopovers/08; type=string; label=@popoverTitleBackground
+		popoverTitleBackground = darken(@popoverBackground, 3%)
+
+		# cat=adx_twitter_bootstrap variables/18_tooltipsAndPopovers/09; type=string; label=@popoverArrowOuterWidth
+		popoverArrowOuterWidth = @popoverArrowWidth + 1
+		# cat=adx_twitter_bootstrap variables/18_tooltipsAndPopovers/10; type=string; label=@popoverArrowOuterColor
+		popoverArrowOuterColor = rgba(0,0,0,.25)
+
+		#
+		# Grid system default (940px)
+		# customsubcategory=19_gridDefault=LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_conf.xlf:plugin.tx_adxtwitterbootstrap.variables.label.gridDefault
+		#
+
+		# cat=adx_twitter_bootstrap variables/19_gridDefault/1; type=string; label=@gridColumns
+		gridColumns = 12
+		# cat=adx_twitter_bootstrap variables/19_gridDefault/2; type=string; label=@gridColumnWidth
+		gridColumnWidth = 60px
+		# cat=adx_twitter_bootstrap variables/19_gridDefault/3; type=string; label=@gridGutterWidth
+		gridGutterWidth = 20px
+		# cat=adx_twitter_bootstrap variables/19_gridDefault/4; type=string; label=@gridRowWidth
+		gridRowWidth = (@gridColumns * @gridColumnWidth) + (@gridGutterWidth * (@gridColumns - 1))
+
+		#
+		# Grid system large (1200px min)
+		# customsubcategory=20_gridLarge=LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_conf.xlf:plugin.tx_adxtwitterbootstrap.variables.label.gridLarge
+		#
+
+		# cat=adx_twitter_bootstrap variables/20_gridLarge/1; type=string; label=@gridColumnWidth1200
+		gridColumnWidth1200 = 70px
+		# cat=adx_twitter_bootstrap variables/20_gridLarge/2; type=string; label=@gridGutterWidth1200
+		gridGutterWidth1200 = 30px
+		# cat=adx_twitter_bootstrap variables/20_gridLarge/3; type=string; label=@gridRowWidth1200
+		gridRowWidth1200 = (@gridColumns * @gridColumnWidth1200) + (@gridGutterWidth1200 * (@gridColumns - 1))
+
+		#
+		# Grid system medium (768px-979px)
+		# customsubcategory=21_gridMedium=LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_conf.xlf:plugin.tx_adxtwitterbootstrap.variables.label.gridMedium
+		#
+
+		# cat=adx_twitter_bootstrap variables/21_gridMedium/1; type=string; label=@gridColumnWidth768
+		gridColumnWidth768 = 42px
+		# cat=adx_twitter_bootstrap variables/21_gridMedium/2; type=string; label=@gridGutterWidth768
+		gridGutterWidth768 = 20px
+		# cat=adx_twitter_bootstrap variables/21_gridMedium/2; type=string; label=@gridRowWidth768
+		gridRowWidth768 = (@gridColumns * @gridColumnWidth768) + (@gridGutterWidth768 * (@gridColumns - 1))
+
+		#
+		# Fluid default (940px)
+		# customsubcategory=22_fluidDefault=LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_conf.xlf:plugin.tx_adxtwitterbootstrap.variables.label.fluidDefault
+		#
+
+		# cat=adx_twitter_bootstrap variables/22_fluidDefault/1; type=string; label=@fluidGridColumnWidth
+		fluidGridColumnWidth = percentage(@gridColumnWidth / @gridRowWidth)
+		# cat=adx_twitter_bootstrap variables/22_fluidDefault/2; type=string; label=@fluidGridGutterWidth
+		fluidGridGutterWidth = percentage(@gridGutterWidth / @gridRowWidth)
+
+		#
+		# Fluid large (1200px min)
+		# customsubcategory=23_fluidLarge=LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_conf.xlf:plugin.tx_adxtwitterbootstrap.variables.label.fluidLarge
+		#
+
+		# cat=adx_twitter_bootstrap variables/23_fluidLarge/1; type=string; label=@fluidGridColumnWidth1200
+		fluidGridColumnWidth1200 = percentage(@gridColumnWidth1200 / @gridRowWidth1200)
+		# cat=adx_twitter_bootstrap variables/23_fluidLarge/2; type=string; label=@fluidGridGutterWidth1200
+		fluidGridGutterWidth1200 = percentage(@gridGutterWidth1200 / @gridRowWidth1200)
+
+		#
+		# Fluid medium (1200px min)
+		# customsubcategory=24_fluidMedium=LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_conf.xlf:plugin.tx_adxtwitterbootstrap.variables.label.fluidMedium
+		#
+
+		# cat=adx_twitter_bootstrap variables/24_fluidMedium/1; type=string; label=@fluidGridColumnWidth1200
+		fluidGridColumnWidth768 = percentage(@gridColumnWidth768 / @gridRowWidth768)
+		# cat=adx_twitter_bootstrap variables/24_fluidMedium/2; type=string; label=@fluidGridGutterWidth768
+		fluidGridGutterWidth768 = percentage(@gridGutterWidth768 / @gridRowWidth768)
 	}
 }

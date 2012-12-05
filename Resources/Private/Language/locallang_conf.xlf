@@ -188,48 +188,100 @@
 				<source>Typeahead</source>
 			</trans-unit>
 
-			<trans-unit id="plugin.tx_adxtwitterbootstrap.variables.label.scaffolding" xml:space="preserve">
-				<source>Scaffolding</source>
-			</trans-unit>
-
 			<trans-unit id="plugin.tx_adxtwitterbootstrap.variables.label.colors" xml:space="preserve">
 				<source>Colors</source>
 			</trans-unit>
 
-			<trans-unit id="plugin.tx_adxtwitterbootstrap.variables.label.typography" xml:space="preserve">
-				<source>Typography</source>
+			<trans-unit id="plugin.tx_adxtwitterbootstrap.variables.label.scaffolding" xml:space="preserve">
+				<source>Scaffolding</source>
 			</trans-unit>
 
 			<trans-unit id="plugin.tx_adxtwitterbootstrap.variables.label.links" xml:space="preserve">
 				<source>Links</source>
 			</trans-unit>
 
+			<trans-unit id="plugin.tx_adxtwitterbootstrap.variables.label.typography" xml:space="preserve">
+				<source>Typography</source>
+			</trans-unit>
+
 			<trans-unit id="plugin.tx_adxtwitterbootstrap.variables.label.tables" xml:space="preserve">
 				<source>Tables</source>
+			</trans-unit>
+
+			<trans-unit id="plugin.tx_adxtwitterbootstrap.variables.label.buttons" xml:space="preserve">
+				<source>Buttons</source>
 			</trans-unit>
 
 			<trans-unit id="plugin.tx_adxtwitterbootstrap.variables.label.forms" xml:space="preserve">
 				<source>Forms</source>
 			</trans-unit>
 
-			<trans-unit id="plugin.tx_adxtwitterbootstrap.variables.label.formStatesAndAlerts" xml:space="preserve">
-				<source>Form states &amp; alerts</source>
+			<trans-unit id="plugin.tx_adxtwitterbootstrap.variables.label.dropdowns" xml:space="preserve">
+				<source>Dropdowns</source>
+			</trans-unit>
+
+			<trans-unit id="plugin.tx_adxtwitterbootstrap.variables.label.zindex" xml:space="preserve">
+				<source>Z-index master list</source>
+			</trans-unit>
+
+			<trans-unit id="plugin.tx_adxtwitterbootstrap.variables.label.sprites" xml:space="preserve">
+				<source>Sprites</source>
+			</trans-unit>
+
+			<trans-unit id="plugin.tx_adxtwitterbootstrap.variables.label.hr" xml:space="preserve">
+				<source>Hr border color</source>
+			</trans-unit>
+
+			<trans-unit id="plugin.tx_adxtwitterbootstrap.variables.label.horizontalFormsAndLists" xml:space="preserve">
+				<source>Horizontal forms &amp; lists</source>
+			</trans-unit>
+
+			<trans-unit id="plugin.tx_adxtwitterbootstrap.variables.label.wells" xml:space="preserve">
+				<source>Wells</source>
 			</trans-unit>
 
 			<trans-unit id="plugin.tx_adxtwitterbootstrap.variables.label.navbar" xml:space="preserve">
 				<source>Navbar</source>
 			</trans-unit>
 
-			<trans-unit id="plugin.tx_adxtwitterbootstrap.variables.label.dropdowns" xml:space="preserve">
-				<source>Dropdowns</source>
+			<trans-unit id="plugin.tx_adxtwitterbootstrap.variables.label.pagination" xml:space="preserve">
+				<source>Pagination</source>
 			</trans-unit>
 
-			<trans-unit id="plugin.tx_adxtwitterbootstrap.variables.label.grid" xml:space="preserve">
-				<source>Grid system</source>
+			<trans-unit id="plugin.tx_adxtwitterbootstrap.variables.label.heroUnit" xml:space="preserve">
+				<source>Hero unit</source>
 			</trans-unit>
 
-			<trans-unit id="plugin.tx_adxtwitterbootstrap.variables.label.sprites" xml:space="preserve">
-				<source>Sprites</source>
+			<trans-unit id="plugin.tx_adxtwitterbootstrap.variables.label.formStatesAndAlerts" xml:space="preserve">
+				<source>Form states &amp; alerts</source>
+			</trans-unit>
+
+			<trans-unit id="plugin.tx_adxtwitterbootstrap.variables.label.tooltipsAndPopovers" xml:space="preserve">
+				<source>Tooltips and popovers</source>
+			</trans-unit>
+
+			<trans-unit id="plugin.tx_adxtwitterbootstrap.variables.label.gridDefault" xml:space="preserve">
+				<source>Grid system default (940px)</source>
+			</trans-unit>
+
+			<trans-unit id="plugin.tx_adxtwitterbootstrap.variables.label.gridLarge" xml:space="preserve">
+				<source>Grid system large (1200px min)</source>
+			</trans-unit>
+
+			<trans-unit id="plugin.tx_adxtwitterbootstrap.variables.label.gridMedium" xml:space="preserve">
+				<source>Grid system medium (768px-979px)</source>
+			</trans-unit>
+
+			<trans-unit id="plugin.tx_adxtwitterbootstrap.variables.label.fluidDefault" xml:space="preserve">
+				<source>Fluid default (940px)</source>
+			</trans-unit>
+
+			<trans-unit id="plugin.tx_adxtwitterbootstrap.variables.label.fluidLarge" xml:space="preserve">
+				<source>Fluid large (1200px min)</source>
+			</trans-unit>
+
+			<trans-unit id="plugin.tx_adxtwitterbootstrap.variables.label.fluidMedium" xml:space="preserve">
+				<source>Fluid medium (768px-979px)</source>
 			</trans-unit>
 		</body>
 	</file>
