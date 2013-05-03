@@ -145,49 +145,6 @@
 				<source>Carousel</source>
 			</trans-unit>
 
-			<trans-unit id="plugin.tx_adxtwitterbootstrap.plugins.label.plugins" xml:space="preserve">
-				<source>jQuery plugins</source>
-			</trans-unit>
-			<trans-unit id="plugin.tx_adxtwitterbootstrap.plugins.transitions" xml:space="preserve">
-				<source>Transitions (required for any animation)</source>
-			</trans-unit>
-			<trans-unit id="plugin.tx_adxtwitterbootstrap.plugins.modal" xml:space="preserve">
-				<source>Modals</source>
-			</trans-unit>
-			<trans-unit id="plugin.tx_adxtwitterbootstrap.plugins.dropdown" xml:space="preserve">
-				<source>Dropdowns</source>
-			</trans-unit>
-			<trans-unit id="plugin.tx_adxtwitterbootstrap.plugins.scrollspy" xml:space="preserve">
-				<source>Scrollspy</source>
-			</trans-unit>
-			<trans-unit id="plugin.tx_adxtwitterbootstrap.plugins.tab" xml:space="preserve">
-				<source>Togglable tabs</source>
-			</trans-unit>
-			<trans-unit id="plugin.tx_adxtwitterbootstrap.plugins.tooltip" xml:space="preserve">
-				<source>Tooltips</source>
-			</trans-unit>
-			<trans-unit id="plugin.tx_adxtwitterbootstrap.plugins.popover" xml:space="preserve">
-				<source>Popovers (requires Tooltips)</source>
-			</trans-unit>
-			<trans-unit id="plugin.tx_adxtwitterbootstrap.plugins.affix" xml:space="preserve">
-				<source>Affix</source>
-			</trans-unit>
-			<trans-unit id="plugin.tx_adxtwitterbootstrap.plugins.alert" xml:space="preserve">
-				<source>Alert messages</source>
-			</trans-unit>
-			<trans-unit id="plugin.tx_adxtwitterbootstrap.plugins.button" xml:space="preserve">
-				<source>Buttons</source>
-			</trans-unit>
-			<trans-unit id="plugin.tx_adxtwitterbootstrap.plugins.collapse" xml:space="preserve">
-				<source>Collapse</source>
-			</trans-unit>
-			<trans-unit id="plugin.tx_adxtwitterbootstrap.plugins.carousel" xml:space="preserve">
-				<source>Carousel</source>
-			</trans-unit>
-			<trans-unit id="plugin.tx_adxtwitterbootstrap.plugins.typeahead" xml:space="preserve">
-				<source>Typeahead</source>
-			</trans-unit>
-
 			<trans-unit id="plugin.tx_adxtwitterbootstrap.variables.label.colors" xml:space="preserve">
 				<source>Colors</source>
 			</trans-unit>

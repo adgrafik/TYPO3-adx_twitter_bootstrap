@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.0">
+	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2012-06-13T20:22:32Z" product-name="adx_twitter_bootstrap">
+		<header/>
+		<body>
+			<!-- tt_content fields -->
+			<trans-unit id="tx_adxtwitterbootstrap_device_visibility" xml:space="preserve">
+				<source>Device visibility</source>
+				<target state="translated">Device-Sichtbarkeit</target>
+			</trans-unit>
+			<trans-unit id="tx_adxtwitterbootstrap_device_visibility.hideOnDesktop" xml:space="preserve">
+				<source>Hide on desktops</source>
+				<target state="translated">Versteckt auf Desktops</target>
+			</trans-unit>
+			<trans-unit id="tx_adxtwitterbootstrap_device_visibility.hideOnTablet" xml:space="preserve">
+				<source>Hide on tablets</source>
+				<target state="translated">Versteckt auf Tablets</target>
+			</trans-unit>
+			<trans-unit id="tx_adxtwitterbootstrap_device_visibility.hideOnPhone" xml:space="preserve">
+				<source>Hide on phones</source>
+				<target state="translated">Versteckt auf Handys</target>
+			</trans-unit>
+
+			<!-- Configuration/TSconfig/Components/*Columns.ts -->
+			<trans-unit id="TSconfig.columns.twoColumns.title" xml:space="preserve">
+				<source>Two Columns Group</source>
+				<target state="translated">Zweispalten-Gruppe</target>
+			</trans-unit>
+			<trans-unit id="TSconfig.columns.twoColumns.description" xml:space="preserve">
+				<source>Creates a content group with two columns.</source>
+				<target state="translated">Erstellt einen Seiteninhalt mit zwei Spalten.</target>
+			</trans-unit>
+
+			<trans-unit id="TSconfig.columns.threeColumns.title" xml:space="preserve">
+				<source>Three Columns Group</source>
+				<target state="translated">Dreispalten-Gruppe</target>
+			</trans-unit>
+			<trans-unit id="TSconfig.columns.threeColumns.description" xml:space="preserve">
+				<source>Creates a content group with three columns.</source>
+				<target state="translated">Erstellt einen Seiteninhalt mit drei Spalten.</target>
+			</trans-unit>
+
+			<trans-unit id="TSconfig.columns.fourColumns.title" xml:space="preserve">
+				<source>Four Columns Group</source>
+				<target state="translated">Vierspalten-Gruppe</target>
+			</trans-unit>
+			<trans-unit id="TSconfig.columns.fourColumns.description" xml:space="preserve">
+				<source>Creates a content group with four columns.</source>
+				<target state="translated">Erstellt einen Seiteninhalt mit vier Spalten.</target>
+			</trans-unit>
+
+			<trans-unit id="TSconfig.columns.column1" xml:space="preserve">
+				<source>1st Column</source>
+				<target state="translated">1. Spalte</target>
+			</trans-unit>
+			<trans-unit id="TSconfig.columns.column2" xml:space="preserve">
+				<source>2nd Column</source>
+				<target state="translated">2. Spalte</target>
+			</trans-unit>
+			<trans-unit id="TSconfig.columns.column3" xml:space="preserve">
+				<source>3rd Column</source>
+				<target state="translated">3. Spalte</target>
+			</trans-unit>
+			<trans-unit id="TSconfig.columns.column4" xml:space="preserve">
+				<source>4th Column</source>
+				<target state="translated">4. Spalte</target>
+			</trans-unit>
+
+			<!-- Configuration/FlexForm/Components/*Columns.xml -->
+			<trans-unit id="flexform.columns.sheet.general" xml:space="preserve">
+				<source>General</source>
+				<target state="translated">Allgemein</target>
+			</trans-unit>
+			<trans-unit id="flexform.columns.segmentation" xml:space="preserve">
+				<source>Segmentation</source>
+				<target state="translated">Aufteilung</target>
+			</trans-unit>
+			<trans-unit id="flexform.columns.layout" xml:space="preserve">
+				<source>Layout</source>
+				<target state="translated">Layout</target>
+			</trans-unit>
+			<trans-unit id="flexform.columns.layout.0" xml:space="preserve">
+				<source>Default</source>
+				<target state="translated">Standard</target>
+			</trans-unit>
+			<trans-unit id="flexform.columns.layout.1" xml:space="preserve">
+				<source>Layout 1</source>
+				<target state="translated">Layout 1</target>
+			</trans-unit>
+			<trans-unit id="flexform.columns.layout.2" xml:space="preserve">
+				<source>Layout 2</source>
+				<target state="translated">Layout 2</target>
+			</trans-unit>
+			<trans-unit id="flexform.columns.layout.3" xml:space="preserve">
+				<source>Layout 3</source>
+				<target state="translated">Layout 3</target>
+			</trans-unit>
+			<trans-unit id="flexform.columns.equalHeight" xml:space="preserve">
+				<source>Equal height</source>
+				<target state="translated">Höhe anpassen</target>
+			</trans-unit>
+
+			<trans-unit id="flexform.columns.sheet.visibility" xml:space="preserve">
+				<source>Device visibility</source>
+				<target state="translated">Device-Sichtbarkeit</target>
+			</trans-unit>
+			<trans-unit id="flexform.columns.visibility.column1" xml:space="preserve">
+				<source>Hide column 1 on</source>
+				<target state="translated">Verstecke Spalte 1 auf</target>
+			</trans-unit>
+			<trans-unit id="flexform.columns.visibility.column2" xml:space="preserve">
+				<source>Hide column 2 on</source>
+				<target state="translated">Verstecke Spalte 2 auf</target>
+			</trans-unit>
+			<trans-unit id="flexform.columns.visibility.column3" xml:space="preserve">
+				<source>Hide column 3 on</source>
+				<target state="translated">Verstecke Spalte 3 auf</target>
+			</trans-unit>
+			<trans-unit id="flexform.columns.visibility.column4" xml:space="preserve">
+				<source>Hide column 4 on</source>
+				<target state="translated">Verstecke Spalte 4 auf</target>
+			</trans-unit>
+			<trans-unit id="flexform.columns.visibility.hideOnDesktop" xml:space="preserve">
+				<source>desktops</source>
+				<target state="translated">Desktops</target>
+			</trans-unit>
+			<trans-unit id="flexform.columns.visibility.hideOnTablet" xml:space="preserve">
+				<source>tablets</source>
+				<target state="translated">Tablets</target>
+			</trans-unit>
+			<trans-unit id="flexform.columns.visibility.hideOnPhone" xml:space="preserve">
+				<source>phones</source>
+				<target state="translated">Handys</target>
+			</trans-unit>
+
+			<!-- Configuration/TSconfig/Components/Carousel.ts -->
+			<trans-unit id="TSconfig.carousel.title" xml:space="preserve">
+				<source>Carousel</source>
+				<target state="translated">Carousel</target>
+			</trans-unit>
+			<trans-unit id="TSconfig.carousel.description" xml:space="preserve">
+				<source>Container for sliding content elements.</source>
+				<target state="translated">Container für "slidende" Seiteninhalte.</target>
+			</trans-unit>
+			<trans-unit id="TSconfig.carousel.column0" xml:space="preserve">
+				<source>Carousel elements</source>
+				<target state="translated">Carousel-Elemente</target>
+			</trans-unit>
+
+			<!-- Configuration/FlexForm/Components/Carousel.xml -->
+			<trans-unit id="flexform.carousel.sheet.general" xml:space="preserve">
+				<source>General</source>
+				<target state="translated">Allgemein</target>
+			</trans-unit>
+			<trans-unit id="flexform.carousel.layout" xml:space="preserve">
+				<source>Layout</source>
+				<target state="translated">Layout</target>
+			</trans-unit>
+			<trans-unit id="flexform.carousel.layout.0" xml:space="preserve">
+				<source>Default</source>
+				<target state="translated">Standard</target>
+			</trans-unit>
+			<trans-unit id="flexform.carousel.layout.1" xml:space="preserve">
+				<source>Layout 1</source>
+				<target state="translated">Layout 1</target>
+			</trans-unit>
+			<trans-unit id="flexform.carousel.layout.2" xml:space="preserve">
+				<source>Layout 2</source>
+				<target state="translated">Layout 2</target>
+			</trans-unit>
+			<trans-unit id="flexform.carousel.layout.3" xml:space="preserve">
+				<source>Layout 3</source>
+				<target state="translated">Layout 3</target>
+			</trans-unit>
+			<trans-unit id="flexform.carousel.interval" xml:space="preserve">
+				<source>Interval</source>
+				<target state="translated">Intervall</target>
+			</trans-unit>
+			<trans-unit id="flexform.carousel.browser" xml:space="preserve">
+				<source>Browser</source>
+				<target state="translated">Browser</target>
+			</trans-unit>
+			<trans-unit id="flexform.carousel.pagination" xml:space="preserve">
+				<source>Pagination</source>
+				<target state="translated">Seitennummerierung</target>
+			</trans-unit>
+			<trans-unit id="flexform.carousel.pagination.none" xml:space="preserve">
+				<source>None</source>
+				<target state="translated">Keine</target>
+			</trans-unit>
+			<trans-unit id="flexform.carousel.pagination.numbers" xml:space="preserve">
+				<source>Numbers</source>
+				<target state="translated">Nummern</target>
+			</trans-unit>
+			<trans-unit id="flexform.carousel.pagination.headers" xml:space="preserve">
+				<source>Headers</source>
+				<target state="translated">Überschriften</target>
+			</trans-unit>
+			<trans-unit id="flexform.carousel.active" xml:space="preserve">
+				<source>Active slide</source>
+				<target state="translated">Aktiver Slide</target>
+			</trans-unit>
+			<trans-unit id="flexform.carousel.pause" xml:space="preserve">
+				<source>Pause on hover</source>
+				<target state="translated">Pause bei hover</target>
+			</trans-unit>
+
+			<trans-unit id="flexform.carousel.provider" xml:space="preserve">
+				<source>Provider</source>
+				<target state="translated">Provider</target>
+			</trans-unit>
+			<trans-unit id="flexform.carousel.provider.images" xml:space="preserve">
+				<source>Use first content element as single image provider</source>
+				<target state="translated">Verwende ersten Seiteninhalt als Bild-Provider</target>
+			</trans-unit>
+			<trans-unit id="flexform.carousel.provider.content" xml:space="preserve">
+				<source>Content elements</source>
+				<target state="translated">Seiteninhalte</target>
+			</trans-unit>
+
+			<!-- Configuration/TSconfig/Components/Accordion.ts -->
+			<trans-unit id="TSconfig.accordion.title" xml:space="preserve">
+				<source>Accordion</source>
+				<target state="translated">Accordion</target>
+			</trans-unit>
+			<trans-unit id="TSconfig.accordion.description" xml:space="preserve">
+				<source>Container for collapsible content elements.</source>
+				<target state="translated">Container für ausklappbare Seiteninhalte.</target>
+			</trans-unit>
+			<trans-unit id="TSconfig.accordion.column1" xml:space="preserve">
+				<source>Accordion elements</source>
+				<target state="translated">Accordion-Elemente</target>
+			</trans-unit>
+
+			<!-- Configuration/FlexForm/Components/Accordion.xml -->
+			<trans-unit id="flexform.accordion.sheet.general" xml:space="preserve">
+				<source>General</source>
+				<target state="translated">Allgemein</target>
+			</trans-unit>
+			<trans-unit id="flexform.accordion.layout" xml:space="preserve">
+				<source>Layout</source>
+				<target state="translated">Layout</target>
+			</trans-unit>
+			<trans-unit id="flexform.accordion.layout.0" xml:space="preserve">
+				<source>Default</source>
+				<target state="translated">Standard</target>
+			</trans-unit>
+			<trans-unit id="flexform.accordion.layout.1" xml:space="preserve">
+				<source>Layout 1</source>
+				<target state="translated">Layout 1</target>
+			</trans-unit>
+			<trans-unit id="flexform.accordion.layout.2" xml:space="preserve">
+				<source>Layout 2</source>
+				<target state="translated">Layout 2</target>
+			</trans-unit>
+			<trans-unit id="flexform.accordion.layout.3" xml:space="preserve">
+				<source>Layout 3</source>
+				<target state="translated">Layout 3</target>
+			</trans-unit>
+			<trans-unit id="flexform.accordion.columns" xml:space="preserve">
+				<source>Columns</source>
+				<target state="translated">Spalten</target>
+			</trans-unit>
+			<trans-unit id="flexform.accordion.active" xml:space="preserve">
+				<source>Active item</source>
+				<target state="translated">Aktives Element</target>
+			</trans-unit>
+			<trans-unit id="flexform.accordion.collapsible" xml:space="preserve">
+				<source>Auto collapsible</source>
+				<target state="translated">Automatisch zusammenklappen</target>
+			</trans-unit>
+			<trans-unit id="flexform.accordion.slideToPosition" xml:space="preserve">
+				<source>Slide to position</source>
+				<target state="translated">Zur Position gleiten</target>
+			</trans-unit>
+			<trans-unit id="flexform.accordion.slideOffset" xml:space="preserve">
+				<source>Slide offset</source>
+				<target state="translated">Offset</target>
+			</trans-unit>
+
+			<!-- Configuration/TSconfig/Components/Tabs.ts -->
+			<trans-unit id="TSconfig.tabs.title" xml:space="preserve">
+				<source>Tabs</source>
+				<target state="translated">Tabs</target>
+			</trans-unit>
+			<trans-unit id="TSconfig.tabs.description" xml:space="preserve">
+				<source>Container for tabs content elements.</source>
+				<target state="translated">Container für Tab-Seiteninhalte.</target>
+			</trans-unit>
+			<trans-unit id="TSconfig.tabs.column1" xml:space="preserve">
+				<source>Tab elements</source>
+				<target state="translated">Tab-Elemente</target>
+			</trans-unit>
+
+			<!-- Configuration/FlexForm/Components/Tabs.xml -->
+			<trans-unit id="flexform.tabs.sheet.general" xml:space="preserve">
+				<source>General</source>
+				<target state="translated">Allgemein</target>
+			</trans-unit>
+			<trans-unit id="flexform.tabs.layout" xml:space="preserve">
+				<source>Layout</source>
+				<target state="translated">Layout</target>
+			</trans-unit>
+			<trans-unit id="flexform.tabs.layout.0" xml:space="preserve">
+				<source>Default</source>
+				<target state="translated">Standard</target>
+			</trans-unit>
+			<trans-unit id="flexform.tabs.layout.1" xml:space="preserve">
+				<source>Layout 1</source>
+				<target state="translated">Layout 1</target>
+			</trans-unit>
+			<trans-unit id="flexform.tabs.layout.2" xml:space="preserve">
+				<source>Layout 2</source>
+				<target state="translated">Layout 2</target>
+			</trans-unit>
+			<trans-unit id="flexform.tabs.layout.3" xml:space="preserve">
+				<source>Layout 3</source>
+				<target state="translated">Layout 3</target>
+			</trans-unit>
+			<trans-unit id="flexform.tabs.active" xml:space="preserve">
+				<source>Active item</source>
+				<target state="translated">Aktives Element</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

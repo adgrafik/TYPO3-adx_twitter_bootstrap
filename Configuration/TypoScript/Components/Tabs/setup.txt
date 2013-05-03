@@ -1,0 +1,61 @@
+
+/**
+ * plugin.tx_gridelements_pi1
+ */
+plugin.tx_gridelements_pi1 = USER
+plugin.tx_gridelements_pi1 {
+	userFunc = tx_gridelements_view->main
+}
+
+lib.adxtwitterbootstrap.tabs {
+
+	render {
+
+		heading = TEXT
+		heading {
+
+			required = 1
+			field = header
+			htmlSpecialChars = 1
+
+			outerWrap = <span class="header"> | </span>
+			outerWrap.insertData = 1
+		}
+
+		content =< tt_content
+	}
+
+	activeClass = TEXT
+	activeClass {
+		value = in active
+		if.value.field = active
+		if.equals.stdWrap.dataWrap = {field: key} + 1
+		if.equals.prioriCalc = 1
+		noTrimWrap = | ||
+	}
+}
+
+/**
+ * plugin.tx_gridelements_pi1.setup.tx_adxtwitterbootstrap_tabs
+ */
+plugin.tx_gridelements_pi1.setup.tx_adxtwitterbootstrap_tabs {
+
+	cObject = FLUIDTEMPLATE
+	cObject {
+
+		file = {$plugin.tx_adxtwitterbootstrap.tabs.templateFile}
+
+		variables {
+
+			layout = TEXT
+			layout {
+				field = flexform_tx_adxtwitterbootstrap_tabs_layout
+				required = 1
+				noTrimWrap = | ||
+			}
+
+			active = TEXT
+			active.field = flexform_tx_adxtwitterbootstrap_tabs_active
+		}
+	}
+}

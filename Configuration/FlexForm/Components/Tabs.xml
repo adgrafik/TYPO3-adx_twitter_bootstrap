@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3DataStructure>
+	<meta type="array">
+		<langDisable>1</langDisable>
+	</meta>
+	<sheets>
+		<tx_adxtwitterbootstrap_tabs_general>
+			<ROOT type="array">
+				<TCEforms>
+					<sheetTitle>LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.tabs.sheet.general</sheetTitle>
+				</TCEforms>
+				<type>array</type>
+				<el type="array">
+					<tx_adxtwitterbootstrap_tabs_layout type="array">
+						<TCEforms type="array">
+							<label>LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.tabs.layout</label>
+							<config type="array">
+								<type>select</type>
+								<default type="string">layout1</default>
+								<items>
+									<numIndex index="0">
+										<numIndex index="0">LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.tabs.layout.0</numIndex>
+										<numIndex index="1"></numIndex>
+									</numIndex>
+									<numIndex index="1">
+										<numIndex index="0">LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.tabs.layout.1</numIndex>
+										<numIndex index="1">layout1</numIndex>
+									</numIndex>
+									<numIndex index="2">
+										<numIndex index="0">LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.tabs.layout.2</numIndex>
+										<numIndex index="1">layout2</numIndex>
+									</numIndex>
+									<numIndex index="3">
+										<numIndex index="0">LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.tabs.layout.3</numIndex>
+										<numIndex index="1">layout3</numIndex>
+									</numIndex>
+								</items>
+							</config>
+						</TCEforms>
+					</tx_adxtwitterbootstrap_tabs_layout>
+					<tx_adxtwitterbootstrap_tabs_active type="array">
+						<TCEforms type="array">
+							<label>LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.tabs.active</label>
+							<config type="array">
+								<type>input</type>
+								<size>3</size>
+								<default>1</default>
+							</config>
+						</TCEforms>
+					</tx_adxtwitterbootstrap_tabs_active>
+				</el>
+			</ROOT>
+		</tx_adxtwitterbootstrap_tabs_general>
+	</sheets>
+</T3DataStructure>

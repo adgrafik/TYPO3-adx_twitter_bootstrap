@@ -1,0 +1,17 @@
+
+{namespace t3jquery=Tx_T3jquery_ViewHelpers}
+
+<div id="tabs{data.uid}" class="tabs{layout}">
+	<ul class="nav nav-tabs">
+		<f:for each="{data.tx_gridelements_view_children}" as="item" key="key">
+			<li class="{f:cObject( typoscriptObjectPath: 'lib.adxtwitterbootstrap.tabs.activeClass', data: {active: active, key: key} )}"><a href="#tabItem{item.uid}" data-toggle="tab"><f:cObject typoscriptObjectPath="lib.adxtwitterbootstrap.tabs.render.heading" data="{item}" /></a></li>
+		</f:for>
+	</ul>
+	<div class="tab-content">
+		<f:for each="{data.tx_gridelements_view_children}" as="item" key="key">
+			<div class="tab-pane fade{f:cObject( typoscriptObjectPath: 'lib.adxtwitterbootstrap.tabs.activeClass', data: {active: active, key: key} )}" id="tabItem{item.uid}">
+				<f:cObject typoscriptObjectPath="lib.adxtwitterbootstrap.tabs.render.content" data="{item}" />
+			</div>
+		</f:for>
+	</div>
+</div>

@@ -1,0 +1,14 @@
+
+/**
+ * plugin.tx_adxtwitterbootstrap
+ */
+plugin.tx_adxtwitterbootstrap {
+
+	# activate Twitter Bootstrap accordion
+	components.componentAnimations = 1
+	components.accordion = 1
+
+	accordion {
+		templateFile = EXT:adx_twitter_bootstrap/Resources/Private/Templates/Components/Accordion.html
+	}
+}

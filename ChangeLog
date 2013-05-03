@@ -1,5 +1,8 @@
 1.0.3
 	[TASK] Added powermail templates for 2.0.5.
+	[TASK] Added bootstrap 2.3.1. Important! TypoScript path has changed. Include in template again.
+	[FEATURE] Added device visibility to content elements.
+	[FEATURE] Added components content elements columns, accordion, carousel and tabs.
 
 1.0.2
 	[BUGFIX] Fix some typos of constants and setup.

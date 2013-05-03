@@ -1,0 +1,98 @@
+
+/**
+ * plugin.tx_gridelements_pi1
+ */
+plugin.tx_gridelements_pi1 = USER
+plugin.tx_gridelements_pi1 {
+	userFunc = tx_gridelements_view->main
+}
+
+lib.adxtwitterbootstrap.carousel {
+
+	render {
+
+		imageItems =< tt_content.image.20
+		imageItems {
+
+			layout >
+			layout = TEXT
+			layout.value = ###IMAGES###
+
+			imageStdWrap.dataWrap = 
+			imageStdWrapNoWidth.wrap = 
+
+			renderMethod = carousel
+
+			rendering.carousel {
+				imageRowStdWrap.wrap = 
+				imageLastRowStdWrap.wrap = 
+				noRowsStdWrap.wrap = 
+				oneImageStdWrap.wrap = <div class="item"> | </div>
+				imgTagStdWrap.wrap = 
+				editIconsStdWrap.wrap = 
+				caption.wrap = <div class="carousel-caption"> | </div>
+				imageStdWrap.wrap = 
+				imageStdWrapNoWidth.wrap = 
+
+			}
+		}
+
+		contentItem =< tt_content
+
+		paginationItem = CASE
+		paginationItem {
+
+			key.field = pagination
+
+			default = TEXT
+			default.value = 
+
+			numbers = TEXT
+			numbers.stdWrap.dataWrap = {field: key} + 1
+			numbers.prioriCalc = 1
+
+			headers = TEXT
+			headers.field = header
+		}
+	}
+}
+
+/**
+ * plugin.tx_gridelements_pi1.setup.tx_adxtwitterbootstrap_carousel
+ */
+plugin.tx_gridelements_pi1.setup.tx_adxtwitterbootstrap_carousel {
+
+	cObject = FLUIDTEMPLATE
+	cObject {
+
+		file = {$plugin.tx_adxtwitterbootstrap.carousel.templateFile}
+
+		variables {
+
+			provider = TEXT
+			provider.field = flexform_tx_adxtwitterbootstrap_carousel_provider
+
+			layout = TEXT
+			layout {
+				field = flexform_tx_adxtwitterbootstrap_carousel_layout
+				required = 1
+				noTrimWrap = | ||
+			}
+
+			pagination = TEXT
+			pagination.field = flexform_tx_adxtwitterbootstrap_carousel_pagination
+
+			browser = TEXT
+			browser.field = flexform_tx_adxtwitterbootstrap_carousel_browser
+
+			active = TEXT
+			active.field = flexform_tx_adxtwitterbootstrap_carousel_active
+
+			interval = TEXT
+			interval.field = flexform_tx_adxtwitterbootstrap_carousel_interval
+
+			pause = TEXT
+			pause.field = flexform_tx_adxtwitterbootstrap_carousel_pause
+		}
+	}
+}

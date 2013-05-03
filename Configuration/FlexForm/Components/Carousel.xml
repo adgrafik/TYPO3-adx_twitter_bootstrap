@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3DataStructure>
+	<meta type="array">
+		<langDisable>1</langDisable>
+	</meta>
+	<sheets>
+		<tx_adxtwitterbootstrap_carousel_general>
+			<ROOT type="array">
+				<TCEforms>
+					<sheetTitle>LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.carousel.sheet.general</sheetTitle>
+				</TCEforms>
+				<type>array</type>
+				<el type="array">
+					<tx_adxtwitterbootstrap_carousel_layout type="array">
+						<TCEforms type="array">
+							<label>LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.carousel.layout</label>
+							<config type="array">
+								<type>select</type>
+								<default type="string">layout1</default>
+								<items>
+									<numIndex index="0">
+										<numIndex index="0">LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.carousel.layout.0</numIndex>
+										<numIndex index="1"></numIndex>
+									</numIndex>
+									<numIndex index="1">
+										<numIndex index="0">LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.carousel.layout.1</numIndex>
+										<numIndex index="1">layout1</numIndex>
+									</numIndex>
+									<numIndex index="2">
+										<numIndex index="0">LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.carousel.layout.2</numIndex>
+										<numIndex index="1">layout2</numIndex>
+									</numIndex>
+									<numIndex index="3">
+										<numIndex index="0">LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.carousel.layout.3</numIndex>
+										<numIndex index="1">layout3</numIndex>
+									</numIndex>
+								</items>
+							</config>
+						</TCEforms>
+					</tx_adxtwitterbootstrap_carousel_layout>
+					<tx_adxtwitterbootstrap_carousel_interval type="array">
+						<TCEforms type="array">
+							<label>LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.carousel.interval</label>
+							<config type="array">
+								<type>input</type>
+								<size>7</size>
+								<eval>trim,int</eval>
+								<default>5000</default>
+							</config>
+						</TCEforms>
+					</tx_adxtwitterbootstrap_carousel_interval>
+					<tx_adxtwitterbootstrap_carousel_browser type="array">
+						<TCEforms type="array">
+							<label>LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.carousel.browser</label>
+							<config type="array">
+								<type>check</type>
+								<default>1</default>
+								<items>
+									<numIndex index="0">
+										<numIndex index="0">LLL:EXT:lang/locallang_core.xml:labels.enabled</numIndex>
+										<numIndex index="1">1</numIndex>
+									</numIndex>
+								</items>
+							</config>
+						</TCEforms>
+					</tx_adxtwitterbootstrap_carousel_browser>
+					<tx_adxtwitterbootstrap_carousel_pagination type="array">
+						<TCEforms type="array">
+							<label>LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.carousel.pagination</label>
+							<config type="array">
+								<type>select</type>
+								<size>1</size>
+								<maxitems>1</maxitems>
+								<items>
+									<numIndex index="0">
+										<numIndex index="0">LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.carousel.pagination.none</numIndex>
+										<numIndex index="1"></numIndex>
+									</numIndex> 
+									<numIndex index="1">
+										<numIndex index="0">LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.carousel.pagination.numbers</numIndex>
+										<numIndex index="1">numbers</numIndex>
+									</numIndex> 
+									<numIndex index="2">
+										<numIndex index="0">LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.carousel.pagination.headers</numIndex>
+										<numIndex index="1">headers</numIndex>
+									</numIndex> 
+								</items>
+							</config>
+						</TCEforms>
+					</tx_adxtwitterbootstrap_carousel_pagination>
+					<tx_adxtwitterbootstrap_carousel_active type="array">
+						<TCEforms type="array">
+							<label>LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.carousel.active</label>
+							<config type="array">
+								<type>input</type>
+								<size>3</size>
+								<default>0</default>
+							</config>
+						</TCEforms>
+					</tx_adxtwitterbootstrap_carousel_active>
+					<tx_adxtwitterbootstrap_carousel_pause type="array">
+						<TCEforms type="array">
+							<label>LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.carousel.pause</label>
+							<config type="array">
+								<type>check</type>
+								<default type="integer">1</default>
+								<items>
+									<numIndex index="0">
+										<numIndex index="0">LLL:EXT:lang/locallang_core.xml:labels.enabled</numIndex>
+										<numIndex index="1">1</numIndex>
+									</numIndex>
+								</items>
+							</config>
+						</TCEforms>
+					</tx_adxtwitterbootstrap_carousel_pause>
+				</el>
+			</ROOT>
+		</tx_adxtwitterbootstrap_carousel_general>
+		<tx_adxtwitterbootstrap_carousel_rendering type="array">
+			<ROOT>
+				<TCEforms>
+					<sheetTitle>LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.carousel.sheet.rendering</sheetTitle>
+				</TCEforms>
+				<type>array</type>
+				<el type="array">
+					<tx_adxtwitterbootstrap_carousel_provider type="array">
+						<TCEforms type="array">
+							<label>LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.carousel.provider</label>
+							<config type="array">
+								<type>select</type>
+								<items>
+									<numIndex index="0">
+										<numIndex index="0">LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.carousel.provider.content</numIndex>
+										<numIndex index="1">0</numIndex>
+									</numIndex> 
+									<numIndex index="1">
+										<numIndex index="0">LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.carousel.provider.images</numIndex>
+										<numIndex index="1">1</numIndex>
+									</numIndex> 
+<!--
+									<numIndex index="2">
+										<numIndex index="0">LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.carousel.provider.news</numIndex>
+										<numIndex index="1">news</numIndex>
+									</numIndex> 
+-->
+								</items>
+							</config>
+						</TCEforms>
+					</tx_adxtwitterbootstrap_carousel_provider>
+<!--
+					<tx_adxtwitterbootstrap_carousel_randomize type="array">
+						<TCEforms type="array">
+							<label>LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.carousel.randomize</label>
+							<config type="array">
+								<type>check</type>
+								<items>
+									<numIndex index="0">
+										<numIndex index="0">LLL:EXT:lang/locallang_core.xml:labels.enabled</numIndex>
+										<numIndex index="1">1</numIndex>
+									</numIndex>
+								</items>
+							</config>
+						</TCEforms>
+					</tx_adxtwitterbootstrap_carousel_randomize>
+-->
+				</el>
+			</ROOT>
+		</tx_adxtwitterbootstrap_carousel_rendering>
+	</sheets>
+</T3DataStructure>

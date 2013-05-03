@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3DataStructure>
+	<meta type="array">
+		<langDisable>1</langDisable>
+	</meta>
+	<sheets>
+		<tx_adxtwitterbootstrap_columns_threecolumns_general>
+			<ROOT type="array">
+				<TCEforms>
+					<sheetTitle>LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.columns.sheet.general</sheetTitle>
+				</TCEforms>
+				<el type="array">
+					<tx_adxtwitterbootstrap_columns_threecolumns_segmentation type="array">
+						<TCEforms type="array">
+							<label>LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.columns.segmentation</label>
+							<config type="array">
+								<type>select</type>
+								<size>1</size>
+								<items>
+									<numIndex index="0">
+										<numIndex index="0">LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.columns.segmentation.131313</numIndex>
+										<numIndex index="1">131313</numIndex>
+									</numIndex> 
+									<numIndex index="1">
+										<numIndex index="0">LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.columns.segmentation.121414</numIndex>
+										<numIndex index="1">121414</numIndex>
+									</numIndex> 
+									<numIndex index="2">
+										<numIndex index="0">LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.columns.segmentation.141214</numIndex>
+										<numIndex index="1">141214</numIndex>
+									</numIndex> 
+									<numIndex index="3">
+										<numIndex index="0">LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.columns.segmentation.141412</numIndex>
+										<numIndex index="1">141412</numIndex>
+									</numIndex> 
+								</items>
+							</config>
+						</TCEforms>
+					</tx_adxtwitterbootstrap_columns_threecolumns_segmentation>
+					<tx_adxtwitterbootstrap_columns_threecolumns_layout type="array">
+						<TCEforms type="array">
+							<label>LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.columns.layout</label>
+							<config type="array">
+								<type>select</type>
+								<items>
+									<numIndex index="0">
+										<numIndex index="0">LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.columns.layout.0</numIndex>
+										<numIndex index="1"></numIndex>
+									</numIndex>
+									<numIndex index="1">
+										<numIndex index="0">LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.columns.layout.1</numIndex>
+										<numIndex index="1">layout1</numIndex>
+									</numIndex>
+									<numIndex index="2">
+										<numIndex index="0">LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.columns.layout.2</numIndex>
+										<numIndex index="1">layout2</numIndex>
+									</numIndex>
+									<numIndex index="3">
+										<numIndex index="0">LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.columns.layout.3</numIndex>
+										<numIndex index="1">layout3</numIndex>
+									</numIndex>
+								</items>
+							</config>
+						</TCEforms>
+					</tx_adxtwitterbootstrap_columns_threecolumns_layout>
+					<tx_adxtwitterbootstrap_columns_threecolumns_equal_height type="array">
+						<TCEforms type="array">
+							<label>LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.columns.equalHeight</label>
+							<config type="array">
+								<type>check</type>
+								<items>
+									<numIndex index="0">
+										<numIndex index="0">LLL:EXT:lang/locallang_core.xml:labels.enabled</numIndex>
+										<numIndex index="1">1</numIndex>
+									</numIndex>
+								</items>
+							</config>
+						</TCEforms>
+					</tx_adxtwitterbootstrap_columns_threecolumns_equal_height>
+				</el>
+			</ROOT>
+		</tx_adxtwitterbootstrap_columns_threecolumns_general>
+		<tx_adxtwitterbootstrap_columns_threecolumns_visibility>
+			<ROOT type="array">
+				<TCEforms>
+					<sheetTitle>LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.columns.sheet.visibility</sheetTitle>
+				</TCEforms>
+				<el type="array">
+					<tx_adxtwitterbootstrap_columns_threecolumns_visibility_column1 type="array">
+						<TCEforms type="array">
+							<label>LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.columns.visibility.column1</label>
+							<config type="array">
+								<type>check</type>
+								<cols>3</cols>
+								<items>
+									<numIndex index="0">
+										<numIndex index="0">LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.columns.visibility.hideOnDesktop</numIndex>
+										<numIndex index="1">visible-desktop</numIndex>
+									</numIndex>
+									<numIndex index="1">
+										<numIndex index="0">LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.columns.visibility.hideOnTablet</numIndex>
+										<numIndex index="1">visible-tablet</numIndex>
+									</numIndex>
+									<numIndex index="2">
+										<numIndex index="0">LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.columns.visibility.hideOnPhone</numIndex>
+										<numIndex index="1">visible-phone</numIndex>
+									</numIndex>
+								</items>
+							</config>
+						</TCEforms>
+					</tx_adxtwitterbootstrap_columns_threecolumns_visibility_column1>
+					<tx_adxtwitterbootstrap_columns_threecolumns_visibility_column2 type="array">
+						<TCEforms type="array">
+							<label>LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.columns.visibility.column2</label>
+							<config type="array">
+								<type>check</type>
+								<cols>3</cols>
+								<items>
+									<numIndex index="0">
+										<numIndex index="0">LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.columns.visibility.hideOnDesktop</numIndex>
+										<numIndex index="1">visible-desktop</numIndex>
+									</numIndex>
+									<numIndex index="1">
+										<numIndex index="0">LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.columns.visibility.hideOnTablet</numIndex>
+										<numIndex index="1">visible-tablet</numIndex>
+									</numIndex>
+									<numIndex index="2">
+										<numIndex index="0">LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.columns.visibility.hideOnPhone</numIndex>
+										<numIndex index="1">visible-phone</numIndex>
+									</numIndex>
+								</items>
+							</config>
+						</TCEforms>
+					</tx_adxtwitterbootstrap_columns_threecolumns_visibility_column2>
+					<tx_adxtwitterbootstrap_columns_threecolumns_visibility_column3 type="array">
+						<TCEforms type="array">
+							<label>LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.columns.visibility.column3</label>
+							<config type="array">
+								<type>check</type>
+								<cols>3</cols>
+								<items>
+									<numIndex index="0">
+										<numIndex index="0">LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.columns.visibility.hideOnDesktop</numIndex>
+										<numIndex index="1">visible-desktop</numIndex>
+									</numIndex>
+									<numIndex index="1">
+										<numIndex index="0">LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.columns.visibility.hideOnTablet</numIndex>
+										<numIndex index="1">visible-tablet</numIndex>
+									</numIndex>
+									<numIndex index="2">
+										<numIndex index="0">LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.columns.visibility.hideOnPhone</numIndex>
+										<numIndex index="1">visible-phone</numIndex>
+									</numIndex>
+								</items>
+							</config>
+						</TCEforms>
+					</tx_adxtwitterbootstrap_columns_threecolumns_visibility_column3>
+				</el>
+			</ROOT>
+		</tx_adxtwitterbootstrap_columns_threecolumns_visibility>
+	</sheets>
+</T3DataStructure>

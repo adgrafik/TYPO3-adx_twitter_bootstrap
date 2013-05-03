@@ -1,0 +1,43 @@
+
+{namespace t3jquery=Tx_T3jquery_ViewHelpers}
+{namespace adx=Tx_AdxTwitterBootstrap_ViewHelpers}
+
+<adx:utility.groupArray array="{data.tx_gridelements_view_children}" modular="{columns}" as="columnItems">
+	<div id="accordion{data.uid}" class="accordion{layout}">
+		<f:for each="{columnItems}" as="columnItem">
+			<div class="accordion-group">
+				<div class="row-fluid">
+					<f:for each="{columnItem}" as="item" key="key" iteration="info">
+						<div class="accordion-heading{span}">
+							<a class="accordion-toggle" data-toggle="collapse" data-parent="{f:if( condition: '{collapsible}', then: '#accordion{data.uid}' )}" href="#collapse{item.uid}">
+								<f:cObject typoscriptObjectPath="lib.adxtwitterbootstrap.accordion.render.heading" data="{item}" />
+							</a>
+						</div>
+					</f:for>
+				</div>
+				<f:for each="{columnItem}" as="item" key="key" iteration="info">
+					<div id="collapse{item.uid}" class="accordion-body collapse{f:cObject( typoscriptObjectPath: 'lib.adxtwitterbootstrap.accordion.activeClass', data: {active: active, key: key} )}">
+						<div class="accordion-inner">
+							<f:cObject typoscriptObjectPath="lib.adxtwitterbootstrap.accordion.render.content" data="{item}" />
+						</div>
+					</div>
+				</f:for>
+			</div>
+		</f:for>
+	</div>
+</adx:utility.groupArray>
+
+<t3jquery:AddJQueryAndScript renderChildrenToData="TRUE">
+(function($){
+	<f:if condition="{slideToPosition}">
+	var selector = '#accordion{data.uid}',
+		slideOffset = {slideOffset};
+	$(selector)
+		.on('shown', function(event){
+			$('html, body').animate({
+				scrollTop: $(event.target).offset().top - slideOffset
+			}, 'slow');
+		});
+	</f:if>
+})(jQuery);
+</t3jquery:AddJQueryAndScript>
