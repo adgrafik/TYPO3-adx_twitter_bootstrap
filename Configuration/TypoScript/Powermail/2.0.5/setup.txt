@@ -23,6 +23,12 @@ lib.tx_adxtwitterbootstrap {
 			default = TEXT
 			default.value = 0
 
+			columnsTwo = TEXT
+			columnsTwo {
+				value = {$plugin.tx_adxtwitterbootstrap.variables.gridColumns} / 2
+				prioriCalc = 1
+			}
+
 			columnFull = TEXT
 			columnFull {
 				value = {$plugin.tx_adxtwitterbootstrap.variables.gridColumns}
@@ -83,6 +89,11 @@ lib.tx_adxtwitterbootstrap {
 */
 		}
 
+		fieldsetSpan =< lib.tx_adxtwitterbootstrap.powermail.spanCalculate
+		fieldsetSpan.stdWrap.ifEmpty = {$plugin.tx_adxtwitterbootstrap.variables.gridColumns}
+		fieldsetSpan.stdWrap.required = 1
+		fieldsetSpan.stdWrap.noTrimWrap = | span||
+
 		fieldSpan =< lib.tx_adxtwitterbootstrap.powermail.spanCalculate
 		fieldSpan.stdWrap.ifEmpty = 
 		fieldSpan.stdWrap.required = 1
@@ -105,10 +116,10 @@ lib.tx_adxtwitterbootstrap {
 			10 = TEXT
 			10 {
 
-				value = <div class="controls-row">
+				value = <div class="control-group">
 				if.isFalse.data = register: countSpan
 
-				override = <div class="controls-row">
+				override = <div class="control-group">
 				override.if.value = columnFull,columnHalfSingleRow,columnThirdSingleRow,columnTwoThirdSingleRow,columnQuarterSingleRow,columnTwoQuarterSingleRow,columnThreeQuarterSingleRow
 				override.if.isInList.field = css
 			}
