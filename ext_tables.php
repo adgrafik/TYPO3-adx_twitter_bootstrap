@@ -36,7 +36,9 @@ $tempColumns = array(
 	),
 );
 
-t3lib_div::loadTCA('tt_content');
+if (version_compare(TYPO3_branch, '6.1', '<')) {
+	t3lib_div::loadTCA('tt_content');
+}
 t3lib_extMgm::addTCAcolumns('tt_content', $tempColumns, 1);
 t3lib_extMgm::addFieldsToPalette('tt_content', 'visibility', '--linebreak--,tx_adxtwitterbootstrap_device_visibility');
 t3lib_extMgm::addLLrefForTCAdescr('tt_content', 'EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf');
