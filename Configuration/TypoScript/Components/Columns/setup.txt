@@ -1,14 +1,6 @@
 
 /**
- * plugin.tx_gridelements_pi1
- */
-plugin.tx_gridelements_pi1 = USER
-plugin.tx_gridelements_pi1 {
-	userFunc = tx_gridelements_view->main
-}
-
-/**
- * plugin.tx_gridelements_pi1.setup.tx_adxtwitterbootstrap_columns_twocolumns
+ * Two columns setup
  */
 plugin.tx_gridelements_pi1.setup.tx_adxtwitterbootstrap_columns_twocolumns {
 
@@ -85,7 +77,7 @@ plugin.tx_gridelements_pi1.setup.tx_adxtwitterbootstrap_columns_twocolumns {
 
 
 /**
- * lib.gridElements.setup.tx_adxtwitterbootstrap_threecolumns
+ * Three columns setup
  */
 plugin.tx_gridelements_pi1.setup.tx_adxtwitterbootstrap_columns_threecolumns < plugin.tx_gridelements_pi1.setup.tx_adxtwitterbootstrap_columns_twocolumns
 plugin.tx_gridelements_pi1.setup.tx_adxtwitterbootstrap_columns_threecolumns {
@@ -109,7 +101,7 @@ plugin.tx_gridelements_pi1.setup.tx_adxtwitterbootstrap_columns_threecolumns {
 
 
 /**
- * lib.gridElements.setup.tx_adxtwitterbootstrap_fourcolumns
+ * Four columns setup
  */
 plugin.tx_gridelements_pi1.setup.tx_adxtwitterbootstrap_columns_fourcolumns < plugin.tx_gridelements_pi1.setup.tx_adxtwitterbootstrap_columns_twocolumns
 plugin.tx_gridelements_pi1.setup.tx_adxtwitterbootstrap_columns_fourcolumns {

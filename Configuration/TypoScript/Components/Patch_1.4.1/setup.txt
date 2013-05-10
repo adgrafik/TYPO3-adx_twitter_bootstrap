@@ -1,0 +1,7 @@
+
+/**
+ * Patch for gridelements >= v1.4.1
+ */
+plugin.tx_gridelements_pi1 {
+	userFunc = tx_gridelements_view->main
+}

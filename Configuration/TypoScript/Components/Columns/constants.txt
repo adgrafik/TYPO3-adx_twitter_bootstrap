@@ -1,7 +1,4 @@
 
-/**
- * plugin.tx_adxtwitterbootstrap
- */
 plugin.tx_adxtwitterbootstrap {
 
 	# activate Twitter Bootstrap grid system

@@ -1,12 +1,7 @@
 
 /**
- * plugin.tx_gridelements_pi1
+ * Shortcut definitions for the carousel
  */
-plugin.tx_gridelements_pi1 = USER
-plugin.tx_gridelements_pi1 {
-	userFunc = tx_gridelements_view->main
-}
-
 lib.adxtwitterbootstrap.carousel {
 
 	render {
@@ -58,9 +53,9 @@ lib.adxtwitterbootstrap.carousel {
 }
 
 /**
- * plugin.tx_gridelements_pi1.setup.tx_adxtwitterbootstrap_carousel
+ * Carousel setup
  */
-plugin.tx_gridelements_pi1.setup.tx_adxtwitterbootstrap_carousel {
+plugin.tx_gridelements_view.setup.tx_adxtwitterbootstrap_carousel {
 
 	cObject = FLUIDTEMPLATE
 	cObject {

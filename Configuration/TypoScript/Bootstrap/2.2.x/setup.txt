@@ -1,6 +1,6 @@
 
 /**
- * plugin.tx_adxless
+ * Settings for adx_less
  */
 plugin.tx_adxless {
 
@@ -304,7 +304,9 @@ plugin.tx_adxless {
 }
 
 
-# page includes
+/**
+ * Include bootstrap
+ */
 page {
 
 	includeCSS.tx_adxtwitterbootstrap = EXT:adx_twitter_bootstrap/Resources/Private/LESS/2.2.x/bootstrap.less

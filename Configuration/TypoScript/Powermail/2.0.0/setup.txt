@@ -1,6 +1,6 @@
 
 /**
- * plugin.powermail
+ * Powermail setup
  */
 plugin.tx_powermail {
 

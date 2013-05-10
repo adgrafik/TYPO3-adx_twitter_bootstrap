@@ -1,12 +1,7 @@
 
 /**
- * plugin.tx_gridelements_pi1
+ * Shortcut definitions for the accordion
  */
-plugin.tx_gridelements_pi1 = USER
-plugin.tx_gridelements_pi1 {
-	userFunc = tx_gridelements_view->main
-}
-
 lib.adxtwitterbootstrap.accordion {
 
 	render {
@@ -36,9 +31,9 @@ lib.adxtwitterbootstrap.accordion {
 }
 
 /**
- * plugin.tx_gridelements_pi1.setup.tx_adxtwitterbootstrap_accordion
+ * Accordion setup
  */
-plugin.tx_gridelements_pi1.setup.tx_adxtwitterbootstrap_accordion {
+plugin.tx_gridelements_view.setup.tx_adxtwitterbootstrap_accordion {
 
 	cObject = FLUIDTEMPLATE
 	cObject {
