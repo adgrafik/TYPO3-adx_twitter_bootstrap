@@ -8,7 +8,8 @@ t3lib_extMgm::addStaticFile($_EXTKEY, 'Configuration/TypoScript/Bootstrap/2.3.x'
 t3lib_extMgm::addStaticFile($_EXTKEY, 'Configuration/TypoScript/DeviceVisibility/4.6/', 'ad: Twitter Bootstrap device visibility 4.6.x');
 t3lib_extMgm::addStaticFile($_EXTKEY, 'Configuration/TypoScript/DeviceVisibility/4.7/', 'ad: Twitter Bootstrap device visibility 4.7.x');
 
-t3lib_extMgm::addStaticFile($_EXTKEY, 'Configuration/TypoScript/Components/Patch_1.4.1/', 'ad: Twitter Bootstrap components patch for gridelements >= v1.4.1');
+t3lib_extMgm::addStaticFile($_EXTKEY, 'Configuration/TypoScript/GridelementsPatch/1.4.1/', 'ad: Twitter Bootstrap components patch for gridelements >= v1.4.1');
+t3lib_extMgm::addStaticFile($_EXTKEY, 'Configuration/TypoScript/GridelementsPatch/2.0.0/', 'ad: Twitter Bootstrap components patch for gridelements >= v2.0.0');
 t3lib_extMgm::addStaticFile($_EXTKEY, 'Configuration/TypoScript/Components/Columns/', 'ad: Twitter Bootstrap columns');
 t3lib_extMgm::addStaticFile($_EXTKEY, 'Configuration/TypoScript/Components/Carousel/', 'ad: Twitter Bootstrap carousel');
 t3lib_extMgm::addStaticFile($_EXTKEY, 'Configuration/TypoScript/Components/Tabs/', 'ad: Twitter Bootstrap tabs');
