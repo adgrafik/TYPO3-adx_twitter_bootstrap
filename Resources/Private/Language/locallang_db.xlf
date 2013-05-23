@@ -3,7 +3,19 @@
 	<file source-language="en" datatype="plaintext" original="messages" date="2012-06-13T20:22:32Z" product-name="adx_twitter_bootstrap">
 		<header/>
 		<body>
+			<!-- backend_layout fields -->
+			<trans-unit id="tx_adxtwitterbootstrap_layout_id" xml:space="preserve">
+				<source>Layout ID</source>
+			</trans-unit>
+
 			<!-- tt_content fields -->
+			<trans-unit id="tx_adxtwitterbootstrap_inherit" xml:space="preserve">
+				<source>Inherit Content element</source>
+			</trans-unit>
+			<trans-unit id="tx_adxtwitterbootstrap_inherit.description" xml:space="preserve">
+				<source>If this option is activated, this content element will be inherited to the sub pages.</source>
+			</trans-unit>
+
 			<trans-unit id="tx_adxtwitterbootstrap_device_visibility" xml:space="preserve">
 				<source>Device visibility</source>
 			</trans-unit>
@@ -109,7 +121,7 @@
 			<trans-unit id="flexform.columns.layout.3" xml:space="preserve">
 				<source>Layout 3</source>
 			</trans-unit>
-			<trans-unit id="flexformcolumns..equalHeight" xml:space="preserve">
+			<trans-unit id="flexform.columns.equalHeight" xml:space="preserve">
 				<source>Equal height</source>
 			</trans-unit>
 

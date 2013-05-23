@@ -4,6 +4,21 @@
 		<header/>
 		<body>
 			<!-- tt_content fields -->
+			<trans-unit id="tx_adxtwitterbootstrap_layout_id" xml:space="preserve">
+				<source>Layout ID</source>
+				<target state="translated">Layout ID</target>
+			</trans-unit>
+
+			<!-- tt_content fields -->
+			<trans-unit id="tx_adxtwitterbootstrap_inherit" xml:space="preserve">
+				<source>Inherit Content element</source>
+				<target state="translated">Seiteninhalt vererben</target>
+			</trans-unit>
+			<trans-unit id="tx_adxtwitterbootstrap_inherit.description" xml:space="preserve">
+				<source>If this option is activated, this content element will be inherited to the sub pages.</source>
+				<target state="translated">If this option is activated, this content element will be inherited to the sub pages.</target>
+			</trans-unit>
+
 			<trans-unit id="tx_adxtwitterbootstrap_device_visibility" xml:space="preserve">
 				<source>Device visibility</source>
 				<target state="translated">Device-Sichtbarkeit</target>
