@@ -2,8 +2,6 @@
 /**
  * Settings for powermail.
  */
-[userFunc = user_adxtwitterbootstrap_isExtensionLoaded(powermail)]
-
 TCEFORM {
 
 	tx_powermail_domain_model_forms {
@@ -64,5 +62,3 @@ TCEFORM {
 		}
 	}
 }
-
-[end]
