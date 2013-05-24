@@ -33,7 +33,9 @@ lib.adxtwitterbootstrap.accordion {
 /**
  * Accordion setup
  */
-plugin.tx_gridelements_view.setup.tx_adxtwitterbootstrap_accordion {
+plugin.tx_gridelements_pi1.setup.tx_adxtwitterbootstrap_accordion {
+
+	columns.default.renderObj =< tt_content
 
 	cObject = FLUIDTEMPLATE
 	cObject {
@@ -56,6 +58,7 @@ plugin.tx_gridelements_view.setup.tx_adxtwitterbootstrap_accordion {
 			span {
 				stdWrap.dataWrap = {$plugin.tx_adxtwitterbootstrap.variables.gridColumns} / {field: flexform_tx_adxtwitterbootstrap_accordion_columns}
 				prioriCalc = 1
+				round.roundType = floor
 				noTrimWrap = | span||
 			}
 
