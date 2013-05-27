@@ -55,7 +55,7 @@ lib.adxtwitterbootstrap.carousel {
 /**
  * Carousel setup
  */
-plugin.tx_gridelements_view.setup.tx_adxtwitterbootstrap_carousel {
+plugin.tx_gridelements_pi1.setup.tx_adxtwitterbootstrap_carousel {
 
 	cObject = FLUIDTEMPLATE
 	cObject {
