@@ -33,7 +33,9 @@ lib.adxtwitterbootstrap.tabs {
 /**
  * Tabs setup
  */
-plugin.tx_gridelements_view.setup.tx_adxtwitterbootstrap_tabs {
+plugin.tx_gridelements_pi1.setup.tx_adxtwitterbootstrap_tabs {
+
+	columns.default.renderObj =< tt_content
 
 	cObject = FLUIDTEMPLATE
 	cObject {
@@ -51,6 +53,12 @@ plugin.tx_gridelements_view.setup.tx_adxtwitterbootstrap_tabs {
 
 			active = TEXT
 			active.field = flexform_tx_adxtwitterbootstrap_tabs_active
+
+			slideToPosition = TEXT
+			slideToPosition.field = flexform_tx_adxtwitterbootstrap_tabs_slide_to_position
+
+			slideOffset = TEXT
+			slideOffset.field = flexform_tx_adxtwitterbootstrap_tabs_slide_offset
 		}
 	}
 }

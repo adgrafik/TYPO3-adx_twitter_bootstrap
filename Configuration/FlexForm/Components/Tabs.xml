@@ -48,6 +48,32 @@
 							</config>
 						</TCEforms>
 					</tx_adxtwitterbootstrap_tabs_active>
+					<tx_adxtwitterbootstrap_tabs_slide_to_position type="array">
+						<TCEforms type="array">
+							<label>LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.tabs.slideToPosition</label>
+							<config type="array">
+								<type>check</type>
+								<default type="integer">1</default>
+								<items>
+									<numIndex index="0">
+										<numIndex index="0">LLL:EXT:lang/locallang_core.xml:labels.enabled</numIndex>
+										<numIndex index="1">1</numIndex>
+									</numIndex>
+								</items>
+							</config>
+						</TCEforms>
+					</tx_adxtwitterbootstrap_tabs_slide_to_position>
+					<tx_adxtwitterbootstrap_tabs_slide_offset type="array">
+						<TCEforms type="array">
+							<label>LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.tabs.slideOffset</label>
+							<config type="array">
+								<type>input</type>
+								<size>3</size>
+								<default type="integer">0</default>
+								<eval>int</eval>
+							</config>
+						</TCEforms>
+					</tx_adxtwitterbootstrap_tabs_slide_offset>
 				</el>
 			</ROOT>
 		</tx_adxtwitterbootstrap_tabs_general>

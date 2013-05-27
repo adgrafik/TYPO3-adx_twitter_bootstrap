@@ -297,6 +297,12 @@
 			<trans-unit id="flexform.tabs.active" xml:space="preserve">
 				<source>Active item</source>
 			</trans-unit>
+			<trans-unit id="flexform.tabs.slideToPosition" xml:space="preserve">
+				<source>Slide to position</source>
+			</trans-unit>
+			<trans-unit id="flexform.tabs.slideOffset" xml:space="preserve">
+				<source>Slide offset</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

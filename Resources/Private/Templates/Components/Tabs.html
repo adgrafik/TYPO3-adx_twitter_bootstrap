@@ -15,3 +15,18 @@
 		</f:for>
 	</div>
 </div>
+
+<f:if condition="{slideToPosition}">
+	<t3jquery:AddJQueryAndScript renderChildrenToData="TRUE">
+		(function($){
+			var selector = '#tabs{data.uid}',
+				slideOffset = {slideOffset};
+			$(selector)
+				.on('shown', function(event){
+					$('html, body').animate({
+						scrollTop: $('.tab-content').offset().top - slideOffset
+					}, 'slow');
+				});
+		})(jQuery);
+	</t3jquery:AddJQueryAndScript>
+</f:if>

@@ -336,6 +336,14 @@
 				<source>Active item</source>
 				<target state="translated">Aktives Element</target>
 			</trans-unit>
+			<trans-unit id="flexform.tabs.slideToPosition" xml:space="preserve">
+				<source>Slide to position</source>
+				<target state="translated">Zur Position gleiten</target>
+			</trans-unit>
+			<trans-unit id="flexform.tabs.slideOffset" xml:space="preserve">
+				<source>Slide offset</source>
+				<target state="translated">Offset</target>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>
