@@ -5,9 +5,9 @@
 plugin.tx_powermail {
 
 	view {
-		templateRootPath = EXT:adx_twitter_bootstrap/Resources/Private/PowermailTemplates/2.0.5/Templates/
-		partialRootPath = EXT:adx_twitter_bootstrap/Resources/Private/PowermailTemplates/2.0.5/Partials/
-		layoutRootPath = EXT:adx_twitter_bootstrap/Resources/Private/PowermailTemplates/2.0.5/Layouts/
+		templateRootPath = EXT:adx_twitter_bootstrap/Resources/Private/Templates/Powermail/2.0.5/Templates/
+		partialRootPath = EXT:adx_twitter_bootstrap/Resources/Private/Templates/Powermail/2.0.5/Partials/
+		layoutRootPath = EXT:adx_twitter_bootstrap/Resources/Private/Templates/Powermail/2.0.5/Layouts/
 	}
 }
 
