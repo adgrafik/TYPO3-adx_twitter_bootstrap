@@ -3,14 +3,16 @@
 
 <div id="tabs{data.uid}" class="tabs{layout}">
 	<ul class="nav nav-tabs">
-		<f:for each="{data.tx_gridelements_view_children}" as="item" key="key">
+		<f:for each="{data.tx_gridelements_view_children}" key="key" as="item">
 			<li class="{f:cObject( typoscriptObjectPath: 'lib.adxtwitterbootstrap.tabs.activeClass', data: {active: active, key: key} )}"><a href="#tabItem{item.uid}" data-toggle="tab"><f:cObject typoscriptObjectPath="lib.adxtwitterbootstrap.tabs.render.heading" data="{item}" /></a></li>
 		</f:for>
 	</ul>
 	<div class="tab-content">
-		<f:for each="{data.tx_gridelements_view_children}" as="item" key="key">
+		<f:for each="{data.tx_gridelements_view_children}" key="key" as="item">
 			<div class="tab-pane fade{f:cObject( typoscriptObjectPath: 'lib.adxtwitterbootstrap.tabs.activeClass', data: {active: active, key: key} )}" id="tabItem{item.uid}">
-				<f:cObject typoscriptObjectPath="lib.adxtwitterbootstrap.tabs.render.content" data="{item}" />
+				<f:if condition="{ajaxLoading} != 1">
+					<f:cObject typoscriptObjectPath="lib.adxtwitterbootstrap.tabs.render.content" data="{item}" />
+				</f:if>
 			</div>
 		</f:for>
 	</div>
@@ -19,14 +21,40 @@
 <f:if condition="{slideToPosition}">
 	<t3jquery:AddJQueryAndScript renderChildrenToData="TRUE">
 		(function($){
-			var selector = '#tabs{data.uid}',
-				slideOffset = {slideOffset};
-			$(selector)
-				.on('shown', function(event){
-					$('html, body').animate({
-						scrollTop: $('.tab-content').offset().top - slideOffset
-					}, 'slow');
+			var $tabs = $('#tabs{data.uid}'),
+				$tabContent = $tabs.find('.tab-content'),
+				ajaxLoading = '{ajaxLoading}',
+				slideOffset = {slideOffset},
+				pageURL = '{f:uri.page()}';
+			var scrolToPosition = function(){
+				$('html, body').stop().animate({
+					scrollTop: $tabContent.offset().top - slideOffset
+				}, 'slow');
+			}
+			if (ajaxLoading){
+				// Set event listener to document for inherit elements.
+				$(document).on('show', $tabs.find('a[data-toggle="tab"]'), function(event){
+					var $tabItem = $(event.target);
+					var id = $tabItem.attr('href').split('#tabItem')[1];
+					var $panel = $('#tabItem' + id);
+					// Usually ther is a DIV within the content. So you can append some SPAN-icons inside the panel.
+					if (!$panel.find('div').length){
+						$tabItem.addClass('loading');
+						$.get(pageURL + '?type=1370426637&tx_adxtwitterbootstrap[uid]=' + id)
+							.success(function(data){
+								$panel.append(data);
+								$tabItem.removeClass('loading');
+								scrolToPosition();
+							});
+					} else {
+						scrolToPosition();
+					}
 				});
+			} else {
+				$(document).on('show', $tabs, function(event){
+					scrolToPosition();
+				});
+			}
 		})(jQuery);
 	</t3jquery:AddJQueryAndScript>
 </f:if>

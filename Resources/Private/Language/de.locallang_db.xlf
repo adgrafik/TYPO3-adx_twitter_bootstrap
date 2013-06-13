@@ -344,6 +344,10 @@
 				<source>Slide offset</source>
 				<target state="translated">Offset</target>
 			</trans-unit>
+			<trans-unit id="flexform.tabs.ajaxLoading" xml:space="preserve">
+				<source>Load content via AJAX</source>
+				<target state="translated">Lade Inhalt per AJAX</target>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

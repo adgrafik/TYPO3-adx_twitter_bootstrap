@@ -44,6 +44,9 @@ plugin.tx_gridelements_pi1.setup.tx_adxtwitterbootstrap_tabs {
 
 		variables {
 
+			pageId = TEXT
+			pageId.data = TSFE: id
+
 			layout = TEXT
 			layout {
 				field = flexform_tx_adxtwitterbootstrap_tabs_layout
@@ -59,6 +62,43 @@ plugin.tx_gridelements_pi1.setup.tx_adxtwitterbootstrap_tabs {
 
 			slideOffset = TEXT
 			slideOffset.field = flexform_tx_adxtwitterbootstrap_tabs_slide_offset
+
+			ajaxLoading = TEXT
+			ajaxLoading.field = flexform_tx_adxtwitterbootstrap_tabs_ajax_loading
+		}
+	}
+}
+
+
+/**
+ * Page: Template
+ */
+pageAdxTwitterBootstrapAjax = PAGE
+pageAdxTwitterBootstrapAjax {
+
+	typeNum = 1370426637
+
+	config {
+		admPanel = 0
+		no_cache = 1
+		disableAllHeaderCode = 1 
+		disableCharsetHeader = 1
+		disablePrefixComment = 1
+	}
+
+	10 = CONTENT
+	10 {
+
+		table = tt_content
+
+		select {
+
+			pidInList.data = TSFE: id
+
+			uidInList.data = GP: tx_adxtwitterbootstrap|uid
+			uidInList.required = 1
+
+			languageField = sys_language_uid
 		}
 	}
 }

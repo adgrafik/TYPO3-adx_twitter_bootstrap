@@ -303,6 +303,9 @@
 			<trans-unit id="flexform.tabs.slideOffset" xml:space="preserve">
 				<source>Slide offset</source>
 			</trans-unit>
+			<trans-unit id="flexform.tabs.ajaxLoading" xml:space="preserve">
+				<source>Load content via AJAX</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

@@ -57,6 +57,8 @@ lib.adxtwitterbootstrap.carousel {
  */
 plugin.tx_gridelements_pi1.setup.tx_adxtwitterbootstrap_carousel {
 
+	columns.default.renderObj =< tt_content
+
 	cObject = FLUIDTEMPLATE
 	cObject {
 
