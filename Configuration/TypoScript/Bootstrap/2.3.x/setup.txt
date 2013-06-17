@@ -333,14 +333,14 @@ tt_content.stdWrap.innerWrap.cObject {
 	default.20.1352997637 = TEXT
 	default.20.1352997637 {
 		field = tx_adxtwitterbootstrap_offset
-		required = 1
+		fieldRequired = tx_adxtwitterbootstrap_offset
 		noTrimWrap = | offset||
 	}
 
 	default.20.1352997638 = TEXT
 	default.20.1352997638 {
 		field = tx_adxtwitterbootstrap_span
-		required = 1
+		fieldRequired = tx_adxtwitterbootstrap_span
 		noTrimWrap = | span||
 	}
 
