@@ -19,6 +19,14 @@
 				<target state="translated">If this option is activated, this content element will be inherited to the sub pages.</target>
 			</trans-unit>
 
+			<trans-unit id="tx_adxtwitterbootstrap_offset" xml:space="preserve">
+				<source>Left Indent</source>
+				<target state="translated">Linke Einrückung</target>
+			</trans-unit>
+			<trans-unit id="tx_adxtwitterbootstrap_span" xml:space="preserve">
+				<source>Span</source>
+				<target state="translated">Spanne</target>
+			</trans-unit>
 			<trans-unit id="tx_adxtwitterbootstrap_device_visibility" xml:space="preserve">
 				<source>Device visibility</source>
 				<target state="translated">Device-Sichtbarkeit</target>

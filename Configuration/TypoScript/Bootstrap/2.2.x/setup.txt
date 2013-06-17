@@ -323,3 +323,27 @@ page {
 		prepend.char = 10
 	}
 }
+
+
+/**
+ * Add offset and span support.
+ */
+tt_content.stdWrap.innerWrap.cObject {
+
+	default.20.1352997637 = TEXT
+	default.20.1352997637 {
+		field = tx_adxtwitterbootstrap_offset
+		required = 1
+		noTrimWrap = | offset||
+	}
+
+	default.20.1352997638 = TEXT
+	default.20.1352997638 {
+		field = tx_adxtwitterbootstrap_span
+		required = 1
+		noTrimWrap = | span||
+	}
+
+	66.1352997637 =< tt_content.stdWrap.innerWrap.cObject.default.20.1352997637
+	66.1352997638 =< tt_content.stdWrap.innerWrap.cObject.default.20.1352997638
+}

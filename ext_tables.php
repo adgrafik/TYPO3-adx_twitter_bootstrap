@@ -23,16 +23,32 @@ t3lib_extMgm::addStaticFile($_EXTKEY, 'Configuration/TypoScript/Powermail/2.0.5/
  * Add-ons for tt_content
  */
 $tempColumns = array(
-	'tx_adxtwitterbootstrap_inherit' => array(		
-		'label' => 'LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:tx_adxtwitterbootstrap_inherit',
-		'exclude' => 1,		
+	'tx_adxtwitterbootstrap_offset' => array(
+		'label' => 'LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:tx_adxtwitterbootstrap_offset',
+		'exclude' => 1,
 		'config' => array(
-			'type' => 'check',
-			'items' => array(
-				'1'	=> array(
-					'0' => 'LLL:EXT:lang/locallang_core.xml:labels.enabled',
-				),
+			'type' => 'input',
+			'size' => '5',
+			'max' => '5',
+			'eval' => 'int',
+			'range' => array(
+				'lower' => '0'
 			),
+			'default' => 0
+		),
+	),
+	'tx_adxtwitterbootstrap_span' => array(
+		'label' => 'LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:tx_adxtwitterbootstrap_span',
+		'exclude' => 1,
+		'config' => array(
+			'type' => 'input',
+			'size' => '5',
+			'max' => '5',
+			'eval' => 'int',
+			'range' => array(
+				'lower' => '0'
+			),
+			'default' => 0
 		),
 	),
 	'tx_adxtwitterbootstrap_device_visibility' => array(
@@ -48,12 +64,25 @@ $tempColumns = array(
 			),
 		),
 	),
+	'tx_adxtwitterbootstrap_inherit' => array(		
+		'label' => 'LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:tx_adxtwitterbootstrap_inherit',
+		'exclude' => 1,		
+		'config' => array(
+			'type' => 'check',
+			'items' => array(
+				'1'	=> array(
+					'0' => 'LLL:EXT:lang/locallang_core.xml:labels.enabled',
+				),
+			),
+		),
+	),
 );
 
 if (version_compare(TYPO3_branch, '6.1', '<')) {
 	t3lib_div::loadTCA('tt_content');
 }
 t3lib_extMgm::addTCAcolumns('tt_content', $tempColumns, 1);
+t3lib_extMgm::addFieldsToPalette('tt_content', 'frames', 'tx_adxtwitterbootstrap_offset,tx_adxtwitterbootstrap_span', 'after:spaceAfter');
 t3lib_extMgm::addFieldsToPalette('tt_content', 'visibility', '--linebreak--,tx_adxtwitterbootstrap_device_visibility');
 t3lib_extMgm::addFieldsToPalette('tt_content', 'visibility', 'tx_adxtwitterbootstrap_inherit', 'after:linkToTop');
 t3lib_extMgm::addLLrefForTCAdescr('tt_content', 'EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf');
