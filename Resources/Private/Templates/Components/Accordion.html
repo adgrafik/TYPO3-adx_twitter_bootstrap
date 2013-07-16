@@ -9,7 +9,7 @@
 				<div class="row-fluid">
 					<f:for each="{columnItem}" as="item" key="key" iteration="info">
 						<div class="accordion-heading{span}">
-							<a class="accordion-toggle" data-toggle="collapse" data-parent="{f:if( condition: '{collapsible}', then: '#accordion{data.uid}' )}" href="#collapse{item.uid}">
+							<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="{f:if( condition: '{collapsible}', then: '#accordion{data.uid}' )}" href="#collapse{item.uid}">
 								<f:cObject typoscriptObjectPath="lib.adxtwitterbootstrap.accordion.render.heading" data="{item}" />
 							</a>
 						</div>
@@ -30,13 +30,19 @@
 <f:if condition="{slideToPosition}">
 	<t3jquery:AddJQueryAndScript renderChildrenToData="TRUE">
 		(function($){
-			var selector = '#accordion{data.uid}',
+			var $selector = $('#accordion{data.uid}'),
 				slideOffset = {slideOffset};
-			$(selector)
+			$selector
+				.on('show', function(event){
+					$selector.find('.accordion-toggle[href*=#' + $(event.target).get(0).id + ']').addClass('active');
+				})
 				.on('shown', function(event){
 					$('html, body').animate({
 						scrollTop: $(event.target).offset().top - slideOffset
 					}, 'slow');
+				})
+				.on('hidden', function(event){
+					$selector.find('.accordion-toggle[href*=#' + $(event.target).get(0).id + ']').removeClass('active');
 				});
 		})(jQuery);
 	</t3jquery:AddJQueryAndScript>

@@ -30,6 +30,8 @@ lib.adxtwitterbootstrap.accordion {
 	}
 }
 
+#treatIdAsReference
+
 /**
  * Accordion setup
  */
