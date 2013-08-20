@@ -1,128 +1,125 @@
 
 {namespace t3jquery=Tx_T3jquery_ViewHelpers}
 
-<div class="row-fluid{layout}{equalHeight}">
+<f:if condition="{columns} == 2">
 
-	<f:if condition="{columns} == 2">
-
-		<f:if condition="{segmentation} == 1212">
-			<div class="span6{visibilityColumn1}">
-				{data.tx_gridelements_view_column_0 -> f:format.raw()}
-			</div>
-			<div class="span6{visibilityColumn2}">
-				{data.tx_gridelements_view_column_1 -> f:format.raw()}
-			</div>
-		</f:if>
-
-		<f:if condition="{segmentation} == 1323">
-			<div class="span4{visibilityColumn1}">
-				{data.tx_gridelements_view_column_0 -> f:format.raw()}
-			</div>
-			<div class="span8{visibilityColumn2}">
-				{data.tx_gridelements_view_column_1 -> f:format.raw()}
-			</div>
-		</f:if>
-
-		<f:if condition="{segmentation} == 2313">
-			<div class="span8{visibilityColumn1}">
-				{data.tx_gridelements_view_column_0 -> f:format.raw()}
-			</div>
-			<div class="span4{visibilityColumn2}">
-				{data.tx_gridelements_view_column_1 -> f:format.raw()}
-			</div>
-		</f:if>
-
-		<f:if condition="{segmentation} == 1434">
-			<div class="span3{visibilityColumn1}">
-				{data.tx_gridelements_view_column_0 -> f:format.raw()}
-			</div>
-			<div class="span9{visibilityColumn2}">
-				{data.tx_gridelements_view_column_1 -> f:format.raw()}
-			</div>
-		</f:if>
-
-		<f:if condition="{segmentation} == 3414">
-			<div class="span9{visibilityColumn1}">
-				{data.tx_gridelements_view_column_0 -> f:format.raw()}
-			</div>
-			<div class="span3{visibilityColumn2}">
-				{data.tx_gridelements_view_column_1 -> f:format.raw()}
-			</div>
-		</f:if>
-
+	<f:if condition="{segmentation} == 1212">
+		<div class="span6{visibilityColumn1}">
+			{data.tx_gridelements_view_column_0 -> f:format.raw()}
+		</div>
+		<div class="span6{visibilityColumn2}">
+			{data.tx_gridelements_view_column_1 -> f:format.raw()}
+		</div>
 	</f:if>
 
-	<f:if condition="{columns} == 3">
-
-		<f:if condition="{segmentation} == 131313">
-			<div class="span4{visibilityColumn1}">
-				{data.tx_gridelements_view_column_0 -> f:format.raw()}
-			</div>
-			<div class="span4{visibilityColumn2}">
-				{data.tx_gridelements_view_column_1 -> f:format.raw()}
-			</div>
-			<div class="span4{visibilityColumn3}">
-				{data.tx_gridelements_view_column_2 -> f:format.raw()}
-			</div>
-		</f:if>
-
-		<f:if condition="{segmentation} == 121414">
-			<div class="span6{visibilityColumn1}">
-				{data.tx_gridelements_view_column_0 -> f:format.raw()}
-			</div>
-			<div class="span3{visibilityColumn2}">
-				{data.tx_gridelements_view_column_1 -> f:format.raw()}
-			</div>
-			<div class="span3{visibilityColumn3}">
-				{data.tx_gridelements_view_column_2 -> f:format.raw()}
-			</div>
-		</f:if>
-
-		<f:if condition="{segmentation} == 141214">
-			<div class="span3{visibilityColumn1}">
-				{data.tx_gridelements_view_column_0 -> f:format.raw()}
-			</div>
-			<div class="span6{visibilityColumn2}">
-				{data.tx_gridelements_view_column_1 -> f:format.raw()}
-			</div>
-			<div class="span3{visibilityColumn3}">
-				{data.tx_gridelements_view_column_2 -> f:format.raw()}
-			</div>
-		</f:if>
-
-		<f:if condition="{segmentation} == 141412">
-			<div class="span3{visibilityColumn1}">
-				{data.tx_gridelements_view_column_0 -> f:format.raw()}
-			</div>
-			<div class="span3{visibilityColumn2}">
-				{data.tx_gridelements_view_column_1 -> f:format.raw()}
-			</div>
-			<div class="span6{visibilityColumn3}">
-				{data.tx_gridelements_view_column_2 -> f:format.raw()}
-			</div>
-		</f:if>
-
+	<f:if condition="{segmentation} == 1323">
+		<div class="span4{visibilityColumn1}">
+			{data.tx_gridelements_view_column_0 -> f:format.raw()}
+		</div>
+		<div class="span8{visibilityColumn2}">
+			{data.tx_gridelements_view_column_1 -> f:format.raw()}
+		</div>
 	</f:if>
 
-	<f:if condition="{columns} == 4">
-
-		<f:if condition="{segmentation} == 14141414">
-			<div class="span3{visibilityColumn1}">
-				{data.tx_gridelements_view_column_0 -> f:format.raw()}
-			</div>
-			<div class="span3{visibilityColumn2}">
-				{data.tx_gridelements_view_column_1 -> f:format.raw()}
-			</div>
-			<div class="span3{visibilityColumn3}">
-				{data.tx_gridelements_view_column_2 -> f:format.raw()}
-			</div>
-			<div class="span3{visibilityColumn4}">
-				{data.tx_gridelements_view_column_3 -> f:format.raw()}
-			</div>
-		</f:if>
-
+	<f:if condition="{segmentation} == 2313">
+		<div class="span8{visibilityColumn1}">
+			{data.tx_gridelements_view_column_0 -> f:format.raw()}
+		</div>
+		<div class="span4{visibilityColumn2}">
+			{data.tx_gridelements_view_column_1 -> f:format.raw()}
+		</div>
 	</f:if>
-</div>
+
+	<f:if condition="{segmentation} == 1434">
+		<div class="span3{visibilityColumn1}">
+			{data.tx_gridelements_view_column_0 -> f:format.raw()}
+		</div>
+		<div class="span9{visibilityColumn2}">
+			{data.tx_gridelements_view_column_1 -> f:format.raw()}
+		</div>
+	</f:if>
+
+	<f:if condition="{segmentation} == 3414">
+		<div class="span9{visibilityColumn1}">
+			{data.tx_gridelements_view_column_0 -> f:format.raw()}
+		</div>
+		<div class="span3{visibilityColumn2}">
+			{data.tx_gridelements_view_column_1 -> f:format.raw()}
+		</div>
+	</f:if>
+
+</f:if>
+
+<f:if condition="{columns} == 3">
+
+	<f:if condition="{segmentation} == 131313">
+		<div class="span4{visibilityColumn1}">
+			{data.tx_gridelements_view_column_0 -> f:format.raw()}
+		</div>
+		<div class="span4{visibilityColumn2}">
+			{data.tx_gridelements_view_column_1 -> f:format.raw()}
+		</div>
+		<div class="span4{visibilityColumn3}">
+			{data.tx_gridelements_view_column_2 -> f:format.raw()}
+		</div>
+	</f:if>
+
+	<f:if condition="{segmentation} == 121414">
+		<div class="span6{visibilityColumn1}">
+			{data.tx_gridelements_view_column_0 -> f:format.raw()}
+		</div>
+		<div class="span3{visibilityColumn2}">
+			{data.tx_gridelements_view_column_1 -> f:format.raw()}
+		</div>
+		<div class="span3{visibilityColumn3}">
+			{data.tx_gridelements_view_column_2 -> f:format.raw()}
+		</div>
+	</f:if>
+
+	<f:if condition="{segmentation} == 141214">
+		<div class="span3{visibilityColumn1}">
+			{data.tx_gridelements_view_column_0 -> f:format.raw()}
+		</div>
+		<div class="span6{visibilityColumn2}">
+			{data.tx_gridelements_view_column_1 -> f:format.raw()}
+		</div>
+		<div class="span3{visibilityColumn3}">
+			{data.tx_gridelements_view_column_2 -> f:format.raw()}
+		</div>
+	</f:if>
+
+	<f:if condition="{segmentation} == 141412">
+		<div class="span3{visibilityColumn1}">
+			{data.tx_gridelements_view_column_0 -> f:format.raw()}
+		</div>
+		<div class="span3{visibilityColumn2}">
+			{data.tx_gridelements_view_column_1 -> f:format.raw()}
+		</div>
+		<div class="span6{visibilityColumn3}">
+			{data.tx_gridelements_view_column_2 -> f:format.raw()}
+		</div>
+	</f:if>
+
+</f:if>
+
+<f:if condition="{columns} == 4">
+
+	<f:if condition="{segmentation} == 14141414">
+		<div class="span3{visibilityColumn1}">
+			{data.tx_gridelements_view_column_0 -> f:format.raw()}
+		</div>
+		<div class="span3{visibilityColumn2}">
+			{data.tx_gridelements_view_column_1 -> f:format.raw()}
+		</div>
+		<div class="span3{visibilityColumn3}">
+			{data.tx_gridelements_view_column_2 -> f:format.raw()}
+		</div>
+		<div class="span3{visibilityColumn4}">
+			{data.tx_gridelements_view_column_3 -> f:format.raw()}
+		</div>
+	</f:if>
+
+</f:if>
 
 <t3jquery:AddJQueryAndScript jsfile="{javaScriptFile}" />
 <t3jquery:AddJQueryAndScript renderChildrenToData="TRUE">

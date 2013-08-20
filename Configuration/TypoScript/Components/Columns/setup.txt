@@ -22,20 +22,6 @@ plugin.tx_gridelements_pi1.setup.tx_adxtwitterbootstrap_columns_twocolumns {
 			segmentation = TEXT
 			segmentation.field = flexform_tx_adxtwitterbootstrap_columns_twocolumns_segmentation
 
-			layout = TEXT
-			layout {
-				field = flexform_tx_adxtwitterbootstrap_columns_twocolumns_layout
-				required = 1
-				noTrimWrap = | ||
-			}
-
-			equalHeight = TEXT
-			equalHeight {
-				value = equal-height
-				fieldRequired = flexform_tx_adxtwitterbootstrap_columns_twocolumns_equal_height
-				noTrimWrap = | ||
-			}
-
 			visibilityColumn1 = CASE
 			visibilityColumn1 {
 
@@ -87,8 +73,6 @@ plugin.tx_gridelements_pi1.setup.tx_adxtwitterbootstrap_columns_threecolumns {
 
 			columns.value = 3
 			segmentation.field = flexform_tx_adxtwitterbootstrap_columns_threecolumns_segmentation
-			layout.field = flexform_tx_adxtwitterbootstrap_columns_threecolumns_layout
-			equalHeight.fieldRequired = flexform_tx_adxtwitterbootstrap_columns_threecolumns_equal_height
 
 			visibilityColumn1.key.field = flexform_tx_adxtwitterbootstrap_columns_threecolumns_visibility_column1
 			visibilityColumn2.key.field = flexform_tx_adxtwitterbootstrap_columns_threecolumns_visibility_column2
@@ -111,8 +95,6 @@ plugin.tx_gridelements_pi1.setup.tx_adxtwitterbootstrap_columns_fourcolumns {
 
 			columns.value = 4
 			segmentation.field = flexform_tx_adxtwitterbootstrap_columns_fourcolumns_segmentation
-			layout.field = flexform_tx_adxtwitterbootstrap_columns_fourcolumns_layout
-			equalHeight.fieldRequired = flexform_tx_adxtwitterbootstrap_columns_fourcolumns_equal_height
 
 			visibilityColumn1.key.field = flexform_tx_adxtwitterbootstrap_columns_fourcolumns_visibility_column1
 			visibilityColumn2.key.field = flexform_tx_adxtwitterbootstrap_columns_fourcolumns_visibility_column2
@@ -127,39 +109,12 @@ plugin.tx_gridelements_pi1.setup.tx_adxtwitterbootstrap_columns_fourcolumns {
 }
 
 
-#[compatVersion = 4.7.0]
-
 // redefine content space
 tt_content.stdWrap.innerWrap.cObject.default.20 {
 
-	1352887520 = CASE
-	1352887520 {
+	20.stdWrap.if.value = gridelements_pi1
+	20.stdWrap.if.equals.field = parentgrid_CType
+	20.stdWrap.if.negate = 1
 
-		key.field = CType
-
-		gridelements_pi1 < tt_content.stdWrap.innerWrap.cObject.default.20.20
-		gridelements_pi1.constant = 0
-
-		default < tt_content.stdWrap.innerWrap.cObject.default.20.20
-
-		stdWrap.noTrimWrap = | ||
-	}
-
-	1352887530 = CASE
-	1352887530 {
-
-		key.field = CType
-
-		gridelements_pi1 < tt_content.stdWrap.innerWrap.cObject.default.20.30
-		gridelements_pi1.constant = 0
-
-		default < tt_content.stdWrap.innerWrap.cObject.default.20.30
-
-		stdWrap.noTrimWrap = | ||
-	}
-
-	20 >
-	30 >
+	30.stdWrap < .20.stdWrap
 }
-
-#[end]

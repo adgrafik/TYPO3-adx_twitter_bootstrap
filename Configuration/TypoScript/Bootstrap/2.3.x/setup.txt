@@ -330,6 +330,12 @@ page {
  */
 tt_content.stdWrap.innerWrap.cObject {
 
+	default.20.1352997636 = TEXT
+	default.20.1352997636 {
+		value = clearfix
+		noTrimWrap = | ||
+	}
+
 	default.20.1352997637 = TEXT
 	default.20.1352997637 {
 		field = tx_adxtwitterbootstrap_offset
@@ -344,6 +350,37 @@ tt_content.stdWrap.innerWrap.cObject {
 		noTrimWrap = | span||
 	}
 
+	default.20.1352997639 = CASE
+	default.20.1352997639 {
+
+		key.field = tx_gridelements_backend_layout
+
+		tx_adxtwitterbootstrap_columns_twocolumns = TEXT
+		tx_adxtwitterbootstrap_columns_twocolumns {
+			value = equal-height
+			fieldRequired = flexform_tx_adxtwitterbootstrap_columns_twocolumns_equal_height
+			noTrimWrap = | ||
+		}
+
+		tx_adxtwitterbootstrap_columns_threecolumns = TEXT
+		tx_adxtwitterbootstrap_columns_threecolumns {
+			value = equal-height
+			fieldRequired = flexform_tx_adxtwitterbootstrap_columns_threecolumns_equal_height
+			noTrimWrap = | ||
+		}
+
+		tx_adxtwitterbootstrap_columns_fourcolumns = TEXT
+		tx_adxtwitterbootstrap_columns_fourcolumns {
+			value = equal-height
+			fieldRequired = flexform_tx_adxtwitterbootstrap_columns_fourcolumns_equal_height
+			noTrimWrap = | ||
+		}
+	}
+
+	default.wrap = <div class="row-fluid"> | </div>
+
+	66.1352997636 =< tt_content.stdWrap.innerWrap.cObject.default.20.1352997636
 	66.1352997637 =< tt_content.stdWrap.innerWrap.cObject.default.20.1352997637
 	66.1352997638 =< tt_content.stdWrap.innerWrap.cObject.default.20.1352997638
+	66.1352997639 =< tt_content.stdWrap.innerWrap.cObject.default.20.1352997639
 }
