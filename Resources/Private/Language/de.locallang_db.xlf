@@ -43,6 +43,10 @@
 				<source>Hide on phones</source>
 				<target state="translated">Versteckt auf Handys</target>
 			</trans-unit>
+			<trans-unit id="tx_adxtwitterbootstrap_link_content_element" xml:space="preserve">
+				<source>Link content element with first found link</source>
+				<target state="translated">Verlinke Seiteninhalt mit dem ersten gefundenen Link</target>
+			</trans-unit>
 
 			<!-- Configuration/TSconfig/Components/*Columns.ts -->
 			<trans-unit id="TSconfig.columns.twoColumns.title" xml:space="preserve">

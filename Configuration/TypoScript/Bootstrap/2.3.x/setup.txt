@@ -377,6 +377,20 @@ tt_content.stdWrap.innerWrap.cObject {
 		}
 	}
 
+	default.20.1352997640 = TEXT
+	default.20.1352997640 {
+
+		value = link-content-element
+		fieldRequired = tx_adxtwitterbootstrap_link_content_element
+		noTrimWrap = | ||
+
+		append = USER
+		append {
+			userFunc = tx_t3jquery->addJS
+			jsdata = (function($){ $(document).ready(function(){ $(document).on('click', '.link-content-element', function(event){ var anchor = $(this).find('a:first').get(0); if (anchor){ window.location.href = $('base').attr('href') + $(anchor).attr('href'); return false; } }); }); })(jQuery);
+		}
+	}
+
 	default.wrap = <div class="row-fluid"> | </div>
 
 	66.1352997636 =< tt_content.stdWrap.innerWrap.cObject.default.20.1352997636

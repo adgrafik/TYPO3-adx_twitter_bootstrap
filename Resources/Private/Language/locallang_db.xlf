@@ -34,6 +34,12 @@
 			<trans-unit id="tx_adxtwitterbootstrap_device_visibility.hideOnPhone" xml:space="preserve">
 				<source>Hide on phones</source>
 			</trans-unit>
+			<trans-unit id="tx_adxtwitterbootstrap_link_content_element" xml:space="preserve">
+				<source>Link content element with first found link</source>
+			</trans-unit>
+			<trans-unit id="tx_adxtwitterbootstrap_link_content_element.description" xml:space="preserve">
+				<source>If this option is activated, the whole content element will be linked with the first found link in this element by JavaScript.</source>
+			</trans-unit>
 
 			<!-- Configuration/TSconfig/Components/*Columns.ts -->
 			<trans-unit id="TSconfig.columns.twoColumns.title" xml:space="preserve">
