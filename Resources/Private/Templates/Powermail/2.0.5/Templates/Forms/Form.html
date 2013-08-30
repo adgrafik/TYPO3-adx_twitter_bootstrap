@@ -15,24 +15,31 @@ Render Powermail Form
 
 			<f:render partial="FormError" arguments="{error}" />
 
-			<div class="row-fluid">
-				<f:for each="{form.pages}" as="page">
-					<fieldset class="powermail_fieldset powermail_fieldset_{page.uid}{f:CObject(typoscriptObjectPath: 'lib.tx_adxtwitterbootstrap.powermail.fieldsetSpan', data: page)}">
+			<f:for each="{form.pages}" as="page" iteration="pageIteration">
+
+				<f:CObject typoscriptObjectPath="lib.tx_adxtwitterbootstrap.powermail.fieldsetRowStartTag" data="{ span: page.span, offset: page.offset, isLast: pageIteration.isLast }" />
+
+				<fieldset class="powermail_fieldset powermail_fieldset_{page.uid} {page.css}{f:CObject( typoscriptObjectPath: 'lib.tx_adxtwitterbootstrap.powermail.fieldsetClasses', data: page )}">
+
+					<f:if condition="{page.hideLegend} == 0">
 						<legend class="powermail_legend">{page.title}</legend>
+					</f:if>
 
-						<f:for each="{page.fields}" as="field">
+					<f:for each="{page.fields}" as="field" iteration="fieldIteration">
 
-							<f:CObject typoscriptObjectPath="lib.tx_adxtwitterbootstrap.powermail.controlsRowStartTag" data="{field}" />
+						<f:CObject typoscriptObjectPath="lib.tx_adxtwitterbootstrap.powermail.controlsRowStartTag" data="{ span: field.span, offset: field.offset, isLast: fieldIteration.isLast }" />
 
-							<f:render partial="Forms/{vh:String.Upper(string: '{field.type}')}" arguments="{field: field}" />
+						<f:render partial="Forms/{vh:String.Upper(string: '{field.type}')}" arguments="{field: field}" />
 
-							<f:CObject typoscriptObjectPath="lib.tx_adxtwitterbootstrap.powermail.controlsRowEndTag" data="{field}" />
+						<f:CObject typoscriptObjectPath="lib.tx_adxtwitterbootstrap.powermail.controlsRowEndTag" data="{ span: field.span, offset: field.offset, isLast: fieldIteration.isLast }" />
 
-						</f:for>
+					</f:for>
 
-					</fieldset>
-				</f:for>
-			</div>
+				</fieldset>
+
+				<f:CObject typoscriptObjectPath="lib.tx_adxtwitterbootstrap.powermail.fieldsetRowEndTag" data="{ span: page.span, offset: page.offset, isLast: pageIteration.isLast }" />
+
+			</f:for>
 
 			<f:form.hidden name="form" value="{form.uid}" />
 			<f:render partial="HoneyPod" arguments="{form: form}" />

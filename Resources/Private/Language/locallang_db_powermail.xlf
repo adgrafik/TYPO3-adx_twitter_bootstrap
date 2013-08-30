@@ -6,54 +6,47 @@
 			<trans-unit id="tx_powermail_domain_model_forms.labelLeftLeftAligned" xml:space="preserve">
 				<source>Labels on the left side (left-aligned)</source>
 			</trans-unit>
-			<trans-unit id="tx_powermail_domain_model_pages.columnsTwo" xml:space="preserve">
-				<source>Two columns</source>
+
+			<trans-unit id="tx_powermail_domain_model_pages.tx_adxtwitterbootstrap_hide_legend" xml:space="preserve">
+				<source>Hide legend</source>
 			</trans-unit>
-			<trans-unit id="tx_powermail_domain_model_pages.defaultNoLegend" xml:space="preserve">
+			<trans-unit id="tx_powermail_domain_model_pages.tx_adxtwitterbootstrap_offset" xml:space="preserve">
+				<source>Left Indent</source>
+			</trans-unit>
+			<trans-unit id="tx_powermail_domain_model_pages.tx_adxtwitterbootstrap_span" xml:space="preserve">
+				<source>Span</source>
+			</trans-unit>
+			<trans-unit id="tx_powermail_domain_model_pages.tx_adxtwitterbootstrap_end_of_row" xml:space="preserve">
+				<source>End of line</source>
+			</trans-unit>
+
+			<trans-unit id="tx_powermail_domain_model_pages.columnFullNoLegend" xml:space="preserve">
 				<source>Default, hide legend</source>
 			</trans-unit>
-			<trans-unit id="tx_powermail_domain_model_pages.columnsTwoNoLegend" xml:space="preserve">
-				<source>Two columns, hide legend</source>
+			<trans-unit id="tx_powermail_domain_model_pages.columnHalf" xml:space="preserve">
+				<source>Half column</source>
 			</trans-unit>
-			<trans-unit id="tx_powermail_domain_model_fields.columnFull" xml:space="preserve">
-				<source>Full</source>
+			<trans-unit id="tx_powermail_domain_model_pages.columnHalfNoLegend" xml:space="preserve">
+				<source>Half column, hide legend</source>
 			</trans-unit>
-			<trans-unit id="tx_powermail_domain_model_fields.columnHalf" xml:space="preserve">
-				<source>Half</source>
+			<trans-unit id="tx_powermail_domain_model_pages.columnThird" xml:space="preserve">
+				<source>Third column</source>
 			</trans-unit>
-			<trans-unit id="tx_powermail_domain_model_fields.columnHalfSingleRow" xml:space="preserve">
-				<source>Half, single row</source>
+			<trans-unit id="tx_powermail_domain_model_pages.columnThirdNoLegend" xml:space="preserve">
+				<source>Third column, hide legend</source>
 			</trans-unit>
-			<trans-unit id="tx_powermail_domain_model_fields.columnThird" xml:space="preserve">
-				<source>Third</source>
+			<trans-unit id="tx_powermail_domain_model_pages.columnTwoThird" xml:space="preserve">
+				<source>Two third column</source>
 			</trans-unit>
-			<trans-unit id="tx_powermail_domain_model_fields.columnThirdSingleRow" xml:space="preserve">
-				<source>Third, single row</source>
+			<trans-unit id="tx_powermail_domain_model_pages.columnTwoThirdNoLegend" xml:space="preserve">
+				<source>Two third column, hide legend</source>
 			</trans-unit>
-			<trans-unit id="tx_powermail_domain_model_fields.columnTwoThird" xml:space="preserve">
-				<source>Two third</source>
-			</trans-unit>
-			<trans-unit id="tx_powermail_domain_model_fields.columnTwoThirdSingleRow" xml:space="preserve">
-				<source>Two third, single row</source>
-			</trans-unit>
-			<trans-unit id="tx_powermail_domain_model_fields.columnQuarter" xml:space="preserve">
-				<source>Quarter</source>
-			</trans-unit>
-			<trans-unit id="tx_powermail_domain_model_fields.columnQuarterSingleRow" xml:space="preserve">
-				<source>Quarter, single row</source>
-			</trans-unit>
-			<trans-unit id="tx_powermail_domain_model_fields.columnTwoQuarter" xml:space="preserve">
-				<source>Two quarter</source>
-			</trans-unit>
-			<trans-unit id="tx_powermail_domain_model_fields.columnTwoQuarterSingleRow" xml:space="preserve">
-				<source>Two quarter, single row</source>
-			</trans-unit>
-			<trans-unit id="tx_powermail_domain_model_fields.columnThreeQuarter" xml:space="preserve">
-				<source>Three quarter</source>
-			</trans-unit>
-			<trans-unit id="tx_powermail_domain_model_fields.columnThreeQuarterSingleRow" xml:space="preserve">
-				<source>Three quarter, single row</source>
-			</trans-unit>
+
+
+
+
+
+
 			<trans-unit id="tx_powermail_domain_model_fields.columnInner" xml:space="preserve">
 				<source>Checkboxes/Radiobuttons</source>
 			</trans-unit>

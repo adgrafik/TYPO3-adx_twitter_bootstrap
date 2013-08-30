@@ -9,8 +9,8 @@
 		<div class="powermail_check_outer">
 			<f:for each="{field.settings}" as="setting" iteration="index">
 				<div class="powermail_check_inner powermail_check_inner_{index.cycle}">
-					<f:form.checkbox name="field[{field.uid}][{index.index}]" value="{setting.value}" checked="{vh:Misc.PrefillField(field: '{field}', cycle: '{index.cycle}')}" id="powermail_field_{field.marker}_{index.cycle}" class="powermail_checkbox powermail_checkbox_{field.uid} {vh:Misc.ValidationClass(field: '{field}')}" />
-					<label for="powermail_field_{field.marker}_{index.cycle}">
+					<label for="powermail_field_{field.marker}_{index.cycle}" class="checkbox">
+						<f:form.checkbox name="field[{field.uid}][{index.index}]" value="{setting.value}" checked="{vh:Misc.PrefillField(field: '{field}', cycle: '{index.cycle}')}" id="powermail_field_{field.marker}_{index.cycle}" class="powermail_checkbox powermail_checkbox_{field.uid} {vh:Misc.ValidationClass(field: '{field}')}" />
 						<vh:string.RawAndRemoveXss>{setting.label}</vh:string.RawAndRemoveXss>
 					</label>
 				</div>

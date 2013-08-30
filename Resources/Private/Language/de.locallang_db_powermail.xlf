@@ -7,70 +7,34 @@
 				<source>Labels on the left side (left-aligned)</source>
 				<target state="translated">Beschriftung auf der linken Seite (linksbündig)</target>
 			</trans-unit>
-			<trans-unit id="tx_powermail_domain_model_pages.columnsTwo" xml:space="preserve">
-				<source>Two columns</source>
-				<target state="translated">Zwei Spalten</target>
-			</trans-unit>
-			<trans-unit id="tx_powermail_domain_model_pages.defaultNoLegend" xml:space="preserve">
-				<source>Default, hide legend</source>
-				<target state="translated">Standard, Legende verstecken</target>
-			</trans-unit>
-			<trans-unit id="tx_powermail_domain_model_pages.columnsTwoNoLegend" xml:space="preserve">
-				<source>Two columns, hide legend</source>
-				<target state="translated">Zwei Spalten, Legende verstecken</target>
-			</trans-unit>
-			<trans-unit id="tx_powermail_domain_model_fields.columnFull" xml:space="preserve">
-				<source>Full</source>
-				<target state="translated">Voll</target>
-			</trans-unit>
-			<trans-unit id="tx_powermail_domain_model_fields.columnHalf" xml:space="preserve">
-				<source>Half</source>
-				<target state="translated">Halb</target>
-			</trans-unit>
-			<trans-unit id="tx_powermail_domain_model_fields.columnHalfSingleRow" xml:space="preserve">
-				<source>Half, single row</source>
-				<target state="translated">Halb, einzelne Reihe</target>
-			</trans-unit>
-			<trans-unit id="tx_powermail_domain_model_fields.columnThird" xml:space="preserve">
-				<source>Third</source>
-				<target state="translated">Drittel</target>
-			</trans-unit>
-			<trans-unit id="tx_powermail_domain_model_fields.columnThirdSingleRow" xml:space="preserve">
-				<source>Third, single row</source>
-				<target state="translated">Drittel, einzelne Reihe</target>
-			</trans-unit>
-			<trans-unit id="tx_powermail_domain_model_fields.columnTwoThird" xml:space="preserve">
-				<source>Two third</source>
-				<target state="translated">Zwei drittel</target>
-			</trans-unit>
-			<trans-unit id="tx_powermail_domain_model_fields.columnTwoThirdSingleRow" xml:space="preserve">
-				<source>Two third, single row</source>
-				<target state="translated">Zwei drittel, einzelne Reihe</target>
-			</trans-unit>
-			<trans-unit id="tx_powermail_domain_model_fields.columnQuarter" xml:space="preserve">
-				<source>Quarter</source>
-				<target state="translated">Viertel</target>
-			</trans-unit>
-			<trans-unit id="tx_powermail_domain_model_fields.columnQuarterSingleRow" xml:space="preserve">
-				<source>Quarter, single row</source>
-				<target state="translated">Viertel, einzelne Reihe</target>
-			</trans-unit>
-			<trans-unit id="tx_powermail_domain_model_fields.columnTwoQuarter" xml:space="preserve">
-				<source>Two quarter</source>
-				<target state="translated">Zwei viertel</target>
-			</trans-unit>
-			<trans-unit id="tx_powermail_domain_model_fields.columnTwoQuarterSingleRow" xml:space="preserve">
-				<source>Two quarter, single row</source>
-				<target state="translated">Zwei viertel, einzelne Reihe</target>
-			</trans-unit>
-			<trans-unit id="tx_powermail_domain_model_fields.columnThreeQuarter" xml:space="preserve">
-				<source>Three quarter</source>
-				<target state="translated">Drei viertel</target>
-			</trans-unit>
-			<trans-unit id="tx_powermail_domain_model_fields.columnThreeQuarterSingleRow" xml:space="preserve">
-				<source>Three quarter, single row</source>
-				<target state="translated">Drei viertel, einzelne Reihe</target>
-			</trans-unit>
+
+            <trans-unit id="tx_powermail_domain_model_pages.tx_adxtwitterbootstrap_hide_legend" xml:space="preserve">
+                <source>Hide legend</source>
+                <target state="translated">Legende nicht sichtbar</target>
+            </trans-unit>
+            <trans-unit id="tx_powermail_domain_model_pages.tx_adxtwitterbootstrap_offset" xml:space="preserve">
+                <source>Left Indent</source>
+                <target state="translated">Linke Einrückung</target>
+            </trans-unit>
+            <trans-unit id="tx_powermail_domain_model_pages.tx_adxtwitterbootstrap_span" xml:space="preserve">
+                <source>Spanne</source>
+                <target state="translated">Spalten</target>
+            </trans-unit>
+            <trans-unit id="tx_powermail_domain_model_pages.tx_adxtwitterbootstrap_end_of_row" xml:space="preserve">
+                <source>End of line</source>
+                <target state="translated">Zeilenende</target>
+            </trans-unit>
+
+
+
+
+
+
+
+
+
+
+
 			<trans-unit id="tx_powermail_domain_model_fields.columnInner" xml:space="preserve">
 				<source>Checkboxes/Radiobuttons</source>
 				<target state="translated">Checkboxen/Radiobuttons</target>
