@@ -27,23 +27,25 @@
 	</adx:utility.groupArray>
 </div>
 
-<f:if condition="{slideToPosition}">
-	<t3jquery:AddJQueryAndScript renderChildrenToData="TRUE">
-		(function($){
-			var $selector = $('#accordion{data.uid}'),
-				slideOffset = {slideOffset};
-			$selector
-				.on('show', function(event){
-					$selector.find('.accordion-toggle[href*=#' + $(event.target).get(0).id + ']').addClass('active');
-				})
-				.on('shown', function(event){
-					$('html, body').animate({
-						scrollTop: $(event.target).offset().top - slideOffset
-					}, 'slow');
-				})
-				.on('hidden', function(event){
-					$selector.find('.accordion-toggle[href*=#' + $(event.target).get(0).id + ']').removeClass('active');
-				});
-		})(jQuery);
-	</t3jquery:AddJQueryAndScript>
-</f:if>
+<t3jquery:AddJQueryAndScript renderChildrenToData="TRUE">
+	(function($){
+		var $selector = $('#accordion{data.uid}'),
+			slideToPosition = Boolean({slideToPosition}),
+			slideOffset = {slideOffset};
+		$selector
+			.on('show', function(event){
+				$selector.find('.accordion-toggle[href*=#' + $(event.target).get(0).id + ']').addClass('active');
+			})
+			.on('hidden', function(event){
+				$selector.find('.accordion-toggle[href*=#' + $(event.target).get(0).id + ']').removeClass('active');
+			});
+		if (slideToPosition){
+		$selector
+			.on('shown', function(event){
+				$('html, body').animate({
+					scrollTop: $(event.target).offset().top - slideOffset
+				}, 'slow');
+			});
+		}
+	})(jQuery);
+</t3jquery:AddJQueryAndScript>
