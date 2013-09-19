@@ -387,7 +387,7 @@ tt_content.stdWrap.innerWrap.cObject {
 		append = USER
 		append {
 			userFunc = tx_t3jquery->addJS
-			jsdata = (function($){ $(document).ready(function(){ $(document).on('click', '.link-content-element', function(event){ var anchor = $(this).find('a:first').get(0); if (anchor){ window.location.href = $('base').attr('href') + $(anchor).attr('href'); return false; } }); }); })(jQuery);
+			jsdata = (function($){ $(document).ready(function(){ $(document).on('click', '.link-content-element', function(event){ var anchor = $(this).find('a:first'); if (anchor.length){ if (anchor.attr('target') == '_blank') { window.open($('base').attr('href') + $(anchor).attr('href')); } else { window.location.href = $('base').attr('href') + $(anchor).attr('href'); } return false; } }); }); })(jQuery);
 		}
 	}
 
