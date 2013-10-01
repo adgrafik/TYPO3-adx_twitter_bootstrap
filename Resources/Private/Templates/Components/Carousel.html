@@ -37,19 +37,27 @@
 	</f:if>
 </div>
 
+<t3jquery:AddJQueryAndScript jsfile="EXT:adx_twitter_bootstrap/Resources/Public/JavaScript/jquery.mobile.custom.min.js" />
+
 <t3jquery:AddJQueryAndScript renderChildrenToData="TRUE">
 (function($){
-	var selector = '#carousel{data.uid}',
+	var $carousel = $('#carousel{data.uid}'),
 		active = Number('{active}'),
 		interval = {interval},
 		pause = {f:if( condition: '{pause}', then: '"hover"' )};
-	$(selector)
+	$carousel
 		.find('.carousel-indicators li:nth-child(' + (active + 1) + '), .carousel-inner div:nth-child(' + (active + 1) + ')')
 		.addClass('active');
-	$(selector)
+	$carousel
 		.carousel({
 			interval: interval,
 			pause: pause
+		})
+		.swiperight(function(){
+			$carousel.carousel('prev');
+		})
+		.swipeleft(function(){
+			$carousel.carousel('next');
 		});
 })(jQuery);
 </t3jquery:AddJQueryAndScript>
