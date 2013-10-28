@@ -14,6 +14,14 @@
 				<source>Inherit Content element</source>
 				<target state="translated">Seiteninhalt vererben</target>
 			</trans-unit>
+			<trans-unit id="tx_adxtwitterbootstrap_inherit.1" xml:space="preserve">
+				<source>This and all Subpages</source>
+				<target state="translated">Diese und alle Unterseiten</target>
+			</trans-unit>
+			<trans-unit id="tx_adxtwitterbootstrap_inherit.2" xml:space="preserve">
+				<source>Only on Subpages</source>
+				<target state="translated">Nur auf den Unterseiten</target>
+			</trans-unit>
 			<trans-unit id="tx_adxtwitterbootstrap_inherit.description" xml:space="preserve">
 				<source>If this option is activated, this content element will be inherited to the sub pages.</source>
 				<target state="translated">If this option is activated, this content element will be inherited to the sub pages.</target>

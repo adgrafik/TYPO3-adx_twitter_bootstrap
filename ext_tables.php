@@ -68,11 +68,11 @@ $tempColumns = array(
 		'label' => 'LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:tx_adxtwitterbootstrap_inherit',
 		'exclude' => 1,		
 		'config' => array(
-			'type' => 'check',
+			'type' => 'select',
 			'items' => array(
-				'1'	=> array(
-					'0' => 'LLL:EXT:lang/locallang_core.xml:labels.enabled',
-				),
+				array('', ''),
+				array('LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:tx_adxtwitterbootstrap_inherit.1', 1),
+				array('LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:tx_adxtwitterbootstrap_inherit.2', 2),
 			),
 		),
 	),

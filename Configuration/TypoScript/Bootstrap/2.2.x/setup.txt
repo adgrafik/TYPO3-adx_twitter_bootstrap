@@ -305,6 +305,35 @@ plugin.tx_adxless {
 
 
 /**
+ * Set inheritance
+ */
+styles.content.get {
+
+  select.pidInList = {field: mount_pid // field: this}
+  select.pidInList.insertData = 1
+  select.andWhere.dataWrap = ( tt_content.tx_adxtwitterbootstrap_inherit = 1 OR ( tt_content.tx_adxtwitterbootstrap_inherit = 2 AND tt_content.pid != {TSFE: contentPid} ) OR ( tt_content.tx_adxtwitterbootstrap_inherit = 0 AND tt_content.pid = {TSFE: contentPid} ) )
+
+  slide = {$styles.content.get.slide}
+  slide.collect = {$styles.content.get.collect}
+  slide.collectReverse = {$styles.content.get.collectReverse}
+  slide.collectFuzzy = {$styles.content.get.collectFuzzy}
+
+}
+
+# get content, left
+styles.content.getLeft < styles.content.get
+styles.content.getLeft.select.where = colPos=1
+
+# get content, right
+styles.content.getRight < styles.content.get
+styles.content.getRight.select.where = colPos=2
+
+# get content, margin
+styles.content.getBorder < styles.content.get
+styles.content.getBorder.select.where = colPos=3
+
+
+/**
  * Include bootstrap
  */
 page {
