@@ -427,3 +427,48 @@ tt_content.stdWrap.innerWrap.cObject {
 	66.1352997638 =< tt_content.stdWrap.innerWrap.cObject.default.20.1352997638
 	66.1352997639 =< tt_content.stdWrap.innerWrap.cObject.default.20.1352997639
 }
+
+
+/**
+ * Add spans to images.
+ */
+tt_content.image.20 {
+
+	rendering {
+
+		noCaption {
+			rowStdWrap.wrap = <div class="row-fluid textpic-imagerow"> | </div>
+			noRowsStdWrap.wrap = <div class="row-fluid textpic-imagerow textpic-imagerow-none"> | </div>
+			lastRowStdWrap.wrap = <div class="row-fluid textpic-imagerow textpic-imagerow-last"> | </div>
+			columnStdWrap.wrap = <div class="textpic-imagecolumn###CLASSES###"> | </div>
+		}
+
+		splitCaption {
+			rowStdWrap.wrap = <div class="row-fluid textpic-imagerow"> | </div>
+			noRowsStdWrap.wrap = <div class="row-fluid textpic-imagerow textpic-imagerow-none"> | </div>
+			lastRowStdWrap.wrap = <div class="row-fluid textpic-imagerow textpic-imagerow-last"> | </div>
+			columnStdWrap.wrap = <div class="textpic-imagecolumn###CLASSES###"> | </div>
+		}
+
+		globalCaption {
+			rowStdWrap.wrap = <div class="row-fluid textpic-imagerow"> | </div>
+			noRowsStdWrap.wrap = <div class="row-fluid textpic-imagerow textpic-imagerow-none"> | </div>
+			lastRowStdWrap.wrap = <div class="row-fluid textpic-imagerow textpic-imagerow-last"> | </div>
+			columnStdWrap.wrap = <div class="textpic-imagecolumn###CLASSES###"> | </div>
+		}
+	}
+
+	addClassesCol.override {
+
+		replacement {
+			10.search = csc-textpic-firstcol
+			10.replace.stdWrap.dataWrap = {$plugin.tx_adxtwitterbootstrap.variables.gridColumns} / {field: imagecols}
+			10.replace.prioriCalc = intval
+			10.replace.noTrimWrap = |textpic-firstcol span||
+
+			20 < .10
+			20.search = csc-textpic-lastcol
+			20.replace.noTrimWrap = |textpic-lastcol span||
+		}
+	}
+}

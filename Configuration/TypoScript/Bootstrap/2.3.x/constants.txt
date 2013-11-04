@@ -615,7 +615,7 @@ styles.content.get {
 	collect = -1
 
 	# cat=adx_twitter_bootstrap inheritance//003; type=boolean; label= collectReverse: Change order of elements in collect mode. If set, elements of the current page will be on the bottom.
-	collectReverse = 1
+	collectReverse = 0
 
 	# cat=adx_twitter_bootstrap inheritance//004; type=boolean; label= collectFuzzy: Only useful in collect mode. If no content elements have been found for the specified depth in collect mode, traverse further until at least one match has occurred.
 	collectFuzzy = 0
