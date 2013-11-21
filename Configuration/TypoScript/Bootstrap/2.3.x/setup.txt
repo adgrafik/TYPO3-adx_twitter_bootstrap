@@ -458,17 +458,26 @@ tt_content.image.20 {
 		}
 	}
 
-	addClassesCol.override {
+	addClassesCol {
 
-		replacement {
-			10.search = csc-textpic-firstcol
-			10.replace.stdWrap.dataWrap = {$plugin.tx_adxtwitterbootstrap.variables.gridColumns} / {field: imagecols}
-			10.replace.prioriCalc = intval
-			10.replace.noTrimWrap = |textpic-firstcol span||
+		override {
 
-			20 < .10
-			20.search = csc-textpic-lastcol
-			20.replace.noTrimWrap = |textpic-lastcol span||
+			replacement {
+
+				10.search = csc-textpic-firstcol
+				10.replace.stdWrap.dataWrap = {$plugin.tx_adxtwitterbootstrap.variables.gridColumns} / {field: imagecols}
+				10.replace.prioriCalc = intval
+				10.replace.noTrimWrap = |textpic-firstcol span||
+
+				20 < .10
+				20.search = csc-textpic-lastcol
+				20.replace.noTrimWrap = |textpic-lastcol span||
+
+				30 < .10
+				30.search = |*| |*|
+				30.replace.noTrimWrap = #|*| span# |*|#
+				30.replace.noTrimWrap.splitChar = #
+			}
 		}
 	}
 }
