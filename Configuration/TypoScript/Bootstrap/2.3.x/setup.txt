@@ -481,3 +481,14 @@ tt_content.image.20 {
 		}
 	}
 }
+
+
+/**
+ * Fix css_styled_content CSS definitions for responsive image display.
+ */
+plugin.tx_cssstyledcontent {
+	_CSS_DEFAULT_STYLE := replaceString(div.csc-textpic .csc-textpic-imagewrap .csc-textpic-image { margin-bottom:|div.csc-textpic .csc-textpic-imagewrap .csc-textpic-image { margin: 0 auto)
+	_CSS_DEFAULT_STYLE := removeString(div.csc-textpic-left .csc-textpic-imagewrap { float: left; })
+	_CSS_DEFAULT_STYLE := removeString(div.csc-textpic-center .csc-textpic-center-outer { position: relative; float: right; right: 50%; })
+	_CSS_DEFAULT_STYLE := removeString(div.csc-textpic-center .csc-textpic-center-inner { position: relative; float: right; right: -50%; })
+}
