@@ -1,0 +1,14 @@
+
+plugin.tx_gridelements_pi1.setup {
+
+	tx_adxtwitterbootstrap_tabs {
+
+		columns.default.renderObj =< tt_content
+
+		cObject = USER
+		cObject {
+			userFunc = AdGrafik\AdxTwitterBootstrap\UserFunc\Frontend->renderTabs
+			templateFile = {$plugin.tx_adxtwitterbootstrap.tabs.templateFile}
+		}
+	}
+}

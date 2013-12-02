@@ -1,0 +1,63 @@
+
+{namespace t3jquery=Tx_T3jquery_ViewHelpers}
+
+<div id="tabs_{data.uid}" class="tabs{f:if( condition: layout, then: ' {layout}' )}">
+	<ul class="nav nav-tabs">
+		<f:for each="{items}" key="key" as="item">
+			<li class="{f:if( condition: '{active} == {key}', then: 'active' )}">
+				<a href="#tabItem_{item.uid}" data-toggle="tab">{item.header}</a>
+			</li>
+		</f:for>
+	</ul>
+	<div class="tab-content">
+		<f:for each="{items}" key="key" as="item">
+			<div id="tabItem_{item.uid}" class="tab-pane fade{f:if( condition: '{active} == {key}', then: ' active in' )}">
+				<f:if condition="{ajaxLoading}">
+					<f:then>
+						<f:if condition="{active} == {key}">
+							<f:cObject typoscriptObjectPath="tt_content" data="{item}" />
+						</f:if>
+					</f:then>
+					<f:else>
+						<f:cObject typoscriptObjectPath="tt_content" data="{item}" />
+					</f:else>
+				</f:if>
+			</div>
+		</f:for>
+	</div>
+</div>
+
+<t3jquery:AddJQueryAndScript renderChildrenToData="TRUE">
+	(function($){
+		var $selector = $('#tabs_{data.uid}'),
+			slideToPosition = Boolean('{slideToPosition}'),
+			slideOffset = Number('{slideOffset}'),
+			ajaxLoading = Boolean('{ajaxLoading}'),
+			pageURL = '{f:uri.page()}';
+		if (slideToPosition){
+			$selector.find('a[data-toggle="tab"]').on('shown.bs.tab', function(event){
+				$('html, body').stop().animate({
+					scrollTop: $(event.target).offset().top - slideOffset
+				}, 'slow');
+			});
+		}
+		if (ajaxLoading){
+			$selector.find('a[data-toggle="tab"]').on('show.bs.tab', function(event){
+				var $tab = $(event.target),
+					id = $tab.attr('href').split('#tabItem_')[1],
+					$target = $('#tabItem_' + id);
+				if (!$.trim($target.html())){
+					$target.addClass('loading')
+					$tab.addClass('loading');
+					$.get(pageURL + '?type=1370426637&tx_adxtwitterbootstrap[uid]=' + id)
+						.success(function(data){
+							$tab.removeClass('loading');
+							$target
+								.removeClass('loading')
+								.append(data);
+						});
+				}
+			});
+		}
+	})(jQuery);
+</t3jquery:AddJQueryAndScript>

@@ -1,0 +1,211 @@
+
+config.tx_extbase {
+	persistence {
+		classes {
+
+			# Using mixed-ins hack from Franz Koch to make map table extendable.
+			# @see http://lists.typo3.org/pipermail/typo3-project-typo3v4mvc/2010-September/006497.html
+			Tx_Powermail_Domain_Model_Forms {
+				mapping.recordType = 0
+				subclasses.0 = AdGrafik\AdxTwitterBootstrap\Domain\Model\Forms
+			}
+
+			AdGrafik\AdxTwitterBootstrap\Domain\Model\Forms {
+				mapping {
+					tableName = tx_powermail_domain_model_forms
+					recordType = 0
+					columns {
+						tx_adxtwitterbootstrap_offset.mapOnProperty = offset
+						tx_adxtwitterbootstrap_span.mapOnProperty = span
+					}
+				}
+			}
+
+			Tx_Powermail_Domain_Model_Pages {
+				mapping.recordType = 0
+				subclasses.0 = AdGrafik\AdxTwitterBootstrap\Domain\Model\Pages
+			}
+
+			AdGrafik\AdxTwitterBootstrap\Domain\Model\Pages {
+				mapping {
+					tableName = tx_powermail_domain_model_pages
+					recordType = 0
+					columns {
+						tx_adxtwitterbootstrap_layout.mapOnProperty = layout
+						tx_adxtwitterbootstrap_hide_legend.mapOnProperty = hideLegend
+						tx_adxtwitterbootstrap_offset.mapOnProperty = offset
+						tx_adxtwitterbootstrap_offset_breakpoint.mapOnProperty = offsetBreakpoint
+						tx_adxtwitterbootstrap_span.mapOnProperty = span
+						tx_adxtwitterbootstrap_span_breakpoint.mapOnProperty = spanBreakpoint
+						tx_adxtwitterbootstrap_clear.mapOnProperty = clear
+						tx_adxtwitterbootstrap_label_to_field_ratio.mapOnProperty = labelToFieldRatio
+						tx_adxtwitterbootstrap_label_to_field_ratio_breakpoint.mapOnProperty = labelToFieldRatioBreakpoint
+					}
+				}
+			}
+
+			Tx_Powermail_Domain_Model_Fields {
+				mapping.recordType = 0
+				subclasses.0 = AdGrafik\AdxTwitterBootstrap\Domain\Model\Fields
+			}
+
+			AdGrafik\AdxTwitterBootstrap\Domain\Model\Fields {
+				mapping {
+					tableName = tx_powermail_domain_model_fields
+					recordType = 0
+					columns {
+						tx_adxtwitterbootstrap_placeholder.mapOnProperty = placeholder
+						tx_adxtwitterbootstrap_hide_label.mapOnProperty = hideLabel
+						tx_adxtwitterbootstrap_element_size.mapOnProperty = elementSize
+						tx_adxtwitterbootstrap_button_class.mapOnProperty = buttonClass
+						tx_adxtwitterbootstrap_button_block.mapOnProperty = buttonBlock
+						tx_adxtwitterbootstrap_offset.mapOnProperty = offset
+						tx_adxtwitterbootstrap_offset_breakpoint.mapOnProperty = offsetBreakpoint
+						tx_adxtwitterbootstrap_span.mapOnProperty = span
+						tx_adxtwitterbootstrap_span_breakpoint.mapOnProperty = spanBreakpoint
+						tx_adxtwitterbootstrap_clear.mapOnProperty = clear
+						tx_adxtwitterbootstrap_checkbox_inline.mapOnProperty = checkboxInline
+						tx_adxtwitterbootstrap_checkbox_inline_breakpoint.mapOnProperty = checkboxInlineBreakpoint
+						tx_adxtwitterbootstrap_datepicker_type.mapOnProperty = datepickerType
+						tx_adxtwitterbootstrap_datepicker_format.mapOnProperty = datepickerFormat
+						tx_adxtwitterbootstrap_datepicker_week_start.mapOnProperty = datepickerWeekStart
+						tx_adxtwitterbootstrap_datepicker_start_date.mapOnProperty = datepickerStartDate
+						tx_adxtwitterbootstrap_datepicker_end_date.mapOnProperty = datepickerEndDate
+						tx_adxtwitterbootstrap_datepicker_start_view.mapOnProperty = datepickerStartView
+						tx_adxtwitterbootstrap_datepicker_min_view_mode.mapOnProperty = datepickerMinViewMode
+						tx_adxtwitterbootstrap_datepicker_today_button.mapOnProperty = datepickerTodayButton
+						tx_adxtwitterbootstrap_datepicker_orientation.mapOnProperty = datepickerOrientation
+						tx_adxtwitterbootstrap_datepicker_days_of_week_disabled.mapOnProperty = datepickerDaysOfWeekDisabled
+						tx_adxtwitterbootstrap_datepicker_calendar_weeks.mapOnProperty = datepickerCalendarWeeks
+						tx_adxtwitterbootstrap_datepicker_autoclose.mapOnProperty = datepickerAutoclose
+						tx_adxtwitterbootstrap_datepicker_today_highlight.mapOnProperty = datepickerTodayHighlight
+						tx_adxtwitterbootstrap_datepicker_keyboard_navigation.mapOnProperty = datepickerKeyboardNavigation
+						tx_adxtwitterbootstrap_datepicker_force_parse.mapOnProperty = datepickerForceParse
+					}
+				}
+			}
+		}
+	}
+}
+
+plugin.tx_powermail {
+
+	view {
+		templateRootPath = EXT:adx_twitter_bootstrap/Resources/Private/Templates/Powermail/2.0.10/Templates/
+		partialRootPath = EXT:adx_twitter_bootstrap/Resources/Private/Templates/Powermail/2.0.10/Partials/
+		layoutRootPath = EXT:adx_twitter_bootstrap/Resources/Private/Templates/Powermail/2.0.10/Layouts/
+	}
+}
+
+lib.tx_adxtwitterbootstrap {
+
+	powermail {
+
+		fieldsetClasses = COA
+		fieldsetClasses {
+
+			10 = TEXT
+			10.field = offset
+			10.fieldRequired = offset
+			10.noTrimWrap = | offset||
+
+			20 = TEXT
+			20.field = span
+			20.fieldRequired = span
+			20.noTrimWrap = | span||
+		}
+
+		fieldClasses < .fieldsetClasses
+
+		itemClasses = COA
+		itemClasses {
+			10 = TEXT
+			10.value = {$plugin.tx_adxtwitterbootstrap.variables.gridColumns}
+			10.fieldRequired = span
+			10.noTrimWrap = | span||
+		}
+
+		fieldsetRowStartTag = COA
+		fieldsetRowStartTag {
+
+			# Start the row class if counter is empty.
+			10 = TEXT
+			10 {
+				value = <div class="row">
+				if.isFalse.data = register: countSpan
+			}
+
+			# Add current span value to total columns.
+			20 = LOAD_REGISTER
+			20.countSpan.stdWrap.dataWrap = {field: span} + {field: offset} + {register: countSpan}
+			20.countSpan.prioriCalc = 1
+
+			# Reset counter if total columns reached.
+			30 = TEXT
+			30 {
+				if.value = {$plugin.tx_adxtwitterbootstrap.variables.gridColumns} - 1
+				if.value.prioriCalc = 1
+
+				if.isGreaterThan.data = register: countSpan
+
+				append = LOAD_REGISTER
+				append.countSpan = 0
+			}
+		}
+
+		# Close row if counter is empty.
+		fieldsetRowEndTag = TEXT
+		fieldsetRowEndTag {
+			value = </div>
+			if.value = 0
+			if.isGreaterThan.data = register: countSpan
+			if.isFalse.field = isLast
+			if.negate = 1
+		}
+
+		controlsRowStartTag = COA
+		controlsRowStartTag {
+
+			# Start the row class if counter is empty.
+			10 = TEXT
+			10 {
+				value = <div class="control-group clearfix">
+				if.isFalse.data = register: countControlSpan
+
+				override = <div class="control-group clearfix">
+				override.if.value = columnFull,columnHalfSingleRow,columnThirdSingleRow,columnTwoThirdSingleRow,columnQuarterSingleRow,columnTwoQuarterSingleRow,columnThreeQuarterSingleRow
+				override.if.isInList.field = css
+			}
+
+			# Add current span value to total columns.
+			20 = LOAD_REGISTER
+			20.countControlSpan.stdWrap.dataWrap = {field: span} + {field: offset} + {register: countControlSpan}
+			20.countControlSpan.prioriCalc = 1
+
+			# Reset counter if total columns reached.
+			30 = TEXT
+			30 {
+				if.value = {$plugin.tx_adxtwitterbootstrap.variables.gridColumns} - 1
+				if.value.prioriCalc = 1
+
+				if.isGreaterThan.data = register: countControlSpan
+				if.isGreaterThan.override = {$plugin.tx_adxtwitterbootstrap.variables.gridColumns}
+				if.isGreaterThan.override.if.value = columnFull,columnHalfSingleRow,columnThirdSingleRow,columnTwoThirdSingleRow,columnQuarterSingleRow,columnTwoQuarterSingleRow,columnThreeQuarterSingleRow
+				if.isGreaterThan.override.if.isInList.field = css
+
+				append = LOAD_REGISTER
+				append.countControlSpan = 0
+			}
+		}
+
+		# Close row if counter is empty.
+		controlsRowEndTag = TEXT
+		controlsRowEndTag {
+			value = </div>
+			if.value = 0
+			if.isGreaterThan.data = register: countControlSpan
+			if.isFalse.field = isLast
+			if.negate = 1
+		}
+	}
+}

@@ -1,0 +1,71 @@
+
+{namespace t3jquery=Tx_T3jquery_ViewHelpers}
+
+<div id="accordion_{data.uid}" class="accordion panel-group {f:if( condition: layout, then: ' {layout}' )}">
+	<f:for each="{itemGroups}" as="items">
+		<div class="{f:if( condition: '{span} < 12', then: 'row' )}">
+			<f:for each="{items}" as="item">
+				<div class="panel-heading{f:if( condition: '{span} < 12', then: ' col-xs-{span}' )}">
+					<h4 class="panel-title">
+						<a class="{f:if( condition: '{active} == {key}', else: 'collapsed' )}" data-toggle="collapse" data-parent="{f:if( condition: '{collapsible}', then: '#accordion_{data.uid}' )}" href="#collapse_{item.uid}">{item.header}</a>
+					</h4>
+				</div>
+			</f:for>
+		</div>
+		<f:for each="{items}" key="key" as="item">
+			<div class="panel panel-default">
+				<div id="collapse_{item.uid}" class="panel-collapse collapse{f:if( condition: '{active} == {key}', then: ' in' )}">
+					<div class="panel-body">
+						<f:if condition="{ajaxLoading}">
+							<f:then>
+								<f:if condition="{active} == {key}">
+									<f:cObject typoscriptObjectPath="tt_content" data="{item}" />
+								</f:if>
+							</f:then>
+							<f:else>
+								<f:cObject typoscriptObjectPath="tt_content" data="{item}" />
+							</f:else>
+						</f:if>
+					</div>
+				</div>
+			</div>
+		</f:for>
+	</f:for>
+</div>
+
+<t3jquery:AddJQueryAndScript renderChildrenToData="TRUE">
+	(function($){
+		var $selector = $('#accordion_{data.uid}'),
+			slideToPosition = Boolean('{slideToPosition}'),
+			slideOffset = Number('{slideOffset}'),
+			ajaxLoading = Boolean('{ajaxLoading}'),
+			pageURL = '{f:uri.page()}';
+		if (slideToPosition){
+			$selector.on('shown.bs.collapse', function(event){
+				$('html, body').animate({
+					scrollTop: $(event.target).offset().top - slideOffset
+				}, 'slow');
+			});
+		}
+		if (ajaxLoading){
+			$selector.on('show.bs.collapse', function(event){
+				var $target = $(event.target),
+					id = $target.attr('id').split('collapse_')[1],
+					$tab = $selector.find('a[href*="#collapse_' + id + '"]');
+				if (!$.trim($target.find('.panel-body').html())){
+					$target.addClass('loading')
+					$tab.addClass('loading');
+					$.get(pageURL + '?type=1370426637&tx_adxtwitterbootstrap[uid]=' + id)
+						.success(function(data){
+							$tab.removeClass('loading');
+							$target
+								.removeClass('loading');
+							$target
+								.find('.panel-body')
+								.append(data);
+						});
+				}
+			});
+		}
+	})(jQuery);
+</t3jquery:AddJQueryAndScript>

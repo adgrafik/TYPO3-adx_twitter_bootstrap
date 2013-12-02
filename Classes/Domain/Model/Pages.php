@@ -1,4 +1,5 @@
 <?php
+namespace AdGrafik\AdxTwitterBootstrap\Domain\Model;
 
 /***************************************************************
  *  Copyright notice
@@ -25,113 +26,231 @@
  ***************************************************************/
 
 
-/**
- *
- *
- * @package powermail
- * @license http://www.gnu.org/licenses/lgpl.html GNU Lesser General Public License, version 3 or later
- *
- */
-class Tx_AdxTwitterBootstrap_Domain_Model_Pages extends Tx_Powermail_Domain_Model_Pages {
+class Pages extends \Tx_Powermail_Domain_Model_Pages {
 
 	/**
-	 * @var boolean $hideLegend
+	 * @var string $layout
+	 */
+	protected $layout;
+
+	/**
+	 * @var string $hideLegend
 	 */
 	protected $hideLegend;
 
 	/**
-	 * @var integer $offset
+	 * @var string $offset
 	 */
 	protected $offset;
 
 	/**
-	 * @var integer $span
+	 * @var string $offsetBreakpoint
+	 */
+	protected $offsetBreakpoint;
+
+	/**
+	 * @var string $span
 	 */
 	protected $span;
 
 	/**
-	 * @var boolean $endOfRow
+	 * @var string $spanBreakpoint
 	 */
-	protected $endOfRow;
+	protected $spanBreakpoint;
+
+	/**
+	 * @var boolean $clear
+	 */
+	protected $clear;
+
+	/**
+	 * @var string $labelToFieldRatio
+	 */
+	protected $labelToFieldRatio;
+
+	/**
+	 * @var string $labelToFieldRatioBreakpoint
+	 */
+	protected $labelToFieldRatioBreakpoint;
+
+	/**
+	 * Set layout
+	 *
+	 * @param string $layout
+	 * @return \AdGrafik\AdxTwitterBootstrap\Domain\Model\Pages
+	 */
+	public function setLayout($layout) {
+		$this->layout = $layout;
+		return $this;
+	}
+
+	/**
+	 * Get layout
+	 *
+	 * @return string
+	 */
+	public function getLayout() {
+		return $this->layout;
+	}
 
 	/**
 	 * Set hideLegend
 	 *
-	 * @param boolean $hideLegend
-	 * @return Tx_AdxTwitterBootstrap_Domain_Model_Pages
+	 * @param string $hideLegend
+	 * @return \AdGrafik\AdxTwitterBootstrap\Domain\Model\Pages
 	 */
 	public function setHideLegend($hideLegend) {
-		$this->hideLegend = (boolean) $hideLegend;
+		$this->hideLegend = $hideLegend;
 		return $this;
 	}
 
 	/**
 	 * Get hideLegend
 	 *
-	 * @return boolean
+	 * @return string
 	 */
-	public function isHideLegend() {
+	public function getHideLegend() {
 		return $this->hideLegend;
 	}
 
 	/**
 	 * Set offset
 	 *
-	 * @param integer $offset
-	 * @return Tx_AdxTwitterBootstrap_Domain_Model_Fields
+	 * @param string $offset
+	 * @return \AdGrafik\AdxTwitterBootstrap\Domain\Model\Pages
 	 */
 	public function setOffset($offset) {
-		$this->offset = (integer) $offset;
+		$this->offset = $offset;
 		return $this;
 	}
 
 	/**
 	 * Get offset
 	 *
-	 * @return integer
+	 * @return string
 	 */
 	public function getOffset() {
 		return $this->offset;
 	}
 
 	/**
+	 * Set offsetBreakpoint
+	 *
+	 * @param string $offsetBreakpoint
+	 * @return \AdGrafik\AdxTwitterBootstrap\Domain\Model\Pages
+	 */
+	public function setOffsetBreakpoint($offsetBreakpoint) {
+		$this->offsetBreakpoint = $offsetBreakpoint;
+		return $this;
+	}
+
+	/**
+	 * Get offsetBreakpoint
+	 *
+	 * @return string
+	 */
+	public function getOffsetBreakpoint() {
+		return $this->offsetBreakpoint;
+	}
+
+	/**
 	 * Set span
 	 *
-	 * @param integer $span
-	 * @return Tx_AdxTwitterBootstrap_Domain_Model_Fields
+	 * @param string $span
+	 * @return \AdGrafik\AdxTwitterBootstrap\Domain\Model\Pages
 	 */
 	public function setSpan($span) {
-		$this->span = (integer) $span;
+		$this->span = $span;
 		return $this;
 	}
 
 	/**
 	 * Get span
 	 *
-	 * @return integer
+	 * @return string
 	 */
 	public function getSpan() {
 		return $this->span;
 	}
 
 	/**
-	 * Set endOfRow
+	 * Set spanBreakpoint
 	 *
-	 * @param boolean $endOfRow
-	 * @return Tx_AdxTwitterBootstrap_Domain_Model_Fields
+	 * @param string $spanBreakpoint
+	 * @return \AdGrafik\AdxTwitterBootstrap\Domain\Model\Pages
 	 */
-	public function setEndOfRow($endOfRow) {
-		$this->endOfRow = (boolean) $endOfRow;
+	public function setSpanBreakpoint($spanBreakpoint) {
+		$this->spanBreakpoint = $spanBreakpoint;
 		return $this;
 	}
 
 	/**
-	 * Get endOfRow
+	 * Get spanBreakpoint
+	 *
+	 * @return string
+	 */
+	public function getSpanBreakpoint() {
+		return $this->spanBreakpoint;
+	}
+
+	/**
+	 * Set clear
+	 *
+	 * @param boolean $clear
+	 * @return \AdGrafik\AdxTwitterBootstrap\Domain\Model\Pages
+	 */
+	public function setClear($clear) {
+		$this->clear = (boolean) $clear;
+		return $this;
+	}
+
+	/**
+	 * Get clear
 	 *
 	 * @return boolean
 	 */
-	public function isEndOfRow() {
-		return $this->endOfRow;
+	public function isClear() {
+		return $this->clear;
+	}
+
+	/**
+	 * Set labelToFieldRatio
+	 *
+	 * @param string $labelToFieldRatio
+	 * @return \AdGrafik\AdxTwitterBootstrap\Domain\Model\Pages
+	 */
+	public function setLabelToFieldRatio($labelToFieldRatio) {
+		$this->labelToFieldRatio = $labelToFieldRatio;
+		return $this;
+	}
+
+	/**
+	 * Get labelToFieldRatio
+	 *
+	 * @return string
+	 */
+	public function getLabelToFieldRatio() {
+		return $this->labelToFieldRatio;
+	}
+
+	/**
+	 * Set labelToFieldRatioBreakpoint
+	 *
+	 * @param string $labelToFieldRatioBreakpoint
+	 * @return \AdGrafik\AdxTwitterBootstrap\Domain\Model\Pages
+	 */
+	public function setLabelToFieldRatioBreakpoint($labelToFieldRatioBreakpoint) {
+		$this->labelToFieldRatioBreakpoint = $labelToFieldRatioBreakpoint;
+		return $this;
+	}
+
+	/**
+	 * Get labelToFieldRatioBreakpoint
+	 *
+	 * @return string
+	 */
+	public function getLabelToFieldRatioBreakpoint() {
+		return $this->labelToFieldRatioBreakpoint;
 	}
 
 }

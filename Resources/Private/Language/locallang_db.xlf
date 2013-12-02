@@ -3,12 +3,34 @@
 	<file source-language="en" datatype="plaintext" original="messages" date="2012-06-13T20:22:32Z" product-name="adx_twitter_bootstrap">
 		<header/>
 		<body>
-			<!-- backend_layout fields -->
-			<trans-unit id="tx_adxtwitterbootstrap_layout_id" xml:space="preserve">
-				<source>Layout ID</source>
-			</trans-unit>
-
 			<!-- tt_content fields -->
+			<trans-unit id="tx_adxtwitterbootstrap_offset" xml:space="preserve">
+				<source>Left Indent</source>
+			</trans-unit>
+			<trans-unit id="tx_adxtwitterbootstrap_span" xml:space="preserve">
+				<source>Span</source>
+			</trans-unit>
+			<trans-unit id="tx_adxtwitterbootstrap_device_visibility" xml:space="preserve">
+				<source>Device visibility</source>
+			</trans-unit>
+			<trans-unit id="tx_adxtwitterbootstrap_device_visibility.xs" xml:space="preserve">
+				<source>Hide on Phones (&lt;768px)</source>
+			</trans-unit>
+			<trans-unit id="tx_adxtwitterbootstrap_device_visibility.sm" xml:space="preserve">
+				<source>Hide on Tablets (&#8805;768px)</source>
+			</trans-unit>
+			<trans-unit id="tx_adxtwitterbootstrap_device_visibility.md" xml:space="preserve">
+				<source>Hide on Desktops (&#8805;992px)</source>
+			</trans-unit>
+			<trans-unit id="tx_adxtwitterbootstrap_device_visibility.lg" xml:space="preserve">
+				<source>Hide on large Desktops (&#8805;1200px)</source>
+			</trans-unit>
+			<trans-unit id="tx_adxtwitterbootstrap_link_content_element" xml:space="preserve">
+				<source>Link content element with first found link</source>
+			</trans-unit>
+			<trans-unit id="tx_adxtwitterbootstrap_link_content_element.description" xml:space="preserve">
+				<source>If this option is activated, the whole content element will be linked with the first found link in this element by JavaScript.</source>
+			</trans-unit>
 			<trans-unit id="tx_adxtwitterbootstrap_inherit" xml:space="preserve">
 				<source>Inherit Content element</source>
 			</trans-unit>
@@ -21,51 +43,33 @@
 			<trans-unit id="tx_adxtwitterbootstrap_inherit.description" xml:space="preserve">
 				<source>If this option is activated, this content element will be inherited to the sub pages.</source>
 			</trans-unit>
+			<trans-unit id="tx_adxtwitterbootstrap_image_responsive" xml:space="preserve">
+				<source>Responsive</source>
+			</trans-unit>
+			<trans-unit id="tx_adxtwitterbootstrap_image_columns" xml:space="preserve">
+				<source>Number of columns</source>
+			</trans-unit>
 
-			<trans-unit id="tx_adxtwitterbootstrap_offset" xml:space="preserve">
-				<source>Left Indent</source>
-			</trans-unit>
-			<trans-unit id="tx_adxtwitterbootstrap_span" xml:space="preserve">
-				<source>Span</source>
-			</trans-unit>
-			<trans-unit id="tx_adxtwitterbootstrap_device_visibility" xml:space="preserve">
-				<source>Device visibility</source>
-			</trans-unit>
-			<trans-unit id="tx_adxtwitterbootstrap_device_visibility.hideOnDesktop" xml:space="preserve">
-				<source>Hide on desktops</source>
-			</trans-unit>
-			<trans-unit id="tx_adxtwitterbootstrap_device_visibility.hideOnTablet" xml:space="preserve">
-				<source>Hide on tablets</source>
-			</trans-unit>
-			<trans-unit id="tx_adxtwitterbootstrap_device_visibility.hideOnPhone" xml:space="preserve">
-				<source>Hide on phones</source>
-			</trans-unit>
-			<trans-unit id="tx_adxtwitterbootstrap_link_content_element" xml:space="preserve">
-				<source>Link content element with first found link</source>
-			</trans-unit>
-			<trans-unit id="tx_adxtwitterbootstrap_link_content_element.description" xml:space="preserve">
-				<source>If this option is activated, the whole content element will be linked with the first found link in this element by JavaScript.</source>
-			</trans-unit>
 
 			<!-- Configuration/TSconfig/Components/*Columns.ts -->
-			<trans-unit id="TSconfig.columns.twoColumns.title" xml:space="preserve">
+			<trans-unit id="TSconfig.twoColumns.title" xml:space="preserve">
 				<source>Two Columns Group</source>
 			</trans-unit>
-			<trans-unit id="TSconfig.columns.twoColumns.description" xml:space="preserve">
+			<trans-unit id="TSconfig.twoColumns.description" xml:space="preserve">
 				<source>Creates a content group with two columns.</source>
 			</trans-unit>
 
-			<trans-unit id="TSconfig.columns.threeColumns.title" xml:space="preserve">
+			<trans-unit id="TSconfig.threeColumns.title" xml:space="preserve">
 				<source>Three Columns Group</source>
 			</trans-unit>
-			<trans-unit id="TSconfig.columns.threeColumns.description" xml:space="preserve">
+			<trans-unit id="TSconfig.threeColumns.description" xml:space="preserve">
 				<source>Creates a content group with three columns.</source>
 			</trans-unit>
 
-			<trans-unit id="TSconfig.columns.fourColumns.title" xml:space="preserve">
+			<trans-unit id="TSconfig.fourColumns.title" xml:space="preserve">
 				<source>Four Columns Group</source>
 			</trans-unit>
-			<trans-unit id="TSconfig.columns.fourColumns.description" xml:space="preserve">
+			<trans-unit id="TSconfig.fourColumns.description" xml:space="preserve">
 				<source>Creates a content group with four columns.</source>
 			</trans-unit>
 
@@ -83,89 +87,151 @@
 			</trans-unit>
 
 			<!-- Configuration/FlexForm/Components/*Columns.xml -->
-			<trans-unit id="flexform.columns.sheet.general" xml:space="preserve">
-				<source>General</source>
-			</trans-unit>
+            <trans-unit id="flexform.columns.grid.sheetTitle" xml:space="preserve">
+                <source>Grid</source>
+            </trans-unit>
+            <trans-unit id="flexform.columns.grid.span.column" xml:space="preserve">
+                <source>Segmentation</source>
+            </trans-unit>
+            <trans-unit id="flexform.columns.grid.span.1212" xml:space="preserve">
+                <source>1/2 : 1/2</source>
+            </trans-unit>
+            <trans-unit id="flexform.columns.grid.span.1323" xml:space="preserve">
+                <source>1/3 : 2/3</source>
+            </trans-unit>
+            <trans-unit id="flexform.columns.grid.span.2313" xml:space="preserve">
+                <source>2/3 : 1/3</source>
+            </trans-unit>
+            <trans-unit id="flexform.columns.grid.span.1434" xml:space="preserve">
+                <source>1/4 : 3/4</source>
+            </trans-unit>
+            <trans-unit id="flexform.columns.grid.span.3414" xml:space="preserve">
+                <source>3/4 : 1/4</source>
+            </trans-unit>
+            <trans-unit id="flexform.columns.grid.span.131313" xml:space="preserve">
+                <source>1/3 : 1/3 : 1/3</source>
+            </trans-unit>
+            <trans-unit id="flexform.columns.grid.span.121414" xml:space="preserve">
+                <source>1/2 : 1/4 : 1/4</source>
+            </trans-unit>
+            <trans-unit id="flexform.columns.grid.span.141214" xml:space="preserve">
+                <source>1/4 : 1/2 : 1/4</source>
+            </trans-unit>
+            <trans-unit id="flexform.columns.grid.span.141412" xml:space="preserve">
+                <source>1/4 : 1/4 : 1/2</source>
+            </trans-unit>
+            <trans-unit id="flexform.columns.grid.span.14141414" xml:space="preserve">
+                <source>1/4 : 1/4 : 1/4 : 1/4</source>
+            </trans-unit>
+            <trans-unit id="flexform.columns.grid.span.column1" xml:space="preserve">
+                <source>Segmentation 1st Column</source>
+            </trans-unit>
+            <trans-unit id="flexform.columns.grid.span.column2" xml:space="preserve">
+                <source>Segmentation 2nd Column</source>
+            </trans-unit>
+            <trans-unit id="flexform.columns.grid.span.column3" xml:space="preserve">
+                <source>Segmentation 3rd Column</source>
+            </trans-unit>
+            <trans-unit id="flexform.columns.grid.span.column4" xml:space="preserve">
+                <source>Segmentation 4th Column</source>
+            </trans-unit>
+            <trans-unit id="flexform.columns.grid.span.xs" xml:space="preserve">
+                <source>Phones (&lt;768px)</source>
+            </trans-unit>
+            <trans-unit id="flexform.columns.grid.span.sm" xml:space="preserve">
+                <source>Tablets (&#8805;768px)</source>
+            </trans-unit>
+            <trans-unit id="flexform.columns.grid.span.md" xml:space="preserve">
+                <source>Desktops (&#8805;992px)</source>
+            </trans-unit>
+            <trans-unit id="flexform.columns.grid.span.lg" xml:space="preserve">
+                <source>Large Desktops (&#8805;1200px)</source>
+            </trans-unit>
+            <trans-unit id="flexform.columns.grid.span.inherit" xml:space="preserve">
+                <source>Inherit</source>
+            </trans-unit>
+            <trans-unit id="flexform.columns.grid.span" xml:space="preserve">
+                <source>Span %s</source>
+            </trans-unit>
+            <trans-unit id="flexform.columns.grid.clear.column1" xml:space="preserve">
+                <source>Clear after 1st Column</source>
+            </trans-unit>
+            <trans-unit id="flexform.columns.grid.clear.column2" xml:space="preserve">
+                <source>Clear after 2nd Column</source>
+            </trans-unit>
+            <trans-unit id="flexform.columns.grid.clear.column3" xml:space="preserve">
+                <source>Clear after 3rd Column</source>
+            </trans-unit>
+            <trans-unit id="flexform.columns.grid.reverseOrder" xml:space="preserve">
+                <source>Reverse Order</source>
+            </trans-unit>
+            <trans-unit id="flexform.columns.grid.reverseOrder.default" xml:space="preserve">
+                <source>Default</source>
+            </trans-unit>
+            <trans-unit id="flexform.columns.grid.reverseOrder.xs" xml:space="preserve">
+                <source>Phones (&lt;768px)</source>
+            </trans-unit>
+            <trans-unit id="flexform.columns.grid.reverseOrder.sm" xml:space="preserve">
+                <source>Tablets (&#8805;768px)</source>
+            </trans-unit>
+            <trans-unit id="flexform.columns.grid.reverseOrder.md" xml:space="preserve">
+                <source>Desktops (&#8805;992px)</source>
+            </trans-unit>
+            <trans-unit id="flexform.columns.grid.reverseOrder.lg" xml:space="preserve">
+                <source>Large Desktops (&#8805;1200px)</source>
+            </trans-unit>
+            <trans-unit id="flexform.columns.grid.expertMode" xml:space="preserve">
+                <source>Expert Mode</source>
+            </trans-unit>
 
-			<trans-unit id="flexform.columns.segmentation" xml:space="preserve">
-				<source>Segmentation</source>
-			</trans-unit>
+            <trans-unit id="flexform.columns.appearance.sheetTitle" xml:space="preserve">
+                <source>Appearance</source>
+            </trans-unit>
+            <trans-unit id="flexform.columns.appearance.layout" xml:space="preserve">
+                <source>Layout</source>
+            </trans-unit>
+            <trans-unit id="flexform.columns.appearance.layout.0" xml:space="preserve">
+                <source>Default</source>
+            </trans-unit>
+            <trans-unit id="flexform.columns.appearance.layout.1" xml:space="preserve">
+                <source>Layout 1</source>
+            </trans-unit>
+            <trans-unit id="flexform.columns.appearance.layout.2" xml:space="preserve">
+                <source>Layout 2</source>
+            </trans-unit>
+            <trans-unit id="flexform.columns.appearance.layout.3" xml:space="preserve">
+                <source>Layout 3</source>
+            </trans-unit>
+            <trans-unit id="flexform.columns.appearance.equalHeight" xml:space="preserve">
+                <source>Equal height</source>
+            </trans-unit>
 
-			<trans-unit id="flexform.columns.segmentation.1212" xml:space="preserve">
-				<source>1/2 : 1/2</source>
-			</trans-unit>
-			<trans-unit id="flexform.columns.segmentation.1323" xml:space="preserve">
-				<source>1/3 : 2/3</source>
-			</trans-unit>
-			<trans-unit id="flexform.columns.segmentation.2313" xml:space="preserve">
-				<source>2/3 : 1/3</source>
-			</trans-unit>
-			<trans-unit id="flexform.columns.segmentation.1434" xml:space="preserve">
-				<source>1/4 : 3/4</source>
-			</trans-unit>
-			<trans-unit id="flexform.columns.segmentation.3414" xml:space="preserve">
-				<source>3/4 : 1/4</source>
-			</trans-unit>
-
-			<trans-unit id="flexform.columns.segmentation.131313" xml:space="preserve">
-				<source>1/3 : 1/3 : 1/3</source>
-			</trans-unit>
-			<trans-unit id="flexform.columns.segmentation.121414" xml:space="preserve">
-				<source>1/2 : 1/4 : 1/4</source>
-			</trans-unit>
-			<trans-unit id="flexform.columns.segmentation.141214" xml:space="preserve">
-				<source>1/4 : 1/2 : 1/4</source>
-			</trans-unit>
-			<trans-unit id="flexform.columns.segmentation.141412" xml:space="preserve">
-				<source>1/4 : 1/4 : 1/2</source>
-			</trans-unit>
-
-			<trans-unit id="flexform.columns.segmentation.14141414" xml:space="preserve">
-				<source>1/4 : 1/4 : 1/4 : 1/4</source>
-			</trans-unit>
-
-			<trans-unit id="flexform.columns.layout" xml:space="preserve">
-				<source>Layout</source>
-			</trans-unit>
-			<trans-unit id="flexform.columns.layout.0" xml:space="preserve">
-				<source>Default</source>
-			</trans-unit>
-			<trans-unit id="flexform.columns.layout.1" xml:space="preserve">
-				<source>Layout 1</source>
-			</trans-unit>
-			<trans-unit id="flexform.columns.layout.2" xml:space="preserve">
-				<source>Layout 2</source>
-			</trans-unit>
-			<trans-unit id="flexform.columns.layout.3" xml:space="preserve">
-				<source>Layout 3</source>
-			</trans-unit>
-			<trans-unit id="flexform.columns.equalHeight" xml:space="preserve">
-				<source>Equal height</source>
-			</trans-unit>
-
-			<trans-unit id="flexform.columns.sheet.visibility" xml:space="preserve">
+			<trans-unit id="flexform.columns.visibility.sheetTitle" xml:space="preserve">
 				<source>Device visibility</source>
 			</trans-unit>
-			<trans-unit id="flexform.columns.visibility.column1" xml:space="preserve">
-				<source>Hide column 1 on</source>
+			<trans-unit id="flexform.columns.visibility.hideColumn1" xml:space="preserve">
+				<source>Hide 1st Column on</source>
 			</trans-unit>
-			<trans-unit id="flexform.columns.visibility.column2" xml:space="preserve">
-				<source>Hide column 2 on</source>
+			<trans-unit id="flexform.columns.visibility.hideColumn2" xml:space="preserve">
+				<source>Hide 2nd Column on</source>
 			</trans-unit>
-			<trans-unit id="flexform.columns.visibility.column3" xml:space="preserve">
-				<source>Hide column 3 on</source>
+			<trans-unit id="flexform.columns.visibility.hideColumn3" xml:space="preserve">
+				<source>Hide 3rd Column on</source>
 			</trans-unit>
-			<trans-unit id="flexform.columns.visibility.column4" xml:space="preserve">
-				<source>Hide column 4 on</source>
+			<trans-unit id="flexform.columns.visibility.hideColumn4" xml:space="preserve">
+				<source>Hide 4th Column on</source>
 			</trans-unit>
-			<trans-unit id="flexform.columns.visibility.hideOnDesktop" xml:space="preserve">
-				<source>desktops</source>
+			<trans-unit id="flexform.columns.visibility.hideColumn.xs" xml:space="preserve">
+				<source>Phones (&lt;768px)</source>
 			</trans-unit>
-			<trans-unit id="flexform.columns.visibility.hideOnTablet" xml:space="preserve">
-				<source>tablets</source>
+			<trans-unit id="flexform.columns.visibility.hideColumn.sm" xml:space="preserve">
+				<source>Tablets (&#8805;768px)</source>
 			</trans-unit>
-			<trans-unit id="flexform.columns.visibility.hideOnPhone" xml:space="preserve">
-				<source>phones</source>
+			<trans-unit id="flexform.columns.visibility.hideColumn.md" xml:space="preserve">
+				<source>Desktops (&#8805;992px)</source>
+			</trans-unit>
+			<trans-unit id="flexform.columns.visibility.hideColumn.lg" xml:space="preserve">
+				<source>Large Desktops (&#8805;1200px)</source>
 			</trans-unit>
 
 			<!-- Configuration/TSconfig/Components/Carousel.ts -->
@@ -248,38 +314,46 @@
 			</trans-unit>
 
 			<!-- Configuration/FlexForm/Components/Accordion.xml -->
-			<trans-unit id="flexform.accordion.sheet.general" xml:space="preserve">
-				<source>General</source>
+			<trans-unit id="flexform.accordion.appearance.sheetTitle" xml:space="preserve">
+				<source>Appearance</source>
 			</trans-unit>
-			<trans-unit id="flexform.accordion.layout" xml:space="preserve">
-				<source>Layout</source>
-			</trans-unit>
-			<trans-unit id="flexform.accordion.layout.0" xml:space="preserve">
-				<source>Default</source>
-			</trans-unit>
-			<trans-unit id="flexform.accordion.layout.1" xml:space="preserve">
-				<source>Layout 1</source>
-			</trans-unit>
-			<trans-unit id="flexform.accordion.layout.2" xml:space="preserve">
-				<source>Layout 2</source>
-			</trans-unit>
-			<trans-unit id="flexform.accordion.layout.3" xml:space="preserve">
-				<source>Layout 3</source>
-			</trans-unit>
-			<trans-unit id="flexform.accordion.columns" xml:space="preserve">
+
+            <trans-unit id="flexform.accordion.appearance.layout" xml:space="preserve">
+                <source>Layout</source>
+            </trans-unit>
+            <trans-unit id="flexform.accordion.appearance.layout.0" xml:space="preserve">
+                <source>Default</source>
+            </trans-unit>
+            <trans-unit id="flexform.accordion.appearance.layout.1" xml:space="preserve">
+                <source>Layout 1</source>
+            </trans-unit>
+            <trans-unit id="flexform.accordion.appearance.layout.2" xml:space="preserve">
+                <source>Layout 2</source>
+            </trans-unit>
+            <trans-unit id="flexform.accordion.appearance.layout.3" xml:space="preserve">
+                <source>Layout 3</source>
+            </trans-unit>
+			<trans-unit id="flexform.accordion.appearance.columns" xml:space="preserve">
 				<source>Columns</source>
 			</trans-unit>
-			<trans-unit id="flexform.accordion.active" xml:space="preserve">
+
+			<trans-unit id="flexform.accordion.behaviour.sheetTitle" xml:space="preserve">
+				<source>Behaviour</source>
+			</trans-unit>
+			<trans-unit id="flexform.accordion.behaviour.active" xml:space="preserve">
 				<source>Active item</source>
 			</trans-unit>
-			<trans-unit id="flexform.accordion.collapsible" xml:space="preserve">
+			<trans-unit id="flexform.accordion.behaviour.collapsible" xml:space="preserve">
 				<source>Auto collapsible</source>
 			</trans-unit>
-			<trans-unit id="flexform.accordion.slideToPosition" xml:space="preserve">
+			<trans-unit id="flexform.accordion.behaviour.slideToPosition" xml:space="preserve">
 				<source>Slide to position</source>
 			</trans-unit>
-			<trans-unit id="flexform.accordion.slideOffset" xml:space="preserve">
+			<trans-unit id="flexform.accordion.behaviour.slideOffset" xml:space="preserve">
 				<source>Slide offset</source>
+			</trans-unit>
+			<trans-unit id="flexform.accordion.behaviour.ajaxLoading" xml:space="preserve">
+				<source>Load content via AJAX</source>
 			</trans-unit>
 
 			<!-- Configuration/TSconfig/Components/Tabs.ts -->
@@ -294,34 +368,34 @@
 			</trans-unit>
 
 			<!-- Configuration/FlexForm/Components/Tabs.xml -->
-			<trans-unit id="flexform.tabs.sheet.general" xml:space="preserve">
+			<trans-unit id="flexform.tabs.appearance.sheetTitle" xml:space="preserve">
 				<source>General</source>
 			</trans-unit>
-			<trans-unit id="flexform.tabs.layout" xml:space="preserve">
+			<trans-unit id="flexform.tabs.appearance.layout" xml:space="preserve">
 				<source>Layout</source>
 			</trans-unit>
-			<trans-unit id="flexform.tabs.layout.0" xml:space="preserve">
+			<trans-unit id="flexform.tabs.appearance.layout.0" xml:space="preserve">
 				<source>Default</source>
 			</trans-unit>
-			<trans-unit id="flexform.tabs.layout.1" xml:space="preserve">
+			<trans-unit id="flexform.tabs.appearance.layout.1" xml:space="preserve">
 				<source>Layout 1</source>
 			</trans-unit>
-			<trans-unit id="flexform.tabs.layout.2" xml:space="preserve">
+			<trans-unit id="flexform.tabs.appearance.layout.2" xml:space="preserve">
 				<source>Layout 2</source>
 			</trans-unit>
-			<trans-unit id="flexform.tabs.layout.3" xml:space="preserve">
+			<trans-unit id="flexform.tabs.appearance.layout.3" xml:space="preserve">
 				<source>Layout 3</source>
 			</trans-unit>
-			<trans-unit id="flexform.tabs.active" xml:space="preserve">
+			<trans-unit id="flexform.tabs.behaviour.active" xml:space="preserve">
 				<source>Active item</source>
 			</trans-unit>
-			<trans-unit id="flexform.tabs.slideToPosition" xml:space="preserve">
+			<trans-unit id="flexform.tabs.behaviour.slideToPosition" xml:space="preserve">
 				<source>Slide to position</source>
 			</trans-unit>
-			<trans-unit id="flexform.tabs.slideOffset" xml:space="preserve">
+			<trans-unit id="flexform.tabs.behaviour.slideOffset" xml:space="preserve">
 				<source>Slide offset</source>
 			</trans-unit>
-			<trans-unit id="flexform.tabs.ajaxLoading" xml:space="preserve">
+			<trans-unit id="flexform.tabs.behaviour.ajaxLoading" xml:space="preserve">
 				<source>Load content via AJAX</source>
 			</trans-unit>
 		</body>

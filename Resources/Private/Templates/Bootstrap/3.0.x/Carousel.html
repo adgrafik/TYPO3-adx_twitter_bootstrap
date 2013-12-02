@@ -1,0 +1,63 @@
+
+{namespace t3jquery=Tx_T3jquery_ViewHelpers}
+{namespace adx=AdGrafik\AdxTwitterBootstrap\ViewHelpers}
+
+<div id="carousel{data.uid}" class="carousel slide{layout}">
+	<f:if condition="{pagination}">
+		<ol class="carousel-indicators">
+			<f:if condition="{provider} == 0">
+				<f:for each="{data.tx_gridelements_view_children}" as="item" key="key">
+					<li data-target="#carousel{data.uid}" data-slide-to="{key}">{f:cObject( typoscriptObjectPath: 'lib.adxtwitterbootstrap.carousel.render.paginationItem', data: { key: key, pagination: pagination, header: item.header } )}</li>
+				</f:for>
+			</f:if>
+			<f:if condition="{provider} == 1">
+				<f:for each="{adx:utility.explode( string: data.tx_gridelements_view_children.0.image )}" as="item" iteration="info">
+					<li data-target="#carousel{data.uid}" data-slide-to="{info.index}">{info.cycle}</li>
+				</f:for>
+			</f:if>
+		</ol>
+	</f:if>
+	<div class="carousel-inner">
+		<f:if condition="{provider} == 0">
+			<f:for each="{data.tx_gridelements_view_children}" as="item" key="key">
+				<div class="item">
+					<f:cObject typoscriptObjectPath="lib.adxtwitterbootstrap.carousel.render.contentItem" data="{item}" />
+				</div>
+			</f:for>
+		</f:if>
+		<f:if condition="{provider} == 1">
+			<f:for each="{data.tx_gridelements_view_children}" as="item">
+				<f:cObject typoscriptObjectPath="lib.adxtwitterbootstrap.carousel.render.imageItems" data="{item}" />
+			</f:for>
+		</f:if>
+	</div>
+	<f:if condition="{browser}">
+		<a class="carousel-control left" href="#carousel{data.uid}" data-slide="prev">&lsaquo;</a> 
+		<a class="carousel-control right" href="#carousel{data.uid}" data-slide="next">&rsaquo;</a>
+	</f:if>
+</div>
+
+<t3jquery:AddJQueryAndScript jsfile="EXT:adx_twitter_bootstrap/Resources/Public/JavaScript/jquery.mobile.custom.min.js" />
+
+<t3jquery:AddJQueryAndScript renderChildrenToData="TRUE">
+(function($){
+	var $carousel = $('#carousel{data.uid}'),
+		active = Number('{active}'),
+		interval = {interval},
+		pause = {f:if( condition: '{pause}', then: '"hover"' )};
+	$carousel
+		.find('.carousel-indicators li:nth-child(' + (active + 1) + '), .carousel-inner div:nth-child(' + (active + 1) + ')')
+		.addClass('active');
+	$carousel
+		.carousel({
+			interval: interval,
+			pause: pause
+		})
+		.swiperight(function(){
+			$carousel.carousel('prev');
+		})
+		.swipeleft(function(){
+			$carousel.carousel('next');
+		});
+})(jQuery);
+</t3jquery:AddJQueryAndScript>

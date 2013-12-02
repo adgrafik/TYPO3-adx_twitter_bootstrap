@@ -1,0 +1,65 @@
+
+{namespace vh=Tx_Powermail_ViewHelpers}
+{namespace adx=AdGrafik\AdxTwitterBootstrap\ViewHelpers}
+
+<div id="powermail_fieldwrap_{field.uid}" class="powermail_fieldwrap powermail_fieldwrap_radio {field.css} {adx:spanParser( pattern: 'col-%s-offset-%s', ratio: '{field.offset}', breakpoint: '{field.offsetBreakpoint}' )} {adx:spanParser( ratio: '{field.span}', breakpoint: '{field.spanBreakpoint}', default: 'col-xs-12' )} {vh:Misc.ErrorClass(field: '{field}', class: 'powermail_field_error')}">
+	<div class="form-group">
+		<f:if condition="{page.layout} == 'form-horizontal'">
+			<f:then>
+				<f:if condition="{0: field.hideLabel} != {0: 'invisible'}">
+					<label class="control-label {adx:spanParser( ratio: '{page.labelToFieldRatio}', breakpoint: '{page.labelToFieldRatioBreakpoint}' )}{f:if( condition: '{field.hideLabel}', then: ' sr-only' )}" for="powermail_field_{field.marker}">{field.title -> vh:string.RawAndRemoveXss()}<f:if condition="{field.mandatory}"><span class="mandatory">*</span></f:if></label>
+				</f:if>
+				<fieldset class="{f:if( condition: '{field.checkboxInline} > 0', then: 'row' )}">
+					<div class="{adx:spanParser( ratio: '{page.labelToFieldRatio}', breakpoint: '{page.labelToFieldRatioBreakpoint}', column: 2 )}">
+						<f:for each="{field.settings}" as="setting" iteration="index">
+							<f:if condition="{field.checkboxInline} > 0">
+								<div class="{adx:spanParser( ratio: '{field.checkboxInline}', breakpoint: '{field.checkboxInlineBreakpoint}' )}">
+							</f:if>
+							<f:if condition="{field.checkboxInline} != -1">
+								<div class="powermail_radio_inner_{index.cycle} radio">
+							</f:if>
+							<label for="powermail_field_{field.marker}_{index.cycle}">
+								<f:form.radio id="powermail_field_{field.marker}_{index.cycle}" class="{vh:Misc.ValidationClass(field: '{field}')}" name="field[{field.uid}]" value="{setting.value}" checked="{vh:Misc.PrefillField(field: '{field}', cycle: '{index.cycle}')}" />
+								{setting.label -> vh:string.RawAndRemoveXss()}
+							</label>
+							<f:if condition="{field.checkboxInline} != -1">
+								</div>
+							</f:if>
+							<f:if condition="{field.checkboxInline} > 0">
+								</div>
+							</f:if>
+						</f:for>
+					</div>
+				</fieldset>
+			</f:then>
+			<f:else>
+				<f:if condition="{0: field.hideLabel} != {0: 'invisible'}">
+					<label class="control-label{f:if( condition: '{field.hideLabel}', then: ' sr-only' )}" for="powermail_field_{field.marker}">{field.title -> vh:string.RawAndRemoveXss()}<f:if condition="{field.mandatory}"><span class="mandatory">*</span></f:if></label>
+				</f:if>
+				<fieldset class="{f:if( condition: '{field.checkboxInline} > 0', then: 'row' )}">
+					<f:for each="{field.settings}" as="setting" iteration="index">
+						<f:if condition="{field.checkboxInline} > 0">
+							<div class="{adx:spanParser( ratio: '{field.checkboxInline}', breakpoint: '{field.checkboxInlineBreakpoint}' )}">
+						</f:if>
+						<f:if condition="{field.checkboxInline} != -1">
+							<div class="powermail_radio_inner_{index.cycle} radio">
+						</f:if>
+						<label for="powermail_field_{field.marker}_{index.cycle}" class="{f:if( condition: '{field.checkboxInline} == -1', then: 'radio-inline' )}">
+							<f:form.radio id="powermail_field_{field.marker}_{index.cycle}" class="{vh:Misc.ValidationClass(field: '{field}')}" name="field[{field.uid}]" value="{setting.value}" checked="{vh:Misc.PrefillField(field: '{field}', cycle: '{index.cycle}')}" /> 
+							{setting.label -> vh:string.RawAndRemoveXss()}
+						</label>
+						<f:if condition="{field.checkboxInline} != -1">
+							</div>
+						</f:if>
+						<f:if condition="{field.checkboxInline} > 0">
+							</div>
+						</f:if>
+					</f:for>
+				</fieldset>
+			</f:else>
+		</f:if>
+	</div>
+</div>
+<f:if condition="{field.clear}">
+	<div class="clearfix"></div>
+</f:if>

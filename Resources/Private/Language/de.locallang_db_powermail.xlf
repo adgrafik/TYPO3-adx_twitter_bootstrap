@@ -3,58 +3,47 @@
 	<file source-language="de" datatype="plaintext" original="messages" date="2012-06-13T20:22:32Z" product-name="adx_twitter_bootstrap">
 		<header/>
 		<body>
-			<trans-unit id="tx_powermail_domain_model_forms.labelLeftLeftAligned" xml:space="preserve">
-				<source>Labels on the left side (left-aligned)</source>
-				<target state="translated">Beschriftung auf der linken Seite (linksbündig)</target>
+			<trans-unit id="tx_powermail_domain_model_forms.palette.apperance" xml:space="preserve">
+				<source>Apperance</source>
+				<target state="translated">Erscheinungsbild</target>
+			</trans-unit>
+			<trans-unit id="tx_adxtwitterbootstrap_layout" xml:space="preserve">
+				<source>Form Layout</source>
+				<target state="translated">Formular Layout</target>
+			</trans-unit>
+			<trans-unit id="tx_adxtwitterbootstrap_layout.default" xml:space="preserve">
+				<source>Default</source>
+				<target state="translated">Standard</target>
+			</trans-unit>
+			<trans-unit id="tx_adxtwitterbootstrap_layout.horizontal" xml:space="preserve">
+				<source>Horizontal</source>
+				<target state="translated">Horizontal</target>
 			</trans-unit>
 
-            <trans-unit id="tx_powermail_domain_model_pages.tx_adxtwitterbootstrap_hide_legend" xml:space="preserve">
-                <source>Hide legend</source>
-                <target state="translated">Legende nicht sichtbar</target>
+            <trans-unit id="tx_adxtwitterbootstrap_placeholder" xml:space="preserve">
+                <source>Placeholder</source>
+                <target state="translated">Platzhalter</target>
             </trans-unit>
-            <trans-unit id="tx_powermail_domain_model_pages.tx_adxtwitterbootstrap_offset" xml:space="preserve">
+            <trans-unit id="tx_adxtwitterbootstrap_offset" xml:space="preserve">
                 <source>Left Indent</source>
                 <target state="translated">Linke Einrückung</target>
             </trans-unit>
-            <trans-unit id="tx_powermail_domain_model_pages.tx_adxtwitterbootstrap_span" xml:space="preserve">
+            <trans-unit id="tx_adxtwitterbootstrap_span" xml:space="preserve">
                 <source>Spanne</source>
                 <target state="translated">Spalten</target>
             </trans-unit>
-            <trans-unit id="tx_powermail_domain_model_pages.tx_adxtwitterbootstrap_end_of_row" xml:space="preserve">
-                <source>End of line</source>
-                <target state="translated">Zeilenende</target>
+            <trans-unit id="tx_adxtwitterbootstrap_end_of_row" xml:space="preserve">
+                <source>End of Row</source>
+                <target state="translated">Ende der Zeile</target>
             </trans-unit>
-
-
-
-
-
-
-
-
-
-
-
-			<trans-unit id="tx_powermail_domain_model_fields.columnInner" xml:space="preserve">
-				<source>Checkboxes/Radiobuttons</source>
-				<target state="translated">Checkboxen/Radiobuttons</target>
-			</trans-unit>
-			<trans-unit id="tx_powermail_domain_model_fields.columnInnerInline" xml:space="preserve">
-				<source>Inline</source>
-				<target state="translated">Inline</target>
-			</trans-unit>
-			<trans-unit id="tx_powermail_domain_model_fields.columnInnerHalf" xml:space="preserve">
-				<source>Half</source>
-				<target state="translated">Halb</target>
-			</trans-unit>
-			<trans-unit id="tx_powermail_domain_model_fields.columnInnerThird" xml:space="preserve">
-				<source>Third</source>
-				<target state="translated">Drittel</target>
-			</trans-unit>
-			<trans-unit id="tx_powermail_domain_model_fields.columnInnerQuarter" xml:space="preserve">
-				<source>Quarter</source>
-				<target state="translated">Viertel</target>
-			</trans-unit>
+            <trans-unit id="tx_adxtwitterbootstrap_hide_legend" xml:space="preserve">
+                <source>Hide Legend</source>
+                <target state="translated">Legende nicht sichtbar</target>
+            </trans-unit>
+            <trans-unit id="tx_adxtwitterbootstrap_hide_label" xml:space="preserve">
+                <source>Hide Label</source>
+                <target state="translated">Label nicht sichtbar</target>
+            </trans-unit>
 		</body>
 	</file>
 </xliff>

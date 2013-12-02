@@ -3,65 +3,285 @@
 	<file source-language="en" datatype="plaintext" original="messages" date="2012-06-13T20:22:32Z" product-name="adx_twitter_bootstrap">
 		<header/>
 		<body>
-			<trans-unit id="tx_powermail_domain_model_forms.labelLeftLeftAligned" xml:space="preserve">
-				<source>Labels on the left side (left-aligned)</source>
+			<trans-unit id="tx_powermail_domain_model_forms.palette.apperance" xml:space="preserve">
+				<source>Apperance</source>
 			</trans-unit>
-
-			<trans-unit id="tx_powermail_domain_model_pages.tx_adxtwitterbootstrap_hide_legend" xml:space="preserve">
-				<source>Hide legend</source>
+			<trans-unit id="tx_adxtwitterbootstrap_layout" xml:space="preserve">
+				<source>Form Layout</source>
 			</trans-unit>
-			<trans-unit id="tx_powermail_domain_model_pages.tx_adxtwitterbootstrap_offset" xml:space="preserve">
+			<trans-unit id="tx_adxtwitterbootstrap_layout.default" xml:space="preserve">
+				<source>Default</source>
+			</trans-unit>
+			<trans-unit id="tx_adxtwitterbootstrap_layout.horizontal" xml:space="preserve">
+				<source>Horizontal</source>
+			</trans-unit>
+            <trans-unit id="tx_adxtwitterbootstrap_ratio.1212" xml:space="preserve">
+                <source>6 : 6 Columns (1/2 : 1/2)</source>
+            </trans-unit>
+            <trans-unit id="tx_adxtwitterbootstrap_ratio.1323" xml:space="preserve">
+                <source>4 : 8 Columns (1/3 : 2/3)</source>
+            </trans-unit>
+            <trans-unit id="tx_adxtwitterbootstrap_ratio.2313" xml:space="preserve">
+                <source>8 : 4 Columns (2/3 : 1/3)</source>
+            </trans-unit>
+            <trans-unit id="tx_adxtwitterbootstrap_ratio.1434" xml:space="preserve">
+                <source>3 : 9 Columns (1/4 : 3/4)</source>
+            </trans-unit>
+            <trans-unit id="tx_adxtwitterbootstrap_ratio.3414" xml:space="preserve">
+                <source>9 : 3 Columns (3/4 : 1/4)</source>
+            </trans-unit>
+            <trans-unit id="tx_adxtwitterbootstrap_breakpoint" xml:space="preserve">
+                <source>Breakpoint</source>
+            </trans-unit>
+            <trans-unit id="tx_adxtwitterbootstrap_breakpoint.xs" xml:space="preserve">
+                <source>Phones (&lt;768px)</source>
+            </trans-unit>
+            <trans-unit id="tx_adxtwitterbootstrap_breakpoint.sm" xml:space="preserve">
+                <source>Tablets (&#8805;768px)</source>
+            </trans-unit>
+            <trans-unit id="tx_adxtwitterbootstrap_breakpoint.md" xml:space="preserve">
+                <source>Desktops (&#8805;992px)</source>
+            </trans-unit>
+            <trans-unit id="tx_adxtwitterbootstrap_breakpoint.lg" xml:space="preserve">
+                <source>Large Desktops (&#8805;1200px)</source>
+            </trans-unit>
+			<trans-unit id="tx_adxtwitterbootstrap_offset" xml:space="preserve">
 				<source>Left Indent</source>
 			</trans-unit>
-			<trans-unit id="tx_powermail_domain_model_pages.tx_adxtwitterbootstrap_span" xml:space="preserve">
+			<trans-unit id="tx_adxtwitterbootstrap_span.none" xml:space="preserve">
+				<source>None</source>
+			</trans-unit>
+			<trans-unit id="tx_adxtwitterbootstrap_span.runIn" xml:space="preserve">
+				<source>Run In</source>
+			</trans-unit>
+			<trans-unit id="tx_adxtwitterbootstrap_span.16" xml:space="preserve">
+				<source>2 Columns (1/6)</source>
+			</trans-unit>
+			<trans-unit id="tx_adxtwitterbootstrap_span.14" xml:space="preserve">
+				<source>3 Columns (1/4)</source>
+			</trans-unit>
+			<trans-unit id="tx_adxtwitterbootstrap_span.13" xml:space="preserve">
+				<source>4 Columns (1/3)</source>
+			</trans-unit>
+			<trans-unit id="tx_adxtwitterbootstrap_span.12" xml:space="preserve">
+				<source>6 Columns (1/2)</source>
+			</trans-unit>
+			<trans-unit id="tx_adxtwitterbootstrap_span.23" xml:space="preserve">
+				<source>8 Columns (2/3)</source>
+			</trans-unit>
+			<trans-unit id="tx_adxtwitterbootstrap_span.34" xml:space="preserve">
+				<source>9 Columns (3/4)</source>
+			</trans-unit>
+			<trans-unit id="tx_adxtwitterbootstrap_span.56" xml:space="preserve">
+				<source>10 Columns (5/6)</source>
+			</trans-unit>
+            <trans-unit id="tx_adxtwitterbootstrap_label_to_field_ratio" xml:space="preserve">
+                <source>Label to Field Ratio</source>
+            </trans-unit>
+
+			<trans-unit id="tx_adxtwitterbootstrap_placeholder" xml:space="preserve">
+				<source>Placeholder</source>
+			</trans-unit>
+			<trans-unit id="tx_adxtwitterbootstrap_span" xml:space="preserve">
 				<source>Span</source>
 			</trans-unit>
-			<trans-unit id="tx_powermail_domain_model_pages.tx_adxtwitterbootstrap_end_of_row" xml:space="preserve">
-				<source>End of line</source>
+			<trans-unit id="tx_adxtwitterbootstrap_clear" xml:space="preserve">
+				<source>End of Row</source>
+			</trans-unit>
+			<trans-unit id="tx_adxtwitterbootstrap_hide_legend" xml:space="preserve">
+				<source>Hide Legend</source>
+			</trans-unit>
+			<trans-unit id="tx_adxtwitterbootstrap_hide_legend.screenReadersOnly" xml:space="preserve">
+				<source>Screen Readers Only</source>
+			</trans-unit>
+			<trans-unit id="tx_adxtwitterbootstrap_hide_legend.invisible" xml:space="preserve">
+				<source>Invisible</source>
 			</trans-unit>
 
-			<trans-unit id="tx_powermail_domain_model_pages.columnFullNoLegend" xml:space="preserve">
-				<source>Default, hide legend</source>
+			<trans-unit id="tx_adxtwitterbootstrap_hide_label" xml:space="preserve">
+				<source>Hide Label</source>
 			</trans-unit>
-			<trans-unit id="tx_powermail_domain_model_pages.columnHalf" xml:space="preserve">
-				<source>Half column</source>
+			<trans-unit id="tx_adxtwitterbootstrap_element_size" xml:space="preserve">
+				<source>Display Size</source>
 			</trans-unit>
-			<trans-unit id="tx_powermail_domain_model_pages.columnHalfNoLegend" xml:space="preserve">
-				<source>Half column, hide legend</source>
+			<trans-unit id="tx_adxtwitterbootstrap_element_size.default" xml:space="preserve">
+				<source>Default</source>
 			</trans-unit>
-			<trans-unit id="tx_powermail_domain_model_pages.columnThird" xml:space="preserve">
-				<source>Third column</source>
+			<trans-unit id="tx_adxtwitterbootstrap_element_size.lg" xml:space="preserve">
+				<source>Large</source>
 			</trans-unit>
-			<trans-unit id="tx_powermail_domain_model_pages.columnThirdNoLegend" xml:space="preserve">
-				<source>Third column, hide legend</source>
+			<trans-unit id="tx_adxtwitterbootstrap_element_size.sm" xml:space="preserve">
+				<source>Small</source>
 			</trans-unit>
-			<trans-unit id="tx_powermail_domain_model_pages.columnTwoThird" xml:space="preserve">
-				<source>Two third column</source>
-			</trans-unit>
-			<trans-unit id="tx_powermail_domain_model_pages.columnTwoThirdNoLegend" xml:space="preserve">
-				<source>Two third column, hide legend</source>
-			</trans-unit>
-
-
-
-
-
-
-			<trans-unit id="tx_powermail_domain_model_fields.columnInner" xml:space="preserve">
-				<source>Checkboxes/Radiobuttons</source>
-			</trans-unit>
-			<trans-unit id="tx_powermail_domain_model_fields.columnInnerInline" xml:space="preserve">
+			<trans-unit id="tx_adxtwitterbootstrap_checkbox_inline" xml:space="preserve">
 				<source>Inline</source>
 			</trans-unit>
-			<trans-unit id="tx_powermail_domain_model_fields.columnInnerHalf" xml:space="preserve">
-				<source>Half</source>
+			<trans-unit id="tx_adxtwitterbootstrap_button_class" xml:space="preserve">
+				<source>Button Class</source>
 			</trans-unit>
-			<trans-unit id="tx_powermail_domain_model_fields.columnInnerThird" xml:space="preserve">
-				<source>Third</source>
+			<trans-unit id="tx_adxtwitterbootstrap_button_class.none" xml:space="preserve">
+				<source>None</source>
 			</trans-unit>
-			<trans-unit id="tx_powermail_domain_model_fields.columnInnerQuarter" xml:space="preserve">
-				<source>Quarter</source>
+			<trans-unit id="tx_adxtwitterbootstrap_button_class.default" xml:space="preserve">
+				<source>Default</source>
 			</trans-unit>
-		</body>
+			<trans-unit id="tx_adxtwitterbootstrap_button_class.primary" xml:space="preserve">
+				<source>Primary</source>
+			</trans-unit>
+			<trans-unit id="tx_adxtwitterbootstrap_button_class.success" xml:space="preserve">
+				<source>Success</source>
+			</trans-unit>
+			<trans-unit id="tx_adxtwitterbootstrap_button_class.info" xml:space="preserve">
+				<source>Info</source>
+			</trans-unit>
+			<trans-unit id="tx_adxtwitterbootstrap_button_class.warning" xml:space="preserve">
+				<source>Warning</source>
+			</trans-unit>
+			<trans-unit id="tx_adxtwitterbootstrap_button_class.danger" xml:space="preserve">
+				<source>Danger</source>
+			</trans-unit>
+			<trans-unit id="tx_adxtwitterbootstrap_button_class.link" xml:space="preserve">
+				<source>Link</source>
+			</trans-unit>
+			<trans-unit id="tx_adxtwitterbootstrap_button_block" xml:space="preserve">
+				<source>As Block</source>
+			</trans-unit>
+
+			<trans-unit id="tx_powermail_domain_model_fields.palette.datepicker" xml:space="preserve">
+				<source>Datepicker</source>
+			</trans-unit>
+			<trans-unit id="tx_adxtwitterbootstrap_datepicker_type" xml:space="preserve">
+				<source>Datepicker Type</source>
+			</trans-unit>
+			<trans-unit id="tx_adxtwitterbootstrap_datepicker_type.none" xml:space="preserve">
+				<source>None</source>
+			</trans-unit>
+			<trans-unit id="tx_adxtwitterbootstrap_datepicker_type.default" xml:space="preserve">
+				<source>Default</source>
+			</trans-unit>
+			<trans-unit id="tx_adxtwitterbootstrap_datepicker_type.before" xml:space="preserve">
+				<source>Icon Before</source>
+			</trans-unit>
+			<trans-unit id="tx_adxtwitterbootstrap_datepicker_type.after" xml:space="preserve">
+				<source>Icon After</source>
+			</trans-unit>
+			<trans-unit id="tx_adxtwitterbootstrap_datepicker_format" xml:space="preserve">
+				<source>Format</source>
+			</trans-unit>
+			<trans-unit id="tx_adxtwitterbootstrap_datepicker_week_start" xml:space="preserve">
+				<source>Week Start</source>
+			</trans-unit>
+            <trans-unit id="tx_adxtwitterbootstrap_datepicker_day_of_week.su" xml:space="preserve">
+                <source>Sunday</source>
+            </trans-unit>
+            <trans-unit id="tx_adxtwitterbootstrap_datepicker_day_of_week.mo" xml:space="preserve">
+                <source>Monday</source>
+            </trans-unit>
+            <trans-unit id="tx_adxtwitterbootstrap_datepicker_day_of_week.tu" xml:space="preserve">
+                <source>Tuesday</source>
+            </trans-unit>
+            <trans-unit id="tx_adxtwitterbootstrap_datepicker_day_of_week.we" xml:space="preserve">
+                <source>Wednesday</source>
+            </trans-unit>
+            <trans-unit id="tx_adxtwitterbootstrap_datepicker_day_of_week.th" xml:space="preserve">
+                <source>Thursday</source>
+            </trans-unit>
+            <trans-unit id="tx_adxtwitterbootstrap_datepicker_day_of_week.fr" xml:space="preserve">
+                <source>Friday</source>
+            </trans-unit>
+            <trans-unit id="tx_adxtwitterbootstrap_datepicker_day_of_week.sa" xml:space="preserve">
+                <source>Saturday</source>
+            </trans-unit>
+			<trans-unit id="tx_adxtwitterbootstrap_datepicker_start_date" xml:space="preserve">
+				<source>Start Date</source>
+			</trans-unit>
+			<trans-unit id="tx_adxtwitterbootstrap_datepicker_end_date" xml:space="preserve">
+				<source>End Date</source>
+			</trans-unit>
+			<trans-unit id="tx_adxtwitterbootstrap_datepicker_start_view" xml:space="preserve">
+				<source>Start View</source>
+			</trans-unit>
+			<trans-unit id="tx_adxtwitterbootstrap_datepicker_start_view.0" xml:space="preserve">
+				<source>Month</source>
+			</trans-unit>
+			<trans-unit id="tx_adxtwitterbootstrap_datepicker_start_view.1" xml:space="preserve">
+				<source>Year</source>
+			</trans-unit>
+			<trans-unit id="tx_adxtwitterbootstrap_datepicker_start_view.2" xml:space="preserve">
+				<source>Decade</source>
+			</trans-unit>
+			<trans-unit id="tx_adxtwitterbootstrap_datepicker_min_view_mode" xml:space="preserve">
+				<source>Min View Mode</source>
+			</trans-unit>
+			<trans-unit id="tx_adxtwitterbootstrap_datepicker_min_view_mode.0" xml:space="preserve">
+				<source>Days</source>
+			</trans-unit>
+			<trans-unit id="tx_adxtwitterbootstrap_datepicker_min_view_mode.1" xml:space="preserve">
+				<source>Months</source>
+			</trans-unit>
+			<trans-unit id="tx_adxtwitterbootstrap_datepicker_min_view_mode.2" xml:space="preserve">
+				<source>Years</source>
+			</trans-unit>
+			<trans-unit id="tx_adxtwitterbootstrap_datepicker_today_button" xml:space="preserve">
+				<source>Today button</source>
+			</trans-unit>
+			<trans-unit id="tx_adxtwitterbootstrap_datepicker_today_button.disabled" xml:space="preserve">
+				<source>Disabled</source>
+			</trans-unit>
+			<trans-unit id="tx_adxtwitterbootstrap_datepicker_today_button.enabled" xml:space="preserve">
+				<source>Enabled (unlinked)</source>
+			</trans-unit>
+			<trans-unit id="tx_adxtwitterbootstrap_datepicker_today_button.linked" xml:space="preserve">
+				<source>Linked</source>
+			</trans-unit>
+			<trans-unit id="tx_adxtwitterbootstrap_datepicker_orientation" xml:space="preserve">
+				<source>Orientation</source>
+			</trans-unit>
+			<trans-unit id="tx_adxtwitterbootstrap_datepicker_orientation.auto" xml:space="preserve">
+				<source>Auto</source>
+			</trans-unit>
+			<trans-unit id="tx_adxtwitterbootstrap_datepicker_orientation.topAuto" xml:space="preserve">
+				<source>Top Auto</source>
+			</trans-unit>
+			<trans-unit id="tx_adxtwitterbootstrap_datepicker_orientation.bottomAuto" xml:space="preserve">
+				<source>Bottom Auto</source>
+			</trans-unit>
+			<trans-unit id="tx_adxtwitterbootstrap_datepicker_orientation.autoLeft" xml:space="preserve">
+				<source>Auto Left</source>
+			</trans-unit>
+			<trans-unit id="tx_adxtwitterbootstrap_datepicker_orientation.topLeft" xml:space="preserve">
+				<source>Top Left</source>
+			</trans-unit>
+			<trans-unit id="tx_adxtwitterbootstrap_datepicker_orientation.bottomLeft" xml:space="preserve">
+				<source>Bottom Left</source>
+			</trans-unit>
+			<trans-unit id="tx_adxtwitterbootstrap_datepicker_orientation.autoRight" xml:space="preserve">
+				<source>Auto Right</source>
+			</trans-unit>
+			<trans-unit id="tx_adxtwitterbootstrap_datepicker_orientation.topRight" xml:space="preserve">
+				<source>Top Right</source>
+			</trans-unit>
+			<trans-unit id="tx_adxtwitterbootstrap_datepicker_orientation.bottomRight" xml:space="preserve">
+				<source>Bottom Right</source>
+			</trans-unit>
+			<trans-unit id="tx_adxtwitterbootstrap_datepicker_days_of_week_disabled" xml:space="preserve">
+				<source>Days of Week Disabled</source>
+			</trans-unit>
+			<trans-unit id="tx_adxtwitterbootstrap_datepicker_calendar_weeks" xml:space="preserve">
+				<source>Calendar Weeks</source>
+			</trans-unit>
+			<trans-unit id="tx_adxtwitterbootstrap_datepicker_autoclose" xml:space="preserve">
+				<source>Autoclose</source>
+			</trans-unit>
+			<trans-unit id="tx_adxtwitterbootstrap_datepicker_today_highlight" xml:space="preserve">
+				<source>Today Highlight</source>
+			</trans-unit>
+			<trans-unit id="tx_adxtwitterbootstrap_datepicker_keyboard_navigation" xml:space="preserve">
+				<source>Keyboard Navigation</source>
+			</trans-unit>
+			<trans-unit id="tx_adxtwitterbootstrap_datepicker_force_parse" xml:space="preserve">
+				<source>Force Parse</source>
+			</trans-unit>
+        </body>
 	</file>
 </xliff>

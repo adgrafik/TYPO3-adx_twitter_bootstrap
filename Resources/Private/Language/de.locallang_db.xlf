@@ -4,12 +4,38 @@
 		<header/>
 		<body>
 			<!-- tt_content fields -->
-			<trans-unit id="tx_adxtwitterbootstrap_layout_id" xml:space="preserve">
-				<source>Layout ID</source>
-				<target state="translated">Layout ID</target>
+			<trans-unit id="tx_adxtwitterbootstrap_offset" xml:space="preserve">
+				<source>Left Indent</source>
+				<target state="translated">Linke Einrückung</target>
 			</trans-unit>
-
-			<!-- tt_content fields -->
+			<trans-unit id="tx_adxtwitterbootstrap_span" xml:space="preserve">
+				<source>Span</source>
+				<target state="translated">Spalte</target>
+			</trans-unit>
+			<trans-unit id="tx_adxtwitterbootstrap_device_visibility" xml:space="preserve">
+				<source>Device visibility</source>
+				<target state="translated">Device-Sichtbarkeit</target>
+			</trans-unit>
+			<trans-unit id="tx_adxtwitterbootstrap_device_visibility.xs" xml:space="preserve">
+				<source>Hide on Phones</source>
+				<target state="translated">Versteckt auf Handys</target>
+			</trans-unit>
+			<trans-unit id="tx_adxtwitterbootstrap_device_visibility.sm" xml:space="preserve">
+				<source>Hide on Tablets</source>
+				<target state="translated">Versteckt auf Tablets</target>
+			</trans-unit>
+			<trans-unit id="tx_adxtwitterbootstrap_device_visibility.md" xml:space="preserve">
+				<source>Hide on Desktops</source>
+				<target state="translated">Versteckt auf Desktops</target>
+			</trans-unit>
+			<trans-unit id="tx_adxtwitterbootstrap_device_visibility.lg" xml:space="preserve">
+				<source>Hide on Large Desktops</source>
+				<target state="translated">Versteckt auf Große Desktops</target>
+			</trans-unit>
+			<trans-unit id="tx_adxtwitterbootstrap_link_content_element" xml:space="preserve">
+				<source>Link content element with first found link</source>
+				<target state="translated">Verlinke Seiteninhalt mit dem ersten gefundenen Link</target>
+			</trans-unit>
 			<trans-unit id="tx_adxtwitterbootstrap_inherit" xml:space="preserve">
 				<source>Inherit Content element</source>
 				<target state="translated">Seiteninhalt vererben</target>
@@ -26,35 +52,14 @@
 				<source>If this option is activated, this content element will be inherited to the sub pages.</source>
 				<target state="translated">If this option is activated, this content element will be inherited to the sub pages.</target>
 			</trans-unit>
-
-			<trans-unit id="tx_adxtwitterbootstrap_offset" xml:space="preserve">
-				<source>Left Indent</source>
-				<target state="translated">Linke Einrückung</target>
-			</trans-unit>
-			<trans-unit id="tx_adxtwitterbootstrap_span" xml:space="preserve">
-				<source>Span</source>
-				<target state="translated">Spanne</target>
-			</trans-unit>
-			<trans-unit id="tx_adxtwitterbootstrap_device_visibility" xml:space="preserve">
-				<source>Device visibility</source>
-				<target state="translated">Device-Sichtbarkeit</target>
-			</trans-unit>
-			<trans-unit id="tx_adxtwitterbootstrap_device_visibility.hideOnDesktop" xml:space="preserve">
-				<source>Hide on desktops</source>
-				<target state="translated">Versteckt auf Desktops</target>
-			</trans-unit>
-			<trans-unit id="tx_adxtwitterbootstrap_device_visibility.hideOnTablet" xml:space="preserve">
-				<source>Hide on tablets</source>
-				<target state="translated">Versteckt auf Tablets</target>
-			</trans-unit>
-			<trans-unit id="tx_adxtwitterbootstrap_device_visibility.hideOnPhone" xml:space="preserve">
-				<source>Hide on phones</source>
-				<target state="translated">Versteckt auf Handys</target>
-			</trans-unit>
-			<trans-unit id="tx_adxtwitterbootstrap_link_content_element" xml:space="preserve">
-				<source>Link content element with first found link</source>
-				<target state="translated">Verlinke Seiteninhalt mit dem ersten gefundenen Link</target>
-			</trans-unit>
+            <trans-unit id="tx_adxtwitterbootstrap_image_responsive" xml:space="preserve">
+                <source>Responsive</source>
+				<target state="translated">Responsive</target>
+            </trans-unit>
+            <trans-unit id="tx_adxtwitterbootstrap_image_columns" xml:space="preserve">
+                <source>Span of each Image</source>
+				<target state="translated">Spalten jedes Bildes</target>
+            </trans-unit>
 
 			<!-- Configuration/TSconfig/Components/*Columns.ts -->
 			<trans-unit id="TSconfig.columns.twoColumns.title" xml:space="preserve">
@@ -102,70 +107,159 @@
 			</trans-unit>
 
 			<!-- Configuration/FlexForm/Components/*Columns.xml -->
-			<trans-unit id="flexform.columns.sheet.general" xml:space="preserve">
-				<source>General</source>
-				<target state="translated">Allgemein</target>
-			</trans-unit>
-			<trans-unit id="flexform.columns.segmentation" xml:space="preserve">
-				<source>Segmentation</source>
-				<target state="translated">Aufteilung</target>
-			</trans-unit>
-			<trans-unit id="flexform.columns.layout" xml:space="preserve">
-				<source>Layout</source>
-				<target state="translated">Layout</target>
-			</trans-unit>
-			<trans-unit id="flexform.columns.layout.0" xml:space="preserve">
-				<source>Default</source>
-				<target state="translated">Standard</target>
-			</trans-unit>
-			<trans-unit id="flexform.columns.layout.1" xml:space="preserve">
-				<source>Layout 1</source>
-				<target state="translated">Layout 1</target>
-			</trans-unit>
-			<trans-unit id="flexform.columns.layout.2" xml:space="preserve">
-				<source>Layout 2</source>
-				<target state="translated">Layout 2</target>
-			</trans-unit>
-			<trans-unit id="flexform.columns.layout.3" xml:space="preserve">
-				<source>Layout 3</source>
-				<target state="translated">Layout 3</target>
-			</trans-unit>
-			<trans-unit id="flexform.columns.equalHeight" xml:space="preserve">
-				<source>Equal height</source>
-				<target state="translated">Höhe anpassen</target>
-			</trans-unit>
+            <trans-unit id="flexform.columns.grid.sheetTitle" xml:space="preserve">
+                <source>Grid</source>
+                <target state="translated">Grid</target>
+            </trans-unit>
+            <trans-unit id="flexform.columns.grid.span.column1" xml:space="preserve">
+                <source>Segmentation 1st Column</source>
+                <target state="translated">Aufteilung der 1. Spalte</target>
+            </trans-unit>
+            <trans-unit id="flexform.columns.grid.span.column2" xml:space="preserve">
+                <source>Segmentation 2nd Column</source>
+                <target state="translated">Aufteilung der 2. Spalte</target>
+            </trans-unit>
+            <trans-unit id="flexform.columns.grid.span.column3" xml:space="preserve">
+                <source>Segmentation 3rd Column</source>
+                <target state="translated">Aufteilung der 3. Spalte</target>
+            </trans-unit>
+            <trans-unit id="flexform.columns.grid.span.column4" xml:space="preserve">
+                <source>Segmentation 4th Column</source>
+                <target state="translated">Aufteilung der 4. Spalte</target>
+            </trans-unit>
+            <trans-unit id="flexform.columns.grid.span.xs" xml:space="preserve">
+                <source>Phones (&lt;768px)</source>
+                <target state="translated">Handys (&lt;768px)</target>
+            </trans-unit>
+            <trans-unit id="flexform.columns.grid.span.sm" xml:space="preserve">
+                <source>Tablets (&#8805;768px)</source>
+                <target state="translated">Tablets (&#8805;768px)</target>
+            </trans-unit>
+            <trans-unit id="flexform.columns.grid.span.md" xml:space="preserve">
+                <source>Desktops (&#8805;992px)</source>
+                <target state="translated">Desktops (&#8805;992px)</target>
+            </trans-unit>
+            <trans-unit id="flexform.columns.grid.span.lg" xml:space="preserve">
+                <source>Large Desktops (&#8805;1200px)</source>
+                <target state="translated">Große Desktops (&#8805;1200px)</target>
+            </trans-unit>
+            <trans-unit id="flexform.columns.grid.span.inherit" xml:space="preserve">
+                <source>Inherit</source>
+                <target state="translated">Vererbt</target>
+            </trans-unit>
+            <trans-unit id="flexform.columns.grid.span" xml:space="preserve">
+                <source>Span %s</source>
+                <target state="translated">Spanne</target>
+            </trans-unit>
+            <trans-unit id="flexform.columns.grid.clear.column1" xml:space="preserve">
+                <source>Clear after 1st Column</source>
+                <target state="translated">Umbruck nach 1. Spalte</target>
+            </trans-unit>
+            <trans-unit id="flexform.columns.grid.clear.column2" xml:space="preserve">
+                <source>Clear after 2nd Column</source>
+                <target state="translated">Umbruck nach 2. Spalte</target>
+            </trans-unit>
+            <trans-unit id="flexform.columns.grid.clear.column3" xml:space="preserve">
+                <source>Clear after 3rd Column</source>
+                <target state="translated">Umbruck nach 3. Spalte</target>
+            </trans-unit>
+            <trans-unit id="flexform.columns.grid.reverseOrder" xml:space="preserve">
+                <source>Reverse Order</source>
+                <target state="translated">Reihenfolge umkehren</target>
+            </trans-unit>
+            <trans-unit id="flexform.columns.grid.reverseOrder.default" xml:space="preserve">
+                <source>Default</source>
+                <target state="translated">Standard</target>
+            </trans-unit>
+            <trans-unit id="flexform.columns.grid.reverseOrder.xs" xml:space="preserve">
+                <source>Phones (&lt;768px)</source>
+                <target state="translated">Handys (&lt;768px)</target>
+            </trans-unit>
+            <trans-unit id="flexform.columns.grid.reverseOrder.sm" xml:space="preserve">
+                <source>Tablets (&#8805;768px)</source>
+                <target state="translated">Tablets (&#8805;768px)</target>
+            </trans-unit>
+            <trans-unit id="flexform.columns.grid.reverseOrder.md" xml:space="preserve">
+                <source>Desktops (&#8805;992px)</source>
+                <target state="translated">Desktops (&#8805;992px)</target>
+            </trans-unit>
+            <trans-unit id="flexform.columns.grid.reverseOrder.lg" xml:space="preserve">
+                <source>Large Desktops (&#8805;1200px)</source>
+                <target state="translated">Große Desktops (&#8805;1200px)</target>
+            </trans-unit>
+            <trans-unit id="flexform.columns.grid.expertMode" xml:space="preserve">
+                <source>Expert Mode</source>
+                <target state="translated">Expertenmodus</target>
+            </trans-unit>
 
-			<trans-unit id="flexform.columns.sheet.visibility" xml:space="preserve">
+            <trans-unit id="flexform.columns.appearance.sheetTitle" xml:space="preserve">
+                <source>Appearance</source>
+                <target state="translated">Erscheinungsbild</target>
+            </trans-unit>
+            <trans-unit id="flexform.columns.appearance.sheetTitle" xml:space="preserve">
+                <source>Appearance</source>
+                <target state="translated">Erscheinungsbild</target>
+            </trans-unit>
+            <trans-unit id="flexform.columns.appearance.layout" xml:space="preserve">
+                <source>Layout</source>
+                <target state="translated">Layout</target>
+            </trans-unit>
+            <trans-unit id="flexform.columns.appearance.layout.0" xml:space="preserve">
+                <source>Default</source>
+                <target state="translated">Standard</target>
+            </trans-unit>
+            <trans-unit id="flexform.columns.appearance.layout.1" xml:space="preserve">
+                <source>Layout 1</source>
+                <target state="translated">Layout 1</target>
+            </trans-unit>
+            <trans-unit id="flexform.columns.appearance.layout.2" xml:space="preserve">
+                <source>Layout 2</source>
+                <target state="translated">Layout 2</target>
+            </trans-unit>
+            <trans-unit id="flexform.columns.appearance.layout.3" xml:space="preserve">
+                <source>Layout 3</source>
+                <target state="translated">Layout 3</target>
+            </trans-unit>
+            <trans-unit id="flexform.columns.appearance.equalHeight" xml:space="preserve">
+                <source>Equal height</source>
+                <target state="translated">Höhe anpassen</target>
+            </trans-unit>
+
+			<trans-unit id="flexform.columns.visibility.sheetTitle" xml:space="preserve">
 				<source>Device visibility</source>
 				<target state="translated">Device-Sichtbarkeit</target>
 			</trans-unit>
-			<trans-unit id="flexform.columns.visibility.column1" xml:space="preserve">
+			<trans-unit id="flexform.columns.visibility.hideColumn1" xml:space="preserve">
 				<source>Hide column 1 on</source>
 				<target state="translated">Verstecke Spalte 1 auf</target>
 			</trans-unit>
-			<trans-unit id="flexform.columns.visibility.column2" xml:space="preserve">
+			<trans-unit id="flexform.columns.visibility.hideColumn2" xml:space="preserve">
 				<source>Hide column 2 on</source>
 				<target state="translated">Verstecke Spalte 2 auf</target>
 			</trans-unit>
-			<trans-unit id="flexform.columns.visibility.column3" xml:space="preserve">
+			<trans-unit id="flexform.columns.visibility.hideColumn3" xml:space="preserve">
 				<source>Hide column 3 on</source>
 				<target state="translated">Verstecke Spalte 3 auf</target>
 			</trans-unit>
-			<trans-unit id="flexform.columns.visibility.column4" xml:space="preserve">
+			<trans-unit id="flexform.columns.visibility.hideColumn4" xml:space="preserve">
 				<source>Hide column 4 on</source>
 				<target state="translated">Verstecke Spalte 4 auf</target>
 			</trans-unit>
-			<trans-unit id="flexform.columns.visibility.hideOnDesktop" xml:space="preserve">
-				<source>desktops</source>
-				<target state="translated">Desktops</target>
+			<trans-unit id="flexform.columns.visibility.hideColumn.xs" xml:space="preserve">
+				<source>Phones (&lt;768px)</source>
+				<target state="translated">Handys (&lt;768px)</target>
 			</trans-unit>
-			<trans-unit id="flexform.columns.visibility.hideOnTablet" xml:space="preserve">
-				<source>tablets</source>
-				<target state="translated">Tablets</target>
+			<trans-unit id="flexform.columns.visibility.hideColumn.sm" xml:space="preserve">
+				<source>Tablets (&#8805;768px)</source>
+				<target state="translated">Tablets (&#8805;768px)</target>
 			</trans-unit>
-			<trans-unit id="flexform.columns.visibility.hideOnPhone" xml:space="preserve">
-				<source>phones</source>
-				<target state="translated">Handys</target>
+			<trans-unit id="flexform.columns.visibility.hideColumn.md" xml:space="preserve">
+				<source>Desktops (&#8805;992px)</source>
+				<target state="translated">Desktops (&#8805;992px)</target>
+			</trans-unit>
+			<trans-unit id="flexform.columns.visibility.hideColumn.lg" xml:space="preserve">
+				<source>Large Desktops (&#8805;1200px)</source>
+				<target state="translated">Große Desktops (&#8805;1200px)</target>
 			</trans-unit>
 
 			<!-- Configuration/TSconfig/Components/Carousel.ts -->
@@ -186,26 +280,6 @@
 			<trans-unit id="flexform.carousel.sheet.general" xml:space="preserve">
 				<source>General</source>
 				<target state="translated">Allgemein</target>
-			</trans-unit>
-			<trans-unit id="flexform.carousel.layout" xml:space="preserve">
-				<source>Layout</source>
-				<target state="translated">Layout</target>
-			</trans-unit>
-			<trans-unit id="flexform.carousel.layout.0" xml:space="preserve">
-				<source>Default</source>
-				<target state="translated">Standard</target>
-			</trans-unit>
-			<trans-unit id="flexform.carousel.layout.1" xml:space="preserve">
-				<source>Layout 1</source>
-				<target state="translated">Layout 1</target>
-			</trans-unit>
-			<trans-unit id="flexform.carousel.layout.2" xml:space="preserve">
-				<source>Layout 2</source>
-				<target state="translated">Layout 2</target>
-			</trans-unit>
-			<trans-unit id="flexform.carousel.layout.3" xml:space="preserve">
-				<source>Layout 3</source>
-				<target state="translated">Layout 3</target>
 			</trans-unit>
 			<trans-unit id="flexform.carousel.interval" xml:space="preserve">
 				<source>Interval</source>
@@ -268,49 +342,63 @@
 			</trans-unit>
 
 			<!-- Configuration/FlexForm/Components/Accordion.xml -->
-			<trans-unit id="flexform.accordion.sheet.general" xml:space="preserve">
-				<source>General</source>
-				<target state="translated">Allgemein</target>
-			</trans-unit>
-			<trans-unit id="flexform.accordion.layout" xml:space="preserve">
-				<source>Layout</source>
-				<target state="translated">Layout</target>
-			</trans-unit>
-			<trans-unit id="flexform.accordion.layout.0" xml:space="preserve">
-				<source>Default</source>
-				<target state="translated">Standard</target>
-			</trans-unit>
-			<trans-unit id="flexform.accordion.layout.1" xml:space="preserve">
-				<source>Layout 1</source>
-				<target state="translated">Layout 1</target>
-			</trans-unit>
-			<trans-unit id="flexform.accordion.layout.2" xml:space="preserve">
-				<source>Layout 2</source>
-				<target state="translated">Layout 2</target>
-			</trans-unit>
-			<trans-unit id="flexform.accordion.layout.3" xml:space="preserve">
-				<source>Layout 3</source>
-				<target state="translated">Layout 3</target>
-			</trans-unit>
-			<trans-unit id="flexform.accordion.columns" xml:space="preserve">
+            <trans-unit id="flexform.accordion.appearance.sheetTitle" xml:space="preserve">
+                <source>Appearance</source>
+                <target state="translated">Erscheinungsbild</target>
+            </trans-unit>
+
+            <trans-unit id="flexform.accordion.appearance.sheetTitle" xml:space="preserve">
+                <source>Appearance</source>
+                <target state="translated">Erscheinungsbild</target>
+            </trans-unit>
+            <trans-unit id="flexform.accordion.appearance.layout" xml:space="preserve">
+                <source>Layout</source>
+                <target state="translated">Layout</target>
+            </trans-unit>
+            <trans-unit id="flexform.accordion.appearance.layout.0" xml:space="preserve">
+                <source>Default</source>
+                <target state="translated">Standard</target>
+            </trans-unit>
+            <trans-unit id="flexform.accordion.appearance.layout.1" xml:space="preserve">
+                <source>Layout 1</source>
+                <target state="translated">Layout 1</target>
+            </trans-unit>
+            <trans-unit id="flexform.accordion.appearance.layout.2" xml:space="preserve">
+                <source>Layout 2</source>
+                <target state="translated">Layout 2</target>
+            </trans-unit>
+            <trans-unit id="flexform.accordion.appearance.layout.3" xml:space="preserve">
+                <source>Layout 3</source>
+                <target state="translated">Layout 3</target>
+            </trans-unit>
+			<trans-unit id="flexform.accordion.appearance.columns" xml:space="preserve">
 				<source>Columns</source>
 				<target state="translated">Spalten</target>
 			</trans-unit>
-			<trans-unit id="flexform.accordion.active" xml:space="preserve">
+
+            <trans-unit id="flexform.accordion.behaviour.sheetTitle" xml:space="preserve">
+                <source>Behaviour</source>
+				<target state="translated">Verhalten</target>
+            </trans-unit>
+			<trans-unit id="flexform.accordion.behaviour.active" xml:space="preserve">
 				<source>Active item</source>
 				<target state="translated">Aktives Element</target>
 			</trans-unit>
-			<trans-unit id="flexform.accordion.collapsible" xml:space="preserve">
+			<trans-unit id="flexform.accordion.behaviour.collapsible" xml:space="preserve">
 				<source>Auto collapsible</source>
 				<target state="translated">Automatisch zusammenklappen</target>
 			</trans-unit>
-			<trans-unit id="flexform.accordion.slideToPosition" xml:space="preserve">
+			<trans-unit id="flexform.accordion.behaviour.slideToPosition" xml:space="preserve">
 				<source>Slide to position</source>
 				<target state="translated">Zur Position gleiten</target>
 			</trans-unit>
-			<trans-unit id="flexform.accordion.slideOffset" xml:space="preserve">
+			<trans-unit id="flexform.accordion.behaviour.slideOffset" xml:space="preserve">
 				<source>Slide offset</source>
 				<target state="translated">Offset</target>
+			</trans-unit>
+			<trans-unit id="flexform.accordion.behaviour.ajaxLoading" xml:space="preserve">
+				<source>Load content via AJAX</source>
+				<target state="translated">Lade Inhalt per AJAX</target>
 			</trans-unit>
 
 			<!-- Configuration/TSconfig/Components/Tabs.ts -->
@@ -328,43 +416,43 @@
 			</trans-unit>
 
 			<!-- Configuration/FlexForm/Components/Tabs.xml -->
-			<trans-unit id="flexform.tabs.sheet.general" xml:space="preserve">
+			<trans-unit id="flexform.tabs.appearance.sheetTitle" xml:space="preserve">
 				<source>General</source>
 				<target state="translated">Allgemein</target>
 			</trans-unit>
-			<trans-unit id="flexform.tabs.layout" xml:space="preserve">
+			<trans-unit id="flexform.tabs.appearance.layout" xml:space="preserve">
 				<source>Layout</source>
 				<target state="translated">Layout</target>
 			</trans-unit>
-			<trans-unit id="flexform.tabs.layout.0" xml:space="preserve">
+			<trans-unit id="flexform.tabs.appearance.layout.0" xml:space="preserve">
 				<source>Default</source>
 				<target state="translated">Standard</target>
 			</trans-unit>
-			<trans-unit id="flexform.tabs.layout.1" xml:space="preserve">
+			<trans-unit id="flexform.tabs.appearance.layout.1" xml:space="preserve">
 				<source>Layout 1</source>
 				<target state="translated">Layout 1</target>
 			</trans-unit>
-			<trans-unit id="flexform.tabs.layout.2" xml:space="preserve">
+			<trans-unit id="flexform.tabs.appearance.layout.2" xml:space="preserve">
 				<source>Layout 2</source>
 				<target state="translated">Layout 2</target>
 			</trans-unit>
-			<trans-unit id="flexform.tabs.layout.3" xml:space="preserve">
+			<trans-unit id="flexform.tabs.appearance.layout.3" xml:space="preserve">
 				<source>Layout 3</source>
 				<target state="translated">Layout 3</target>
 			</trans-unit>
-			<trans-unit id="flexform.tabs.active" xml:space="preserve">
+			<trans-unit id="flexform.tabs.behaviour.active" xml:space="preserve">
 				<source>Active item</source>
 				<target state="translated">Aktives Element</target>
 			</trans-unit>
-			<trans-unit id="flexform.tabs.slideToPosition" xml:space="preserve">
+			<trans-unit id="flexform.tabs.behaviour.slideToPosition" xml:space="preserve">
 				<source>Slide to position</source>
 				<target state="translated">Zur Position gleiten</target>
 			</trans-unit>
-			<trans-unit id="flexform.tabs.slideOffset" xml:space="preserve">
+			<trans-unit id="flexform.tabs.behaviour.slideOffset" xml:space="preserve">
 				<source>Slide offset</source>
 				<target state="translated">Offset</target>
 			</trans-unit>
-			<trans-unit id="flexform.tabs.ajaxLoading" xml:space="preserve">
+			<trans-unit id="flexform.tabs.behaviour.ajaxLoading" xml:space="preserve">
 				<source>Load content via AJAX</source>
 				<target state="translated">Lade Inhalt per AJAX</target>
 			</trans-unit>

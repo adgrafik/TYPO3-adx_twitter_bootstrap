@@ -1,0 +1,57 @@
+
+/**
+ * adx_twitter_bootstrap import function.
+ */
+.import-component(@component, @import) when (@import = 1) {
+	@import @component;
+}
+
+// Core variables and mixins
+//@import "variables.less"; // Defined by TypoScript
+@import "mixins.less";
+
+// Reset
+.import-component('normalize.less', @component-normalize);
+.import-component('print.less', @component-print);
+
+// Core CSS
+.import-component('scaffolding.less', @component-scaffolding);
+.import-component('type.less', @component-type);
+.import-component('code.less', @component-code);
+.import-component('grid.less', @component-grid);
+.import-component('tables.less', @component-tables);
+.import-component('forms.less', @component-forms);
+.import-component('buttons.less', @component-buttons);
+
+// Components
+.import-component('component-animations.less', @component-animations);
+.import-component('glyphicons.less', @component-glyphicons);
+.import-component('dropdowns.less', @component-dropdowns);
+.import-component('button-groups.less', @component-button-groups);
+.import-component('input-groups.less', @component-input-groups);
+.import-component('navs.less', @component-navs);
+.import-component('navbar.less', @component-navbar);
+.import-component('breadcrumbs.less', @component-breadcrumbs);
+.import-component('pagination.less', @component-pagination);
+.import-component('pager.less', @component-pager);
+.import-component('labels.less', @component-labels);
+.import-component('badges.less', @component-badges);
+.import-component('jumbotron.less', @component-jumbotron);
+.import-component('thumbnails.less', @component-thumbnails);
+.import-component('alerts.less', @component-alerts);
+.import-component('progress-bars.less', @component-progress-bars);
+.import-component('media.less', @component-media);
+.import-component('list-group.less', @component-list-group);
+.import-component('panels.less', @component-panels);
+.import-component('wells.less', @component-wells);
+.import-component('close.less', @component-close);
+
+// Components w/ JavaScript
+.import-component('modals.less', @component-modals);
+.import-component('tooltip.less', @component-tooltip);
+.import-component('popovers.less', @component-popovers);
+.import-component('carousel.less', @component-carousel);
+
+// Utility classes
+.import-component('utilities.less', @component-utilities);
+.import-component('responsive-utilities.less', @component-responsive-utilities);

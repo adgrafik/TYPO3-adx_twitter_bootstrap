@@ -1,0 +1,5 @@
+
+tt_content.stdWrap.innerWrap.cObject.default.20 {
+	1352275551 =< lib.tx_adxtwitterbootstrap.deviceVisibility
+	1352275551.key.field = tx_adxtwitterbootstrap_device_visibility
+}

@@ -1,0 +1,29 @@
+
+plugin.tx_gridelements_pi1.setup {
+
+	tx_adxtwitterbootstrap_twocolumns {
+
+		columns.default.renderObj =< tt_content
+
+		cObject = USER
+		cObject {
+			userFunc = AdGrafik\AdxTwitterBootstrap\UserFunc\Frontend->renderColumns
+			templateFile = {$plugin.tx_adxtwitterbootstrap.columns.templateFile}
+		}
+	}
+
+	tx_adxtwitterbootstrap_threecolumns < .tx_adxtwitterbootstrap_twocolumns
+
+	tx_adxtwitterbootstrap_fourcolumns < .tx_adxtwitterbootstrap_twocolumns
+}
+
+
+// redefine content space
+tt_content.stdWrap.innerWrap.cObject.default.20 {
+
+	20.stdWrap.if.value = gridelements_pi1
+	20.stdWrap.if.equals.field = parentgrid_CType
+	20.stdWrap.if.negate = 1
+
+	30.stdWrap < .20.stdWrap
+}

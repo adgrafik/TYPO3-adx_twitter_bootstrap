@@ -1,0 +1,27 @@
+
+{namespace vh=Tx_Powermail_ViewHelpers}
+{namespace adx=AdGrafik\AdxTwitterBootstrap\ViewHelpers}
+
+<div id="powermail_fieldwrap_{field.uid}" class="powermail_fieldwrap powermail_fieldwrap_input {field.css} {adx:spanParser( pattern: 'col-%s-offset-%s', ratio: '{field.offset}', breakpoint: '{field.offsetBreakpoint}' )} {adx:spanParser( ratio: '{field.span}', breakpoint: '{field.spanBreakpoint}', default: 'col-xs-12' )} {vh:Misc.ErrorClass(field: '{field}', class: 'powermail_field_error')}">
+	<div class="form-group">
+		<f:if condition="{page.layout} == 'form-horizontal'">
+			<f:then>
+				<f:if condition="{0: field.hideLabel} != {0: 'invisible'}">
+					<label class="control-label {adx:spanParser( ratio: '{page.labelToFieldRatio}', breakpoint: '{page.labelToFieldRatioBreakpoint}' )}{f:if( condition: '{field.hideLabel}', then: ' sr-only' )}" for="powermail_field_{field.marker}">{field.title -> vh:string.RawAndRemoveXss()}<f:if condition="{field.mandatory}"><span class="mandatory">*</span></f:if></label>
+				</f:if>
+				<div class="{adx:spanParser( ratio: '{page.labelToFieldRatio}', breakpoint: '{page.labelToFieldRatioBreakpoint}', column: 2 )}">
+					<vh:Form.SelectField id="powermail_field_{field.marker}" class="form-control {vh:Misc.ValidationClass(field: '{field}')}{f:if( condition: '{field.elementSize}', then: ' input-{field.elementSize}' )}" name="field[{field.uid}]" options="{field.settings}" value="{vh:Misc.PrefillField(field: '{field}')}" additionalAttributes="{adx:additionalAttributes( field: '{field}' )}" />
+				</div>
+			</f:then>
+			<f:else>
+				<f:if condition="{0: field.hideLabel} != {0: 'invisible'}">
+					<label class="control-label{f:if( condition: '{field.hideLabel}', then: ' sr-only' )}" for="powermail_field_{field.marker}">{field.title -> vh:string.RawAndRemoveXss()}<f:if condition="{field.mandatory}"><span class="mandatory">*</span></f:if></label>
+				</f:if>
+				<vh:Form.SelectField id="powermail_field_{field.marker}" class="form-control {vh:Misc.ValidationClass(field: '{field}')}{f:if( condition: '{field.elementSize}', then: ' input-{field.elementSize}' )}" name="field[{field.uid}]" options="{field.settings}" value="{vh:Misc.PrefillField(field: '{field}')}" additionalAttributes="{adx:additionalAttributes( field: '{field}' )}" />
+			</f:else>
+		</f:if>
+	</div>
+</div>
+<f:if condition="{field.clear}">
+	<div class="clearfix"></div>
+</f:if>

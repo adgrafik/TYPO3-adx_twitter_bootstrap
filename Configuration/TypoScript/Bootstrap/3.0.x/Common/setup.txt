@@ -1,0 +1,895 @@
+
+/**
+ * Settings for adx_less
+ */
+plugin.tx_adxless {
+
+	lessphp {
+
+		importDirectories := addToList( EXT:adx_twitter_bootstrap/Resources/Private/LESS/Bootstrap/3.0.x/ )
+
+		variables {
+
+			#
+			# Components
+			#
+
+			# Reset
+			component-normalize = {$plugin.tx_adxtwitterbootstrap.components.normalize}
+			component-print = {$plugin.tx_adxtwitterbootstrap.components.print}
+
+			# Core CSS
+			component-scaffolding = {$plugin.tx_adxtwitterbootstrap.components.scaffolding}
+			component-type = {$plugin.tx_adxtwitterbootstrap.components.type}
+			component-code = {$plugin.tx_adxtwitterbootstrap.components.code}
+			component-grid = {$plugin.tx_adxtwitterbootstrap.components.grid}
+			component-tables = {$plugin.tx_adxtwitterbootstrap.components.tables}
+			component-forms = {$plugin.tx_adxtwitterbootstrap.components.forms}
+			component-buttons = {$plugin.tx_adxtwitterbootstrap.components.buttons}
+
+			# Components
+			component-animations = {$plugin.tx_adxtwitterbootstrap.components.animations}
+			component-glyphicons = {$plugin.tx_adxtwitterbootstrap.components.glyphicons}
+			component-dropdowns = {$plugin.tx_adxtwitterbootstrap.components.dropdowns}
+			component-button-groups = {$plugin.tx_adxtwitterbootstrap.components.button-groups}
+			component-input-groups = {$plugin.tx_adxtwitterbootstrap.components.input-groups}
+			component-navs = {$plugin.tx_adxtwitterbootstrap.components.navs}
+			component-navbar = {$plugin.tx_adxtwitterbootstrap.components.navbar}
+			component-breadcrumbs = {$plugin.tx_adxtwitterbootstrap.components.breadcrumbs}
+			component-pagination = {$plugin.tx_adxtwitterbootstrap.components.pagination}
+			component-pager = {$plugin.tx_adxtwitterbootstrap.components.pager}
+			component-labels = {$plugin.tx_adxtwitterbootstrap.components.labels}
+			component-badges = {$plugin.tx_adxtwitterbootstrap.components.badges}
+			component-jumbotron = {$plugin.tx_adxtwitterbootstrap.components.jumbotron}
+			component-thumbnails = {$plugin.tx_adxtwitterbootstrap.components.thumbnails}
+			component-alerts = {$plugin.tx_adxtwitterbootstrap.components.alerts}
+			component-progress-bars = {$plugin.tx_adxtwitterbootstrap.components.progress-bars}
+			component-media = {$plugin.tx_adxtwitterbootstrap.components.media}
+			component-list-group = {$plugin.tx_adxtwitterbootstrap.components.list-group}
+			component-panels = {$plugin.tx_adxtwitterbootstrap.components.panels}
+			component-wells = {$plugin.tx_adxtwitterbootstrap.components.wells}
+			component-close = {$plugin.tx_adxtwitterbootstrap.components.close}
+
+			# JavaScript components
+			component-modals = {$plugin.tx_adxtwitterbootstrap.components.modals}
+			component-tooltip = {$plugin.tx_adxtwitterbootstrap.components.tooltip}
+			component-popovers = {$plugin.tx_adxtwitterbootstrap.components.popovers}
+			component-carousel = {$plugin.tx_adxtwitterbootstrap.components.carousel}
+
+			# Utilities
+			component-utilities = {$plugin.tx_adxtwitterbootstrap.components.utilities}
+			component-responsive-utilities = {$plugin.tx_adxtwitterbootstrap.components.responsive-utilities}
+
+			#
+			# Variables
+			#
+
+			#
+			# Colors
+			#
+
+			# Grays
+			gray-darker = {$plugin.tx_adxtwitterbootstrap.variables.gray-darker}
+			gray-dark = {$plugin.tx_adxtwitterbootstrap.variables.gray-dark}
+			gray = {$plugin.tx_adxtwitterbootstrap.variables.gray}
+			gray-light = {$plugin.tx_adxtwitterbootstrap.variables.gray-light}
+			gray-lighter = {$plugin.tx_adxtwitterbootstrap.variables.gray-lighter}
+
+			# Brand colors
+			brand-primary = {$plugin.tx_adxtwitterbootstrap.variables.brand-primary}
+			brand-success = {$plugin.tx_adxtwitterbootstrap.variables.brand-success}
+			brand-warning = {$plugin.tx_adxtwitterbootstrap.variables.brand-warning}
+			brand-danger = {$plugin.tx_adxtwitterbootstrap.variables.brand-danger}
+			brand-info = {$plugin.tx_adxtwitterbootstrap.variables.brand-info}
+
+			# Scaffolding
+			body-bg = {$plugin.tx_adxtwitterbootstrap.variables.body-bg}
+			text-color = {$plugin.tx_adxtwitterbootstrap.variables.text-color}
+
+			# Links
+			link-color = {$plugin.tx_adxtwitterbootstrap.variables.link-color}
+			link-hover-color = {$plugin.tx_adxtwitterbootstrap.variables.link-hover-color}
+
+			#
+			# Typography
+			#
+
+			font-family-sans-serif = {$plugin.tx_adxtwitterbootstrap.variables.font-family-sans-serif}
+			font-family-serif = {$plugin.tx_adxtwitterbootstrap.variables.font-family-serif}
+			font-family-monospace = {$plugin.tx_adxtwitterbootstrap.variables.font-family-monospace}
+			font-family-base = {$plugin.tx_adxtwitterbootstrap.variables.font-family-base}
+
+			font-size-base = {$plugin.tx_adxtwitterbootstrap.variables.font-size-base}
+			font-size-large = {$plugin.tx_adxtwitterbootstrap.variables.font-size-large}
+			font-size-small = {$plugin.tx_adxtwitterbootstrap.variables.font-size-small}
+
+			font-size-h1 = {$plugin.tx_adxtwitterbootstrap.variables.font-size-h1}
+			font-size-h2 = {$plugin.tx_adxtwitterbootstrap.variables.font-size-h2}
+			font-size-h3 = {$plugin.tx_adxtwitterbootstrap.variables.font-size-h3}
+			font-size-h4 = {$plugin.tx_adxtwitterbootstrap.variables.font-size-h4}
+			font-size-h5 = {$plugin.tx_adxtwitterbootstrap.variables.font-size-h5}
+			font-size-h6 = {$plugin.tx_adxtwitterbootstrap.variables.font-size-h6}
+
+			line-height-base = {$plugin.tx_adxtwitterbootstrap.variables.line-height-base}
+			line-height-computed = {$plugin.tx_adxtwitterbootstrap.variables.line-height-computed}
+
+			headings-font-family = {$plugin.tx_adxtwitterbootstrap.variables.headings-font-family}
+			headings-font-weight = {$plugin.tx_adxtwitterbootstrap.variables.headings-font-weight}
+			headings-line-height = {$plugin.tx_adxtwitterbootstrap.variables.headings-line-height}
+			headings-color = {$plugin.tx_adxtwitterbootstrap.variables.headings-color}
+
+			#
+			# Iconography
+			#
+
+			icon-font-path = {$plugin.tx_adxtwitterbootstrap.variables.icon-font-path}
+			icon-font-name = {$plugin.tx_adxtwitterbootstrap.variables.icon-font-name}
+
+			#
+			# Components
+			#
+
+			padding-base-vertical = {$plugin.tx_adxtwitterbootstrap.variables.padding-base-vertical}
+			padding-base-horizontal = {$plugin.tx_adxtwitterbootstrap.variables.padding-base-horizontal}
+
+			padding-large-vertical = {$plugin.tx_adxtwitterbootstrap.variables.padding-large-vertical}
+			padding-large-horizontal = {$plugin.tx_adxtwitterbootstrap.variables.padding-large-horizontal}
+
+			padding-small-vertical = {$plugin.tx_adxtwitterbootstrap.variables.padding-small-vertical}
+			padding-small-horizontal = {$plugin.tx_adxtwitterbootstrap.variables.padding-small-horizontal}
+
+			line-height-large = {$plugin.tx_adxtwitterbootstrap.variables.line-height-large}
+			line-height-small = {$plugin.tx_adxtwitterbootstrap.variables.line-height-small}
+
+			border-radius-base = {$plugin.tx_adxtwitterbootstrap.variables.border-radius-base}
+			border-radius-large = {$plugin.tx_adxtwitterbootstrap.variables.border-radius-large}
+			border-radius-small = {$plugin.tx_adxtwitterbootstrap.variables.border-radius-small}
+
+			component-active-color = {$plugin.tx_adxtwitterbootstrap.variables.component-active-color}
+			component-active-bg = {$plugin.tx_adxtwitterbootstrap.variables.component-active-bg}
+
+			caret-width-base = {$plugin.tx_adxtwitterbootstrap.variables.caret-width-base}
+			caret-width-large = {$plugin.tx_adxtwitterbootstrap.variables.caret-width-large}
+
+			#
+			# Tables
+			#
+
+			table-cell-padding = {$plugin.tx_adxtwitterbootstrap.variables.table-cell-padding}
+			table-condensed-cell-padding = {$plugin.tx_adxtwitterbootstrap.variables.table-condensed-cell-padding}
+
+			table-bg = {$plugin.tx_adxtwitterbootstrap.variables.table-bg}
+			table-bg-accent = {$plugin.tx_adxtwitterbootstrap.variables.table-bg-accent}
+			table-bg-hover = {$plugin.tx_adxtwitterbootstrap.variables.table-bg-hover}
+			table-bg-active = {$plugin.tx_adxtwitterbootstrap.variables.table-bg-active}
+
+			table-border-color = {$plugin.tx_adxtwitterbootstrap.variables.table-border-color}
+
+			#
+			# Buttons
+			#
+
+			btn-font-weight = {$plugin.tx_adxtwitterbootstrap.variables.btn-font-weight}
+
+			btn-default-color = {$plugin.tx_adxtwitterbootstrap.variables.btn-default-color}
+			btn-default-bg = {$plugin.tx_adxtwitterbootstrap.variables.btn-default-bg}
+			btn-default-border = {$plugin.tx_adxtwitterbootstrap.variables.btn-default-border}
+
+			btn-primary-color = {$plugin.tx_adxtwitterbootstrap.variables.btn-primary-color}
+			btn-primary-bg = {$plugin.tx_adxtwitterbootstrap.variables.btn-primary-bg}
+			btn-primary-border = {$plugin.tx_adxtwitterbootstrap.variables.btn-primary-border}
+
+			btn-success-color = {$plugin.tx_adxtwitterbootstrap.variables.btn-success-color}
+			btn-success-bg = {$plugin.tx_adxtwitterbootstrap.variables.btn-success-bg}
+			btn-success-border = {$plugin.tx_adxtwitterbootstrap.variables.btn-success-border}
+
+			btn-warning-color = {$plugin.tx_adxtwitterbootstrap.variables.btn-warning-color}
+			btn-warning-bg = {$plugin.tx_adxtwitterbootstrap.variables.btn-warning-bg}
+			btn-warning-border = {$plugin.tx_adxtwitterbootstrap.variables.btn-warning-border}
+
+			btn-danger-color = {$plugin.tx_adxtwitterbootstrap.variables.btn-danger-color}
+			btn-danger-bg = {$plugin.tx_adxtwitterbootstrap.variables.btn-danger-bg}
+			btn-danger-border = {$plugin.tx_adxtwitterbootstrap.variables.btn-danger-border}
+
+			btn-info-color = {$plugin.tx_adxtwitterbootstrap.variables.btn-info-color}
+			btn-info-bg = {$plugin.tx_adxtwitterbootstrap.variables.btn-info-bg}
+			btn-info-border = {$plugin.tx_adxtwitterbootstrap.variables.btn-info-border}
+
+			btn-link-disabled-color = {$plugin.tx_adxtwitterbootstrap.variables.btn-link-disabled-color}
+
+			#
+			# Forms
+			#
+
+			# Forms
+			input-bg = {$plugin.tx_adxtwitterbootstrap.variables.input-bg}
+			input-bg-disabled = {$plugin.tx_adxtwitterbootstrap.variables.input-bg-disabled}
+
+			input-color = {$plugin.tx_adxtwitterbootstrap.variables.input-color}
+			input-border = {$plugin.tx_adxtwitterbootstrap.variables.input-border}
+			input-border-radius = {$plugin.tx_adxtwitterbootstrap.variables.input-border-radius}
+			input-border-focus = {$plugin.tx_adxtwitterbootstrap.variables.input-border-focus}
+
+			input-color-placeholder = {$plugin.tx_adxtwitterbootstrap.variables.input-color-placeholder}
+
+			input-height-base = {$plugin.tx_adxtwitterbootstrap.variables.input-height-base}
+			input-height-large = {$plugin.tx_adxtwitterbootstrap.variables.input-height-large}
+			input-height-small = {$plugin.tx_adxtwitterbootstrap.variables.input-height-small}
+
+			legend-color = {$plugin.tx_adxtwitterbootstrap.variables.legend-color}
+			legend-border-color = {$plugin.tx_adxtwitterbootstrap.variables.legend-border-color}
+
+			input-group-addon-bg = {$plugin.tx_adxtwitterbootstrap.variables.input-group-addon-bg}
+			input-group-addon-border-color = {$plugin.tx_adxtwitterbootstrap.variables.input-group-addon-border-color}
+
+			#
+			# Dropdowns
+			#
+
+			dropdown-bg = {$plugin.tx_adxtwitterbootstrap.variables.dropdown-bg}
+			dropdown-border = {$plugin.tx_adxtwitterbootstrap.variables.dropdown-border}
+			dropdown-fallback-border = {$plugin.tx_adxtwitterbootstrap.variables.dropdown-fallback-border}
+			dropdown-divider-bg = {$plugin.tx_adxtwitterbootstrap.variables.dropdown-divider-bg}
+
+			dropdown-link-color = {$plugin.tx_adxtwitterbootstrap.variables.dropdown-link-color}
+			dropdown-link-hover-color = {$plugin.tx_adxtwitterbootstrap.variables.dropdown-link-hover-color}
+			dropdown-link-hover-bg = {$plugin.tx_adxtwitterbootstrap.variables.dropdown-link-hover-bg}
+
+			dropdown-link-active-color = {$plugin.tx_adxtwitterbootstrap.variables.dropdown-link-active-color}
+			dropdown-link-active-bg = {$plugin.tx_adxtwitterbootstrap.variables.dropdown-link-active-bg}
+
+			dropdown-link-disabled-color = {$plugin.tx_adxtwitterbootstrap.variables.dropdown-link-disabled-color}
+
+			dropdown-header-color = {$plugin.tx_adxtwitterbootstrap.variables.dropdown-header-color}
+
+			dropdown-caret-color = {$plugin.tx_adxtwitterbootstrap.variables.dropdown-caret-color}
+
+			#
+			# Z-index master list
+			#
+
+			zindex-navbar = {$plugin.tx_adxtwitterbootstrap.variables.zindex-navbar}
+			zindex-dropdown = {$plugin.tx_adxtwitterbootstrap.variables.zindex-dropdown}
+			zindex-popover = {$plugin.tx_adxtwitterbootstrap.variables.zindex-popover}
+			zindex-tooltip = {$plugin.tx_adxtwitterbootstrap.variables.zindex-tooltip}
+			zindex-navbar-fixed = {$plugin.tx_adxtwitterbootstrap.variables.zindex-navbar-fixed}
+			zindex-modal-background = {$plugin.tx_adxtwitterbootstrap.variables.zindex-modal-background}
+			zindex-modal = {$plugin.tx_adxtwitterbootstrap.variables.zindex-modal}
+
+			#
+			# Media queries breakpoints
+			#
+
+			screen-xs = {$plugin.tx_adxtwitterbootstrap.variables.screen-xs}
+			screen-xs-min = {$plugin.tx_adxtwitterbootstrap.variables.screen-xs-min}
+			screen-phone = {$plugin.tx_adxtwitterbootstrap.variables.screen-phone}
+
+			# Small screen / tablet
+			# Note: Deprecated @screen-sm and @screen-tablet as of v3.0.1
+			screen-sm = {$plugin.tx_adxtwitterbootstrap.variables.screen-sm}
+			screen-sm-min = {$plugin.tx_adxtwitterbootstrap.variables.screen-sm-min}
+			screen-tablet = {$plugin.tx_adxtwitterbootstrap.variables.screen-tablet}
+
+			# Medium screen / desktop
+			# Note: Deprecated @screen-md and @screen-desktop as of v3.0.1
+			screen-md = {$plugin.tx_adxtwitterbootstrap.variables.screen-md}
+			screen-md-min = {$plugin.tx_adxtwitterbootstrap.variables.screen-md-min}
+			screen-desktop = {$plugin.tx_adxtwitterbootstrap.variables.screen-desktop}
+
+			# Large screen / wide desktop
+			# Note: Deprecated @screen-lg and @screen-lg-desktop as of v3.0.1
+			screen-lg = {$plugin.tx_adxtwitterbootstrap.variables.screen-lg}
+			screen-lg-min = {$plugin.tx_adxtwitterbootstrap.variables.screen-lg-min}
+			screen-lg-desktop = {$plugin.tx_adxtwitterbootstrap.variables.screen-lg-desktop}
+
+			# So media queries don't overlap when required, provide a maximum
+			screen-xs-max = {$plugin.tx_adxtwitterbootstrap.variables.screen-xs-max}
+			screen-sm-max = {$plugin.tx_adxtwitterbootstrap.variables.screen-sm-max}
+			screen-md-max = {$plugin.tx_adxtwitterbootstrap.variables.screen-md-max}
+
+			#
+			# Grid system
+			#
+
+			# Grid system
+			grid-columns = {$plugin.tx_adxtwitterbootstrap.variables.grid-columns}
+			grid-gutter-width = {$plugin.tx_adxtwitterbootstrap.variables.grid-gutter-width}
+			grid-float-breakpoint = {$plugin.tx_adxtwitterbootstrap.variables.grid-float-breakpoint}
+
+			#
+			# Navbar
+			#
+
+			# Basics of a navbar
+			navbar-height = {$plugin.tx_adxtwitterbootstrap.variables.navbar-height}
+			navbar-margin-bottom = {$plugin.tx_adxtwitterbootstrap.variables.navbar-margin-bottom}
+			navbar-border-radius = {$plugin.tx_adxtwitterbootstrap.variables.navbar-border-radius}
+			navbar-padding-horizontal = {$plugin.tx_adxtwitterbootstrap.variables.navbar-padding-horizontal}
+			navbar-padding-vertical = {$plugin.tx_adxtwitterbootstrap.variables.navbar-padding-vertical}
+
+			navbar-default-color = {$plugin.tx_adxtwitterbootstrap.variables.navbar-default-color}
+			navbar-default-bg = {$plugin.tx_adxtwitterbootstrap.variables.navbar-default-bg}
+			navbar-default-border = {$plugin.tx_adxtwitterbootstrap.variables.navbar-default-border}
+
+			# Navbar links
+			navbar-default-link-color = {$plugin.tx_adxtwitterbootstrap.variables.navbar-default-link-color}
+			navbar-default-link-hover-color = {$plugin.tx_adxtwitterbootstrap.variables.navbar-default-link-hover-color}
+			navbar-default-link-hover-bg = {$plugin.tx_adxtwitterbootstrap.variables.navbar-default-link-hover-bg}
+			navbar-default-link-active-color = {$plugin.tx_adxtwitterbootstrap.variables.navbar-default-link-active-color}
+			navbar-default-link-active-bg = {$plugin.tx_adxtwitterbootstrap.variables.navbar-default-link-active-bg}
+			navbar-default-link-disabled-color = {$plugin.tx_adxtwitterbootstrap.variables.navbar-default-link-disabled-color}
+			navbar-default-link-disabled-bg = {$plugin.tx_adxtwitterbootstrap.variables.navbar-default-link-disabled-bg}
+
+			# Navbar brand label
+			navbar-default-brand-color = {$plugin.tx_adxtwitterbootstrap.variables.navbar-default-brand-color}
+			navbar-default-brand-hover-color = {$plugin.tx_adxtwitterbootstrap.variables.navbar-default-brand-hover-color}
+			navbar-default-brand-hover-bg = {$plugin.tx_adxtwitterbootstrap.variables.navbar-default-brand-hover-bg}
+
+			# Navbar toggle
+			navbar-default-toggle-hover-bg = {$plugin.tx_adxtwitterbootstrap.variables.navbar-default-toggle-hover-bg}
+			navbar-default-toggle-icon-bar-bg = {$plugin.tx_adxtwitterbootstrap.variables.navbar-default-toggle-icon-bar-bg}
+			navbar-default-toggle-border-color = {$plugin.tx_adxtwitterbootstrap.variables.navbar-default-toggle-border-color}
+
+			# Inverted navbar
+			# Reset inverted navbar basics
+			navbar-inverse-color = {$plugin.tx_adxtwitterbootstrap.variables.navbar-inverse-color}
+			navbar-inverse-bg = {$plugin.tx_adxtwitterbootstrap.variables.navbar-inverse-bg}
+			navbar-inverse-border = {$plugin.tx_adxtwitterbootstrap.variables.navbar-inverse-border}
+
+			# Inverted navbar links
+			navbar-inverse-link-color = {$plugin.tx_adxtwitterbootstrap.variables.navbar-inverse-link-color}
+			navbar-inverse-link-hover-color = {$plugin.tx_adxtwitterbootstrap.variables.navbar-inverse-link-hover-color}
+			navbar-inverse-link-hover-bg = {$plugin.tx_adxtwitterbootstrap.variables.navbar-inverse-link-hover-bg}
+			navbar-inverse-link-active-color = {$plugin.tx_adxtwitterbootstrap.variables.navbar-inverse-link-active-color}
+			navbar-inverse-link-active-bg = {$plugin.tx_adxtwitterbootstrap.variables.navbar-inverse-link-active-bg}
+			navbar-inverse-link-disabled-color = {$plugin.tx_adxtwitterbootstrap.variables.navbar-inverse-link-disabled-color}
+			navbar-inverse-link-disabled-bg = {$plugin.tx_adxtwitterbootstrap.variables.navbar-inverse-link-disabled-bg}
+
+			# Inverted navbar brand label
+			navbar-inverse-brand-color = {$plugin.tx_adxtwitterbootstrap.variables.navbar-inverse-brand-color}
+			navbar-inverse-brand-hover-color = {$plugin.tx_adxtwitterbootstrap.variables.navbar-inverse-brand-hover-color}
+			navbar-inverse-brand-hover-bg = {$plugin.tx_adxtwitterbootstrap.variables.navbar-inverse-brand-hover-bg}
+
+			# Inverted navbar toggle
+			navbar-inverse-toggle-hover-bg = {$plugin.tx_adxtwitterbootstrap.variables.navbar-inverse-toggle-hover-bg}
+			navbar-inverse-toggle-icon-bar-bg = {$plugin.tx_adxtwitterbootstrap.variables.navbar-inverse-toggle-icon-bar-bg}
+			navbar-inverse-toggle-border-color = {$plugin.tx_adxtwitterbootstrap.variables.navbar-inverse-toggle-border-color}
+
+			#
+			# Navs
+			#
+
+			nav-link-padding = {$plugin.tx_adxtwitterbootstrap.variables.nav-link-padding}
+			nav-link-hover-bg = {$plugin.tx_adxtwitterbootstrap.variables.nav-link-hover-bg}
+
+			nav-disabled-link-color = {$plugin.tx_adxtwitterbootstrap.variables.nav-disabled-link-color}
+			nav-disabled-link-hover-color = {$plugin.tx_adxtwitterbootstrap.variables.nav-disabled-link-hover-color}
+
+			nav-open-link-hover-color = {$plugin.tx_adxtwitterbootstrap.variables.nav-open-link-hover-color}
+			nav-open-caret-border-color = {$plugin.tx_adxtwitterbootstrap.variables.nav-open-caret-border-color}
+
+			# Tabs
+			nav-tabs-border-color = {$plugin.tx_adxtwitterbootstrap.variables.nav-tabs-border-color}
+
+			nav-tabs-link-hover-border-color = {$plugin.tx_adxtwitterbootstrap.variables.nav-tabs-link-hover-border-color}
+
+			nav-tabs-active-link-hover-bg = {$plugin.tx_adxtwitterbootstrap.variables.nav-tabs-active-link-hover-bg}
+			nav-tabs-active-link-hover-color = {$plugin.tx_adxtwitterbootstrap.variables.nav-tabs-active-link-hover-color}
+			nav-tabs-active-link-hover-border-color = {$plugin.tx_adxtwitterbootstrap.variables.nav-tabs-active-link-hover-border-color}
+
+			nav-tabs-justified-link-border-color = {$plugin.tx_adxtwitterbootstrap.variables.nav-tabs-justified-link-border-color}
+			nav-tabs-justified-active-link-border-color = {$plugin.tx_adxtwitterbootstrap.variables.nav-tabs-justified-active-link-border-color}
+
+			# Pills
+			nav-pills-border-radius = {$plugin.tx_adxtwitterbootstrap.variables.nav-pills-border-radius}
+			nav-pills-active-link-hover-bg = {$plugin.tx_adxtwitterbootstrap.variables.nav-pills-active-link-hover-bg}
+			nav-pills-active-link-hover-color = {$plugin.tx_adxtwitterbootstrap.variables.nav-pills-active-link-hover-color}
+
+			#
+			# Pagination
+			#
+
+			pagination-bg = {$plugin.tx_adxtwitterbootstrap.variables.pagination-bg}
+			pagination-border = {$plugin.tx_adxtwitterbootstrap.variables.pagination-border}
+
+			pagination-hover-bg = {$plugin.tx_adxtwitterbootstrap.variables.pagination-hover-bg}
+
+			pagination-active-bg = {$plugin.tx_adxtwitterbootstrap.variables.pagination-active-bg}
+			pagination-active-color = {$plugin.tx_adxtwitterbootstrap.variables.pagination-active-color}
+
+			pagination-disabled-color = {$plugin.tx_adxtwitterbootstrap.variables.pagination-disabled-color}
+
+			#
+			# Pager
+			#
+
+			pager-border-radius = {$plugin.tx_adxtwitterbootstrap.variables.pager-border-radius}
+			pager-disabled-color = {$plugin.tx_adxtwitterbootstrap.variables.pager-disabled-color}
+
+			#
+			# Jumbotron
+			#
+
+			jumbotron-padding = {$plugin.tx_adxtwitterbootstrap.variables.jumbotron-padding}
+			jumbotron-color = {$plugin.tx_adxtwitterbootstrap.variables.jumbotron-color}
+			jumbotron-bg = {$plugin.tx_adxtwitterbootstrap.variables.jumbotron-bg}
+			jumbotron-heading-color = {$plugin.tx_adxtwitterbootstrap.variables.jumbotron-heading-color}
+			jumbotron-font-size = {$plugin.tx_adxtwitterbootstrap.variables.jumbotron-font-size}
+
+			#
+			# Form states and alerts
+			#
+
+			state-success-text = {$plugin.tx_adxtwitterbootstrap.variables.state-success-text}
+			state-success-bg = {$plugin.tx_adxtwitterbootstrap.variables.state-success-bg}
+			state-success-border = {$plugin.tx_adxtwitterbootstrap.variables.state-success-border}
+
+			state-info-text = {$plugin.tx_adxtwitterbootstrap.variables.state-info-text}
+			state-info-bg = {$plugin.tx_adxtwitterbootstrap.variables.state-info-bg}
+			state-info-border = {$plugin.tx_adxtwitterbootstrap.variables.state-info-border}
+
+			state-warning-text = {$plugin.tx_adxtwitterbootstrap.variables.state-warning-text}
+			state-warning-bg = {$plugin.tx_adxtwitterbootstrap.variables.state-warning-bg}
+			state-warning-border = {$plugin.tx_adxtwitterbootstrap.variables.state-warning-border}
+
+			state-danger-text = {$plugin.tx_adxtwitterbootstrap.variables.state-danger-text}
+			state-danger-bg = {$plugin.tx_adxtwitterbootstrap.variables.state-danger-bg}
+			state-danger-border = {$plugin.tx_adxtwitterbootstrap.variables.state-danger-border}
+
+			#
+			# Tooltips
+			#
+
+			tooltip-max-width = {$plugin.tx_adxtwitterbootstrap.variables.tooltip-max-width}
+			tooltip-color = {$plugin.tx_adxtwitterbootstrap.variables.tooltip-color}
+			tooltip-bg = {$plugin.tx_adxtwitterbootstrap.variables.tooltip-bg}
+
+			tooltip-arrow-width = {$plugin.tx_adxtwitterbootstrap.variables.tooltip-arrow-width}
+			tooltip-arrow-color = {$plugin.tx_adxtwitterbootstrap.variables.tooltip-arrow-color}
+
+			#
+			# Popovers
+			#
+
+			popover-bg = {$plugin.tx_adxtwitterbootstrap.variables.popover-bg}
+			popover-max-width = {$plugin.tx_adxtwitterbootstrap.variables.popover-max-width}
+			popover-border-color = {$plugin.tx_adxtwitterbootstrap.variables.popover-border-color}
+			popover-fallback-border-color = {$plugin.tx_adxtwitterbootstrap.variables.popover-fallback-border-color}
+
+			popover-title-bg = {$plugin.tx_adxtwitterbootstrap.variables.popover-title-bg}
+
+			popover-arrow-width = {$plugin.tx_adxtwitterbootstrap.variables.popover-arrow-width}
+			popover-arrow-color = {$plugin.tx_adxtwitterbootstrap.variables.popover-arrow-color}
+
+			popover-arrow-outer-width = {$plugin.tx_adxtwitterbootstrap.variables.popover-arrow-outer-width}
+			popover-arrow-outer-color = {$plugin.tx_adxtwitterbootstrap.variables.popover-arrow-outer-color}
+			popover-arrow-outer-fallback-color = {$plugin.tx_adxtwitterbootstrap.variables.popover-arrow-outer-fallback-color}
+
+			#
+			# Labels
+			#
+
+			label-default-bg = {$plugin.tx_adxtwitterbootstrap.variables.label-default-bg}
+			label-primary-bg = {$plugin.tx_adxtwitterbootstrap.variables.label-primary-bg}
+			label-success-bg = {$plugin.tx_adxtwitterbootstrap.variables.label-success-bg}
+			label-info-bg = {$plugin.tx_adxtwitterbootstrap.variables.label-info-bg}
+			label-warning-bg = {$plugin.tx_adxtwitterbootstrap.variables.label-warning-bg}
+			label-danger-bg = {$plugin.tx_adxtwitterbootstrap.variables.label-danger-bg}
+
+			label-color = {$plugin.tx_adxtwitterbootstrap.variables.label-color}
+			label-link-hover-color = {$plugin.tx_adxtwitterbootstrap.variables.label-link-hover-color}
+
+			#
+			# Modals
+			#
+
+			modal-inner-padding = {$plugin.tx_adxtwitterbootstrap.variables.modal-inner-padding}
+
+			modal-title-padding = {$plugin.tx_adxtwitterbootstrap.variables.modal-title-padding}
+			modal-title-line-height = {$plugin.tx_adxtwitterbootstrap.variables.modal-title-line-height}
+
+			modal-content-bg = {$plugin.tx_adxtwitterbootstrap.variables.modal-content-bg}
+			modal-content-border-color = {$plugin.tx_adxtwitterbootstrap.variables.modal-content-border-color}
+			modal-content-fallback-border-color = {$plugin.tx_adxtwitterbootstrap.variables.modal-content-fallback-border-color}
+
+			modal-backdrop-bg = {$plugin.tx_adxtwitterbootstrap.variables.modal-backdrop-bg}
+			modal-header-border-color = {$plugin.tx_adxtwitterbootstrap.variables.modal-header-border-color}
+			modal-footer-border-color = {$plugin.tx_adxtwitterbootstrap.variables.modal-footer-border-color}
+
+			#
+			# Alerts
+			#
+
+			alert-padding = {$plugin.tx_adxtwitterbootstrap.variables.alert-padding}
+			alert-border-radius = {$plugin.tx_adxtwitterbootstrap.variables.alert-border-radius}
+			alert-link-font-weight = {$plugin.tx_adxtwitterbootstrap.variables.alert-link-font-weight}
+
+			alert-success-bg = {$plugin.tx_adxtwitterbootstrap.variables.alert-success-bg}
+			alert-success-text = {$plugin.tx_adxtwitterbootstrap.variables.alert-success-text}
+			alert-success-border = {$plugin.tx_adxtwitterbootstrap.variables.alert-success-border}
+
+			alert-info-bg = {$plugin.tx_adxtwitterbootstrap.variables.alert-info-bg}
+			alert-info-text = {$plugin.tx_adxtwitterbootstrap.variables.alert-info-text}
+			alert-info-border = {$plugin.tx_adxtwitterbootstrap.variables.alert-info-border}
+
+			alert-warning-bg = {$plugin.tx_adxtwitterbootstrap.variables.alert-warning-bg}
+			alert-warning-text = {$plugin.tx_adxtwitterbootstrap.variables.alert-warning-text}
+			alert-warning-border = {$plugin.tx_adxtwitterbootstrap.variables.alert-warning-border}
+
+			alert-danger-bg = {$plugin.tx_adxtwitterbootstrap.variables.alert-danger-bg}
+			alert-danger-text = {$plugin.tx_adxtwitterbootstrap.variables.alert-danger-text}
+			alert-danger-border = {$plugin.tx_adxtwitterbootstrap.variables.alert-danger-border}
+
+			#
+			# Progress bars
+			#
+
+			progress-bg = {$plugin.tx_adxtwitterbootstrap.variables.progress-bg}
+			progress-bar-color = {$plugin.tx_adxtwitterbootstrap.variables.progress-bar-color}
+
+			progress-bar-bg = {$plugin.tx_adxtwitterbootstrap.variables.progress-bar-bg}
+			progress-bar-success-bg = {$plugin.tx_adxtwitterbootstrap.variables.progress-bar-success-bg}
+			progress-bar-warning-bg = {$plugin.tx_adxtwitterbootstrap.variables.progress-bar-warning-bg}
+			progress-bar-danger-bg = {$plugin.tx_adxtwitterbootstrap.variables.progress-bar-danger-bg}
+			progress-bar-info-bg = {$plugin.tx_adxtwitterbootstrap.variables.progress-bar-info-bg}
+
+			#
+			# List group
+			#
+
+			list-group-bg = {$plugin.tx_adxtwitterbootstrap.variables.list-group-bg}
+			list-group-border = {$plugin.tx_adxtwitterbootstrap.variables.list-group-border}
+			list-group-border-radius = {$plugin.tx_adxtwitterbootstrap.variables.list-group-border-radius}
+
+			list-group-hover-bg = {$plugin.tx_adxtwitterbootstrap.variables.list-group-hover-bg}
+			list-group-active-color = {$plugin.tx_adxtwitterbootstrap.variables.list-group-active-color}
+			list-group-active-bg = {$plugin.tx_adxtwitterbootstrap.variables.list-group-active-bg}
+			list-group-active-border = {$plugin.tx_adxtwitterbootstrap.variables.list-group-active-border}
+
+			list-group-link-color = {$plugin.tx_adxtwitterbootstrap.variables.list-group-link-color}
+			list-group-link-heading-color = {$plugin.tx_adxtwitterbootstrap.variables.list-group-link-heading-color}
+
+			#
+			# Panels
+			#
+
+			panel-bg = {$plugin.tx_adxtwitterbootstrap.variables.panel-bg}
+			panel-inner-border = {$plugin.tx_adxtwitterbootstrap.variables.panel-inner-border}
+			panel-border-radius = {$plugin.tx_adxtwitterbootstrap.variables.panel-border-radius}
+			panel-footer-bg = {$plugin.tx_adxtwitterbootstrap.variables.panel-footer-bg}
+
+			panel-default-text = {$plugin.tx_adxtwitterbootstrap.variables.panel-default-text}
+			panel-default-border = {$plugin.tx_adxtwitterbootstrap.variables.panel-default-border}
+			panel-default-heading-bg = {$plugin.tx_adxtwitterbootstrap.variables.panel-default-heading-bg}
+
+			panel-primary-text = {$plugin.tx_adxtwitterbootstrap.variables.panel-primary-text}
+			panel-primary-border = {$plugin.tx_adxtwitterbootstrap.variables.panel-primary-border}
+			panel-primary-heading-bg = {$plugin.tx_adxtwitterbootstrap.variables.panel-primary-heading-bg}
+
+			panel-success-text = {$plugin.tx_adxtwitterbootstrap.variables.panel-success-text}
+			panel-success-border = {$plugin.tx_adxtwitterbootstrap.variables.panel-success-border}
+			panel-success-heading-bg = {$plugin.tx_adxtwitterbootstrap.variables.panel-success-heading-bg}
+
+			panel-warning-text = {$plugin.tx_adxtwitterbootstrap.variables.panel-warning-text}
+			panel-warning-border = {$plugin.tx_adxtwitterbootstrap.variables.panel-warning-border}
+			panel-warning-heading-bg = {$plugin.tx_adxtwitterbootstrap.variables.panel-warning-heading-bg}
+
+			panel-danger-text = {$plugin.tx_adxtwitterbootstrap.variables.panel-danger-text}
+			panel-danger-border = {$plugin.tx_adxtwitterbootstrap.variables.panel-danger-border}
+			panel-danger-heading-bg = {$plugin.tx_adxtwitterbootstrap.variables.panel-danger-heading-bg}
+
+			panel-info-text = {$plugin.tx_adxtwitterbootstrap.variables.panel-info-text}
+			panel-info-border = {$plugin.tx_adxtwitterbootstrap.variables.panel-info-border}
+			panel-info-heading-bg = {$plugin.tx_adxtwitterbootstrap.variables.panel-info-heading-bg}
+
+			#
+			# Thumbnails
+			#
+
+			thumbnail-padding = {$plugin.tx_adxtwitterbootstrap.variables.thumbnail-padding}
+			thumbnail-bg = {$plugin.tx_adxtwitterbootstrap.variables.thumbnail-bg}
+			thumbnail-border = {$plugin.tx_adxtwitterbootstrap.variables.thumbnail-border}
+			thumbnail-border-radius = {$plugin.tx_adxtwitterbootstrap.variables.thumbnail-border-radius}
+
+			thumbnail-caption-color = {$plugin.tx_adxtwitterbootstrap.variables.thumbnail-caption-color}
+			thumbnail-caption-padding = {$plugin.tx_adxtwitterbootstrap.variables.thumbnail-caption-padding}
+
+			#
+			# Wells
+			#
+
+			well-bg = {$plugin.tx_adxtwitterbootstrap.variables.well-bg}
+
+			#
+			# Badges
+			#
+
+			badge-color = {$plugin.tx_adxtwitterbootstrap.variables.badge-color}
+			badge-link-hover-color = {$plugin.tx_adxtwitterbootstrap.variables.badge-link-hover-color}
+			badge-bg = {$plugin.tx_adxtwitterbootstrap.variables.badge-bg}
+
+			badge-active-color = {$plugin.tx_adxtwitterbootstrap.variables.badge-active-color}
+			badge-active-bg = {$plugin.tx_adxtwitterbootstrap.variables.badge-active-bg}
+
+			badge-font-weight = {$plugin.tx_adxtwitterbootstrap.variables.badge-font-weight}
+			badge-line-height = {$plugin.tx_adxtwitterbootstrap.variables.badge-line-height}
+			badge-border-radius = {$plugin.tx_adxtwitterbootstrap.variables.badge-border-radius}
+
+			#
+			# Breadcrumbs
+			#
+
+			breadcrumb-bg = {$plugin.tx_adxtwitterbootstrap.variables.breadcrumb-bg}
+			breadcrumb-color = {$plugin.tx_adxtwitterbootstrap.variables.breadcrumb-color}
+			breadcrumb-active-color = {$plugin.tx_adxtwitterbootstrap.variables.breadcrumb-active-color}
+			breadcrumb-separator = {$plugin.tx_adxtwitterbootstrap.variables.breadcrumb-separator}
+
+			#
+			# Carousel
+			#
+
+			carousel-text-shadow = {$plugin.tx_adxtwitterbootstrap.variables.carousel-text-shadow}
+
+			carousel-control-color = {$plugin.tx_adxtwitterbootstrap.variables.carousel-control-color}
+			carousel-control-width = {$plugin.tx_adxtwitterbootstrap.variables.carousel-control-width}
+			carousel-control-opacity = {$plugin.tx_adxtwitterbootstrap.variables.carousel-control-opacity}
+			carousel-control-font-size = {$plugin.tx_adxtwitterbootstrap.variables.carousel-control-font-size}
+
+			carousel-indicator-active-bg = {$plugin.tx_adxtwitterbootstrap.variables.carousel-indicator-active-bg}
+			carousel-indicator-border-color = {$plugin.tx_adxtwitterbootstrap.variables.carousel-indicator-border-color}
+
+			carousel-caption-color = {$plugin.tx_adxtwitterbootstrap.variables.carousel-caption-color}
+
+			#
+			# Close
+			#
+
+			close-font-weight = {$plugin.tx_adxtwitterbootstrap.variables.close-font-weight}
+			close-color = {$plugin.tx_adxtwitterbootstrap.variables.close-color}
+			close-text-shadow = {$plugin.tx_adxtwitterbootstrap.variables.close-text-shadow}
+
+			#
+			# Code
+			#
+
+			code-color = {$plugin.tx_adxtwitterbootstrap.variables.code-color}
+			code-bg = {$plugin.tx_adxtwitterbootstrap.variables.code-bg}
+
+			pre-bg = {$plugin.tx_adxtwitterbootstrap.variables.pre-bg}
+			pre-color = {$plugin.tx_adxtwitterbootstrap.variables.pre-color}
+			pre-border-color = {$plugin.tx_adxtwitterbootstrap.variables.pre-border-color}
+			pre-scrollable-max-height = {$plugin.tx_adxtwitterbootstrap.variables.pre-scrollable-max-height}
+
+			#
+			# Type
+			#
+
+			text-muted = {$plugin.tx_adxtwitterbootstrap.variables.text-muted}
+			abbr-border-color = {$plugin.tx_adxtwitterbootstrap.variables.abbr-border-color}
+			headings-small-color = {$plugin.tx_adxtwitterbootstrap.variables.headings-small-color}
+			blockquote-small-color = {$plugin.tx_adxtwitterbootstrap.variables.blockquote-small-color}
+			blockquote-border-color = {$plugin.tx_adxtwitterbootstrap.variables.blockquote-border-color}
+			page-header-border-color = {$plugin.tx_adxtwitterbootstrap.variables.page-header-border-color}
+
+			#
+			# Miscellaneous
+			#
+
+			hr-border = {$plugin.tx_adxtwitterbootstrap.variables.hr-border}
+			component-offset-horizontal = {$plugin.tx_adxtwitterbootstrap.variables.component-offset-horizontal}
+
+			#
+			# Container sizes
+			#
+
+			# Small screen / tablet
+			container-tablet = {$plugin.tx_adxtwitterbootstrap.variables.container-tablet}
+			container-sm = {$plugin.tx_adxtwitterbootstrap.variables.container-sm}
+
+			# Medium screen / desktop
+			container-desktop = {$plugin.tx_adxtwitterbootstrap.variables.container-desktop}
+			container-md = {$plugin.tx_adxtwitterbootstrap.variables.container-md}
+
+			# Large screen / wide desktop
+			container-large-desktop = {$plugin.tx_adxtwitterbootstrap.variables.container-large-desktop}
+			container-lg = {$plugin.tx_adxtwitterbootstrap.variables.container-lg}
+		}
+	}
+}
+
+
+/**
+ * Set inheritance
+ */
+styles.content.get {
+
+  select.pidInList = {field: mount_pid // field: this}
+  select.pidInList.insertData = 1
+  select.andWhere.dataWrap = ( tt_content.tx_adxtwitterbootstrap_inherit = 1 OR ( tt_content.tx_adxtwitterbootstrap_inherit = 2 AND tt_content.pid != {TSFE: contentPid} ) OR ( tt_content.tx_adxtwitterbootstrap_inherit = 0 AND tt_content.pid = {TSFE: contentPid} ) )
+
+  slide = {$styles.content.get.slide}
+  slide.collect = {$styles.content.get.collect}
+  slide.collectReverse = {$styles.content.get.collectReverse}
+  slide.collectFuzzy = {$styles.content.get.collectFuzzy}
+
+}
+
+# get content, left
+styles.content.getLeft < styles.content.get
+styles.content.getLeft.select.where = colPos=1
+
+# get content, right
+styles.content.getRight < styles.content.get
+styles.content.getRight.select.where = colPos=2
+
+# get content, margin
+styles.content.getBorder < styles.content.get
+styles.content.getBorder.select.where = colPos=3
+
+
+/**
+ * Include bootstrap
+ */
+page {
+
+	includeCSS.tx_adxtwitterbootstrap = EXT:adx_twitter_bootstrap/Resources/Private/LESS/Bootstrap/3.0.x/bootstrap.less
+
+	headerData.1352997637 = TEXT
+	headerData.1352997637 {
+
+		value = {$plugin.tx_adxtwitterbootstrap.common.viewport}
+		required = 1
+
+		wrap = <meta name="viewport" content=" | ">
+
+		prepend = TEXT
+		prepend.char = 10
+	}
+}
+
+
+/**
+ * Add offset and span support.
+ */
+tt_content.stdWrap.innerWrap.cObject {
+
+	default.20.1352997637 = USER
+	default.20.1352997637.userFunc = AdGrafik\AdxTwitterBootstrap\UserFunc\Frontend->renderSpan
+	default.20.1352997637.pattern = col-%s-offset-%s
+	default.20.1352997637.value.field = tx_adxtwitterbootstrap_offset
+	default.20.1352997637.stdWrap.noTrimWrap = | ||
+
+	default.20.1352997638 < .default.20.1352997637
+	default.20.1352997638.pattern = col-%s-%s
+	default.20.1352997638.value.field = tx_adxtwitterbootstrap_span
+
+	default.20.1352997640 = TEXT
+	default.20.1352997640 {
+
+		value = link-content-element
+		fieldRequired = tx_adxtwitterbootstrap_link_content_element
+		noTrimWrap = | ||
+
+		append = USER
+		append {
+			userFunc = tx_t3jquery->addJS
+			jsdata = (function($){ $(document).ready(function(){ $(document).on('click', '.link-content-element', function(event){ var anchor = $(this).find('a:first'); if (anchor.length){ if (anchor.attr('target') == '_blank') { window.open($('base').attr('href') + $(anchor).attr('href')); } else { window.location.href = $('base').attr('href') + $(anchor).attr('href'); } return false; } }); }); })(jQuery);
+		}
+	}
+
+	# Append clearfix if span is set to prevent overlapping next content element.
+	stdWrap.append = TEXT
+	stdWrap.append.value = <div class="clearfix"></div>
+	stdWrap.append.if.isTrue.field = tx_adxtwitterbootstrap_span
+
+	66.1352997636 =< tt_content.stdWrap.innerWrap.cObject.default.20.1352997636
+	66.1352997637 =< tt_content.stdWrap.innerWrap.cObject.default.20.1352997637
+	66.1352997638 =< tt_content.stdWrap.innerWrap.cObject.default.20.1352997638
+	66.1352997639 =< tt_content.stdWrap.innerWrap.cObject.default.20.1352997639
+}
+
+
+/**
+ * Add spans to images.
+ */
+tt_content.image.20 {
+
+	1 {
+		params.append = TEXT
+		params.append.value = class="img-responsive"
+		params.append.if.isTrue.field = tx_adxtwitterbootstrap_image_responsive
+	}
+
+	rendering {
+
+		noCaption {
+			rowStdWrap.wrap = <div class="row textpic-imagerow"> | </div>
+			noRowsStdWrap.wrap = <div class="row textpic-imagerow textpic-imagerow-none"> | </div>
+			lastRowStdWrap.wrap = <div class="row textpic-imagerow textpic-imagerow-last"> | </div>
+			columnStdWrap.wrap = <div class="textpic-imagecolumn###CLASSES###"> | </div>
+		}
+
+		splitCaption {
+			rowStdWrap.wrap = <div class="row textpic-imagerow"> | </div>
+			noRowsStdWrap.wrap = <div class="row textpic-imagerow textpic-imagerow-none"> | </div>
+			lastRowStdWrap.wrap = <div class="row textpic-imagerow textpic-imagerow-last"> | </div>
+			columnStdWrap.wrap = <div class="textpic-imagecolumn###CLASSES###"> | </div>
+		}
+
+		globalCaption {
+			rowStdWrap.wrap = <div class="row textpic-imagerow"> | </div>
+			noRowsStdWrap.wrap = <div class="row textpic-imagerow textpic-imagerow-none"> | </div>
+			lastRowStdWrap.wrap = <div class="row textpic-imagerow textpic-imagerow-last"> | </div>
+			columnStdWrap.wrap = <div class="textpic-imagecolumn###CLASSES###"> | </div>
+		}
+	}
+
+	addClassesCol.override {
+
+		if >
+		if.value = 0,0,0,0
+		if.equals.field = tx_adxtwitterbootstrap_image_columns
+		if.negate = 1
+
+		replacement {
+
+			10.search = csc-textpic-firstcol
+			10.replace.cObject = USER
+			10.replace.cObject.userFunc = AdGrafik\AdxTwitterBootstrap\UserFunc\Frontend->renderSpan
+			10.replace.cObject.pattern = col-%s-%s
+			10.replace.cObject.value.field = tx_adxtwitterbootstrap_image_column_span
+			10.replace.cObject.stdWrap.noTrimWrap = |textpic-firstcol  ||
+
+			20 < .10
+			20.search = csc-textpic-lastcol
+			20.replace.cObject.stdWrap.noTrimWrap = |textpic-lastcol ||
+
+			30 < .10
+			30.search = |*| |*|
+			30.replace.cObject.stdWrap.noTrimWrap = #|*| # |*|#
+		}
+	}
+}
+
+
+/**
+ * Fix css_styled_content CSS definitions for responsive image display.
+ */
+plugin.tx_cssstyledcontent {
+	_CSS_DEFAULT_STYLE := replaceString(div.csc-textpic .csc-textpic-imagewrap .csc-textpic-image { margin-bottom:|div.csc-textpic .csc-textpic-imagewrap .csc-textpic-image { margin: 0 auto)
+	_CSS_DEFAULT_STYLE := removeString(div.csc-textpic-left .csc-textpic-imagewrap { float: left; })
+	_CSS_DEFAULT_STYLE := removeString(div.csc-textpic-center .csc-textpic-center-outer { position: relative; float: right; right: 50%; })
+	_CSS_DEFAULT_STYLE := removeString(div.csc-textpic-center .csc-textpic-center-inner { position: relative; float: right; right: -50%; })
+}
+
+
+pageAdxTwitterBootstrapAjax = PAGE
+pageAdxTwitterBootstrapAjax {
+
+	typeNum = 1370426637
+
+	config {
+		admPanel = 0
+		no_cache = 1
+		disableAllHeaderCode = 1 
+		disableCharsetHeader = 1
+		disablePrefixComment = 1
+	}
+
+	10 = CONTENT
+	10 {
+
+		table = tt_content
+
+		select {
+
+			pidInList.data = TSFE: id
+
+			uidInList.data = GP: tx_adxtwitterbootstrap|uid
+			uidInList.intval = 1
+			uidInList.required = 1
+
+			languageField = sys_language_uid
+		}
+	}
+}

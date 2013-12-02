@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3DataStructure>
+	<meta type="array">
+		<langDisable>1</langDisable>
+	</meta>
+	<sheets>
+        <tx_adxtwitterbootstrap_accordion_appearance>
+            <ROOT type="array">
+                <TCEforms>
+                    <sheetTitle>LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.accordion.appearance.sheetTitle</sheetTitle>
+                </TCEforms>
+                <type>array</type>
+                <el type="array">
+                    <tx_adxtwitterbootstrap_accordion_layout type="array">
+                        <TCEforms type="array">
+                            <label>LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.accordion.appearance.layout</label>
+                            <config type="array">
+                                <type>select</type>
+                                <items>
+                                    <numIndex index="0">
+                                        <numIndex index="0">LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.accordion.appearance.layout.0</numIndex>
+                                        <numIndex index="1"></numIndex>
+                                    </numIndex>
+                                    <numIndex index="1">
+                                        <numIndex index="0">LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.accordion.appearance.layout.1</numIndex>
+                                        <numIndex index="1">layout1</numIndex>
+                                    </numIndex>
+                                    <numIndex index="2">
+                                        <numIndex index="0">LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.accordion.appearance.layout.2</numIndex>
+                                        <numIndex index="1">layout2</numIndex>
+                                    </numIndex>
+                                    <numIndex index="3">
+                                        <numIndex index="0">LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.accordion.appearance.layout.3</numIndex>
+                                        <numIndex index="1">layout3</numIndex>
+                                    </numIndex>
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </tx_adxtwitterbootstrap_accordion_layout>
+                    <tx_adxtwitterbootstrap_accordion_columns type="array">
+                        <TCEforms type="array">
+                            <label>LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.accordion.appearance.columns</label>
+                            <config type="array">
+                                <type>input</type>
+                                <size>2</size>
+                                <eval>int,required</eval>
+                                <default type="integer">1</default>
+                            </config>
+                        </TCEforms>
+                    </tx_adxtwitterbootstrap_accordion_columns>
+                </el>
+            </ROOT>
+        </tx_adxtwitterbootstrap_accordion_appearance>
+		<tx_adxtwitterbootstrap_accordion_behaviour>
+			<ROOT type="array">
+				<TCEforms>
+					<sheetTitle>LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.accordion.behaviour.sheetTitle</sheetTitle>
+				</TCEforms>
+				<el type="array">
+					<tx_adxtwitterbootstrap_accordion_active type="array">
+						<TCEforms type="array">
+							<label>LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.accordion.behaviour.active</label>
+							<config type="array">
+								<type>input</type>
+								<size>3</size>
+								<default>0</default>
+							</config>
+						</TCEforms>
+					</tx_adxtwitterbootstrap_accordion_active>
+					<tx_adxtwitterbootstrap_accordion_collapsible type="array">
+						<TCEforms type="array">
+							<label>LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.accordion.behaviour.collapsible</label>
+							<config type="array">
+								<type>check</type>
+								<default type="integer">1</default>
+								<items>
+									<numIndex index="0">
+										<numIndex index="0">LLL:EXT:lang/locallang_core.xml:labels.enabled</numIndex>
+										<numIndex index="1">1</numIndex>
+									</numIndex>
+								</items>
+							</config>
+						</TCEforms>
+					</tx_adxtwitterbootstrap_accordion_collapsible>
+					<tx_adxtwitterbootstrap_accordion_slide_to_position type="array">
+						<TCEforms type="array">
+							<label>LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.accordion.behaviour.slideToPosition</label>
+							<config type="array">
+								<type>check</type>
+								<items>
+									<numIndex index="0">
+										<numIndex index="0">LLL:EXT:lang/locallang_core.xml:labels.enabled</numIndex>
+										<numIndex index="1">1</numIndex>
+									</numIndex>
+								</items>
+							</config>
+						</TCEforms>
+					</tx_adxtwitterbootstrap_accordion_slide_to_position>
+					<tx_adxtwitterbootstrap_accordion_slide_offset type="array">
+						<TCEforms type="array">
+							<label>LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.accordion.behaviour.slideOffset</label>
+							<config type="array">
+								<type>input</type>
+								<size>3</size>
+								<default type="integer">0</default>
+								<eval>int</eval>
+							</config>
+						</TCEforms>
+					</tx_adxtwitterbootstrap_accordion_slide_offset>
+					<tx_adxtwitterbootstrap_accordion_ajax_loading type="array">
+						<TCEforms type="array">
+							<label>LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.accordion.behaviour.ajaxLoading</label>
+							<config type="array">
+								<type>check</type>
+								<items>
+									<numIndex index="0">
+										<numIndex index="0">LLL:EXT:lang/locallang_core.xml:labels.enabled</numIndex>
+										<numIndex index="1">1</numIndex>
+									</numIndex>
+								</items>
+							</config>
+						</TCEforms>
+					</tx_adxtwitterbootstrap_accordion_ajax_loading>
+				</el>
+			</ROOT>
+		</tx_adxtwitterbootstrap_accordion_behaviour>
+	</sheets>
+</T3DataStructure>

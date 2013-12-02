@@ -1,0 +1,10 @@
+
+{namespace vh=Tx_Powermail_ViewHelpers}
+{namespace adx=AdGrafik\AdxTwitterBootstrap\ViewHelpers}
+
+<div id="powermail_fieldwrap_{field.uid}" class="powermail_fieldwrap powermail_fieldwrap_reset {field.css} {adx:spanParser( pattern: 'col-%s-offset-%s', ratio: '{field.offset}', breakpoint: '{field.offsetBreakpoint}' )} {adx:spanParser( ratio: '{field.span}', breakpoint: '{field.spanBreakpoint}', default: 'col-xs-12' )} {vh:Misc.ErrorClass(field: '{field}', class: 'powermail_field_error')}">
+	<button id="powermail_field_{field.marker}" class="{field.buttonClass}{f:if( condition: '{field.elementSize}', then: ' input-{field.elementSize}' )}{f:if( condition: '{field.buttonBlock}', then: ' btn-block' )}" type="reset">{field.title -> vh:string.RawAndRemoveXss()}</button>
+</div>
+<f:if condition="{field.clear}">
+	<div class="clearfix"></div>
+</f:if>
