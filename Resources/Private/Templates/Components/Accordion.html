@@ -60,7 +60,6 @@
 		}
 		if (ajaxLoading){
 			$selector.on('show.bs.collapse', function(event){
-console.log(event);
 				var $target = $(event.target),
 					id = $target.attr('id').split('collapse')[1],
 					$tab = $selector.find('a[href*="#collapse' + id + '"]');
