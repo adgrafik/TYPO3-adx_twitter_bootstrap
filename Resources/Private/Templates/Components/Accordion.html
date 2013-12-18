@@ -9,7 +9,7 @@
 				<div class="row-fluid">
 					<f:for each="{columnItem}" as="item" key="key" iteration="info">
 						<div class="accordion-heading{span}">
-							<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="{f:if( condition: '{collapsible}', then: '#accordion{data.uid}' )}" href="#collapse{item.uid}">
+							<a class="accordion-toggle collapsed{f:if( condition: '{active} == {info.cycle}', then: ' active' )}" data-toggle="collapse" data-parent="{f:if( condition: '{collapsible}', then: '#accordion{data.uid}' )}" href="#collapse{item.uid}">
 								<f:cObject typoscriptObjectPath="lib.adxtwitterbootstrap.accordion.render.heading" data="{item}" />
 							</a>
 						</div>
@@ -18,7 +18,16 @@
 				<f:for each="{columnItem}" as="item" key="key" iteration="info">
 					<div id="collapse{item.uid}" class="accordion-body collapse{f:cObject( typoscriptObjectPath: 'lib.adxtwitterbootstrap.accordion.activeClass', data: {active: active, key: key} )}">
 						<div class="accordion-inner">
-							<f:cObject typoscriptObjectPath="lib.adxtwitterbootstrap.accordion.render.content" data="{item}" />
+							<f:if condition="{ajaxLoading}">
+								<f:then>
+									<f:if condition="{active} == {info.cycle}">
+										<f:cObject typoscriptObjectPath="lib.adxtwitterbootstrap.accordion.render.content" data="{item}" />
+									</f:if>
+								</f:then>
+								<f:else>
+									<f:cObject typoscriptObjectPath="lib.adxtwitterbootstrap.accordion.render.content" data="{item}" />
+								</f:else>
+							</f:if>
 						</div>
 					</div>
 				</f:for>
@@ -31,7 +40,9 @@
 	(function($){
 		var $selector = $('#accordion{data.uid}'),
 			slideToPosition = Boolean({slideToPosition}),
-			slideOffset = {slideOffset};
+			slideOffset = {slideOffset},
+			ajaxLoading = Boolean('{ajaxLoading}'),
+			pageURL = '{f:uri.page()}';
 		$selector
 			.on('show', function(event){
 				$selector.find('.accordion-toggle[href*=#' + $(event.target).get(0).id + ']').addClass('active');
@@ -45,6 +56,27 @@
 				$('html, body').animate({
 					scrollTop: $(event.target).offset().top - slideOffset
 				}, 'slow');
+			});
+		}
+		if (ajaxLoading){
+			$selector.on('show.bs.collapse', function(event){
+console.log(event);
+				var $target = $(event.target),
+					id = $target.attr('id').split('collapse')[1],
+					$tab = $selector.find('a[href*="#collapse' + id + '"]');
+				if (!$.trim($target.find('.accordion-inner').html())){
+					$target.addClass('loading')
+					$tab.addClass('loading');
+					$.get(pageURL + '?type=1370426637&tx_adxtwitterbootstrap[uid]=' + id)
+						.success(function(data){
+							$tab.removeClass('loading');
+							$target
+								.removeClass('loading');
+							$target
+								.find('.accordion-inner')
+								.append(data);
+						});
+				}
 			});
 		}
 	})(jQuery);

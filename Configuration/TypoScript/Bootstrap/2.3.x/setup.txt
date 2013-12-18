@@ -492,3 +492,35 @@ plugin.tx_cssstyledcontent {
 	_CSS_DEFAULT_STYLE := removeString(div.csc-textpic-center .csc-textpic-center-outer { position: relative; float: right; right: 50%; })
 	_CSS_DEFAULT_STYLE := removeString(div.csc-textpic-center .csc-textpic-center-inner { position: relative; float: right; right: -50%; })
 }
+
+
+pageAdxTwitterBootstrapAjax = PAGE
+pageAdxTwitterBootstrapAjax {
+
+	typeNum = 1370426637
+
+	config {
+		admPanel = 0
+		no_cache = 1
+		disableAllHeaderCode = 1 
+		disableCharsetHeader = 1
+		disablePrefixComment = 1
+	}
+
+	10 = CONTENT
+	10 {
+
+		table = tt_content
+
+		select {
+
+			pidInList.data = TSFE: id
+
+			uidInList.data = GP: tx_adxtwitterbootstrap|uid
+			uidInList.intval = 1
+			uidInList.required = 1
+
+			languageField = sys_language_uid
+		}
+	}
+}

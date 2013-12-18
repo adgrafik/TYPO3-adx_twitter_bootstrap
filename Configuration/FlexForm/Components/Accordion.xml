@@ -100,6 +100,20 @@
 							</config>
 						</TCEforms>
 					</tx_adxtwitterbootstrap_accordion_slide_offset>
+                    <tx_adxtwitterbootstrap_accordion_ajax_loading type="array">
+                        <TCEforms type="array">
+                            <label>LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.accordion.ajaxLoading</label>
+                            <config type="array">
+                                <type>check</type>
+                                <items>
+                                    <numIndex index="0">
+                                        <numIndex index="0">LLL:EXT:lang/locallang_core.xml:labels.enabled</numIndex>
+                                        <numIndex index="1">1</numIndex>
+                                    </numIndex>
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </tx_adxtwitterbootstrap_accordion_ajax_loading>
 				</el>
 			</ROOT>
 		</tx_adxtwitterbootstrap_accordion_general>

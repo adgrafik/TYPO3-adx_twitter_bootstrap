@@ -376,3 +376,35 @@ tt_content.stdWrap.innerWrap.cObject {
 	66.1352997637 =< tt_content.stdWrap.innerWrap.cObject.default.20.1352997637
 	66.1352997638 =< tt_content.stdWrap.innerWrap.cObject.default.20.1352997638
 }
+
+
+pageAdxTwitterBootstrapAjax = PAGE
+pageAdxTwitterBootstrapAjax {
+
+	typeNum = 1370426637
+
+	config {
+		admPanel = 0
+		no_cache = 1
+		disableAllHeaderCode = 1 
+		disableCharsetHeader = 1
+		disablePrefixComment = 1
+	}
+
+	10 = CONTENT
+	10 {
+
+		table = tt_content
+
+		select {
+
+			pidInList.data = TSFE: id
+
+			uidInList.data = GP: tx_adxtwitterbootstrap|uid
+			uidInList.intval = 1
+			uidInList.required = 1
+
+			languageField = sys_language_uid
+		}
+	}
+}

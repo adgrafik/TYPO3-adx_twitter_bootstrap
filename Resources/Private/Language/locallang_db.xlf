@@ -281,6 +281,9 @@
 			<trans-unit id="flexform.accordion.slideOffset" xml:space="preserve">
 				<source>Slide offset</source>
 			</trans-unit>
+            <trans-unit id="flexform.accordion.ajaxLoading" xml:space="preserve">
+                <source>Load content via AJAX</source>
+            </trans-unit>
 
 			<!-- Configuration/TSconfig/Components/Tabs.ts -->
 			<trans-unit id="TSconfig.tabs.title" xml:space="preserve">
