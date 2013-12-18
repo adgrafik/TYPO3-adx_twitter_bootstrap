@@ -9,18 +9,18 @@
 				<div class="row-fluid">
 					<f:for each="{columnItem}" as="item" key="key" iteration="info">
 						<div class="accordion-heading{span}">
-							<a class="accordion-toggle collapsed{f:if( condition: '{active} == {info.cycle}', then: ' active' )}" data-toggle="collapse" data-parent="{f:if( condition: '{collapsible}', then: '#accordion{data.uid}' )}" href="#collapse{item.uid}">
+							<a class="accordion-toggle collapsed{f:if( condition: '{active} == {key}', then: ' active' )}" data-toggle="collapse" data-parent="{f:if( condition: '{collapsible}', then: '#accordion{data.uid}' )}" href="#collapse{item.uid}">
 								<f:cObject typoscriptObjectPath="lib.adxtwitterbootstrap.accordion.render.heading" data="{item}" />
 							</a>
 						</div>
 					</f:for>
 				</div>
 				<f:for each="{columnItem}" as="item" key="key" iteration="info">
-					<div id="collapse{item.uid}" class="accordion-body collapse{f:cObject( typoscriptObjectPath: 'lib.adxtwitterbootstrap.accordion.activeClass', data: {active: active, key: key} )}">
+					<div id="collapse{item.uid}" class="accordion-body collapse{f:if( condition: '{active} == {key}', then: ' in' )}">
 						<div class="accordion-inner">
 							<f:if condition="{ajaxLoading}">
 								<f:then>
-									<f:if condition="{active} == {info.cycle}">
+									<f:if condition="{active} == {key}">
 										<f:cObject typoscriptObjectPath="lib.adxtwitterbootstrap.accordion.render.content" data="{item}" />
 									</f:if>
 								</f:then>
@@ -51,12 +51,12 @@
 				$selector.find('.accordion-toggle[href*=#' + $(event.target).get(0).id + ']').removeClass('active');
 			});
 		if (slideToPosition){
-		$selector
-			.on('shown', function(event){
-				$('html, body').animate({
-					scrollTop: $(event.target).offset().top - slideOffset
-				}, 'slow');
-			});
+			$selector
+				.on('shown', function(event){
+					$('html, body').animate({
+						scrollTop: $(event.target).offset().top - slideOffset
+					}, 'slow');
+				});
 		}
 		if (ajaxLoading){
 			$selector.on('show.bs.collapse', function(event){
