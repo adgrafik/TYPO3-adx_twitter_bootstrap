@@ -1,3 +1,6 @@
+1.1.0
+	[FEATURE] Added bootstrap 3.0. Important: No upgrade from 1.0.x possible!
+
 1.0.3
 	[TASK] Added powermail templates for 2.0.5.
 	[TASK] Added bootstrap 2.3.1. Important! TypoScript path has changed. Include in template again.

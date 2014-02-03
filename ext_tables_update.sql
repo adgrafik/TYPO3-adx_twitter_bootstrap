@@ -1,4 +1,9 @@
 
+#
+# WARNING! Working file - do not execute if you don't know what you are doing!
+#
+
+
 UPDATE tt_content
 SET pi_flexform = REPLACE(pi_flexform, '<field index="tx_adxtwitterbootstrap_columns_twocolumns_segmentation">\n                    <value index="vDEF">1212</value>\n                </field>', '<field index="tx_adxtwitterbootstrap_columns_twocolumns_span_column1">\n                    <value index="vDEF">0,6,0,0</value>\n                </field>\n                <field index="tx_adxtwitterbootstrap_columns_twocolumns_span_column2">\n                    <value index="vDEF">0,6,0,0</value>\n                </field>')
 WHERE pi_flexform LIKE '%<field index="tx_adxtwitterbootstrap_columns_twocolumns_segmentation">\n                    <value index="vDEF">1212</value>\n                </field>%'
