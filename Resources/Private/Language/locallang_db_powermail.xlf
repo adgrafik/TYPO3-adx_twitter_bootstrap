@@ -34,16 +34,16 @@
                 <source>Breakpoint</source>
             </trans-unit>
             <trans-unit id="tx_adxtwitterbootstrap_breakpoint.xs" xml:space="preserve">
-                <source>Phones (&lt;768px)</source>
+                <source>None</source>
             </trans-unit>
             <trans-unit id="tx_adxtwitterbootstrap_breakpoint.sm" xml:space="preserve">
-                <source>Tablets (&#8805;768px)</source>
+                <source>Phones (&#8804;768px)</source>
             </trans-unit>
             <trans-unit id="tx_adxtwitterbootstrap_breakpoint.md" xml:space="preserve">
-                <source>Desktops (&#8805;992px)</source>
+                <source>Tablets (&#8804;992px)</source>
             </trans-unit>
             <trans-unit id="tx_adxtwitterbootstrap_breakpoint.lg" xml:space="preserve">
-                <source>Large Desktops (&#8805;1200px)</source>
+                <source>Desktops (&#8804;1200px)</source>
             </trans-unit>
 			<trans-unit id="tx_adxtwitterbootstrap_offset" xml:space="preserve">
 				<source>Left Indent</source>
