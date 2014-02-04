@@ -114,7 +114,7 @@
 				<source>Small</source>
 			</trans-unit>
 			<trans-unit id="tx_adxtwitterbootstrap_checkbox_inline" xml:space="preserve">
-				<source>Inline</source>
+				<source>Inline Span</source>
 			</trans-unit>
 			<trans-unit id="tx_adxtwitterbootstrap_button_class" xml:space="preserve">
 				<source>Button Class</source>
