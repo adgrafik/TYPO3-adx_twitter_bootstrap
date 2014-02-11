@@ -2,17 +2,17 @@
 {namespace t3jquery=Tx_T3jquery_ViewHelpers}
 {namespace adx=AdGrafik\AdxTwitterBootstrap\ViewHelpers}
 
-<div id="carousel{data.uid}" class="carousel slide{layout}">
+<div id="carousel-{data.uid}" class="carousel slide{layout}">
 	<f:if condition="{pagination}">
 		<ol class="carousel-indicators">
 			<f:if condition="{provider} == 0">
 				<f:for each="{data.tx_gridelements_view_children}" as="item" key="key">
-					<li data-target="#carousel{data.uid}" data-slide-to="{key}">{f:cObject( typoscriptObjectPath: 'lib.adxtwitterbootstrap.carousel.render.paginationItem', data: { key: key, pagination: pagination, header: item.header } )}</li>
+					<li data-target="#carousel-{data.uid}" data-slide-to="{key}">{f:cObject( typoscriptObjectPath: 'lib.adxtwitterbootstrap.carousel.render.paginationItem', data: { key: key, pagination: pagination, header: item.header } )}</li>
 				</f:for>
 			</f:if>
 			<f:if condition="{provider} == 1">
 				<f:for each="{adx:utility.explode( string: data.tx_gridelements_view_children.0.image )}" as="item" iteration="info">
-					<li data-target="#carousel{data.uid}" data-slide-to="{info.index}">{info.cycle}</li>
+					<li data-target="#carousel-{data.uid}" data-slide-to="{info.index}">{info.cycle}</li>
 				</f:for>
 			</f:if>
 		</ol>
@@ -32,8 +32,8 @@
 		</f:if>
 	</div>
 	<f:if condition="{browser}">
-		<a class="carousel-control left" href="#carousel{data.uid}" data-slide="prev">&lsaquo;</a> 
-		<a class="carousel-control right" href="#carousel{data.uid}" data-slide="next">&rsaquo;</a>
+		<a class="carousel-control left" href="#carousel-{data.uid}" data-slide="prev">&lsaquo;</a> 
+		<a class="carousel-control right" href="#carousel-{data.uid}" data-slide="next">&rsaquo;</a>
 	</f:if>
 </div>
 
@@ -41,7 +41,7 @@
 
 <t3jquery:AddJQueryAndScript renderChildrenToData="TRUE">
 (function($){
-	var $carousel = $('#carousel{data.uid}'),
+	var $carousel = $('#carousel-{data.uid}'),
 		active = Number('{active}'),
 		interval = {interval},
 		pause = {f:if( condition: '{pause}', then: '"hover"' )};
