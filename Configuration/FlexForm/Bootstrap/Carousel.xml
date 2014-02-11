@@ -4,10 +4,10 @@
 		<langDisable>1</langDisable>
 	</meta>
 	<sheets>
-		<tx_adxtwitterbootstrap_carousel_general>
+		<tx_adxtwitterbootstrap_carousel_appearance>
 			<ROOT type="array">
 				<TCEforms>
-					<sheetTitle>LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.carousel.sheet.general</sheetTitle>
+					<sheetTitle>LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.carousel.sheet.appearance</sheetTitle>
 				</TCEforms>
 				<type>array</type>
 				<el type="array">
@@ -115,7 +115,7 @@
 					</tx_adxtwitterbootstrap_carousel_pause>
 				</el>
 			</ROOT>
-		</tx_adxtwitterbootstrap_carousel_general>
+		</tx_adxtwitterbootstrap_carousel_appearance>
 		<tx_adxtwitterbootstrap_carousel_rendering type="array">
 			<ROOT>
 				<TCEforms>

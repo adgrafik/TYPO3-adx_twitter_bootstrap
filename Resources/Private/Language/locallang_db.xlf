@@ -246,8 +246,8 @@
 			</trans-unit>
 
 			<!-- Configuration/FlexForm/Components/Carousel.xml -->
-			<trans-unit id="flexform.carousel.sheet.general" xml:space="preserve">
-				<source>General</source>
+			<trans-unit id="flexform.carousel.sheet.appearance" xml:space="preserve">
+				<source>Appearance</source>
 			</trans-unit>
 			<trans-unit id="flexform.carousel.layout" xml:space="preserve">
 				<source>Layout</source>
@@ -369,7 +369,7 @@
 
 			<!-- Configuration/FlexForm/Components/Tabs.xml -->
 			<trans-unit id="flexform.tabs.appearance.sheetTitle" xml:space="preserve">
-				<source>General</source>
+				<source>Appearance</source>
 			</trans-unit>
 			<trans-unit id="flexform.tabs.appearance.layout" xml:space="preserve">
 				<source>Layout</source>
