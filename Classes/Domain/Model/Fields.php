@@ -54,16 +54,6 @@ class Fields extends \Tx_Powermail_Domain_Model_Fields {
 	protected $buttonBlock;
 
 	/**
-	 * @var string $offset
-	 */
-	protected $offset;
-
-	/**
-	 * @var string $offsetBreakpoint
-	 */
-	protected $offsetBreakpoint;
-
-	/**
 	 * @var string $span
 	 */
 	protected $span;
@@ -72,6 +62,16 @@ class Fields extends \Tx_Powermail_Domain_Model_Fields {
 	 * @var string $spanBreakpoint
 	 */
 	protected $spanBreakpoint;
+
+	/**
+	 * @var string $offset
+	 */
+	protected $offset;
+
+	/**
+	 * @var string $offsetBreakpoint
+	 */
+	protected $offsetBreakpoint;
 
 	/**
 	 * @var boolean $clear
@@ -190,6 +190,24 @@ class Fields extends \Tx_Powermail_Domain_Model_Fields {
 	}
 
 	/**
+	 * Get required
+	 *
+	 * @return string
+	 */
+	public function getAdditionalAttributes() {
+		$additionalAttributes = array();
+		if ($this->getPlaceholder() !== NULL) {
+			$additionalAttributes['placeholder'] = $this->getPlaceholder()
+				? $this->getPlaceholder()
+				: $this->getTitle();
+		}
+		if ($this->getMandatory()) {
+			$additionalAttributes['required'] = 'required';
+		}
+		return $additionalAttributes;
+	}
+
+	/**
 	 * Set hideLabel
 	 *
 	 * @param string $hideLabel
@@ -270,46 +288,6 @@ class Fields extends \Tx_Powermail_Domain_Model_Fields {
 	}
 
 	/**
-	 * Set offset
-	 *
-	 * @param string $offset
-	 * @return \AdGrafik\AdxTwitterBootstrap\Domain\Model\Fields
-	 */
-	public function setOffset($offset) {
-		$this->offset = $offset;
-		return $this;
-	}
-
-	/**
-	 * Get offset
-	 *
-	 * @return string
-	 */
-	public function getOffset() {
-		return $this->offset;
-	}
-
-	/**
-	 * Set offsetBreakpoint
-	 *
-	 * @param string $offsetBreakpoint
-	 * @return \AdGrafik\AdxTwitterBootstrap\Domain\Model\Fields
-	 */
-	public function setOffsetBreakpoint($offsetBreakpoint) {
-		$this->offsetBreakpoint = $offsetBreakpoint;
-		return $this;
-	}
-
-	/**
-	 * Get offsetBreakpoint
-	 *
-	 * @return string
-	 */
-	public function getOffsetBreakpoint() {
-		return $this->offsetBreakpoint;
-	}
-
-	/**
 	 * Set span
 	 *
 	 * @param string $span
@@ -346,7 +324,71 @@ class Fields extends \Tx_Powermail_Domain_Model_Fields {
 	 * @return string
 	 */
 	public function getSpanBreakpoint() {
-		return $this->spanBreakpoint;
+		return $this->spanBreakpoint ?: 'mx';
+	}
+
+	/**
+	 * Get span class
+	 *
+	 * @return string
+	 */
+	public function getSpanClass() {
+		$class = $this->getSpan()
+			? sprintf('col-%s-%s', $this->getSpanBreakpoint(), $this->getSpan())
+			: 'col-xs-12';
+		return $class;
+	}
+
+	/**
+	 * Set offset
+	 *
+	 * @param string $offset
+	 * @return \AdGrafik\AdxTwitterBootstrap\Domain\Model\Fields
+	 */
+	public function setOffset($offset) {
+		$this->offset = $offset;
+		return $this;
+	}
+
+	/**
+	 * Get offset
+	 *
+	 * @return string
+	 */
+	public function getOffset() {
+		return $this->offset;
+	}
+
+	/**
+	 * Set offsetBreakpoint
+	 *
+	 * @param string $offsetBreakpoint
+	 * @return \AdGrafik\AdxTwitterBootstrap\Domain\Model\Fields
+	 */
+	public function setOffsetBreakpoint($offsetBreakpoint) {
+		$this->offsetBreakpoint = $offsetBreakpoint;
+		return $this;
+	}
+
+	/**
+	 * Get offsetBreakpoint
+	 *
+	 * @return string
+	 */
+	public function getOffsetBreakpoint() {
+		return $this->offsetBreakpoint ?: 'mx';
+	}
+
+	/**
+	 * Get offset class
+	 *
+	 * @return string
+	 */
+	public function getOffsetClass() {
+		$class = $this->getOffset()
+			? sprintf('col-%s-offset-%s', $this->getOffsetBreakpoint(), $this->getOffset())
+			: '';
+		return $class;
 	}
 
 	/**
@@ -407,6 +449,18 @@ class Fields extends \Tx_Powermail_Domain_Model_Fields {
 	 */
 	public function getCheckboxInlineBreakpoint() {
 		return $this->checkboxInlineBreakpoint;
+	}
+
+	/**
+	 * Get checkbox inline class
+	 *
+	 * @return string
+	 */
+	public function getCheckboxInlineClass() {
+		$class = ($this->getCheckboxInline() > 0)
+			? sprintf('col-%s-%s', $this->getCheckboxInlineBreakpoint(), $this->getCheckboxInline())
+			: '';
+		return $class;
 	}
 
 	/**

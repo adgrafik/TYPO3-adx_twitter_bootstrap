@@ -1,14 +1,15 @@
 
 plugin.tx_adxtwitterbootstrap {
 
-	cssClassPrefix = adxtwitterbootstrap-
-
 	common {
 
 		# customsubcategory=00_common=LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_conf.xlf:plugin.tx_adxtwitterbootstrap.common
 
 		# cat=adx_twitter_bootstrap common/00_common/1; type=string; label=LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_conf.xlf:plugin.tx_adxtwitterbootstrap.common.viewport
 		viewport = width=device-width, initial-scale=1.0
+
+		# cat=adx_twitter_bootstrap common/00_common/2; type=boolean; label=Always include link content element
+		alwaysIncludeLinkContentElement = 0
 	}
 
 	components {

@@ -53,6 +53,7 @@ class Frontend {
 	 * @var array $clearMatrix
 	 */
 	static protected $clearMatrix = array(
+		0 => '',
 		1 => 'clearfix visible-xs',
 		2 => 'clearfix visible-sm',
 		3 => 'clearfix visible-xs visible-sm',
@@ -71,284 +72,157 @@ class Frontend {
 	);
 
 	/**
-	 * @var \TYPO3\CMS\Extbase\Configuration\ConfigurationManagerInterface $configurationManager
+	 * @var string $currentUid
 	 */
-	protected $configurationManager;
+	static protected $currentUid;
 
 	/**
-	 * @var \TYPO3\CMS\Extbase\Object\ObjectManager $objectManager
+	 * @var array $free
 	 */
-	protected $objectManager;
+	static protected $free = array(
+		'xs' => 12,
+		'sm' => 12,
+		'md' => 12,
+		'lg' => 12,
+	);
 
 	/**
-	 * @var \TYPO3\CMS\Extbase\SignalSlot_Dispatcher $signalSlotDispatcher
+	 * renderColumns
+	 *
+	 * @param string $content
+	 * @param array $parameters
+	 * @return string
 	 */
-	protected $signalSlotDispatcher;
+	public function renderColumnClasses($content, $parameters) {
 
-	/**
-	 * @var \TYPO3\CMS\Fluid\View\StandaloneView $view
-	 */
-	protected $view;
-
-	/**
-	 * @var array $contentData
-	 */
-	protected $contentData;
-
-	/**
-	 * @return void
-	 */
-	public function initializeAction() {
-		$this->objectManager = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance('TYPO3\\CMS\\Extbase\\Object\\ObjectManager');
-		$this->signalSlotDispatcher = $this->objectManager->get('TYPO3\\CMS\\Extbase\\SignalSlot\\Dispatcher');
-		$this->view = $this->objectManager->get('TYPO3\\CMS\\Fluid\\View\\StandaloneView');
-		$this->contentData = $this->cObj->data;
-	}
-
-	/**
-	  * action show form for creating new mails
-	  *
-	  * @param string $content
-	  * @param array $parameters
-	  * @return string
-	  */
-	public function renderColumns($content, $parameters) {
-
-		$this->initializeAction();
-
-		$this->signalSlotDispatcher->dispatch(__CLASS__, __FUNCTION__ . 'BeforeRender', array($this));
-
-		$this->view->setTemplatePathAndFilename(\TYPO3\CMS\Core\Utility\GeneralUtility::getFileAbsFileName($parameters['templateFile']));
-
-		$classes = array('row');
-		$layout = $this->getFlexFormValue('layout');
-		if ($layout) {
-			$classes[] = $layout;
+		if ($this->cObj->checkIf($parameters['if.']) === FALSE) {
+			return $content;
 		}
 
-		$equalHeight = (boolean) $this->getFlexFormValue('equal_height');
-		if ($equalHeight) {
-			$classes[] = 'equal-height';
+		$reverseOrder = $this->cObj->stdWrap($parameters['reverseOrder'], $parameters['reverseOrder.']);
+		$format = $this->cObj->stdWrap($parameters['format'], $parameters['format.']) ?: 'col-%s-%s';
+		$forceMaxSpan = $this->cObj->stdWrap($parameters['forceMaxSpan'], $parameters['forceMaxSpan.']);
+		$deviceSpanAsString = $this->cObj->stdWrap($parameters['deviceSpan'], $parameters['deviceSpan.']) ?: '0,0,0,0';
+		$deviceSpan = $this->resolveSpanByDevice($deviceSpanAsString);
+
+		if (isset($deviceSpan[$forceMaxSpan])) {
+			$deviceSpan[$forceMaxSpan] = 12;
 		}
 
-		$reverseOrder = $this->getFlexFormValue('reverse_order');
-		$expertMode = (boolean) $this->getFlexFormValue('expert_mode');
-
-		$row = array(
-			'class' => implode(' ', $classes),
-		);
-
-		$total = $free = array(
+		$total = array(
 			'xs' => 12,
 			'sm' => 12,
 			'md' => 12,
 			'lg' => 12,
 		);
-		$columns = array();
-		for ($x = 0; $x < 12; $x++) {
 
-			$column = $x + 1;
-			$classes = array();
-
-			if ($this->getFlexFormValue('span_column' . $column) === NULL) {
-				break;
-			}
-
-			$spans = $this->getFlexFormValue('span_column' . $column) ?: '0,0,0,0';
-			$spans = \TYPO3\CMS\Core\Utility\GeneralUtility::intExplode(',', $spans, TRUE);
-			$spans = array(
-				'xs' => $spans[0],
-				'sm' => $spans[1],
-				'md' => $spans[2],
-				'lg' => $spans[3],
-			);
-
-			foreach ($spans as $device => $span) {
-
-				if ($span) {
-					$classes[] = sprintf('col-%s-%s', $device, $span);
-				}
-
-				if ($device !== $reverseOrder) {
-					continue;
-				}
-
-				// Do magic offset calculation.
-				$offset = $total[$device] - $free[$device] - ($free[$device] = $free[$device] - $spans[$device]);
-				if ($offset > 0) {
-					$classes[] = sprintf('col-%s-pull-%s', $device, $offset);
-				} else if ($offset < 0) {
-					$classes[] = sprintf('col-%s-push-%s', $device, $offset * -1);
-				}
-			}
-
-			$clear = 0;
-			if ($expertMode) {
-				$clear = (integer) $this->getFlexFormValue('clear_column' . $column);
-				if ($clear) {
-					$clear = static::$clearMatrix[$clear];
-				}
-			}
-
-			$visibility = (integer) $this->getFlexFormValue('hide_column' . $column);
-			if ($visibility) {
-				$classes[] = static::$visibilityMatrix[$visibility];
-			}
-
-			$content = $this->contentData['tx_gridelements_view_column_' . $x];
-
-			$columns[$column] = array(
-				'span' => $spans,
-				'visibility' => $visibility,
-				'class' => implode(' ', $classes),
-				'clear' => $clear,
-				'content' => $content,
-			);
+		// Reset free span if parsing new content element.
+		if ($reverseOrder && self::$currentUid != $this->cObj->data['uid']) {
+			self::$currentUid = $this->cObj->data['uid'];
+			self::$free = $total;
 		}
-
-		$this->view->assignMultiple(array(
-			'data' => $this->contentData,
-			'row' => $row,
-			'columns' => $columns,
-		));
-
-		$this->signalSlotDispatcher->dispatch(__CLASS__, __FUNCTION__ . 'AfterRender', array($this));
-
-		return $this->view->render();
-
-#\TYPO3\CMS\Extbase\Utility\DebuggerUtility::var_dump($this->contentData);
-	}
-
-	/**
-	  * parseAccordion
-	  *
-	  * @param string $content
-	  * @param array $parameters
-	  * @return string
-	  */
-	public function renderAccordion($content, $parameters) {
-
-		$this->initializeAction();
-
-		$this->signalSlotDispatcher->dispatch(__CLASS__, __FUNCTION__ . 'BeforeRender', array($this));
-
-		$this->view->setTemplatePathAndFilename(\TYPO3\CMS\Core\Utility\GeneralUtility::getFileAbsFileName($parameters['templateFile']));
-
-		$columnsCount = $this->getFlexFormValue('columns');
-		$children = $this->contentData['tx_gridelements_view_children'];
-
-		$itemGroups = array();
-		for ($x = 0, $y = -1; $x < count($children); $x++) {
-			if ($x % $columnsCount == 0) {
-				$y++;
-			}
-			$itemGroups[$y][$x] = $children[$x];
-		}
-
-		$this->view->assignMultiple(array(
-			'data' => $this->contentData,
-			'itemGroups' => $itemGroups,
-			'layout' => $this->getFlexFormValue('layout'),
-			'span' => floor(12 / $columnsCount),
-			'collapsible' => (integer) $this->getFlexFormValue('collapsible'),
-			'active' => (integer) $this->getFlexFormValue('active') - 1,
-			'slideToPosition' => (integer) $this->getFlexFormValue('slide_to_position'),
-			'slideOffset' => (integer) $this->getFlexFormValue('slide_offset'),
-			'ajaxLoading' => (integer) $this->getFlexFormValue('ajax_loading'),
-		));
-
-		$this->signalSlotDispatcher->dispatch(__CLASS__, __FUNCTION__ . 'AfterRender', array($this));
-
-		return $this->view->render();
-	}
-
-	/**
-	  * parseAccordion
-	  *
-	  * @param string $content
-	  * @param array $parameters
-	  * @return string
-	  */
-	public function renderTabs($content, $parameters) {
-
-		$this->initializeAction();
-
-		$this->signalSlotDispatcher->dispatch(__CLASS__, __FUNCTION__ . 'BeforeRender', array($this));
-
-		$this->view->setTemplatePathAndFilename(\TYPO3\CMS\Core\Utility\GeneralUtility::getFileAbsFileName($parameters['templateFile']));
-
-		$this->view->assignMultiple(array(
-			'data' => $this->contentData,
-			'items' => $this->contentData['tx_gridelements_view_children'],
-			'layout' => $this->getFlexFormValue('layout'),
-			'active' => (integer) $this->getFlexFormValue('active') - 1,
-			'slideToPosition' => (integer) $this->getFlexFormValue('slide_to_position'),
-			'slideOffset' => (integer) $this->getFlexFormValue('slide_offset'),
-			'ajaxLoading' => (integer) $this->getFlexFormValue('ajax_loading'),
-		));
-
-		$this->signalSlotDispatcher->dispatch(__CLASS__, __FUNCTION__ . 'AfterRender', array($this));
-
-		return $this->view->render();
-
-#\TYPO3\CMS\Extbase\Utility\DebuggerUtility::var_dump($this->contentData);
-	}
-
-	/**
-	  * parseAccordion
-	  *
-	  * @param string $content
-	  * @param array $parameters
-	  * @return string
-	  */
-	public function renderSpan($content, $parameters) {
-
-		$pattern = isset($parameters['pattern.'])
-			? $this->cObj->stdWrap($parameters['pattern'], $parameters['pattern.'])
-			: $parameters['pattern'];
-		$default = isset($parameters['default.'])
-			? $this->cObj->stdWrap($parameters['default'], $parameters['default.'])
-			: $parameters['default'] ?: '';
-		$value = isset($parameters['value.'])
-			? ($this->cObj->stdWrap($parameters['value'], $parameters['value.']) ?: '0,0,0,0')
-			: $parameters['value'];
-		$spans = \TYPO3\CMS\Core\Utility\GeneralUtility::intExplode(',', $value, TRUE);
-		$spans = array(
-			'xs' => $spans[0],
-			'sm' => $spans[1],
-			'md' => $spans[2],
-			'lg' => $spans[3],
-		);
 
 		$classes = array();
-		foreach ($spans as $device => &$span) {
+		$reverseAt;
+		foreach ($deviceSpan as $device => $span) {
+
+			// Add span class for current device.
 			if ($span) {
-				$classes[] = sprintf($pattern, $device, $span);
+				$classes[] = sprintf($format, $device, $span);
+			}
+
+			// Set device when the reverse begins.
+			if ($device === $reverseOrder) {
+				$reverseAt = $reverseOrder;
+			}
+
+			// No pull and push needed if span is 0 or no reverse is set.
+			if ($span === 0 || $reverseAt === NULL) {
+				continue;
+			}
+
+			// Do magic offset calculation.
+			$offset = $total[$device] - self::$free[$device] - (self::$free[$device] = self::$free[$device] - $deviceSpan[$device]);
+			if ($offset > 0) {
+				$classes[] = sprintf('col-%s-pull-%s', $device, $offset);
+			} else if ($offset < 0) {
+				$classes[] = sprintf('col-%s-push-%s', $device, $offset * -1);
 			}
 		}
 
-		if (count($classes) === 0 && $default) {
-			$classes[] = $default;
-		}
-
-		$content = implode(' ', $classes);
-
-		if (isset($parameters['stdWrap.'])) {
-			$content = $this->cObj->stdWrap($content, $parameters['stdWrap.']);
-		}
-
-		return $content;
+		return implode(' ', $classes);
 	}
 
 	/**
-	  * Returns the FlexForm field value from current backend layout.
+	  * renderVisibilityClasses
 	  *
-	  * @param string $fieldName
-	  * @return mixed
+	  * @param string $content
+	  * @param array $parameters
+	  * @return string
 	  */
-	protected function getFlexFormValue($fieldName) {
-		$key = 'flexform_' . $this->contentData['tx_gridelements_backend_layout'] . '_' . $fieldName;
-		return $this->contentData[$key];
+	public function renderVisibilityClasses($content, $parameters) {
+		$visibility = (integer) $this->cObj->stdWrap($parameters['visibility'], $parameters['visibility.']);
+		return self::$visibilityMatrix[$visibility];
+	}
+
+	/**
+	  * parseClearfixClasses
+	  *
+	  * @param string $content
+	  * @param array $parameters
+	  * @return string
+	  */
+	public function renderClearfixClasses($content, $parameters) {
+		$clear = (integer) $this->cObj->stdWrap($parameters['clear'], $parameters['clear.']);
+		return self::$clearMatrix[$clear];
+	}
+
+	/**
+	 * resolveSpanByDevice
+	 *
+	 * @param string $span
+	 * @return array
+	 */
+	protected function resolveSpanByDevice($span) {
+
+		if (preg_match('/[0-9]{1,2},?/', $span) === FALSE) {
+			$span = '0,0,0,0';
+		}
+
+		$span = \TYPO3\CMS\Core\Utility\GeneralUtility::intExplode(',', $span, TRUE);
+		$span = array(
+			'xs' => intval($span[0]),
+			'sm' => intval($span[1]),
+			'md' => intval($span[2]),
+			'lg' => intval($span[3]),
+		);
+
+		return $span;
+	}
+
+	/**
+	 * resolveSpanByDevice
+	 *
+	 * @param string $span
+	 * @param integer $columns
+	 * @return array
+	 */
+	protected function resolveColumnsByDevice($span, $columns = 12) {
+
+		if (preg_match('/[0-9]{1,2},?/', $span) === FALSE) {
+			$span = '0,0,0,0';
+		}
+
+		$span = \TYPO3\CMS\Core\Utility\GeneralUtility::intExplode(',', $span, TRUE);
+		$span = array(
+			'xs' => $xs = ($span[0] ? intval($columns / $span[0]) : 1),
+			'sm' => $sm = ($span[1] ? intval($columns / $span[1]) : $xs),
+			'md' => $md = ($span[2] ? intval($columns / $span[2]) : $sm),
+			'lg' => $span[3] ? intval($columns / $span[3]) : $md,
+		);
+
+		return $span;
+#\TYPO3\CMS\Extbase\Utility\DebuggerUtility::var_dump($this->contentData);
 	}
 
 }

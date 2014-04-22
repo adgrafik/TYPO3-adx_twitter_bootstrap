@@ -2,8 +2,9 @@
 plugin.tx_adxtwitterbootstrap {
 
 	# activate Bootstrap tabs
-	components.animations = 1
 	components.navs = 1
+	components.dropdowns = 1
+	components.animations = 1
 
 	tabs {
 		templateFile = EXT:adx_twitter_bootstrap/Resources/Private/Templates/Bootstrap/3.0.x/Tabs.html

@@ -45,9 +45,6 @@
             <trans-unit id="tx_adxtwitterbootstrap_breakpoint.lg" xml:space="preserve">
                 <source>Desktops (&#8804;1200px)</source>
             </trans-unit>
-			<trans-unit id="tx_adxtwitterbootstrap_offset" xml:space="preserve">
-				<source>Left Indent</source>
-			</trans-unit>
 			<trans-unit id="tx_adxtwitterbootstrap_span.none" xml:space="preserve">
 				<source>None</source>
 			</trans-unit>
@@ -75,6 +72,9 @@
 			<trans-unit id="tx_adxtwitterbootstrap_span.56" xml:space="preserve">
 				<source>10 Columns (5/6)</source>
 			</trans-unit>
+            <trans-unit id="tx_adxtwitterbootstrap_offset" xml:space="preserve">
+                <source>Left Indent</source>
+            </trans-unit>
             <trans-unit id="tx_adxtwitterbootstrap_label_to_field_ratio" xml:space="preserve">
                 <source>Label to Field Ratio</source>
             </trans-unit>

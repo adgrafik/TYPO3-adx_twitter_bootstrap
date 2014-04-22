@@ -16,7 +16,7 @@
                             <displayCond>FIELD:tx_adxtwitterbootstrap_fourcolumns_expert_mode:REQ:FALSE</displayCond>
                             <config type="array">
                                 <type>user</type>
-                                <userFunc>AdGrafik\AdxTwitterBootstrap\UserFunc\Tca->getSpanColumnFields</userFunc>
+                                <userFunc>AdGrafik\AdxTwitterBootstrap\UserFunc\Backend->getSpanColumnFields</userFunc>
                                 <parameters type="array">
                                     <segments type="array">
                                         <numIndex index="0">
@@ -32,19 +32,57 @@
                             </config>
                         </TCEforms>
                     </tx_adxtwitterbootstrap_fourcolumns_span>
-                    <tx_adxtwitterbootstrap_fourcolumns_span_column1 type="array">
+                    <tx_adxtwitterbootstrap_fourcolumns_span_column0 type="array">
                         <TCEforms type="array">
                             <label>LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.columns.grid.span.column1</label>
                             <config type="array">
                                 <type>user</type>
-                                <userFunc>AdGrafik\AdxTwitterBootstrap\UserFunc\Tca->getSpanColumnFieldsExpert</userFunc>
+                                <userFunc>AdGrafik\AdxTwitterBootstrap\UserFunc\Backend->getSpanColumnFieldsExpert</userFunc>
+                                <default>0,0,3,0</default>
+                            </config>
+                        </TCEforms>
+                    </tx_adxtwitterbootstrap_fourcolumns_span_column0>
+                    <tx_adxtwitterbootstrap_fourcolumns_clear_column0 type="array">
+                        <TCEforms type="array">
+                            <label>LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.columns.grid.clear.column1</label>
+                            <displayCond>FIELD:tx_adxtwitterbootstrap_fourcolumns_expert_mode:REQ:TRUE</displayCond>
+                            <config type="array">
+                                <type>check</type>
+                                <cols>4</cols>
+                                <items>
+                                    <numIndex index="0">
+                                        <numIndex index="0">LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.columns.grid.span.xs</numIndex>
+                                        <numIndex index="1">1</numIndex>
+                                    </numIndex>
+                                    <numIndex index="1">
+                                        <numIndex index="0">LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.columns.grid.span.sm</numIndex>
+                                        <numIndex index="1">2</numIndex>
+                                    </numIndex>
+                                    <numIndex index="2">
+                                        <numIndex index="0">LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.columns.grid.span.md</numIndex>
+                                        <numIndex index="1">4</numIndex>
+                                    </numIndex>
+                                    <numIndex index="3">
+                                        <numIndex index="0">LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.columns.grid.span.lg</numIndex>
+                                        <numIndex index="1">8</numIndex>
+                                    </numIndex>
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </tx_adxtwitterbootstrap_fourcolumns_clear_column0>
+                    <tx_adxtwitterbootstrap_fourcolumns_span_column1 type="array">
+                        <TCEforms type="array">
+                            <label>LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.columns.grid.span.column2</label>
+                            <config type="array">
+                                <type>user</type>
+                                <userFunc>AdGrafik\AdxTwitterBootstrap\UserFunc\Backend->getSpanColumnFieldsExpert</userFunc>
                                 <default>0,0,3,0</default>
                             </config>
                         </TCEforms>
                     </tx_adxtwitterbootstrap_fourcolumns_span_column1>
                     <tx_adxtwitterbootstrap_fourcolumns_clear_column1 type="array">
                         <TCEforms type="array">
-                            <label>LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.columns.grid.clear.column1</label>
+                            <label>LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.columns.grid.clear.column2</label>
                             <displayCond>FIELD:tx_adxtwitterbootstrap_fourcolumns_expert_mode:REQ:TRUE</displayCond>
                             <config type="array">
                                 <type>check</type>
@@ -72,53 +110,15 @@
                     </tx_adxtwitterbootstrap_fourcolumns_clear_column1>
                     <tx_adxtwitterbootstrap_fourcolumns_span_column2 type="array">
                         <TCEforms type="array">
-                            <label>LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.columns.grid.span.column2</label>
+                            <label>LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.columns.grid.span.column3</label>
                             <config type="array">
                                 <type>user</type>
-                                <userFunc>AdGrafik\AdxTwitterBootstrap\UserFunc\Tca->getSpanColumnFieldsExpert</userFunc>
+                                <userFunc>AdGrafik\AdxTwitterBootstrap\UserFunc\Backend->getSpanColumnFieldsExpert</userFunc>
                                 <default>0,0,3,0</default>
                             </config>
                         </TCEforms>
                     </tx_adxtwitterbootstrap_fourcolumns_span_column2>
                     <tx_adxtwitterbootstrap_fourcolumns_clear_column2 type="array">
-                        <TCEforms type="array">
-                            <label>LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.columns.grid.clear.column2</label>
-                            <displayCond>FIELD:tx_adxtwitterbootstrap_fourcolumns_expert_mode:REQ:TRUE</displayCond>
-                            <config type="array">
-                                <type>check</type>
-                                <cols>4</cols>
-                                <items>
-                                    <numIndex index="0">
-                                        <numIndex index="0">LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.columns.grid.span.xs</numIndex>
-                                        <numIndex index="1">1</numIndex>
-                                    </numIndex>
-                                    <numIndex index="1">
-                                        <numIndex index="0">LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.columns.grid.span.sm</numIndex>
-                                        <numIndex index="1">2</numIndex>
-                                    </numIndex>
-                                    <numIndex index="2">
-                                        <numIndex index="0">LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.columns.grid.span.md</numIndex>
-                                        <numIndex index="1">4</numIndex>
-                                    </numIndex>
-                                    <numIndex index="3">
-                                        <numIndex index="0">LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.columns.grid.span.lg</numIndex>
-                                        <numIndex index="1">8</numIndex>
-                                    </numIndex>
-                                </items>
-                            </config>
-                        </TCEforms>
-                    </tx_adxtwitterbootstrap_fourcolumns_clear_column2>
-                    <tx_adxtwitterbootstrap_fourcolumns_span_column3 type="array">
-                        <TCEforms type="array">
-                            <label>LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.columns.grid.span.column3</label>
-                            <config type="array">
-                                <type>user</type>
-                                <userFunc>AdGrafik\AdxTwitterBootstrap\UserFunc\Tca->getSpanColumnFieldsExpert</userFunc>
-                                <default>0,0,3,0</default>
-                            </config>
-                        </TCEforms>
-                    </tx_adxtwitterbootstrap_fourcolumns_span_column3>
-                    <tx_adxtwitterbootstrap_fourcolumns_clear_column3 type="array">
                         <TCEforms type="array">
                             <label>LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.columns.grid.clear.column3</label>
                             <displayCond>FIELD:expert_mode:REQ:TRUE</displayCond>
@@ -145,17 +145,17 @@
                                 </items>
                             </config>
                         </TCEforms>
-                    </tx_adxtwitterbootstrap_fourcolumns_clear_column3>
-                    <tx_adxtwitterbootstrap_fourcolumns_span_column4 type="array">
+                    </tx_adxtwitterbootstrap_fourcolumns_clear_column2>
+                    <tx_adxtwitterbootstrap_fourcolumns_span_column3 type="array">
                         <TCEforms type="array">
                             <label>LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.columns.grid.span.column4</label>
                             <config type="array">
                                 <type>user</type>
-                                <userFunc>AdGrafik\AdxTwitterBootstrap\UserFunc\Tca->getSpanColumnFieldsExpert</userFunc>
+                                <userFunc>AdGrafik\AdxTwitterBootstrap\UserFunc\Backend->getSpanColumnFieldsExpert</userFunc>
                                 <default>0,0,3,0</default>
                             </config>
                         </TCEforms>
-                    </tx_adxtwitterbootstrap_fourcolumns_span_column4>
+                    </tx_adxtwitterbootstrap_fourcolumns_span_column3>
                     <tx_adxtwitterbootstrap_fourcolumns_reverse_order type="array">
                         <TCEforms type="array">
                             <label>LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.columns.grid.reverseOrder</label>
@@ -259,7 +259,7 @@
                     <sheetTitle>LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.columns.visibility.sheetTitle</sheetTitle>
                 </TCEforms>
                 <el type="array">
-                    <tx_adxtwitterbootstrap_fourcolumns_hide_column1 type="array">
+                    <tx_adxtwitterbootstrap_fourcolumns_visibility_column0 type="array">
                         <TCEforms type="array">
                             <label>LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.columns.visibility.hideColumn1</label>
                             <config type="array">
@@ -285,8 +285,8 @@
                                 </items>
                             </config>
                         </TCEforms>
-                    </tx_adxtwitterbootstrap_fourcolumns_hide_column1>
-                    <tx_adxtwitterbootstrap_fourcolumns_hide_column2 type="array">
+                    </tx_adxtwitterbootstrap_fourcolumns_visibility_column0>
+                    <tx_adxtwitterbootstrap_fourcolumns_visibility_column1 type="array">
                         <TCEforms type="array">
                             <label>LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.columns.visibility.hideColumn2</label>
                             <config type="array">
@@ -312,8 +312,8 @@
                                 </items>
                             </config>
                         </TCEforms>
-                    </tx_adxtwitterbootstrap_fourcolumns_hide_column2>
-                    <tx_adxtwitterbootstrap_fourcolumns_hide_column3 type="array">
+                    </tx_adxtwitterbootstrap_fourcolumns_visibility_column1>
+                    <tx_adxtwitterbootstrap_fourcolumns_visibility_column2 type="array">
                         <TCEforms type="array">
                             <label>LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.columns.visibility.hideColumn3</label>
                             <config type="array">
@@ -339,8 +339,8 @@
                                 </items>
                             </config>
                         </TCEforms>
-                    </tx_adxtwitterbootstrap_fourcolumns_hide_column3>
-                    <tx_adxtwitterbootstrap_fourcolumns_hide_column4 type="array">
+                    </tx_adxtwitterbootstrap_fourcolumns_visibility_column2>
+                    <tx_adxtwitterbootstrap_fourcolumns_visibility_column3 type="array">
                         <TCEforms type="array">
                             <label>LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.columns.visibility.hideColumn4</label>
                             <config type="array">
@@ -366,7 +366,7 @@
                                 </items>
                             </config>
                         </TCEforms>
-                    </tx_adxtwitterbootstrap_fourcolumns_hide_column4>
+                    </tx_adxtwitterbootstrap_fourcolumns_visibility_column3>
 				</el>
 			</ROOT>
 		</tx_adxtwitterbootstrap_fourcolumns_visibility>

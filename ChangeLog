@@ -1,3 +1,15 @@
+1.1.1
+	[TASK] Changed FlexForm fieldnames for easy using in loops. Use ext_tables_update.sql to update from 1.0.0.
+	[TASK] Changed components rendering to FLUIDTEMPLATE for more flexibility.
+	[TASK] Added some new getter in powermail model to get more flexibility in template building and removed related ViewHelper.
+	[BUGFIX] Fixed some bugs in bootstrap components.
+	[FEATURE] Added extension configuration to activate single components.
+	[FEATURE] Added responsive image feature.
+	[FEATURE] Added „Panel Context“ to accordions.
+	[FEATURE] Added „Justified tabs“, „Show Tabs as Pills“ and „Stacked Tabs“ to tab component.
+	[FEATURE] Added dropdown feature to tab component.
+	[FEATURE] Added mobile swipe to carousel component.
+
 1.1.0
 	[FEATURE] Added bootstrap 3.0. Important: No upgrade from 1.0.x possible!
 

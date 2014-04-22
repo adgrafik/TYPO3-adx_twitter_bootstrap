@@ -25,14 +25,28 @@ namespace AdGrafik\AdxTwitterBootstrap\ViewHelpers;
  ***************************************************************/
 
 
-class SpanToColumnsViewHelper extends \TYPO3\CMS\Fluid\Core\ViewHelper\AbstractViewHelper {
+class GroupArrayViewHelper extends \TYPO3\CMS\Fluid\Core\ViewHelper\AbstractViewHelper {
 
 	/**
-	 * @param string $span
-	 * @return integer
+	 * render
+	 *
+	 * @param array $array
+	 * @param string $modular
+	 * @param string $as
+	 * @return array
 	 */
-	public function render($span) {
-		return floor(12 / $span);
+	public function render($array = array(), $modular = 1) {
+
+		$groupArray = array();
+		$y = -1;
+		for ($x = 0; $x < count($array); $x++) {
+			if ($x % $modular == 0) {
+				$y++;
+			}
+			$groupArray[$y][$x] = $array[$x];
+		}
+
+		return $groupArray;
 	}
 
 }

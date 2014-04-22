@@ -24,13 +24,13 @@
                 <source>Placeholder</source>
                 <target state="translated">Platzhalter</target>
             </trans-unit>
-            <trans-unit id="tx_adxtwitterbootstrap_offset" xml:space="preserve">
-                <source>Left Indent</source>
-                <target state="translated">Linke Einrückung</target>
-            </trans-unit>
             <trans-unit id="tx_adxtwitterbootstrap_span" xml:space="preserve">
                 <source>Spanne</source>
                 <target state="translated">Spalten</target>
+            </trans-unit>
+            <trans-unit id="tx_adxtwitterbootstrap_offset" xml:space="preserve">
+                <source>Left Indent</source>
+                <target state="translated">Linke Einrückung</target>
             </trans-unit>
             <trans-unit id="tx_adxtwitterbootstrap_end_of_row" xml:space="preserve">
                 <source>End of Row</source>

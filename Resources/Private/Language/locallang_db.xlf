@@ -4,11 +4,11 @@
 		<header/>
 		<body>
 			<!-- tt_content fields -->
-			<trans-unit id="tx_adxtwitterbootstrap_offset" xml:space="preserve">
-				<source>Left Indent</source>
-			</trans-unit>
 			<trans-unit id="tx_adxtwitterbootstrap_span" xml:space="preserve">
 				<source>Span</source>
+			</trans-unit>
+			<trans-unit id="tx_adxtwitterbootstrap_offset" xml:space="preserve">
+				<source>Left Indent</source>
 			</trans-unit>
 			<trans-unit id="tx_adxtwitterbootstrap_device_visibility" xml:space="preserve">
 				<source>Device visibility</source>
@@ -43,11 +43,23 @@
 			<trans-unit id="tx_adxtwitterbootstrap_inherit.description" xml:space="preserve">
 				<source>If this option is activated, this content element will be inherited to the sub pages.</source>
 			</trans-unit>
+			<trans-unit id="tx_adxtwitterbootstrap_image_style" xml:space="preserve">
+				<source>Style</source>
+			</trans-unit>
+			<trans-unit id="tx_adxtwitterbootstrap_image_style.none" xml:space="preserve">
+				<source>None</source>
+			</trans-unit>
+			<trans-unit id="tx_adxtwitterbootstrap_image_style.rounded" xml:space="preserve">
+				<source>Rounded</source>
+			</trans-unit>
+			<trans-unit id="tx_adxtwitterbootstrap_image_style.circle" xml:space="preserve">
+				<source>Circle</source>
+			</trans-unit>
+			<trans-unit id="tx_adxtwitterbootstrap_image_style.thumbnail" xml:space="preserve">
+				<source>Thumbnail</source>
+			</trans-unit>
 			<trans-unit id="tx_adxtwitterbootstrap_image_responsive" xml:space="preserve">
 				<source>Responsive</source>
-			</trans-unit>
-			<trans-unit id="tx_adxtwitterbootstrap_image_columns" xml:space="preserve">
-				<source>Number of columns</source>
 			</trans-unit>
 
 
@@ -246,7 +258,7 @@
 			</trans-unit>
 
 			<!-- Configuration/FlexForm/Components/Carousel.xml -->
-			<trans-unit id="flexform.carousel.sheet.appearance" xml:space="preserve">
+			<trans-unit id="flexform.carousel.appearance.sheetTitle" xml:space="preserve">
 				<source>Appearance</source>
 			</trans-unit>
 			<trans-unit id="flexform.carousel.layout" xml:space="preserve">
@@ -264,43 +276,22 @@
 			<trans-unit id="flexform.carousel.layout.3" xml:space="preserve">
 				<source>Layout 3</source>
 			</trans-unit>
-			<trans-unit id="flexform.carousel.interval" xml:space="preserve">
-				<source>Interval</source>
-			</trans-unit>
 			<trans-unit id="flexform.carousel.browser" xml:space="preserve">
 				<source>Browser</source>
 			</trans-unit>
 			<trans-unit id="flexform.carousel.pagination" xml:space="preserve">
 				<source>Pagination</source>
 			</trans-unit>
-			<trans-unit id="flexform.carousel.pagination.none" xml:space="preserve">
-				<source>None</source>
-			</trans-unit>
-			<trans-unit id="flexform.carousel.pagination.numbers" xml:space="preserve">
-				<source>Numbers</source>
-			</trans-unit>
-			<trans-unit id="flexform.carousel.pagination.headers" xml:space="preserve">
-				<source>Headers</source>
-			</trans-unit>
-			<trans-unit id="flexform.carousel.active" xml:space="preserve">
-				<source>Active slide</source>
-			</trans-unit>
-			<trans-unit id="flexform.carousel.pause" xml:space="preserve">
-				<source>Pause on hover</source>
-			</trans-unit>
 
-			<trans-unit id="flexform.carousel.sheet.rendering" xml:space="preserve">
-				<source>Rendering</source>
-			</trans-unit>
-			<trans-unit id="flexform.carousel.provider" xml:space="preserve">
-				<source>Provider</source>
-			</trans-unit>
-			<trans-unit id="flexform.carousel.provider.images" xml:space="preserve">
-				<source>Use first content element as single image provider</source>
-			</trans-unit>
-			<trans-unit id="flexform.carousel.provider.content" xml:space="preserve">
-				<source>Content elements</source>
-			</trans-unit>
+            <trans-unit id="flexform.carousel.behaviour.sheetTitle" xml:space="preserve">
+                <source>Behaviour</source>
+            </trans-unit>
+            <trans-unit id="flexform.carousel.interval" xml:space="preserve">
+                <source>Interval</source>
+            </trans-unit>
+            <trans-unit id="flexform.carousel.pause" xml:space="preserve">
+                <source>Pause on hover</source>
+            </trans-unit>
 
 			<!-- Configuration/TSconfig/Components/Accordion.ts -->
 			<trans-unit id="TSconfig.accordion.title" xml:space="preserve">
@@ -333,6 +324,30 @@
             <trans-unit id="flexform.accordion.appearance.layout.3" xml:space="preserve">
                 <source>Layout 3</source>
             </trans-unit>
+			<trans-unit id="flexform.accordion.appearance.panelContext" xml:space="preserve">
+				<source>Panel Context</source>
+			</trans-unit>
+			<trans-unit id="flexform.accordion.appearance.panelContext.none" xml:space="preserve">
+				<source>None</source>
+			</trans-unit>
+			<trans-unit id="flexform.accordion.appearance.panelContext.default" xml:space="preserve">
+				<source>Default</source>
+			</trans-unit>
+			<trans-unit id="flexform.accordion.appearance.panelContext.primary" xml:space="preserve">
+				<source>Primary</source>
+			</trans-unit>
+			<trans-unit id="flexform.accordion.appearance.panelContext.success" xml:space="preserve">
+				<source>Success</source>
+			</trans-unit>
+			<trans-unit id="flexform.accordion.appearance.panelContext.info" xml:space="preserve">
+				<source>Info</source>
+			</trans-unit>
+			<trans-unit id="flexform.accordion.appearance.panelContext.warning" xml:space="preserve">
+				<source>Warning</source>
+			</trans-unit>
+			<trans-unit id="flexform.accordion.appearance.panelContext.danger" xml:space="preserve">
+				<source>Danger</source>
+			</trans-unit>
 			<trans-unit id="flexform.accordion.appearance.columns" xml:space="preserve">
 				<source>Columns</source>
 			</trans-unit>
@@ -386,8 +401,27 @@
 			<trans-unit id="flexform.tabs.appearance.layout.3" xml:space="preserve">
 				<source>Layout 3</source>
 			</trans-unit>
+			<trans-unit id="flexform.tabs.appearance.pills" xml:space="preserve">
+				<source>Show Tabs as Pills</source>
+			</trans-unit>
+			<trans-unit id="flexform.tabs.appearance.justified" xml:space="preserve">
+				<source>Justified tabs</source>
+			</trans-unit>
+			<trans-unit id="flexform.tabs.appearance.stacked" xml:space="preserve">
+				<source>Stacked Tabs</source>
+			</trans-unit>
+
+            <trans-unit id="flexform.tabs.behaviour.sheetTitle" xml:space="preserve">
+                <source>Behaviour</source>
+            </trans-unit>
 			<trans-unit id="flexform.tabs.behaviour.active" xml:space="preserve">
 				<source>Active item</source>
+			</trans-unit>
+			<trans-unit id="flexform.tabs.behaviour.dropdown" xml:space="preserve">
+				<source>Dropdown at Item</source>
+			</trans-unit>
+			<trans-unit id="flexform.tabs.behaviour.dropdownLabel" xml:space="preserve">
+				<source>Dropdown Label</source>
 			</trans-unit>
 			<trans-unit id="flexform.tabs.behaviour.slideToPosition" xml:space="preserve">
 				<source>Slide to position</source>

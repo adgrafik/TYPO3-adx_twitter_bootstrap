@@ -37,13 +37,209 @@
 							</config>
 						</TCEforms>
 					</tx_adxtwitterbootstrap_tabs_layout>
+                    <tx_adxtwitterbootstrap_tabs_justified type="array">
+                        <TCEforms type="array">
+                            <label>LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.tabs.appearance.justified</label>
+                            <displayCond>FIELD:tx_adxtwitterbootstrap_tabs_stacked:REQ:FALSE</displayCond>
+                            <config type="array">
+                                <type>check</type>
+                                <items>
+                                    <numIndex index="0">
+                                        <numIndex index="0">LLL:EXT:lang/locallang_core.xml:labels.enabled</numIndex>
+                                        <numIndex index="1">1</numIndex>
+                                    </numIndex>
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </tx_adxtwitterbootstrap_tabs_justified>
+                    <tx_adxtwitterbootstrap_tabs_pills type="array">
+                        <TCEforms type="array">
+                            <label>LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.tabs.appearance.pills</label>
+                            <onChange>reload</onChange>
+                            <config type="array">
+                                <type>check</type>
+                                <items>
+                                    <numIndex index="0">
+                                        <numIndex index="0">LLL:EXT:lang/locallang_core.xml:labels.enabled</numIndex>
+                                        <numIndex index="1">1</numIndex>
+                                    </numIndex>
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </tx_adxtwitterbootstrap_tabs_pills>
+                    <tx_adxtwitterbootstrap_tabs_stacked type="array">
+                        <TCEforms type="array">
+                            <label>LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.tabs.appearance.stacked</label>
+                            <displayCond>FIELD:tx_adxtwitterbootstrap_tabs_pills:REQ:TRUE</displayCond>
+                            <onChange>reload</onChange>
+                            <config type="array">
+                                <type>check</type>
+                                <items>
+                                    <numIndex index="0">
+                                        <numIndex index="0">LLL:EXT:lang/locallang_core.xml:labels.enabled</numIndex>
+                                        <numIndex index="1">1</numIndex>
+                                    </numIndex>
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </tx_adxtwitterbootstrap_tabs_stacked>
+                    <tx_adxtwitterbootstrap_tabs_span type="array">
+                        <TCEforms type="array">
+                            <label>LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.columns.grid.span.column</label>
+                            <displayCond>
+                                <AND>
+                                    <numIndex>FIELD:tx_adxtwitterbootstrap_tabs_stacked:REQ:TRUE</numIndex>
+                                    <AND>
+                                        <numIndex>FIELD:tx_adxtwitterbootstrap_tabs_expert_mode:REQ:FALSE</numIndex>
+                                    </AND>
+                                </AND>
+                            </displayCond>
+                            <config type="array">
+                                <type>user</type>
+                                <userFunc>AdGrafik\AdxTwitterBootstrap\UserFunc\Backend->getSpanColumnFields</userFunc>
+                                <default>3,9</default>
+                                <parameters type="array">
+                                    <segments type="array">
+                                        <numIndex index="0">
+                                            <numIndex index="0">LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.columns.grid.span.inherit</numIndex>
+                                            <numIndex index="1">0,0</numIndex>
+                                        </numIndex>
+                                        <numIndex index="1">
+                                            <numIndex index="0">LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.columns.grid.span.1212</numIndex>
+                                            <numIndex index="1">6,6</numIndex>
+                                        </numIndex>
+                                        <numIndex index="2">
+                                            <numIndex index="0">LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.columns.grid.span.1323</numIndex>
+                                            <numIndex index="1">4,8</numIndex>
+                                        </numIndex>
+                                        <numIndex index="3">
+                                            <numIndex index="0">LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.columns.grid.span.2313</numIndex>
+                                            <numIndex index="1">8,4</numIndex>
+                                        </numIndex>
+                                        <numIndex index="4">
+                                            <numIndex index="0">LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.columns.grid.span.1434</numIndex>
+                                            <numIndex index="1">3,9</numIndex>
+                                        </numIndex>
+                                        <numIndex index="5">
+                                            <numIndex index="0">LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.columns.grid.span.3414</numIndex>
+                                            <numIndex index="1">9,3</numIndex>
+                                        </numIndex>
+                                    </segments>
+                                </parameters>
+                            </config>
+                        </TCEforms>
+                    </tx_adxtwitterbootstrap_tabs_span>
+                    <tx_adxtwitterbootstrap_tabs_span_column0 type="array">
+                        <TCEforms type="array">
+                            <label>LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.columns.grid.span.column1</label>
+                            <displayCond>FIELD:tx_adxtwitterbootstrap_tabs_stacked:REQ:TRUE</displayCond>
+                            <config type="array">
+                                <type>user</type>
+                                <userFunc>AdGrafik\AdxTwitterBootstrap\UserFunc\Backend->getSpanColumnFieldsExpert</userFunc>
+                                <default>0,3,0,0</default>
+                            </config>
+                        </TCEforms>
+                    </tx_adxtwitterbootstrap_tabs_span_column0>
+                    <tx_adxtwitterbootstrap_tabs_clear_column0 type="array">
+                        <TCEforms type="array">
+                            <label>LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.columns.grid.clear.column1</label>
+                            <displayCond>
+                                <AND>
+                                    <numIndex>FIELD:tx_adxtwitterbootstrap_tabs_stacked:REQ:TRUE</numIndex>
+                                    <AND>
+                                        <numIndex>FIELD:tx_adxtwitterbootstrap_tabs_expert_mode:REQ:TRUE</numIndex>
+                                    </AND>
+                                </AND>
+                            </displayCond>
+                            <config type="array">
+                                <type>check</type>
+                                <cols>4</cols>
+                                <items>
+                                    <numIndex index="0">
+                                        <numIndex index="0">LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.columns.grid.span.xs</numIndex>
+                                        <numIndex index="1">1</numIndex>
+                                    </numIndex>
+                                    <numIndex index="1">
+                                        <numIndex index="0">LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.columns.grid.span.sm</numIndex>
+                                        <numIndex index="1">2</numIndex>
+                                    </numIndex>
+                                    <numIndex index="2">
+                                        <numIndex index="0">LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.columns.grid.span.md</numIndex>
+                                        <numIndex index="1">4</numIndex>
+                                    </numIndex>
+                                    <numIndex index="3">
+                                        <numIndex index="0">LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.columns.grid.span.lg</numIndex>
+                                        <numIndex index="1">8</numIndex>
+                                    </numIndex>
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </tx_adxtwitterbootstrap_tabs_clear_column0>
+                    <tx_adxtwitterbootstrap_tabs_span_column1 type="array">
+                        <TCEforms type="array">
+                            <label>LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.columns.grid.span.column2</label>
+                            <displayCond>FIELD:tx_adxtwitterbootstrap_tabs_stacked:REQ:TRUE</displayCond>
+                            <config type="array">
+                                <type>user</type>
+                                <userFunc>AdGrafik\AdxTwitterBootstrap\UserFunc\Backend->getSpanColumnFieldsExpert</userFunc>
+                                <default>0,9,0,0</default>
+                            </config>
+                        </TCEforms>
+                    </tx_adxtwitterbootstrap_tabs_span_column1>
+                    <tx_adxtwitterbootstrap_tabs_reverse_order type="array">
+                        <TCEforms type="array">
+                            <label>LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.columns.grid.reverseOrder</label>
+                            <displayCond>FIELD:tx_adxtwitterbootstrap_tabs_stacked:REQ:TRUE</displayCond>
+                            <config type="array">
+                                <type>select</type>
+                                <items>
+                                    <numIndex index="0">
+                                        <numIndex index="0">LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.columns.grid.reverseOrder.default</numIndex>
+                                        <numIndex index="1"></numIndex>
+                                    </numIndex>
+                                    <numIndex index="1">
+                                        <numIndex index="0">LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.columns.grid.reverseOrder.xs</numIndex>
+                                        <numIndex index="1">xs</numIndex>
+                                    </numIndex>
+                                    <numIndex index="2">
+                                        <numIndex index="0">LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.columns.grid.reverseOrder.sm</numIndex>
+                                        <numIndex index="1">sm</numIndex>
+                                    </numIndex>
+                                    <numIndex index="3">
+                                        <numIndex index="0">LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.columns.grid.reverseOrder.md</numIndex>
+                                        <numIndex index="1">md</numIndex>
+                                    </numIndex>
+                                    <numIndex index="4">
+                                        <numIndex index="0">LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.columns.grid.reverseOrder.lg</numIndex>
+                                        <numIndex index="1">lg</numIndex>
+                                    </numIndex>
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </tx_adxtwitterbootstrap_tabs_reverse_order>
+                    <tx_adxtwitterbootstrap_tabs_expert_mode type="array">
+                        <TCEforms type="array">
+                            <label>LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.columns.grid.expertMode</label>
+                            <displayCond>FIELD:tx_adxtwitterbootstrap_tabs_stacked:REQ:TRUE</displayCond>
+                            <onChange>reload</onChange>
+                            <config type="array">
+                                <type>check</type>
+                                <items>
+                                    <numIndex index="0">
+                                        <numIndex index="0">LLL:EXT:lang/locallang_core.xml:labels.enabled</numIndex>
+                                        <numIndex index="1">1</numIndex>
+                                    </numIndex>
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </tx_adxtwitterbootstrap_tabs_expert_mode>
                 </el>
             </ROOT>
         </tx_adxtwitterbootstrap_tabs_appearance>
 		<tx_adxtwitterbootstrap_tabs_behaviour>
 			<ROOT type="array">
 				<TCEforms>
-					<sheetTitle>LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.accordion.behaviour.sheetTitle</sheetTitle>
+					<sheetTitle>LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.tabs.behaviour.sheetTitle</sheetTitle>
 				</TCEforms>
 				<el type="array">
 					<tx_adxtwitterbootstrap_tabs_active type="array">
@@ -53,9 +249,34 @@
 								<type>input</type>
 								<size>3</size>
 								<default>1</default>
+								<eval>int</eval>
+								<range>
+								    <lower>1</lower>
+								</range>
 							</config>
 						</TCEforms>
 					</tx_adxtwitterbootstrap_tabs_active>
+                    <tx_adxtwitterbootstrap_tabs_dropdown type="array">
+                        <TCEforms type="array">
+                            <label>LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.tabs.behaviour.dropdown</label>
+                            <config type="array">
+                                <type>input</type>
+                                <size>3</size>
+                                <default>0</default>
+                                <eval>int</eval>
+                            </config>
+                        </TCEforms>
+                    </tx_adxtwitterbootstrap_tabs_dropdown>
+                    <tx_adxtwitterbootstrap_tabs_dropdown_label type="array">
+                        <TCEforms type="array">
+                            <label>LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.tabs.behaviour.dropdownLabel</label>
+                            <displayCond>FIELD:tx_adxtwitterbootstrap_tabs_dropdown:>:0</displayCond>
+                            <config type="array">
+                                <type>input</type>
+                                <size>12</size>
+                            </config>
+                        </TCEforms>
+                    </tx_adxtwitterbootstrap_tabs_dropdown_label>
 					<tx_adxtwitterbootstrap_tabs_slide_to_position type="array">
 						<TCEforms type="array">
 							<label>LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.tabs.behaviour.slideToPosition</label>

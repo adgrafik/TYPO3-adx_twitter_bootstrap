@@ -1,0 +1,27 @@
+
+# cat=components; type=boolean; label=Activate Responsive Image: Activate responsive image for the backend. (Static TypoScript have to be activated additionally.)
+components.activateResponsiveImage = 1
+
+# cat=components; type=boolean; label=Activate Two Columns Component: Activate the two columns component for the backend. (jQuery component and static TypoScript have to be activated additionally.)
+components.activateTwoColumns = 1
+
+# cat=components; type=boolean; label=Activate Three Columns Component: Activate the three columns component for the backend. (jQuery component and static TypoScript have to be activated additionally.)
+components.activateThreeColumns = 1
+
+# cat=components; type=boolean; label=Activate Four Columns Component: Activate the four columns component for the backend. (jQuery component and static TypoScript have to be activated additionally.)
+components.activateFourColumns = 1
+
+# cat=components; type=boolean; label=Activate Carousel Component: Activate the carousel component for the backend. (jQuery component and static TypoScript have to be activated additionally.)
+components.activateCarousel = 1
+
+# cat=components; type=boolean; label=Activate Tabs Component: Activate the tabs component for the backend. (jQuery component and static TypoScript have to be activated additionally.)
+components.activateTabs = 1
+
+# cat=components; type=boolean; label=Activate Accordion Component: Activate the accordion component for the backend. (jQuery component and static TypoScript have to be activated additionally.)
+components.activateAccordion = 1
+
+# cat=components; type=boolean; label=Activate Datepicker Component: Activate the datepicker component for the extension powermail and for the backend. (Static TypoScript have to be activated additionally.)
+components.activateDatepicker = 1
+
+# cat=extensions; type=boolean; label=Activate Powermail Support: Activate support for the extension powermail if installed. (Static TypoScript have to be activated additionally.)
+extensions.activatePowermail = 1

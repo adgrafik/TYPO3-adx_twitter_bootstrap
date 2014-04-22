@@ -4,13 +4,13 @@
 		<header/>
 		<body>
 			<!-- tt_content fields -->
+			<trans-unit id="tx_adxtwitterbootstrap_span" xml:space="preserve">
+				<source>Span</source>
+				<target state="translated">Spanne</target>
+			</trans-unit>
 			<trans-unit id="tx_adxtwitterbootstrap_offset" xml:space="preserve">
 				<source>Left Indent</source>
 				<target state="translated">Linke Einrückung</target>
-			</trans-unit>
-			<trans-unit id="tx_adxtwitterbootstrap_span" xml:space="preserve">
-				<source>Span</source>
-				<target state="translated">Spalte</target>
 			</trans-unit>
 			<trans-unit id="tx_adxtwitterbootstrap_device_visibility" xml:space="preserve">
 				<source>Device visibility</source>
@@ -52,13 +52,29 @@
 				<source>If this option is activated, this content element will be inherited to the sub pages.</source>
 				<target state="translated">If this option is activated, this content element will be inherited to the sub pages.</target>
 			</trans-unit>
+            <trans-unit id="tx_adxtwitterbootstrap_image_style" xml:space="preserve">
+                <source>Style</source>
+				<target state="translated">Stil</target>
+            </trans-unit>
+            <trans-unit id="tx_adxtwitterbootstrap_image_style.none" xml:space="preserve">
+                <source>None</source>
+				<target state="translated">Kein</target>
+            </trans-unit>
+            <trans-unit id="tx_adxtwitterbootstrap_image_style.rounded" xml:space="preserve">
+                <source>Rounded</source>
+				<target state="translated">Abgerundet</target>
+            </trans-unit>
+            <trans-unit id="tx_adxtwitterbootstrap_image_style.circle" xml:space="preserve">
+                <source>Circle</source>
+				<target state="translated">Kreis</target>
+            </trans-unit>
+            <trans-unit id="tx_adxtwitterbootstrap_image_style.thumbnail" xml:space="preserve">
+                <source>Thumbnail</source>
+				<target state="translated">Thumbnail</target>
+            </trans-unit>
             <trans-unit id="tx_adxtwitterbootstrap_image_responsive" xml:space="preserve">
                 <source>Responsive</source>
 				<target state="translated">Responsive</target>
-            </trans-unit>
-            <trans-unit id="tx_adxtwitterbootstrap_image_columns" xml:space="preserve">
-                <source>Span of each Image</source>
-				<target state="translated">Spalten jedes Bildes</target>
             </trans-unit>
 
 			<!-- Configuration/TSconfig/Components/*Columns.ts -->
@@ -149,7 +165,7 @@
             </trans-unit>
             <trans-unit id="flexform.columns.grid.span" xml:space="preserve">
                 <source>Span %s</source>
-                <target state="translated">Spanne</target>
+                <target state="translated">Spanne %s</target>
             </trans-unit>
             <trans-unit id="flexform.columns.grid.clear.column1" xml:space="preserve">
                 <source>Clear after 1st Column</source>
@@ -277,13 +293,9 @@
 			</trans-unit>
 
 			<!-- Configuration/FlexForm/Components/Carousel.xml -->
-			<trans-unit id="flexform.carousel.sheet.appearance" xml:space="preserve">
+			<trans-unit id="flexform.carousel.appearance.sheetTitle" xml:space="preserve">
                 <source>Appearance</source>
                 <target state="translated">Erscheinungsbild</target>
-			</trans-unit>
-			<trans-unit id="flexform.carousel.interval" xml:space="preserve">
-				<source>Interval</source>
-				<target state="translated">Intervall</target>
 			</trans-unit>
 			<trans-unit id="flexform.carousel.browser" xml:space="preserve">
 				<source>Browser</source>
@@ -293,39 +305,19 @@
 				<source>Pagination</source>
 				<target state="translated">Seitennummerierung</target>
 			</trans-unit>
-			<trans-unit id="flexform.carousel.pagination.none" xml:space="preserve">
-				<source>None</source>
-				<target state="translated">Keine</target>
-			</trans-unit>
-			<trans-unit id="flexform.carousel.pagination.numbers" xml:space="preserve">
-				<source>Numbers</source>
-				<target state="translated">Nummern</target>
-			</trans-unit>
-			<trans-unit id="flexform.carousel.pagination.headers" xml:space="preserve">
-				<source>Headers</source>
-				<target state="translated">Überschriften</target>
-			</trans-unit>
-			<trans-unit id="flexform.carousel.active" xml:space="preserve">
-				<source>Active slide</source>
-				<target state="translated">Aktiver Slide</target>
-			</trans-unit>
-			<trans-unit id="flexform.carousel.pause" xml:space="preserve">
-				<source>Pause on hover</source>
-				<target state="translated">Pause bei hover</target>
-			</trans-unit>
 
-			<trans-unit id="flexform.carousel.provider" xml:space="preserve">
-				<source>Provider</source>
-				<target state="translated">Provider</target>
-			</trans-unit>
-			<trans-unit id="flexform.carousel.provider.images" xml:space="preserve">
-				<source>Use first content element as single image provider</source>
-				<target state="translated">Verwende ersten Seiteninhalt als Bild-Provider</target>
-			</trans-unit>
-			<trans-unit id="flexform.carousel.provider.content" xml:space="preserve">
-				<source>Content elements</source>
-				<target state="translated">Seiteninhalte</target>
-			</trans-unit>
+            <trans-unit id="flexform.carousel.behaviour.sheetTitle" xml:space="preserve">
+                <source>Behaviour</source>
+                <target state="translated">Verhalten</target>
+            </trans-unit>
+            <trans-unit id="flexform.carousel.interval" xml:space="preserve">
+                <source>Interval</source>
+                <target state="translated">Intervall</target>
+            </trans-unit>
+            <trans-unit id="flexform.carousel.pause" xml:space="preserve">
+                <source>Pause on hover</source>
+                <target state="translated">Pause bei hover</target>
+            </trans-unit>
 
 			<!-- Configuration/TSconfig/Components/Accordion.ts -->
 			<trans-unit id="TSconfig.accordion.title" xml:space="preserve">
@@ -440,6 +432,14 @@
 				<source>Layout 3</source>
 				<target state="translated">Layout 3</target>
 			</trans-unit>
+            <trans-unit id="flexform.tabs.appearance.pills" xml:space="preserve">
+                <source>Show Tabs as Pills</source>
+				<target state="translated">Zeige Tabs als Pillen</target>
+            </trans-unit>
+            <trans-unit id="flexform.tabs.appearance.stacked" xml:space="preserve">
+                <source>Stacked Tabs</source>
+				<target state="translated">Tabs Stapeln</target>
+            </trans-unit>
 			<trans-unit id="flexform.tabs.behaviour.active" xml:space="preserve">
 				<source>Active item</source>
 				<target state="translated">Aktives Element</target>

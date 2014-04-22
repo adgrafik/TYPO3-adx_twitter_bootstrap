@@ -1,20 +1,45 @@
 
 {namespace t3jquery=Tx_T3jquery_ViewHelpers}
 
-<div id="tabs-{data.uid}" class="tabs{f:if( condition: layout, then: ' {layout}' )}">
-	<ul class="nav nav-tabs">
-		<f:for each="{items}" key="key" as="item">
-			<li class="{f:if( condition: '{active} == {key}', then: 'active' )}">
-				<a href="{f:uri.page( additionalParams: { type: 1370426637, tx_adxtwitterbootstrap: { uid: '{item.uid}' } } )}#tab-item-{item.uid}" data-toggle="tab">{item.header}</a>
-			</li>
+<div id="tabs-{data.uid}" class="{classes}">
+	<ul class="{navClasses}">
+		<f:for each="{data.tx_gridelements_view_children}" key="key" as="item" iteration="loop">
+			<f:if condition="{dropdown} == 0">
+				<f:then>
+					<li class="{f:if( condition: '{active} == {loop.cycle}', then: 'active' )}">
+						<a href="{f:uri.page( section: 'tab-item-{item.uid}', additionalParams: { type: 1370426637, tx_adxtwitterbootstrap: { uid: '{item.uid}' } } )}" data-toggle="tab">{item.header}</a>
+					</li>
+				</f:then>
+				<f:else>
+					<f:if condition="{dropdown} == {loop.cycle}">
+						<f:then>
+							<li class="dropdown{f:if( condition: '{active} >= {loop.cycle}', then: ' active' )}">
+								<a id="dropdown-{item.uid}" class="dropdown-toggle" href="#" data-toggle="dropdown">{dropdownLabel} <b class="caret"></b></a>
+								<ul class="dropdown-menu" role="menu" aria-labelledby="dropdown-{item.uid}">
+						</f:then>
+						<f:else>
+							<li class="{f:if( condition: '{active} == {loop.cycle}', then: 'active' )}">
+								<a href="{f:uri.page( section: 'tab-item-{item.uid}', additionalParams: { type: 1370426637, tx_adxtwitterbootstrap: { uid: '{item.uid}' } } )}" tabindex="-1" data-toggle="tab">{item.header}</a>
+							</li>
+						</f:else>
+					</f:if>
+					<f:if condition="{loop.isLast}">
+							</ul>
+						</li>
+					</f:if>
+				</f:else>
+			</f:if>
 		</f:for>
 	</ul>
-	<div class="tab-content">
-		<f:for each="{items}" key="key" as="item">
-			<div id="tab-item-{item.uid}" class="tab-pane fade{f:if( condition: '{active} == {key}', then: ' active in' )}">
+	<f:if condition="{clearAfterNav}">
+		<div class="{clearAfterNav}"></div>
+	</f:if>
+	<div class="{paneClasses}">
+		<f:for each="{data.tx_gridelements_view_children}" key="key" as="item" iteration="loop">
+			<div id="tab-item-{item.uid}" class="tab-pane fade{f:if( condition: '{active} == {loop.cycle}', then: ' active in' )}">
 				<f:if condition="{ajaxLoading}">
 					<f:then>
-						<f:if condition="{active} == {key}">
+						<f:if condition="{active} == {loop.cycle}">
 							<f:cObject typoscriptObjectPath="tt_content" data="{item}" />
 						</f:if>
 					</f:then>
@@ -30,9 +55,9 @@
 <t3jquery:AddJQueryAndScript renderChildrenToData="TRUE">
 	(function($){
 		var $tabs = $('#tabs-{data.uid}'),
-			slideToPosition = Boolean('{slideToPosition}'),
-			slideOffset = Number('{slideOffset}'),
-			ajaxLoading = Boolean('{ajaxLoading}');
+			slideToPosition = {slideToPosition},
+			slideOffset = {slideOffset},
+			ajaxLoading = {ajaxLoading};
 		if (slideToPosition){
 			$tabs.find('a[data-toggle="tab"]').on('shown.bs.tab', function(event){
 				$('html, body').stop().animate({

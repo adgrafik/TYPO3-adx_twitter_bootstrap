@@ -37,14 +37,102 @@
                             </config>
                         </TCEforms>
                     </tx_adxtwitterbootstrap_accordion_layout>
+                    <tx_adxtwitterbootstrap_accordion_panel_context type="array">
+                        <TCEforms type="array">
+                            <label>LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.accordion.appearance.panelContext</label>
+                            <config type="array">
+                                <type>select</type>
+                                <default type="integer">panel-default</default>
+                                <items>
+                                    <numIndex index="0">
+                                        <numIndex index="0">LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.accordion.appearance.panelContext.none</numIndex>
+                                        <numIndex index="1"></numIndex>
+                                    </numIndex>
+                                    <numIndex index="1">
+                                        <numIndex index="0">LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.accordion.appearance.panelContext.default</numIndex>
+                                        <numIndex index="1">panel-default</numIndex>
+                                    </numIndex>
+                                    <numIndex index="2">
+                                        <numIndex index="0">LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.accordion.appearance.panelContext.primary</numIndex>
+                                        <numIndex index="1">panel-primary</numIndex>
+                                    </numIndex>
+                                    <numIndex index="3">
+                                        <numIndex index="0">LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.accordion.appearance.panelContext.success</numIndex>
+                                        <numIndex index="1">panel-success</numIndex>
+                                    </numIndex>
+                                    <numIndex index="4">
+                                        <numIndex index="0">LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.accordion.appearance.panelContext.info</numIndex>
+                                        <numIndex index="1">panel-info</numIndex>
+                                    </numIndex>
+                                    <numIndex index="5">
+                                        <numIndex index="0">LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.accordion.appearance.panelContext.warning</numIndex>
+                                        <numIndex index="1">panel-warning</numIndex>
+                                    </numIndex>
+                                    <numIndex index="6">
+                                        <numIndex index="0">LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.accordion.appearance.panelContext.danger</numIndex>
+                                        <numIndex index="1">panel-danger</numIndex>
+                                    </numIndex>
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </tx_adxtwitterbootstrap_accordion_panel_context>
                     <tx_adxtwitterbootstrap_accordion_columns type="array">
                         <TCEforms type="array">
                             <label>LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.accordion.appearance.columns</label>
                             <config type="array">
-                                <type>input</type>
-                                <size>2</size>
-                                <eval>int,required</eval>
+                                <type>select</type>
                                 <default type="integer">1</default>
+                                <eval>int,required</eval>
+                                <items>
+                                    <numIndex index="0">
+                                        <numIndex index="0">1</numIndex>
+                                        <numIndex index="1">1</numIndex>
+                                    </numIndex>
+                                    <numIndex index="1">
+                                        <numIndex index="0">2</numIndex>
+                                        <numIndex index="1">2</numIndex>
+                                    </numIndex>
+                                    <numIndex index="2">
+                                        <numIndex index="0">3</numIndex>
+                                        <numIndex index="1">3</numIndex>
+                                    </numIndex>
+                                    <numIndex index="3">
+                                        <numIndex index="0">4</numIndex>
+                                        <numIndex index="1">4</numIndex>
+                                    </numIndex>
+                                    <numIndex index="4">
+                                        <numIndex index="0">5</numIndex>
+                                        <numIndex index="1">5</numIndex>
+                                    </numIndex>
+                                    <numIndex index="5">
+                                        <numIndex index="0">6</numIndex>
+                                        <numIndex index="1">6</numIndex>
+                                    </numIndex>
+                                    <numIndex index="6">
+                                        <numIndex index="0">7</numIndex>
+                                        <numIndex index="1">7</numIndex>
+                                    </numIndex>
+                                    <numIndex index="7">
+                                        <numIndex index="0">8</numIndex>
+                                        <numIndex index="1">8</numIndex>
+                                    </numIndex>
+                                    <numIndex index="8">
+                                        <numIndex index="0">9</numIndex>
+                                        <numIndex index="1">9</numIndex>
+                                    </numIndex>
+                                    <numIndex index="9">
+                                        <numIndex index="0">10</numIndex>
+                                        <numIndex index="1">10</numIndex>
+                                    </numIndex>
+                                    <numIndex index="10">
+                                        <numIndex index="0">11</numIndex>
+                                        <numIndex index="1">11</numIndex>
+                                    </numIndex>
+                                    <numIndex index="11">
+                                        <numIndex index="0">12</numIndex>
+                                        <numIndex index="1">12</numIndex>
+                                    </numIndex>
+                                </items>
                             </config>
                         </TCEforms>
                     </tx_adxtwitterbootstrap_accordion_columns>
@@ -64,6 +152,7 @@
 								<type>input</type>
 								<size>3</size>
 								<default>0</default>
+                                <eval>int</eval>
 							</config>
 						</TCEforms>
 					</tx_adxtwitterbootstrap_accordion_active>

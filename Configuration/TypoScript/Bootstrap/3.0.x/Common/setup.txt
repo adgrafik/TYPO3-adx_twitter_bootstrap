@@ -1,7 +1,7 @@
 
-/**
- * Settings for adx_less
- */
+#
+# Bootstrap settings for adx_less.
+#
 plugin.tx_adxless {
 
 	lessphp {
@@ -698,9 +698,9 @@ plugin.tx_adxless {
 }
 
 
-/**
- * Set inheritance
- */
+#
+# Implement CE inheritance.
+#
 styles.content.get {
 
   select.pidInList = {field: mount_pid // field: this}
@@ -714,26 +714,25 @@ styles.content.get {
 
 }
 
-# get content, left
 styles.content.getLeft < styles.content.get
 styles.content.getLeft.select.where = colPos=1
 
-# get content, right
 styles.content.getRight < styles.content.get
 styles.content.getRight.select.where = colPos=2
 
-# get content, margin
 styles.content.getBorder < styles.content.get
 styles.content.getBorder.select.where = colPos=3
 
 
-/**
- * Include bootstrap
- */
+#
+# Additional page settings.
+#
 page {
 
+	# Include bootstrap base LESS file.
 	includeCSS.tx_adxtwitterbootstrap = EXT:adx_twitter_bootstrap/Resources/Private/LESS/Bootstrap/3.0.x/bootstrap.less
 
+	# Set viewport for bootstrap.
 	headerData.1352997637 = TEXT
 	headerData.1352997637 {
 
@@ -745,125 +744,105 @@ page {
 		prepend = TEXT
 		prepend.char = 10
 	}
-}
 
-
-/**
- * Add offset and span support.
- */
-tt_content.stdWrap.innerWrap.cObject {
-
-	default.20.1352997637 = USER
-	default.20.1352997637.userFunc = AdGrafik\AdxTwitterBootstrap\UserFunc\Frontend->renderSpan
-	default.20.1352997637.pattern = col-%s-offset-%s
-	default.20.1352997637.value.field = tx_adxtwitterbootstrap_offset
-	default.20.1352997637.stdWrap.noTrimWrap = | ||
-
-	default.20.1352997638 < .default.20.1352997637
-	default.20.1352997638.pattern = col-%s-%s
-	default.20.1352997638.value.field = tx_adxtwitterbootstrap_span
-
-	default.20.1352997640 = TEXT
-	default.20.1352997640 {
-
-		value = link-content-element
-		fieldRequired = tx_adxtwitterbootstrap_link_content_element
-		noTrimWrap = | ||
-
-		append = USER
-		append {
-			userFunc = tx_t3jquery->addJS
-			jsdata = (function($){ $(document).ready(function(){ $(document).on('click', '.link-content-element', function(event){ var anchor = $(this).find('a:first'); if (anchor.length){ if (anchor.attr('target') == '_blank') { window.open($('base').attr('href') + $(anchor).attr('href')); } else { window.location.href = $('base').attr('href') + $(anchor).attr('href'); } return false; } }); }); })(jQuery);
-		}
+	# Include link content element if set.
+	headerData.1352997638 = USER
+	headerData.1352997638 {
+		userFunc = tx_t3jquery->addJS
+		jsdata = (function($){ $(document).ready(function(){ $(document).on('click', '.link-content-element', function(event){ var $anchor = $(this).find('a:first'); if ($anchor.length){ $anchor.attr('href', $anchor.attr('href').search(/^http/) === -1 ? $('base').attr('href') + $anchor.attr('href') : $anchor.attr('href')); if ($anchor.attr('target') == '_blank') { window.open($anchor.attr('href')); } else { window.location.href = $anchor.attr('href'); } return false; } }); }); })(jQuery);
+		stdWrap.if.isTrue = {$plugin.tx_adxtwitterbootstrap.common.alwaysIncludeLinkContentElement}
 	}
 
-	# Append clearfix if span is set to prevent overlapping next content element.
-	stdWrap.append = TEXT
-	stdWrap.append.value = <div class="clearfix"></div>
-	stdWrap.append.if.isTrue.field = tx_adxtwitterbootstrap_span
+	includeJSlibs {
 
-	66.1352997636 =< tt_content.stdWrap.innerWrap.cObject.default.20.1352997636
-	66.1352997637 =< tt_content.stdWrap.innerWrap.cObject.default.20.1352997637
-	66.1352997638 =< tt_content.stdWrap.innerWrap.cObject.default.20.1352997638
-	66.1352997639 =< tt_content.stdWrap.innerWrap.cObject.default.20.1352997639
-}
+		# Add html5shiv
+		html5shiv = https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js
+		html5shiv.external = 1
+		html5shiv.excludeFromConcatenation = 1
+		html5shiv.disableCompression = 1
+		html5shiv.forceOnTop = 1
+		html5shiv.allWrap = <!--[if lt IE 9]>|<![endif]-->
 
-
-/**
- * Add spans to images.
- */
-tt_content.image.20 {
-
-	1 {
-		params.append = TEXT
-		params.append.value = class="img-responsive"
-		params.append.if.isTrue.field = tx_adxtwitterbootstrap_image_responsive
-	}
-
-	rendering {
-
-		noCaption {
-			rowStdWrap.wrap = <div class="row textpic-imagerow"> | </div>
-			noRowsStdWrap.wrap = <div class="row textpic-imagerow textpic-imagerow-none"> | </div>
-			lastRowStdWrap.wrap = <div class="row textpic-imagerow textpic-imagerow-last"> | </div>
-			columnStdWrap.wrap = <div class="textpic-imagecolumn###CLASSES###"> | </div>
-		}
-
-		splitCaption {
-			rowStdWrap.wrap = <div class="row textpic-imagerow"> | </div>
-			noRowsStdWrap.wrap = <div class="row textpic-imagerow textpic-imagerow-none"> | </div>
-			lastRowStdWrap.wrap = <div class="row textpic-imagerow textpic-imagerow-last"> | </div>
-			columnStdWrap.wrap = <div class="textpic-imagecolumn###CLASSES###"> | </div>
-		}
-
-		globalCaption {
-			rowStdWrap.wrap = <div class="row textpic-imagerow"> | </div>
-			noRowsStdWrap.wrap = <div class="row textpic-imagerow textpic-imagerow-none"> | </div>
-			lastRowStdWrap.wrap = <div class="row textpic-imagerow textpic-imagerow-last"> | </div>
-			columnStdWrap.wrap = <div class="textpic-imagecolumn###CLASSES###"> | </div>
-		}
-	}
-
-	addClasses = csc-textpic-responsive
-	addClasses.if.isTrue.field = tx_adxtwitterbootstrap_image_responsive
-
-	addClassesCol.override {
-
-		if >
-		if.value = 0,0,0,0
-		if.equals.field = tx_adxtwitterbootstrap_image_columns
-		if.negate = 1
-
-		replacement {
-
-			10.search = csc-textpic-firstcol
-			10.replace.cObject = USER
-			10.replace.cObject.userFunc = AdGrafik\AdxTwitterBootstrap\UserFunc\Frontend->renderSpan
-			10.replace.cObject.pattern = col-%s-%s
-			10.replace.cObject.value.field = tx_adxtwitterbootstrap_image_column_span
-			10.replace.cObject.stdWrap.noTrimWrap = |textpic-firstcol  ||
-
-			20 < .10
-			20.search = csc-textpic-lastcol
-			20.replace.cObject.stdWrap.noTrimWrap = |textpic-lastcol ||
-
-			30 < .10
-			30.search = |*| |*|
-			30.replace.cObject.stdWrap.noTrimWrap = #|*| # |*|#
-		}
+		# Add respond
+		respond = https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js
+		respond.external = 1
+		respond.excludeFromConcatenation = 1
+		respond.disableCompression = 1
+		respond.forceOnTop = 1
+		respond.allWrap = <!--[if lt IE 9]>|<![endif]-->
 	}
 }
 
 
-/**
- * Fix css_styled_content CSS definitions for responsive image display.
- */
-plugin.tx_cssstyledcontent {
-	_CSS_DEFAULT_STYLE := replaceString(div.csc-textpic .csc-textpic-imagewrap .csc-textpic-image { margin-bottom:|div.csc-textpic .csc-textpic-imagewrap .csc-textpic-image img { margin: 0 auto)
-	_CSS_DEFAULT_STYLE := removeString(div.csc-textpic .csc-textpic-imagewrap figure, div.csc-textpic figure.csc-textpic-imagewrap { margin: 0; display: table; })
-	_CSS_DEFAULT_STYLE := removeString(div.csc-textpic-left .csc-textpic-imagewrap { float: left; })
-	_CSS_DEFAULT_STYLE := removeString(div.csc-textpic-center .csc-textpic-center-outer { position: relative; float: right; right: 50%; })
-	_CSS_DEFAULT_STYLE := removeString(div.csc-textpic-center .csc-textpic-center-inner { position: relative; float: right; right: -50%; })
+#
+# Additional content settings.
+#
+tt_content.stdWrap {
+
+	# Add container rows to content element which have a span or offset defined.
+	outerWrap = <div class="row"><div class="{register: columnClasses}"> | </div></div>
+	outerWrap.insertData = 1
+	outerWrap.if.value = 0,0,0,0-0,0,0,0
+	outerWrap.if.equals.dataWrap = {field: tx_adxtwitterbootstrap_span}-{field: tx_adxtwitterbootstrap_offset}
+	outerWrap.if.negate = 1
+
+	# Add span and offset support.
+	outerWrap.append = LOAD_REGISTER
+	outerWrap.append.columnClasses.cObject = COA
+	outerWrap.append.columnClasses.cObject {
+
+		# Render the span column classes.
+		10 = USER
+		10 {
+			userFunc = AdGrafik\AdxTwitterBootstrap\UserFunc\Frontend->renderColumnClasses
+			deviceSpan.field = tx_adxtwitterbootstrap_span
+		}
+
+		# Render the offset column classes.
+		20 = USER
+		20 {
+
+			userFunc = AdGrafik\AdxTwitterBootstrap\UserFunc\Frontend->renderColumnClasses
+
+			deviceSpan.field = tx_adxtwitterbootstrap_offset
+			format = col-%s-offset-%s
+
+			stdWrap.required = 1
+			stdWrap.noTrimWrap = | ||
+		}
+	}
+
+	# Add feature "Link content element with first found link".
+	innerWrap.cObject {
+
+		default.20 {
+
+			1352997640 = TEXT
+			1352997640 {
+
+				value = link-content-element
+				fieldRequired = tx_adxtwitterbootstrap_link_content_element
+				noTrimWrap = | ||
+
+				append = USER
+				append {
+					userFunc = tx_t3jquery->addJS
+					jsdata = (function($){ $(document).ready(function(){ $(document).on('click', '.link-content-element', function(event){ var $anchor = $(this).find('a:first'); if ($anchor.length){ $anchor.attr('href', $anchor.attr('href').search(/^http/) === -1 ? $('base').attr('href') + $anchor.attr('href') : $anchor.attr('href')); if ($anchor.attr('target') == '_blank') { window.open($anchor.attr('href')); } else { window.location.href = $anchor.attr('href'); } return false; } }); }); })(jQuery);
+					stdWrap.if.isFalse = {$plugin.tx_adxtwitterbootstrap.common.alwaysIncludeLinkContentElement}
+				}
+			}
+		}
+
+		1.20.1352997640 =< tt_content.stdWrap.innerWrap.cObject.default.20.1352997640
+		5.20.1352997640 =< tt_content.stdWrap.innerWrap.cObject.default.20.1352997640
+		6.20.1352997640 =< tt_content.stdWrap.innerWrap.cObject.default.20.1352997640
+		10.20.1352997640 =< tt_content.stdWrap.innerWrap.cObject.default.20.1352997640
+		11.20.1352997640 =< tt_content.stdWrap.innerWrap.cObject.default.20.1352997640
+		12.20.1352997640 =< tt_content.stdWrap.innerWrap.cObject.default.20.1352997640
+		20.20.1352997640 =< tt_content.stdWrap.innerWrap.cObject.default.20.1352997640
+		21.20.1352997640 =< tt_content.stdWrap.innerWrap.cObject.default.20.1352997640
+		66.20.1352997640 =< tt_content.stdWrap.innerWrap.cObject.default.20.1352997640
+	}
 }
 
 

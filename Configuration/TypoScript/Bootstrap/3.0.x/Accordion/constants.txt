@@ -2,6 +2,7 @@
 plugin.tx_adxtwitterbootstrap {
 
 	# activate Bootstrap animations
+	components.panels = 1
 	components.animations = 1
 
 	accordion {

@@ -1,6 +1,5 @@
 
 {namespace vh=Tx_Powermail_ViewHelpers}
-{namespace adx=AdGrafik\AdxTwitterBootstrap\ViewHelpers}
 
 <f:layout name="Default" />
 
@@ -21,7 +20,7 @@ Render Powermail Form
 
 					<div class="row">
 						<f:for each="{form.pages}" as="page">
-							<fieldset id="page_{page.uid}" class="page {page.layout} {page.css} {adx:spanParser( pattern: 'col-%s-offset-%s', ratio: '{page.offset}', breakpoint: '{page.offsetBreakpoint}' )} {adx:spanParser( ratio: '{page.span}', breakpoint: '{page.spanBreakpoint}', default: 'col-xs-12' )}">
+							<fieldset id="page_{page.uid}" class="page {page.layout} {page.css} {page.offsetClass} {page.spanClass}">
 								<f:if condition="{0: page.hideLegend} != {0: 'invisible'}">
 									<legend class="{f:if( condition: '{page.hideLegend}', then: 'sr-only' )}">{page.title -> vh:string.RawAndRemoveXss()}</legend>
 								</f:if>

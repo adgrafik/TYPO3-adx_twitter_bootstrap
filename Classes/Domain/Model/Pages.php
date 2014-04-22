@@ -114,6 +114,58 @@ class Pages extends \Tx_Powermail_Domain_Model_Pages {
 	}
 
 	/**
+	 * Set span
+	 *
+	 * @param string $span
+	 * @return \AdGrafik\AdxTwitterBootstrap\Domain\Model\Pages
+	 */
+	public function setSpan($span) {
+		$this->span = $span;
+		return $this;
+	}
+
+	/**
+	 * Get span
+	 *
+	 * @return string
+	 */
+	public function getSpan() {
+		return $this->span;
+	}
+
+	/**
+	 * Set spanBreakpoint
+	 *
+	 * @param string $spanBreakpoint
+	 * @return \AdGrafik\AdxTwitterBootstrap\Domain\Model\Pages
+	 */
+	public function setSpanBreakpoint($spanBreakpoint) {
+		$this->spanBreakpoint = $spanBreakpoint;
+		return $this;
+	}
+
+	/**
+	 * Get spanBreakpoint
+	 *
+	 * @return string
+	 */
+	public function getSpanBreakpoint() {
+		return $this->spanBreakpoint;
+	}
+
+	/**
+	 * Get span class
+	 *
+	 * @return string
+	 */
+	public function getSpanClass() {
+		$class = $this->getSpan()
+			? sprintf('col-%s-%s', $this->getSpanBreakpoint(), $this->getSpan())
+			: 'col-xs-12';
+		return $class;
+	}
+
+	/**
 	 * Set offset
 	 *
 	 * @param string $offset
@@ -154,43 +206,15 @@ class Pages extends \Tx_Powermail_Domain_Model_Pages {
 	}
 
 	/**
-	 * Set span
-	 *
-	 * @param string $span
-	 * @return \AdGrafik\AdxTwitterBootstrap\Domain\Model\Pages
-	 */
-	public function setSpan($span) {
-		$this->span = $span;
-		return $this;
-	}
-
-	/**
-	 * Get span
+	 * Get offset class
 	 *
 	 * @return string
 	 */
-	public function getSpan() {
-		return $this->span;
-	}
-
-	/**
-	 * Set spanBreakpoint
-	 *
-	 * @param string $spanBreakpoint
-	 * @return \AdGrafik\AdxTwitterBootstrap\Domain\Model\Pages
-	 */
-	public function setSpanBreakpoint($spanBreakpoint) {
-		$this->spanBreakpoint = $spanBreakpoint;
-		return $this;
-	}
-
-	/**
-	 * Get spanBreakpoint
-	 *
-	 * @return string
-	 */
-	public function getSpanBreakpoint() {
-		return $this->spanBreakpoint;
+	public function getOffsetClass() {
+		$class = $this->getOffset()
+			? sprintf('col-%s-offset-%s', $this->getOffsetBreakpoint(), $this->getOffset())
+			: '';
+		return $class;
 	}
 
 	/**
@@ -250,7 +274,31 @@ class Pages extends \Tx_Powermail_Domain_Model_Pages {
 	 * @return string
 	 */
 	public function getLabelToFieldRatioBreakpoint() {
-		return $this->labelToFieldRatioBreakpoint;
+		return $this->labelToFieldRatioBreakpoint ?: 'xs';
+	}
+
+	/**
+	 * Get labelToFieldRatio as array
+	 *
+	 * @return string
+	 */
+	public function getLabelToFieldRatioClass() {
+
+		$labelClass = $fieldClass = '';
+		$labelToFieldRatio = $this->getLabelToFieldRatio();
+
+		if (strpos($labelToFieldRatio, ':')) {
+			$labelToFieldRatio = \TYPO3\CMS\Core\Utility\GeneralUtility::intExplode(':', $labelToFieldRatio);
+			$labelClass = sprintf('col-%s-%s', $this->getLabelToFieldRatioBreakpoint(), $labelToFieldRatio[0]);
+			$fieldClass = sprintf('col-%s-%s', $this->getLabelToFieldRatioBreakpoint(), $labelToFieldRatio[1]);
+		}
+
+		$classes = array(
+			'label' => $labelClass,
+			'field' => $fieldClass,
+		);
+
+		return $classes;
 	}
 
 }

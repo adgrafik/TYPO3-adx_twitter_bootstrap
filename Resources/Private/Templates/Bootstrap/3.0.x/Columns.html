@@ -1,16 +1,32 @@
 
 {namespace t3jquery=Tx_T3jquery_ViewHelpers}
 
-<div class="{row.class}">
-	<f:for each="{columns}" as="column">
-		<div class="{column.class}">
-			{column.content -> f:format.raw()}
-		</div>
-		<f:if condition="{column.clear}">
-			<div class="{column.clear}"></div>
-		</f:if>
-	</f:for>
+<div id="row-{data.uid}" class="{classes}">
+	<f:if condition="{ type: '{data.CType}', layout: '{data.tx_gridelements_backend_layout}' } == { type: 'gridelements_pi1', layout: 'tx_adxtwitterbootstrap_twocolumns' }">
+		<f:render section="column" arguments="{ classes: '{column1Classes}', content: '{data.tx_gridelements_view_columns.0}', clear: '{clearAfterColumn1}' }" />
+		<f:render section="column" arguments="{ classes: '{column2Classes}', content: '{data.tx_gridelements_view_columns.1}' }" />
+	</f:if>
+	<f:if condition="{ type: '{data.CType}', layout: '{data.tx_gridelements_backend_layout}' } == { type: 'gridelements_pi1', layout: 'tx_adxtwitterbootstrap_threecolumns' }">
+		<f:render section="column" arguments="{ classes: '{column1Classes}', content: '{data.tx_gridelements_view_columns.0}', clear: '{clearAfterColumn1}' }" />
+		<f:render section="column" arguments="{ classes: '{column2Classes}', content: '{data.tx_gridelements_view_columns.1}', clear: '{clearAfterColumn2}' }" />
+		<f:render section="column" arguments="{ classes: '{column3Classes}', content: '{data.tx_gridelements_view_columns.2}' }" />
+	</f:if>
+	<f:if condition="{ type: '{data.CType}', layout: '{data.tx_gridelements_backend_layout}' } == { type: 'gridelements_pi1', layout: 'tx_adxtwitterbootstrap_fourcolumns' }">
+		<f:render section="column" arguments="{ classes: '{column1Classes}', content: '{data.tx_gridelements_view_columns.0}', clear: '{clearAfterColumn1}' }" />
+		<f:render section="column" arguments="{ classes: '{column2Classes}', content: '{data.tx_gridelements_view_columns.1}', clear: '{clearAfterColumn2}' }" />
+		<f:render section="column" arguments="{ classes: '{column3Classes}', content: '{data.tx_gridelements_view_columns.2}', clear: '{clearAfterColumn3}' }" />
+		<f:render section="column" arguments="{ classes: '{column4Classes}', content: '{data.tx_gridelements_view_columns.3}' }" />
+	</f:if>
 </div>
+
+<f:section name="column">
+	<div class="{classes}">
+		{content -> f:format.raw()}
+	</div>
+	<f:if condition="{clear}">
+		<div class="{clear}"></div>
+	</f:if>
+</f:section>
 
 <t3jquery:AddJQueryAndScript jsfile="EXT:adx_twitter_bootstrap/Resources/Public/JavaScript/Bootstrap/3.0.x/columns.js" />
 <t3jquery:AddJQueryAndScript>

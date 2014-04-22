@@ -26,7 +26,7 @@ namespace AdGrafik\AdxTwitterBootstrap\UserFunc;
  ***************************************************************/
 
 
-class Tca {
+class Backend {
 
 	/**
 	 * getSpanColumnFields
@@ -201,19 +201,6 @@ class Tca {
 		$formField .= '</span>';
 
 		return $formField;
-	}
-
-	/**
-	 * getSpanColumnFields
-	 *
-	 * @param array $parameters
-	 * @param string $content
-	 * @return string
-	 */
-	public function parseSpanClasses($parameters, $content) {
-		print_r($value);
-		print_r($escape);
-		return $content;
 	}
 
 }

@@ -1,44 +1,48 @@
 
 {namespace t3jquery=Tx_T3jquery_ViewHelpers}
+{namespace adx=AdGrafik\AdxTwitterBootstrap\ViewHelpers}
 
-<div id="accordion-{data.uid}" class="accordion panel-group {f:if( condition: layout, then: ' {layout}' )}">
-	<f:for each="{itemGroups}" as="items">
-		<div class="{f:if( condition: '{span} < 12', then: 'row' )}">
-			<f:for each="{items}" as="item">
-				<div class="panel-heading{f:if( condition: '{span} < 12', then: ' col-xs-{span}' )}">
-					<h4 class="panel-title">
-						<a class="{f:if( condition: '{active} == {key}', else: 'collapsed' )}" data-toggle="collapse" data-parent="{f:if( condition: '{collapsible}', then: '#accordion-{data.uid}' )}" href="{f:uri.page( additionalParams: { type: 1370426637, tx_adxtwitterbootstrap: { uid: '{item.uid}' } } )}#accordion-item-{item.uid}">{item.header}</a>
-					</h4>
-				</div>
-			</f:for>
-		</div>
-		<f:for each="{items}" key="key" as="item">
-			<div class="panel panel-default">
-				<div id="accordion-item-{item.uid}" class="panel-collapse collapse{f:if( condition: '{active} == {key}', then: ' in' )}">
+<div id="accordion-{data.uid}" class="{classes}">
+	<f:for each="{adx:groupArray( array: '{data.tx_gridelements_view_children}', modular: '{columns}' )}" as="row">
+		<div class="{panelClasses}">
+			<div class="panel-heading row">
+				<f:for each="{row}" key="key" as="column">
+					<div class="{headingClasses}{f:if( condition: '{active} == {key}', then: ' active' )}">
+						<a class="panel-toggle{f:if( condition: '{active} == {key}', else: ' collapsed' )}" data-toggle="collapse" data-parent="{f:if( condition: '{collapsible}', then: '#accordion-{data.uid}' )}" href="{f:uri.page( section: 'accordion-item-{column.uid}', additionalParams: { type: 1370426637, tx_adxtwitterbootstrap: { uid: '{column.uid}' } } )}">{column.header}</a>
+					</div>
+				</f:for>
+				<div class="clearfix"></div>
+			</div>
+			<f:for each="{row}" key="key" as="column">
+				<f:comment>Hack to force bootstraps CSS path ".panel-default > .panel-heading + .panel-collapse .panel-body" for "border-top"-attribute.</f:comment>
+				<f:if condition="{columns} > 1">
+					<div class="panel-heading hidden"></div>
+				</f:if>
+				<div id="accordion-item-{column.uid}" class="panel-collapse collapse{f:if( condition: '{active} == {key}', then: ' in' )}">
 					<div class="panel-body">
 						<f:if condition="{ajaxLoading}">
 							<f:then>
 								<f:if condition="{active} == {key}">
-									<f:cObject typoscriptObjectPath="tt_content" data="{item}" />
+									<f:cObject typoscriptObjectPath="tt_content" data="{column}" />
 								</f:if>
 							</f:then>
 							<f:else>
-								<f:cObject typoscriptObjectPath="tt_content" data="{item}" />
+								<f:cObject typoscriptObjectPath="tt_content" data="{column}" />
 							</f:else>
 						</f:if>
 					</div>
 				</div>
-			</div>
-		</f:for>
+			</f:for>
+		</div>
 	</f:for>
 </div>
 
 <t3jquery:AddJQueryAndScript renderChildrenToData="TRUE">
 	(function($){
 		var $accordion = $('#accordion-{data.uid}'),
-			slideToPosition = Boolean('{slideToPosition}'),
-			slideOffset = Number('{slideOffset}'),
-			ajaxLoading = Boolean('{ajaxLoading}');
+			slideToPosition = {slideToPosition},
+			slideOffset = {slideOffset},
+			ajaxLoading = {ajaxLoading};
 		if (slideToPosition){
 			$accordion.on('shown.bs.collapse', function(event){
 				$('html, body').animate({
@@ -46,6 +50,12 @@
 				}, 'slow');
 			});
 		}
+		$accordion.on('show.bs.collapse', function(event){
+			$accordion.find('.panel-toggle[href*=#' + $(event.target).get(0).id + ']').parent().addClass('active');
+		});
+		$accordion.on('hidden.bs.collapse', function(event){
+			$accordion.find('.panel-toggle[href*=#' + $(event.target).get(0).id + ']').parent().removeClass('active');
+		});
 		if (ajaxLoading){
 			$accordion.on('show.bs.collapse', function(event){
 				var $accordionPanel = $(event.target),

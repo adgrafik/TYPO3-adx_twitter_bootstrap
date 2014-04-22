@@ -1,22 +1,21 @@
 
 {namespace vh=Tx_Powermail_ViewHelpers}
-{namespace adx=AdGrafik\AdxTwitterBootstrap\ViewHelpers}
 
-<div id="powermail_fieldwrap_{field.uid}" class="powermail_fieldwrap powermail_fieldwrap_radio {field.css} {adx:spanParser( pattern: 'col-%s-offset-%s', ratio: '{field.offset}', breakpoint: '{field.offsetBreakpoint}' )} {adx:spanParser( ratio: '{field.span}', breakpoint: '{field.spanBreakpoint}', default: 'col-xs-12' )} {vh:Misc.ErrorClass(field: '{field}', class: 'powermail_field_error')}">
+<div id="powermail_fieldwrap_{field.uid}" class="powermail_fieldwrap powermail_fieldwrap_radio {field.css} {field.offsetClass} {field.spanClass} {vh:Misc.ErrorClass(field: '{field}', class: 'powermail_field_error')}">
 	<div class="form-group">
 		<f:if condition="{page.layout} == 'form-horizontal'">
 			<f:then>
 				<f:if condition="{0: field.hideLabel} != {0: 'invisible'}">
-					<label class="control-label {adx:spanParser( ratio: '{page.labelToFieldRatio}', breakpoint: '{page.labelToFieldRatioBreakpoint}' )}{f:if( condition: '{field.hideLabel}', then: ' sr-only' )}">{field.title -> vh:string.RawAndRemoveXss()}<f:if condition="{field.mandatory}"><span class="mandatory">*</span></f:if></label>
+					<label class="control-label {page.labelToFieldRatioClass.label}{f:if( condition: '{field.hideLabel}', then: ' sr-only' )}">{field.title -> vh:string.RawAndRemoveXss()}<f:if condition="{field.mandatory}"><span class="mandatory">*</span></f:if></label>
 				</f:if>
-				<div class="{adx:spanParser( ratio: '{page.labelToFieldRatio}', breakpoint: '{page.labelToFieldRatioBreakpoint}', column: 2 )}">
+				<div class="{page.labelToFieldRatioClass.field}">
 					<fieldset>
 						<f:if condition="{field.checkboxInline} > 0">
 							<div class="row">
 						</f:if>
 						<f:for each="{field.settings}" as="setting" iteration="loop">
 							<f:if condition="{field.checkboxInline} > 0">
-								<div class="{adx:spanParser( ratio: '{field.checkboxInline}', breakpoint: '{field.checkboxInlineBreakpoint}' )}">
+								<div class="{field.checkboxInlineClass}">
 							</f:if>
 							<f:if condition="{field.checkboxInline} != -1">
 								<div class="powermail_radio_inner_{loop.cycle} radio">
@@ -32,7 +31,7 @@
 								</div>
 								<f:if condition="{loop.cycle} != 1">
 									<f:if condition="{loop.cycle} != {loop.total}">
-										<f:if condition="{loop.cycle} % {adx:SpanToColumns( span: field.checkboxInline )}">
+										<f:if condition="{loop.cycle} % {field.checkboxInline}">
 											<f:else>
 												</div>
 												<div class="row">
@@ -56,7 +55,7 @@
 					<div class="{f:if( condition: '{field.checkboxInline} > 0', then: 'row' )}">
 						<f:for each="{field.settings}" as="setting" iteration="loop">
 							<f:if condition="{field.checkboxInline} > 0">
-								<div class="{adx:spanParser( ratio: '{field.checkboxInline}', breakpoint: '{field.checkboxInlineBreakpoint}' )}">
+								<div class="{field.checkboxInlineClass}">
 							</f:if>
 							<f:if condition="{field.checkboxInline} != -1">
 								<div class="powermail_radio_inner_{loop.cycle} radio">
@@ -72,7 +71,7 @@
 								</div>
 								<f:if condition="{loop.cycle} != 1">
 									<f:if condition="{loop.cycle} != {loop.total}">
-										<f:if condition="{loop.cycle} % {adx:SpanToColumns( span: field.checkboxInline )}">
+										<f:if condition="{loop.cycle} % {field.checkboxInline}">
 											<f:else>
 												</div>
 												<div class="row">

@@ -16,7 +16,7 @@
                             <displayCond>FIELD:tx_adxtwitterbootstrap_twocolumns_expert_mode:REQ:FALSE</displayCond>
                             <config type="array">
                                 <type>user</type>
-                                <userFunc>AdGrafik\AdxTwitterBootstrap\UserFunc\Tca->getSpanColumnFields</userFunc>
+                                <userFunc>AdGrafik\AdxTwitterBootstrap\UserFunc\Backend->getSpanColumnFields</userFunc>
                                 <parameters type="array">
                                     <segments type="array">
                                         <numIndex index="0">
@@ -48,17 +48,17 @@
                             </config>
                         </TCEforms>
                     </tx_adxtwitterbootstrap_twocolumns_span>
-                    <tx_adxtwitterbootstrap_twocolumns_span_column1 type="array">
+                    <tx_adxtwitterbootstrap_twocolumns_span_column0 type="array">
                         <TCEforms type="array">
                             <label>LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.columns.grid.span.column1</label>
                             <config type="array">
                                 <type>user</type>
-                                <userFunc>AdGrafik\AdxTwitterBootstrap\UserFunc\Tca->getSpanColumnFieldsExpert</userFunc>
+                                <userFunc>AdGrafik\AdxTwitterBootstrap\UserFunc\Backend->getSpanColumnFieldsExpert</userFunc>
                                 <default>0,6,0,0</default>
                             </config>
                         </TCEforms>
-                    </tx_adxtwitterbootstrap_twocolumns_span_column1>
-                    <tx_adxtwitterbootstrap_twocolumns_clear_column1 type="array">
+                    </tx_adxtwitterbootstrap_twocolumns_span_column0>
+                    <tx_adxtwitterbootstrap_twocolumns_clear_column0 type="array">
                         <TCEforms type="array">
                             <label>LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.columns.grid.clear.column1</label>
                             <displayCond>FIELD:tx_adxtwitterbootstrap_twocolumns_expert_mode:REQ:TRUE</displayCond>
@@ -85,17 +85,17 @@
                                 </items>
                             </config>
                         </TCEforms>
-                    </tx_adxtwitterbootstrap_twocolumns_clear_column1>
-                    <tx_adxtwitterbootstrap_twocolumns_span_column2 type="array">
+                    </tx_adxtwitterbootstrap_twocolumns_clear_column0>
+                    <tx_adxtwitterbootstrap_twocolumns_span_column1 type="array">
                         <TCEforms type="array">
                             <label>LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.columns.grid.span.column2</label>
                             <config type="array">
                                 <type>user</type>
-                                <userFunc>AdGrafik\AdxTwitterBootstrap\UserFunc\Tca->getSpanColumnFieldsExpert</userFunc>
+                                <userFunc>AdGrafik\AdxTwitterBootstrap\UserFunc\Backend->getSpanColumnFieldsExpert</userFunc>
                                 <default>0,6,0,0</default>
                             </config>
                         </TCEforms>
-                    </tx_adxtwitterbootstrap_twocolumns_span_column2>
+                    </tx_adxtwitterbootstrap_twocolumns_span_column1>
                     <tx_adxtwitterbootstrap_twocolumns_reverse_order type="array">
                         <TCEforms type="array">
                             <label>LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.columns.grid.reverseOrder</label>
@@ -199,7 +199,7 @@
 					<sheetTitle>LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.columns.visibility.sheetTitle</sheetTitle>
 				</TCEforms>
 				<el type="array">
-					<tx_adxtwitterbootstrap_twocolumns_hide_column1 type="array">
+					<tx_adxtwitterbootstrap_twocolumns_visibility_column0 type="array">
 						<TCEforms type="array">
 							<label>LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.columns.visibility.hideColumn1</label>
 							<config type="array">
@@ -225,8 +225,8 @@
 								</items>
 							</config>
 						</TCEforms>
-					</tx_adxtwitterbootstrap_twocolumns_hide_column1>
-					<tx_adxtwitterbootstrap_twocolumns_hide_column2 type="array">
+					</tx_adxtwitterbootstrap_twocolumns_visibility_column0>
+					<tx_adxtwitterbootstrap_twocolumns_visibility_column1 type="array">
 						<TCEforms type="array">
 							<label>LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.columns.visibility.hideColumn2</label>
 							<config type="array">
@@ -252,7 +252,7 @@
                                 </items>
 							</config>
 						</TCEforms>
-					</tx_adxtwitterbootstrap_twocolumns_hide_column2>
+					</tx_adxtwitterbootstrap_twocolumns_visibility_column1>
 				</el>
 			</ROOT>
 		</tx_adxtwitterbootstrap_twocolumns_visibility>
