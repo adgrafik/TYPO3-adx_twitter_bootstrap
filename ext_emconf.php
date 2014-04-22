@@ -3,7 +3,7 @@
 /***************************************************************
  * Extension Manager/Repository config file for ext "adx_twitter_bootstrap".
  *
- * Auto generated 03-02-2014 16:28
+ * Auto generated 22-04-2014 10:39
  *
  * Manual updates:
  * Only the data in the array - everything else is removed by next
@@ -15,7 +15,7 @@ $EM_CONF[$_EXTKEY] = array (
 	'description' => 'Twitter Bootstrap (http://twitter.github.com/bootstrap/)',
 	'category' => 'plugin',
 	'shy' => 0,
-	'version' => '1.1.0',
+	'version' => '1.1.1',
 	'dependencies' => 'cms,version,adx_less,gridelements',
 	'conflicts' => '',
 	'priority' => '',
