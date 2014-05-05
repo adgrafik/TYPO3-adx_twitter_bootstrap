@@ -76,8 +76,10 @@ tt_content.image.20 {
 				10 {
 					if {
 						isTrue.field = imagecaption
+						isTrue.override.data = file:current:description
 						value = 1
 						equals.data = register:imageCount
+						equals.override.data = register:imageCount
 					}
 					value = singleCaption
 				}
@@ -90,6 +92,7 @@ tt_content.image.20 {
 						isGreaterThan.data = register:imageCount
 						isTrue.if.isFalse.data = register:renderGlobalCaption
 						isTrue.field = imagecaption
+						isTrue.override.data = register:allImageCaptions
 					}
 					value = splitCaption
 				}
@@ -102,6 +105,7 @@ tt_content.image.20 {
 						isGreaterThan.data = register:imageCount
 						isTrue.if.isTrue.data = register:renderGlobalCaption
 						isTrue.field = imagecaption
+						isTrue.override.data = register:allImageCaptions
 					}
 					value = globalCaption
 				}
@@ -113,6 +117,7 @@ tt_content.image.20 {
 						value = 1
 						isGreaterThan.data = register:imageCount
 						isFalse.field = imagecaption
+						isFalse.override.data = register:allImageCaptions
 					}
 					value = noCaption
 				}
@@ -123,10 +128,11 @@ tt_content.image.20 {
 				innerWrap.cObject {
 					key.field = imageorient
 					# above-center
-					0 = TEXT
-					0.value = <div class="csc-textpic-center-outer"><div class="csc-textpic-center-inner"> | </div></div>
+					default = TEXT
+					default.value = <div class="csc-textpic-center-outer"><div class="csc-textpic-center-inner"> | </div></div>
+					0 < .default
 					# below-center
-					8 < .0
+					8 < .default
 				}
 			}
 			imgTagStdWrap.wrap = |
@@ -138,11 +144,11 @@ tt_content.image.20 {
 				override.if.isTrue.field = imageborder
 				override.prioriCalc = 1
 			}
-
-
-			singleStdWrap.wrap = <figure class="csc-textpic-image###CLASSES###" style="max-width: {register: maxImageWidth}px;"> @ </figure>
-			singleStdWrap.wrap.splitChar = @
-			singleStdWrap.insertData = 1
+			singleStdWrap {
+				wrap = <figure class="csc-textpic-image###CLASSES###" style="max-width: {register: maxImageWidth}px;"> @ </figure>
+				wrap.splitChar = @
+				insertData = 1
+			}
 			rowStdWrap.wrap = |
 			noRowsStdWrap.wrap = |
 			lastRowStdWrap.wrap = |
@@ -157,53 +163,48 @@ tt_content.image.20 {
 			allStdWrap.wrap = <div class="csc-textpic-imagewrap"> | </div>
 			singleStdWrap.wrap = <figure class="csc-textpic-image###CLASSES###" style="max-width: {register: maxImageWidth}px;"> @ </figure>
 			rowStdWrap.wrap = <div class="csc-textpic-imagerow row"> | </div>
-			rowStdWrap.insertData = 1
 			noRowsStdWrap.wrap = <div class="csc-textpic-imagerow csc-textpic-imagerow-none row"> | </div>
-			noRowsStdWrap.insertData = 1
 			lastRowStdWrap.wrap = <div class="csc-textpic-imagerow csc-textpic-imagerow-last row"> | </div>
-			lastRowStdWrap.insertData = 1
-			columnStdWrap.wrap = <div class="csc-textpic-imagecolumn###CLASSES###"> | </div>
+			columnStdWrap {
+				if.isTrue.current = 1
+				wrap = <div class="csc-textpic-imagecolumn###CLASSES###"> | </div>
+			}
 		}
 		singleCaption {
 			# Just one image with a caption
 			fallbackRendering < tt_content.image.20.rendering.singleNoCaption.fallbackRendering.10
 			singleStdWrap.wrap = <figure class="csc-textpic-image###CLASSES###" style="max-width: {register: maxImageWidth}px;"> @ ###CAPTION###</figure>
-			caption {
-				required = 1
-				wrap = <figcaption class="csc-textpic-caption###CLASSES###"> | </figcaption>
-			}
+			caption.wrap = <figcaption class="csc-textpic-caption###CLASSES###"> | </figcaption>
 		}
 		splitCaption {
 			fallbackRendering < tt_content.image.20.rendering.singleNoCaption.fallbackRendering.10
 			singleStdWrap.wrap = <figure class="csc-textpic-image###CLASSES###" style="max-width: {register: maxImageWidth}px;"> @ ###CAPTION###</figure>
 			rowStdWrap.wrap = <div class="csc-textpic-imagerow row"> | </div>
-			rowStdWrap.insertData = 1
 			noRowsStdWrap.wrap = <div class="csc-textpic-imagerow csc-textpic-imagerow-none row"> | </div>
 			lastRowStdWrap.wrap = <div class="csc-textpic-imagerow csc-textpic-imagerow-last row"> | </div>
-			lastRowStdWrap.insertData = 1
-			columnStdWrap.wrap = <div class="csc-textpic-imagecolumn###CLASSES###"> | </div>
-			caption {
-				required = 1
-				wrap = <figcaption class="csc-textpic-caption###CLASSES###"> | </figcaption>
+			columnStdWrap {
+				if.isTrue.current = 1
+				wrap = <div class="csc-textpic-imagecolumn###CLASSES###"> | </div>
 			}
+			caption.wrap = <figcaption class="csc-textpic-caption###CLASSES###"> | </figcaption>
 		}
 		globalCaption {
 			# Just one image without a caption
 			fallbackRendering < tt_content.image.20.rendering.singleNoCaption.fallbackRendering.10
-			allStdWrap.wrap = <figure class="csc-textpic-imagewrap" style="max-width: {register: maxImageWidth}px;"> @ ###CAPTION###</figure>
-			allStdWrap.wrap.splitChar = @
-			allStdWrap.insertData = 1
+			allStdWrap {
+				wrap = <figure class="csc-textpic-imagewrap" style="max-width: {register: maxImageWidth}px;"> @ ###CAPTION###</figure>
+				wrap.splitChar = @
+				insertData = 1
+			}
 			singleStdWrap.wrap = <div class="csc-textpic-image###CLASSES###"> @ </div>
 			rowStdWrap.wrap = <div class="csc-textpic-imagerow row"> | </div>
 			noRowsStdWrap.wrap = <div class="csc-textpic-imagerow csc-textpic-imagerow-none row"> | </div>
-			noRowsStdWrap.insertData = 1
 			lastRowStdWrap.wrap = <div class="csc-textpic-imagerow csc-textpic-imagerow-last row"> | </div>
-			lastRowStdWrap.insertData = 1
-			columnStdWrap.wrap = <div class="csc-textpic-imagecolumn###CLASSES###"> | </div>
-			caption {
-				required = 1
-				wrap = <figcaption class="csc-textpic-caption###CLASSES###"> | </figcaption>
+			columnStdWrap {
+				if.isTrue.current = 1
+				wrap = <div class="csc-textpic-imagecolumn###CLASSES###"> | </div>
 			}
+			caption.wrap = <figcaption class="csc-textpic-caption###CLASSES###"> | </figcaption>
 		}
 	}
 }

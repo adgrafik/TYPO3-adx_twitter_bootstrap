@@ -120,7 +120,7 @@ lib.tx_adxtwitterbootstrap {
 		itemClasses = COA
 		itemClasses {
 			10 = TEXT
-			10.value = {$plugin.tx_adxtwitterbootstrap.variables.gridColumns}
+			10.value = {$plugin.tx_adxtwitterbootstrap.variables.grid-columns}
 			10.fieldRequired = span
 			10.noTrimWrap = | span||
 		}
@@ -143,7 +143,7 @@ lib.tx_adxtwitterbootstrap {
 			# Reset counter if total columns reached.
 			30 = TEXT
 			30 {
-				if.value = {$plugin.tx_adxtwitterbootstrap.variables.gridColumns} - 1
+				if.value = {$plugin.tx_adxtwitterbootstrap.variables.grid-columns} - 1
 				if.value.prioriCalc = 1
 
 				if.isGreaterThan.data = register: countSpan
@@ -185,11 +185,11 @@ lib.tx_adxtwitterbootstrap {
 			# Reset counter if total columns reached.
 			30 = TEXT
 			30 {
-				if.value = {$plugin.tx_adxtwitterbootstrap.variables.gridColumns} - 1
+				if.value = {$plugin.tx_adxtwitterbootstrap.variables.grid-columns} - 1
 				if.value.prioriCalc = 1
 
 				if.isGreaterThan.data = register: countControlSpan
-				if.isGreaterThan.override = {$plugin.tx_adxtwitterbootstrap.variables.gridColumns}
+				if.isGreaterThan.override = {$plugin.tx_adxtwitterbootstrap.variables.grid-columns}
 				if.isGreaterThan.override.if.value = columnFull,columnHalfSingleRow,columnThirdSingleRow,columnTwoThirdSingleRow,columnQuarterSingleRow,columnTwoQuarterSingleRow,columnThreeQuarterSingleRow
 				if.isGreaterThan.override.if.isInList.field = css
 
