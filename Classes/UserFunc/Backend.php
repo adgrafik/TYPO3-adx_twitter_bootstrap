@@ -133,7 +133,7 @@ class Backend {
 		$fieldDevicesClass = 'tx-adxtwitterbootstrap-device';
 		$onchange = htmlspecialchars(implode('', $parameters['fieldChangeFunc']));
 
-		$formField  = '<span class="t3-form-palette-field-container">';
+		$formField  = '<span class="t3-form-palette-field-container" style="display: block;">';
 		$formField .= '<label class="t3-form-palette-field-label class-main3">' . \TYPO3\CMS\Extbase\Utility\LocalizationUtility::translate('LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.columns.grid.span.' . $type, 'adx_twitter_bootstrap') . '</label>';
 		$formField .= '<span class="t3-form-palette-field class-main5"><div class="t3-form-field-item">';
 		$formField .= '<select class="select ' . $fieldDevicesClass . '" onchange="' . $onchange . '">';
