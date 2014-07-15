@@ -51,7 +51,7 @@ plugin.tx_gridelements_pi1.setup {
 
 						userFunc = AdGrafik\AdxTwitterBootstrap\UserFunc\Frontend->renderVisibilityClasses
 
-						visibility.field = flexform_tx_adxtwitterbootstrap_twocolumns_hide_column0
+						visibility.field = flexform_tx_adxtwitterbootstrap_twocolumns_visibility_column0
 
 						stdWrap.required = 1
 						stdWrap.noTrimWrap = | ||
@@ -69,7 +69,7 @@ plugin.tx_gridelements_pi1.setup {
 				# Set classes for the columns.
 				column2Classes < .column1Classes
 				column2Classes.10.deviceSpan.field = flexform_tx_adxtwitterbootstrap_twocolumns_span_column1
-				column2Classes.20.visibility.field = flexform_tx_adxtwitterbootstrap_twocolumns_hide_column1
+				column2Classes.20.visibility.field = flexform_tx_adxtwitterbootstrap_twocolumns_visibility_column1
 			}
 		}
 	}
@@ -81,12 +81,12 @@ plugin.tx_gridelements_pi1.setup {
 	tx_adxtwitterbootstrap_threecolumns.cObject.variables {
 
 		column1Classes.10.deviceSpan.field = flexform_tx_adxtwitterbootstrap_threecolumns_span_column0
-		column1Classes.20.visibility.field = flexform_tx_adxtwitterbootstrap_threecolumns_hide_column0
+		column1Classes.20.visibility.field = flexform_tx_adxtwitterbootstrap_threecolumns_visibility_column0
 
 		clearAfterColumn1.clear.field = flexform_tx_adxtwitterbootstrap_threecolumns_clear_column0
 
 		column2Classes.10.deviceSpan.field = flexform_tx_adxtwitterbootstrap_threecolumns_span_column1
-		column2Classes.20.visibility.field = flexform_tx_adxtwitterbootstrap_threecolumns_hide_column1
+		column2Classes.20.visibility.field = flexform_tx_adxtwitterbootstrap_threecolumns_visibility_column1
 
 		# Add clear after second column.
 		clearAfterColumn2 < .clearAfterColumn1
@@ -95,7 +95,7 @@ plugin.tx_gridelements_pi1.setup {
 		# Add third column.
 		column3Classes < .column2Classes
 		column3Classes.10.deviceSpan.field = flexform_tx_adxtwitterbootstrap_threecolumns_span_column2
-		column3Classes.20.visibility.field = flexform_tx_adxtwitterbootstrap_threecolumns_hide_column2
+		column3Classes.20.visibility.field = flexform_tx_adxtwitterbootstrap_threecolumns_visibility_column2
 	}
 
 	#
@@ -105,17 +105,17 @@ plugin.tx_gridelements_pi1.setup {
 	tx_adxtwitterbootstrap_fourcolumns.cObject.variables {
 
 		column1Classes.10.deviceSpan.field = flexform_tx_adxtwitterbootstrap_fourcolumns_span_column0
-		column1Classes.20.visibility.field = flexform_tx_adxtwitterbootstrap_fourcolumns_hide_column0
+		column1Classes.20.visibility.field = flexform_tx_adxtwitterbootstrap_fourcolumns_visibility_column0
 
 		clearAfterColumn1.clear.field = flexform_tx_adxtwitterbootstrap_fourcolumns_clear_column0
 
 		column2Classes.10.deviceSpan.field = flexform_tx_adxtwitterbootstrap_fourcolumns_span_column1
-		column2Classes.20.visibility.field = flexform_tx_adxtwitterbootstrap_fourcolumns_hide_column1
+		column2Classes.20.visibility.field = flexform_tx_adxtwitterbootstrap_fourcolumns_visibility_column1
 
 		clearAfterColumn2.clear.field = flexform_tx_adxtwitterbootstrap_fourcolumns_clear_column1
 
 		column3Classes.10.deviceSpan.field = flexform_tx_adxtwitterbootstrap_fourcolumns_span_column2
-		column3Classes.20.visibility.field = flexform_tx_adxtwitterbootstrap_fourcolumns_hide_column2
+		column3Classes.20.visibility.field = flexform_tx_adxtwitterbootstrap_fourcolumns_visibility_column2
 
 		# Add clear after third column.
 		clearAfterColumn3 < .clearAfterColumn1
@@ -124,6 +124,6 @@ plugin.tx_gridelements_pi1.setup {
 		# Add fourth column.
 		column4Classes < .column3Classes
 		column4Classes.10.deviceSpan.field = flexform_tx_adxtwitterbootstrap_fourcolumns_span_column3
-		column4Classes.20.visibility.field = flexform_tx_adxtwitterbootstrap_fourcolumns_hide_column3
+		column4Classes.20.visibility.field = flexform_tx_adxtwitterbootstrap_fourcolumns_visibility_column3
 	}
 }
