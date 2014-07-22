@@ -5,9 +5,7 @@ $extensionConfiguration = unserialize($GLOBALS['TYPO3_CONF_VARS']['EXT']['extCon
 
 // Add TypoScript gridelements patch.
 $versionGridelements = \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::getExtensionVersion('gridelements');
-if (version_compare($versionGridelements, '2.0.0', '>=')) {
-	\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile($_EXTKEY, 'Configuration/TypoScript/GridelementsPatch/2.0.x/', 'ad: Bootstrap patch for gridelements');
-}
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile($_EXTKEY, 'Configuration/TypoScript/GridelementsPatch/2.0.x/', 'ad: Bootstrap patch for gridelements');
 
 /**
  * Add-ons for tt_content
@@ -41,7 +39,7 @@ $tempColumns = array(
 		'exclude' => 1,
 		'config' => array(
 			'type' => 'user',
-			'default' => '0,0,0,0',
+			'default' => '-1,-1,-1,-1',
 			'userFunc' => 'AdGrafik\AdxTwitterBootstrap\UserFunc\Backend->getSpanColumnFieldsExpert',
 		),
 	),
@@ -50,7 +48,8 @@ $tempColumns = array(
 		'exclude' => 1,
 		'config' => array(
 			'type' => 'user',
-			'default' => '0,0,0,0',
+			'default' => '-1,-1,-1,-1',
+			'startAt' => 0,
 			'userFunc' => 'AdGrafik\AdxTwitterBootstrap\UserFunc\Backend->getSpanColumnFieldsExpert',
 		),
 	),
@@ -152,7 +151,7 @@ if ($extensionConfiguration['extensions.']['activatePowermail'] && \TYPO3\CMS\Co
 			'exclude' => 1,
 			'config' => array(
 				'type' => 'user',
-				'default' => '0,0,0,0',
+				'default' => '-1,-1,-1,-1',
 				'userFunc' => 'AdGrafik\AdxTwitterBootstrap\UserFunc\Backend->getSpanColumnFieldsExpert',
 			),
 		),
@@ -161,7 +160,8 @@ if ($extensionConfiguration['extensions.']['activatePowermail'] && \TYPO3\CMS\Co
 			'exclude' => 1,
 			'config' => array(
 				'type' => 'user',
-				'default' => '0,0,0,0',
+				'default' => '-1,-1,-1,-1',
+				'startAt' => 1,
 				'userFunc' => 'AdGrafik\AdxTwitterBootstrap\UserFunc\Backend->getSpanColumnFieldsExpert',
 			),
 		),

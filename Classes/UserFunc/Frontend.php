@@ -102,7 +102,8 @@ class Frontend {
 		$reverseOrder = $this->cObj->stdWrap($parameters['reverseOrder'], $parameters['reverseOrder.']);
 		$format = $this->cObj->stdWrap($parameters['format'], $parameters['format.']) ?: 'col-%s-%s';
 		$forceMaxSpan = $this->cObj->stdWrap($parameters['forceMaxSpan'], $parameters['forceMaxSpan.']);
-		$deviceSpanAsString = $this->cObj->stdWrap($parameters['deviceSpan'], $parameters['deviceSpan.']) ?: '0,0,0,0';
+		$forceMinSpan = (boolean) $this->cObj->stdWrap($parameters['forceMinSpan'], $parameters['forceMinSpan.']);
+		$deviceSpanAsString = $this->cObj->stdWrap($parameters['deviceSpan'], $parameters['deviceSpan.']) ?: '-1,-1,-1,-1';
 		$deviceSpan = $this->resolveSpanByDevice($deviceSpanAsString);
 
 		if (isset($deviceSpan[$forceMaxSpan])) {
@@ -127,7 +128,7 @@ class Frontend {
 		foreach ($deviceSpan as $device => $span) {
 
 			// Add span class for current device.
-			if ($span) {
+			if ($forceMinSpan === FALSE && $span > 0 || $forceMinSpan && $span >= 0) {
 				$classes[] = sprintf($format, $device, $span);
 			}
 
@@ -136,7 +137,7 @@ class Frontend {
 				$reverseAt = $reverseOrder;
 			}
 
-			// No pull and push needed if span is 0 or no reverse is set.
+			// No pull and push needed if span is -1 or no reverse is set.
 			if ($span === 0 || $reverseAt === NULL) {
 				continue;
 			}

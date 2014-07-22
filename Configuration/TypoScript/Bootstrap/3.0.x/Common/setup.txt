@@ -782,8 +782,8 @@ tt_content.stdWrap {
 	# Add container rows to content element which have a span or offset defined.
 	outerWrap = <div class="row"><div class="{register: columnClasses}"> | </div></div>
 	outerWrap.insertData = 1
-	outerWrap.if.value = 0,0,0,0-0,0,0,0
-	outerWrap.if.equals.dataWrap = {field: tx_adxtwitterbootstrap_span}-{field: tx_adxtwitterbootstrap_offset}
+	outerWrap.if.value = -1,-1,-1,-1#-1,-1,-1,-1
+	outerWrap.if.equals.dataWrap = {field: tx_adxtwitterbootstrap_span}#{field: tx_adxtwitterbootstrap_offset}
 	outerWrap.if.negate = 1
 
 	# Add span and offset support.
@@ -806,6 +806,7 @@ tt_content.stdWrap {
 
 			deviceSpan.field = tx_adxtwitterbootstrap_offset
 			format = col-%s-offset-%s
+			forceMinSpan = 1
 
 			stdWrap.required = 1
 			stdWrap.noTrimWrap = | ||

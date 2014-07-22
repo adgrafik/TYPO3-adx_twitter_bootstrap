@@ -125,16 +125,16 @@ class Backend {
 	 * getDeviceSelectField
 	 *
 	 * @param array $parameters
-	 * @param string $type
+	 * @param string $device
 	 * @return string
 	 */
-	private function getDeviceSelectField($parameters, $type) {
+	private function getDeviceSelectField($parameters, $device) {
 
 		$fieldDevicesClass = 'tx-adxtwitterbootstrap-device';
 		$onchange = htmlspecialchars(implode('', $parameters['fieldChangeFunc']));
 
 		$formField  = '<span class="t3-form-palette-field-container" style="display: block;">';
-		$formField .= '<label class="t3-form-palette-field-label class-main3">' . \TYPO3\CMS\Extbase\Utility\LocalizationUtility::translate('LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.columns.grid.span.' . $type, 'adx_twitter_bootstrap') . '</label>';
+		$formField .= '<label class="t3-form-palette-field-label class-main3">' . \TYPO3\CMS\Extbase\Utility\LocalizationUtility::translate('LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.columns.grid.span.' . $device, 'adx_twitter_bootstrap') . '</label>';
 		$formField .= '<span class="t3-form-palette-field class-main5"><div class="t3-form-field-item">';
 		$formField .= '<select class="select ' . $fieldDevicesClass . '" onchange="' . $onchange . '">';
 
@@ -158,10 +158,10 @@ class Backend {
 	 */
 	public function getSpanColumnFieldsExpert($parameters, \TYPO3\CMS\Backend\Form\FormEngine $formEngine) {
 
-		$valueXs = preg_replace('/([0-9]+),[0-9]+,[0-9]+,[0-9]+/', '$1', $parameters['itemFormElValue']);
-		$valueSm = preg_replace('/[0-9]+,([0-9]+),[0-9]+,[0-9]+/', '$1', $parameters['itemFormElValue']);
-		$valueMd = preg_replace('/[0-9]+,[0-9]+,([0-9]+),[0-9]+/', '$1', $parameters['itemFormElValue']);
-		$valueLg = preg_replace('/[0-9]+,[0-9]+,[0-9]+,([0-9]+)/', '$1', $parameters['itemFormElValue']);
+		$valueXs = preg_replace('/(-?\d+),-?\d+,-?\d+,-?\d+/', '$1', $parameters['itemFormElValue']);
+		$valueSm = preg_replace('/-?\d+,(-?\d+),-?\d+,-?\d+/', '$1', $parameters['itemFormElValue']);
+		$valueMd = preg_replace('/-?\d+,-?\d+,(-?\d+),-?\d+/', '$1', $parameters['itemFormElValue']);
+		$valueLg = preg_replace('/-?\d+,-?\d+,-?\d+,(-?\d+)/', '$1', $parameters['itemFormElValue']);
 
 		$fieldColumnsClass = 'tx-adxtwitterbootstrap-columns'; // Class of all column fields of expert mode.
 
@@ -178,21 +178,22 @@ class Backend {
 	 * getDeviceSelectField
 	 *
 	 * @param array $parameters
-	 * @param string $type
+	 * @param string $device
 	 * @param integer $value
 	 * @return string
 	 */
-	private function getDeviceSelectFieldExpert($parameters, $type, $value) {
+	private function getDeviceSelectFieldExpert($parameters, $device, $value) {
 
+		$startAt = isset($parameters['fieldConf']['config']['startAt']) ? intval($parameters['fieldConf']['config']['startAt']) : 1;
 		$fieldDevicesClass = 'tx-adxtwitterbootstrap-device-' . md5($parameters['itemFormElID']);
 		$onchange = 'var fieldValues = []; TYPO3.jQuery(\'.' . $fieldDevicesClass . '\').each(function(index, element){ if (element.value) fieldValues.push(element.value); }); document.editform[\'' . $parameters['itemFormElName'] . '\'].value = fieldValues.join(\',\');' . htmlspecialchars(implode('', $parameters['fieldChangeFunc']));
 
 		$formField  = '<span class="tx-adxtwitterbootstrap-span-column t3-form-palette-field-container">';
-		$formField .= '<label class="t3-form-palette-field-label class-main3">' . \TYPO3\CMS\Extbase\Utility\LocalizationUtility::translate('LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.columns.grid.span.' . $type, 'adx_twitter_bootstrap') . '</label>';
+		$formField .= '<label class="t3-form-palette-field-label class-main3">' . \TYPO3\CMS\Extbase\Utility\LocalizationUtility::translate('LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.columns.grid.span.' . $device, 'adx_twitter_bootstrap') . '</label>';
 		$formField .= '<span class="t3-form-palette-field class-main5"><div class="t3-form-field-item">';
 		$formField .= '<select class="select ' . $fieldDevicesClass . '" onchange="' . $onchange . '">';
-		$formField .= '<option value="0">' . \TYPO3\CMS\Extbase\Utility\LocalizationUtility::translate('LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.columns.grid.span.inherit', 'adx_twitter_bootstrap') . '</option>';
-		for ($i=1; $i <= 12; $i++) {
+		$formField .= '<option value="-1">' . \TYPO3\CMS\Extbase\Utility\LocalizationUtility::translate('LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.columns.grid.span.inherit', 'adx_twitter_bootstrap') . '</option>';
+		for ($i = $startAt; $i <= 12; $i++) {
 			$label = \TYPO3\CMS\Extbase\Utility\LocalizationUtility::translate('LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.columns.grid.span', 'adx_twitter_bootstrap', array($i));
 			$formField .= '<option value="' . $i . '"' . ($i == $value ? ' selected="selected"' : '') . '>' . $label . '</option>';
 		}

@@ -1,3 +1,15 @@
+
+1.1.2
+	[BUGFIX] Fixed wrong field name in columns visibility.
+	[BUGFIX] Fixed run in fields in backend form.
+	[BUGFIX] Fixed TypoScript un-substituted constants.
+	[BUGFIX] Fixed missing default in CASE object.
+	[BUGFIX] Fixed empty last cells in column view.
+	[TASK] Made captions 6.2 ready.
+	[TASK] Updated bootstrap less files to v3.0.3.
+	[TASK] Changed span and offset value from "0" or "" (< 1.1.0) and from "0,0,0,0" (> 1.1.1) to "-1,-1,-1,-1" so offset can be reset to "0" if smaler devices are set. Use ext_tables_update.sql to update database.
+
+
 1.1.1
 	[TASK] Changed FlexForm fieldnames for easy using in loops. Use ext_tables_update.sql to update from 1.0.0.
 	[TASK] Changed components rendering to FLUIDTEMPLATE for more flexibility.

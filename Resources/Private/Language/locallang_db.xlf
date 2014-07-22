@@ -163,7 +163,7 @@
                 <source>Inherit</source>
             </trans-unit>
             <trans-unit id="flexform.columns.grid.span" xml:space="preserve">
-                <source>Span %s</source>
+                <source>Span %2d</source>
             </trans-unit>
             <trans-unit id="flexform.columns.grid.clear.column1" xml:space="preserve">
                 <source>Clear after 1st Column</source>

@@ -50,7 +50,7 @@
 							<config type="array">
 								<type>user</type>
 								<userFunc>AdGrafik\AdxTwitterBootstrap\UserFunc\Backend->getSpanColumnFieldsExpert</userFunc>
-                                <default>0,0,4,0</default>
+                                <default>-1,-1,4,-1</default>
 							</config>
 						</TCEforms>
 					</tx_adxtwitterbootstrap_threecolumns_span_column0>
@@ -88,7 +88,7 @@
 							<config type="array">
 								<type>user</type>
 								<userFunc>AdGrafik\AdxTwitterBootstrap\UserFunc\Backend->getSpanColumnFieldsExpert</userFunc>
-                                <default>0,0,4,0</default>
+                                <default>-1,-1,4,-1</default>
 							</config>
 						</TCEforms>
 					</tx_adxtwitterbootstrap_threecolumns_span_column1>
@@ -126,7 +126,7 @@
 							<config type="array">
 								<type>user</type>
 								<userFunc>AdGrafik\AdxTwitterBootstrap\UserFunc\Backend->getSpanColumnFieldsExpert</userFunc>
-                                <default>0,0,4,0</default>
+                                <default>-1,-1,4,-1</default>
 							</config>
 						</TCEforms>
 					</tx_adxtwitterbootstrap_threecolumns_span_column2>

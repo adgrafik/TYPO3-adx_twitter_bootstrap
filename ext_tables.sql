@@ -3,8 +3,8 @@
 # Table structure for table 'tt_content'
 #
 CREATE TABLE tt_content (
-	tx_adxtwitterbootstrap_span varchar(16) NOT NULL DEFAULT '0,0,0,0',
-	tx_adxtwitterbootstrap_offset varchar(16) NOT NULL DEFAULT '0,0,0,0',
+	tx_adxtwitterbootstrap_span varchar(16) NOT NULL DEFAULT '-1,-1,-1,-1',
+	tx_adxtwitterbootstrap_offset varchar(16) NOT NULL DEFAULT '-1,-1,-1,-1',
 	tx_adxtwitterbootstrap_link_content_element tinyint(4) DEFAULT '0' NOT NULL,
 	tx_adxtwitterbootstrap_image_style varchar(16) NOT NULL DEFAULT '',
 	tx_adxtwitterbootstrap_image_responsive tinyint(4) DEFAULT '0' NOT NULL,
@@ -16,8 +16,8 @@ CREATE TABLE tt_content (
 # Table structure for table 'tx_powermail_domain_model_forms'
 #
 CREATE TABLE tx_powermail_domain_model_forms (
-	tx_adxtwitterbootstrap_span varchar(16) NOT NULL DEFAULT '0,0,0,0',
-	tx_adxtwitterbootstrap_offset varchar(16) NOT NULL DEFAULT '0,0,0,0',
+	tx_adxtwitterbootstrap_span varchar(16) NOT NULL DEFAULT '-1,-1,-1,-1',
+	tx_adxtwitterbootstrap_offset varchar(16) NOT NULL DEFAULT '-1,-1,-1,-1',
 );
 
 #

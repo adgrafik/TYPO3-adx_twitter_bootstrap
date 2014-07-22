@@ -1,4 +1,13 @@
 
+# cat=versions; type=options[3.1.x,3.0.x]; label=Bootstrap Version
+versions.bootstrap = 3.1.x
+
+# cat=versions; type=options[1.2.x]; label=Bootstrap Datepicker Version
+versions.bootstrapDatepicker = 1.2.x
+
+# cat=versions; type=options[≥ 2.0.10=2.0.10]; label=Powermail Version
+versions.powermail = 2.0.10
+
 # cat=components; type=boolean; label=Activate Responsive Image: Activate responsive image for the backend. (Static TypoScript have to be activated additionally.)
 components.activateResponsiveImage = 1
 
