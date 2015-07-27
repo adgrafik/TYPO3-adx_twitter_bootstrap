@@ -30,8 +30,11 @@
             <trans-unit id="tx_adxtwitterbootstrap_ratio.3414" xml:space="preserve">
                 <source>9 : 3 Columns (3/4 : 1/4)</source>
             </trans-unit>
-            <trans-unit id="tx_adxtwitterbootstrap_breakpoint" xml:space="preserve">
-                <source>Breakpoint</source>
+            <trans-unit id="tx_adxtwitterbootstrap_span_breakpoint" xml:space="preserve">
+                <source>Span Breakpoint</source>
+            </trans-unit>
+            <trans-unit id="tx_adxtwitterbootstrap_offset_breakpoint" xml:space="preserve">
+                <source>Offset Breakpoint</source>
             </trans-unit>
             <trans-unit id="tx_adxtwitterbootstrap_breakpoint.xs" xml:space="preserve">
                 <source>None</source>
@@ -79,9 +82,9 @@
                 <source>Label to Field Ratio</source>
             </trans-unit>
 
-			<trans-unit id="tx_adxtwitterbootstrap_placeholder" xml:space="preserve">
-				<source>Placeholder</source>
-			</trans-unit>
+            <trans-unit id="tx_adxtwitterbootstrap_placeholder" xml:space="preserve">
+                <source>Placeholder</source>
+            </trans-unit>
 			<trans-unit id="tx_adxtwitterbootstrap_span" xml:space="preserve">
 				<source>Span</source>
 			</trans-unit>
@@ -103,6 +106,9 @@
 			</trans-unit>
 			<trans-unit id="tx_adxtwitterbootstrap_element_size" xml:space="preserve">
 				<source>Display Size</source>
+			</trans-unit>
+			<trans-unit id="tx_adxtwitterbootstrap_element_size.inherit" xml:space="preserve">
+				<source>Inherit from page settings</source>
 			</trans-unit>
 			<trans-unit id="tx_adxtwitterbootstrap_element_size.default" xml:space="preserve">
 				<source>Default</source>

@@ -106,6 +106,9 @@
             <trans-unit id="plugin.tx_adxtwitterbootstrap.components.panels" xml:space="preserve">
                 <source>Panels</source>
             </trans-unit>
+            <trans-unit id="plugin.tx_adxtwitterbootstrap.components.responsiveEmbed" xml:space="preserve">
+                <source>Responsive embed</source>
+            </trans-unit>
             <trans-unit id="plugin.tx_adxtwitterbootstrap.components.wells" xml:space="preserve">
                 <source>Wells</source>
             </trans-unit>
@@ -141,6 +144,10 @@
 
             <trans-unit id="plugin.tx_adxtwitterbootstrap.variables.label.colors" xml:space="preserve">
                 <source>Colors</source>
+            </trans-unit>
+
+            <trans-unit id="plugin.tx_adxtwitterbootstrap.variables.label.scaffolding" xml:space="preserve">
+                <source>Scaffolding</source>
             </trans-unit>
 
             <trans-unit id="plugin.tx_adxtwitterbootstrap.variables.label.typography" xml:space="preserve">

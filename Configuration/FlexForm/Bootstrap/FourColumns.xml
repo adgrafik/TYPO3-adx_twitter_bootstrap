@@ -48,7 +48,7 @@
                             <displayCond>FIELD:tx_adxtwitterbootstrap_fourcolumns_expert_mode:REQ:TRUE</displayCond>
                             <config type="array">
                                 <type>check</type>
-                                <cols>4</cols>
+                                <cols>1</cols>
                                 <items>
                                     <numIndex index="0">
                                         <numIndex index="0">LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.columns.grid.span.xs</numIndex>
@@ -86,7 +86,7 @@
                             <displayCond>FIELD:tx_adxtwitterbootstrap_fourcolumns_expert_mode:REQ:TRUE</displayCond>
                             <config type="array">
                                 <type>check</type>
-                                <cols>4</cols>
+                                <cols>1</cols>
                                 <items>
                                     <numIndex index="0">
                                         <numIndex index="0">LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.columns.grid.span.xs</numIndex>
@@ -124,7 +124,7 @@
                             <displayCond>FIELD:expert_mode:REQ:TRUE</displayCond>
                             <config type="array">
                                 <type>check</type>
-                                <cols>4</cols>
+                                <cols>1</cols>
                                 <items>
                                     <numIndex index="0">
                                         <numIndex index="0">LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.columns.grid.span.xs</numIndex>
@@ -264,7 +264,7 @@
                             <label>LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.columns.visibility.hideColumn1</label>
                             <config type="array">
                                 <type>check</type>
-                                <cols>4</cols>
+                                <cols>1</cols>
                                 <items>
                                     <numIndex index="0">
                                         <numIndex index="0">LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.columns.visibility.hideColumn.xs</numIndex>
@@ -291,7 +291,7 @@
                             <label>LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.columns.visibility.hideColumn2</label>
                             <config type="array">
                                 <type>check</type>
-                                <cols>4</cols>
+                                <cols>1</cols>
                                 <items>
                                     <numIndex index="0">
                                         <numIndex index="0">LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.columns.visibility.hideColumn.xs</numIndex>
@@ -318,7 +318,7 @@
                             <label>LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.columns.visibility.hideColumn3</label>
                             <config type="array">
                                 <type>check</type>
-                                <cols>4</cols>
+                                <cols>1</cols>
                                 <items>
                                     <numIndex index="0">
                                         <numIndex index="0">LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.columns.visibility.hideColumn.xs</numIndex>
@@ -345,7 +345,7 @@
                             <label>LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.columns.visibility.hideColumn4</label>
                             <config type="array">
                                 <type>check</type>
-                                <cols>4</cols>
+                                <cols>1</cols>
                                 <items>
                                     <numIndex index="0">
                                         <numIndex index="0">LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.columns.visibility.hideColumn.xs</numIndex>

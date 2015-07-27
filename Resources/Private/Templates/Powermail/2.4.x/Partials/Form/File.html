@@ -1,0 +1,52 @@
+{namespace vh=In2code\Powermail\ViewHelpers}
+
+<div id="powermail_fieldwrap_{field.uid}" class="powermail_fieldwrap powermail_fieldwrap_file powermail_fieldwrap_{field.uid} {field.spanClass} {field.offsetClass} {field.css} {vh:Validation.ErrorClass( field: field, class: 'powermail_field_error has-error' )}">
+	<div class="form-group">
+		<f:if condition="{page.layout} == 'form-horizontal'">
+			<f:then>
+				<div class="{page.labelToFieldRatioClass.label}">
+					<f:if condition="{0: field.hideLabel} != {0: 'invisible'}">
+						<label for="powermail_field_{field.marker}" class="powermail_label control-label{f:if( condition: '{field.hideLabel}', then: ' sr-only' )}" title="{field.description}">
+							<vh:string.RawAndRemoveXss>{field.title}</vh:string.RawAndRemoveXss><f:if condition="{field.mandatory}"><span class="mandatory">*</span></f:if>
+						</label>
+					</f:if>
+				</div>
+				<div class="{page.labelToFieldRatioClass.field}">
+					<vh:Form.MultiUpload
+						id="powermail_field_{field.marker}"
+						class="powermail_field powermail_file form-control{f:if( condition: '{field.elementSize}', then: ' input-{field.elementSize}' )}"
+						property="{field.marker}"
+						additionalAttributes="{vh:Validation.UploadAttributes(field:field)}" />
+				</div>
+			</f:then>
+			<f:else>
+				<f:if condition="{0: field.hideLabel} != {0: 'invisible'}">
+					<label for="powermail_field_{field.marker}" class="control-label{f:if( condition: '{field.hideLabel}', then: ' sr-only' )}" title="{field.description}">
+						<vh:string.RawAndRemoveXss>{field.title}</vh:string.RawAndRemoveXss><f:if condition="{field.mandatory}"><span class="mandatory">*</span></f:if>
+					</label>
+				</f:if>
+				<vh:Form.MultiUpload
+					id="powermail_field_{field.marker}"
+					class="powermail_field powermail_file form-control{f:if( condition: '{field.elementSize}', then: ' input-{field.elementSize}' )}"
+					property="{field.marker}"
+					additionalAttributes="{vh:Validation.UploadAttributes(field:field)}" />
+			</f:else>
+		</f:if>
+		<f:if condition="{vh:Misc.PrefillField(field:field)}">
+			<ul>
+				<f:for each="{vh:Misc.PrefillField(field:field)}" as="file">
+					<li>
+						<span class="fileName">{file}</span>
+						<f:form.hidden property="{field.marker}." value="{file}" />
+					</li>
+				</f:for>
+				<li>
+					<span class="deleteAllFiles"><f:translate key="deleteAllFiles">Delete All Files</f:translate></span>
+				</li>
+			</ul>
+		</f:if>
+	</div>
+</div>
+<f:if condition="{field.clear}">
+	<div class="clearfix"></div>
+</f:if>

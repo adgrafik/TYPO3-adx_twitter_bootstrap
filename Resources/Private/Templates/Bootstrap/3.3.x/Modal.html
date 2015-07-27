@@ -1,0 +1,41 @@
+
+{namespace t3jquery=T3Ext\T3jquery\ViewHelpers}
+{namespace adx=AdGrafik\AdxTwitterBootstrap\ViewHelpers}
+
+<div id="modal-{data.uid}" class="{classes}" tabindex="-1" role="dialog" aria-labelledby="modal-label-{data.uid}" 
+	data-show="{show}" 
+	data-keyboard="{keyboard}" 
+	data-backdrop="{backdrop}">
+	<div class="modal-dialog{f:if( condition: '{size}', then: ' {size}' )}" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<f:if condition="{showCloseButton}">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				</f:if>
+				<div id="modal-label-{data.uid}" class="modal-title">
+					{header -> f:format.raw()}
+				</div>
+			</div>
+			<div class="modal-body">
+				{data.tx_gridelements_view_column_0 -> f:format.raw()}
+			</div>
+		</div>
+	</div>
+</div>
+
+<t3jquery:AddJQueryAndScript renderChildrenToData="TRUE">
+	(function($){
+		// Do anchor activating if set.
+		$(window).on('load hashchange', function() {
+			if (window.location.hash){
+				$(window.location.hash).modal('show');
+			}
+		});
+		var modalSelector = '#modal-{data.uid}';
+		var show = ('{show}' == 'true');
+		$(modalSelector).modal();
+		if (show) {
+			$(modalSelector).modal('show');
+		}
+	})(jQuery);
+</t3jquery:AddJQueryAndScript>

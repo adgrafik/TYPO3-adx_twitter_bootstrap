@@ -1,0 +1,45 @@
+{namespace vh=In2code\Powermail\ViewHelpers}
+
+<div id="powermail_fieldwrap_{field.uid}" class="powermail_fieldwrap powermail_fieldwrap_input powermail_fieldwrap_{field.uid} {field.spanClass} {field.offsetClass} {field.css} {vh:Validation.ErrorClass( field: field, class: 'powermail_field_error has-error' )}">
+	<div class="form-group">
+		<f:if condition="{page.layout} == 'form-horizontal'">
+			<f:then>
+				<div class="{page.labelToFieldRatioClass.label}">
+					<f:if condition="{0: field.hideLabel} != {0: 'invisible'}">
+						<label for="powermail_field_{field.marker}" class="powermail_label control-label{f:if( condition: '{field.hideLabel}', then: ' sr-only' )}" title="{field.description}">
+							<vh:string.RawAndRemoveXss>{field.title}</vh:string.RawAndRemoveXss><f:if condition="{field.mandatory}"><span class="mandatory">*</span></f:if>
+						</label>
+					</f:if>
+				</div>
+				<div class="{page.labelToFieldRatioClass.field}">
+					<f:form.textfield
+						id="powermail_field_{field.marker}"
+						class="powermail_field powermail_input form-control{f:if( condition: '{field.elementSize}', then: ' input-{field.elementSize}' )}" 
+						type="{vh:Validation.FieldTypeFromValidation(field:field)}"
+						property="{field.marker}"
+						placeholder="{field.placeholder}"
+						value="{vh:Misc.PrefillField( field: field, mail: mail )}"
+						additionalAttributes="{vh:Validation.ValidationDataAttribute( field: field )}" />
+				</div>
+			</f:then>
+			<f:else>
+				<f:if condition="{0: field.hideLabel} != {0: 'invisible'}">
+					<label for="powermail_field_{field.marker}" class="powermail_label control-label{f:if( condition: '{field.hideLabel}', then: ' sr-only' )}" title="{field.description}">
+						<vh:string.RawAndRemoveXss>{field.title}</vh:string.RawAndRemoveXss><f:if condition="{field.mandatory}"><span class="mandatory">*</span></f:if>
+					</label>
+				</f:if>
+				<f:form.textfield
+					id="powermail_field_{field.marker}"
+					class="powermail_field powermail_input form-control{f:if( condition: '{field.elementSize}', then: ' input-{field.elementSize}' )}" 
+					type="{vh:Validation.FieldTypeFromValidation(field:field)}"
+					property="{field.marker}"
+					placeholder="{field.placeholder}"
+					value="{vh:Misc.PrefillField( field: field, mail: mail )}"
+					additionalAttributes="{vh:Validation.ValidationDataAttribute( field: field )}" />
+			</f:else>
+		</f:if>
+	</div>
+</div>
+<f:if condition="{field.clear}">
+	<div class="clearfix"></div>
+</f:if>

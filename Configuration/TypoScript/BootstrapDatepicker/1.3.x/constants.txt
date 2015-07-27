@@ -1,0 +1,10 @@
+
+plugin.tx_adxtwitterbootstrap {
+
+	components {
+		dropdowns = 1
+		buttons = 1
+		button-groups = 1
+		input-groups = 1
+	}
+}

@@ -1,0 +1,12 @@
+
+plugin.tx_adxtwitterbootstrap {
+
+	# activate Bootstrap modal
+	components.modals = 1
+	components.close = 1
+	components.animations = 1
+
+	modal {
+		templateFile = EXT:adx_twitter_bootstrap/Resources/Private/Templates/Bootstrap/3.3.x/Modal.html
+	}
+}

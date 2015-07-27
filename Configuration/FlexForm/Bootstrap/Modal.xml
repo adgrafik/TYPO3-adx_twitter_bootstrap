@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3DataStructure>
+    <meta type="array">
+        <langDisable>1</langDisable>
+    </meta>
+    <sheets>
+        <tx_adxtwitterbootstrap_modal_appearance>
+            <ROOT type="array">
+                <TCEforms>
+                    <sheetTitle>LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.modal.appearance.sheetTitle</sheetTitle>
+                </TCEforms>
+                <type>array</type>
+                <el type="array">
+                    <tx_adxtwitterbootstrap_modal_layout type="array">
+                        <TCEforms type="array">
+                            <label>LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.modal.appearance.layout</label>
+                            <config type="array">
+                                <type>select</type>
+                                <items>
+                                    <numIndex index="0">
+                                        <numIndex index="0">LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.modal.appearance.layout.0</numIndex>
+                                        <numIndex index="1"></numIndex>
+                                    </numIndex>
+                                    <numIndex index="1">
+                                        <numIndex index="0">LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.modal.appearance.layout.1</numIndex>
+                                        <numIndex index="1">layout1</numIndex>
+                                    </numIndex>
+                                    <numIndex index="2">
+                                        <numIndex index="0">LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.modal.appearance.layout.2</numIndex>
+                                        <numIndex index="1">layout2</numIndex>
+                                    </numIndex>
+                                    <numIndex index="3">
+                                        <numIndex index="0">LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.modal.appearance.layout.3</numIndex>
+                                        <numIndex index="1">layout3</numIndex>
+                                    </numIndex>
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </tx_adxtwitterbootstrap_modal_layout>
+                    <tx_adxtwitterbootstrap_modal_size type="array">
+                        <TCEforms type="array">
+                            <label>LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.modal.appearance.size</label>
+                            <config type="array">
+                                <type>select</type>
+                                <items>
+                                    <numIndex index="0">
+                                        <numIndex index="0">LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.modal.appearance.size.sm</numIndex>
+                                        <numIndex index="1">modal-sm</numIndex>
+                                    </numIndex>
+                                    <numIndex index="1">
+                                        <numIndex index="0">LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.modal.appearance.size.md</numIndex>
+                                        <numIndex index="1"></numIndex>
+                                    </numIndex>
+                                    <numIndex index="2">
+                                        <numIndex index="0">LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.modal.appearance.size.lg</numIndex>
+                                        <numIndex index="1">modal-lg</numIndex>
+                                    </numIndex>
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </tx_adxtwitterbootstrap_modal_size>
+                    <tx_adxtwitterbootstrap_modal_show_close_button type="array">
+                        <TCEforms type="array">
+                            <label>LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.modal.appearance.showCloseButton</label>
+                            <config type="array">
+                                <type>check</type>
+                                <default type="integer">1</default>
+                                <items>
+                                    <numIndex index="0">
+                                        <numIndex index="0">LLL:EXT:lang/locallang_core.xml:labels.enabled</numIndex>
+                                        <numIndex index="1">1</numIndex>
+                                    </numIndex>
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </tx_adxtwitterbootstrap_modal_show_close_button>
+                    <tx_adxtwitterbootstrap_modal_help type="array">
+                        <TCEforms type="array">
+                            <label>LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.modal.appearance.info</label>
+                            <config type="array">
+                                <type>user</type>
+                                <userFunc>AdGrafik\AdxTwitterBootstrap\UserFunc\Backend->getModalInfo</userFunc>
+                                <pass_content>1</pass_content>
+                            </config>
+                        </TCEforms>
+                    </tx_adxtwitterbootstrap_modal_help>
+                </el>
+            </ROOT>
+        </tx_adxtwitterbootstrap_modal_appearance>
+        <tx_adxtwitterbootstrap_modal_behaviour>
+            <ROOT type="array">
+                <TCEforms>
+                    <sheetTitle>LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.modal.behaviour.sheetTitle</sheetTitle>
+                </TCEforms>
+                <el type="array">
+                    <tx_adxtwitterbootstrap_modal_backdrop type="array">
+                        <TCEforms type="array">
+                            <label>LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.modal.behaviour.backdrop</label>
+                            <config type="array">
+                                <type>check</type>
+                                <default type="integer">1</default>
+                                <items>
+                                    <numIndex index="0">
+                                        <numIndex index="0">LLL:EXT:lang/locallang_core.xml:labels.enabled</numIndex>
+                                        <numIndex index="1">1</numIndex>
+                                    </numIndex>
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </tx_adxtwitterbootstrap_modal_backdrop>
+                    <tx_adxtwitterbootstrap_modal_keyboard type="array">
+                        <TCEforms type="array">
+                            <label>LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.modal.behaviour.keyboard</label>
+                            <config type="array">
+                                <type>check</type>
+                                <default type="integer">1</default>
+                                <items>
+                                    <numIndex index="0">
+                                        <numIndex index="0">LLL:EXT:lang/locallang_core.xml:labels.enabled</numIndex>
+                                        <numIndex index="1">1</numIndex>
+                                    </numIndex>
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </tx_adxtwitterbootstrap_modal_keyboard>
+                    <tx_adxtwitterbootstrap_modal_show type="array">
+                        <TCEforms type="array">
+                            <label>LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.modal.behaviour.show</label>
+                            <config type="array">
+                                <type>check</type>
+                                <default type="integer">1</default>
+                                <items>
+                                    <numIndex index="0">
+                                        <numIndex index="0">LLL:EXT:lang/locallang_core.xml:labels.enabled</numIndex>
+                                        <numIndex index="1">1</numIndex>
+                                    </numIndex>
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </tx_adxtwitterbootstrap_modal_show>
+                    <tx_adxtwitterbootstrap_modal_fade type="array">
+                        <TCEforms type="array">
+                            <label>LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.modal.behaviour.fade</label>
+                            <config type="array">
+                                <type>check</type>
+                                <default type="integer">1</default>
+                                <items>
+                                    <numIndex index="0">
+                                        <numIndex index="0">LLL:EXT:lang/locallang_core.xml:labels.enabled</numIndex>
+                                        <numIndex index="1">1</numIndex>
+                                    </numIndex>
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </tx_adxtwitterbootstrap_modal_fade>
+                </el>
+            </ROOT>
+        </tx_adxtwitterbootstrap_modal_behaviour>
+    </sheets>
+</T3DataStructure>

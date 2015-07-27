@@ -43,7 +43,7 @@ class Backend {
 		}
 
 		$formFieldClass = 'tx-adxtwitterbootstrap-' . md5($parameters['itemFormElID']); // Class wrapping complete field to find children per jQuery.
-		$fieldClass = 'tx-adxtwitterbootstrap-value-' . md5($parameters['itemFormElID']); // Class of current value field in simple mode.
+		$fieldClass = 'tx-adxtwitterbootstrap-' . md5($parameters['itemFormElID']); // Class of current value field in simple mode.
 		$fieldColumnsClass = 'tx-adxtwitterbootstrap-columns'; // Class of all column fields of expert mode.
 		$fieldDevicesClass = 'tx-adxtwitterbootstrap-device';
 
@@ -54,18 +54,20 @@ class Backend {
 		$formField .= $this->getDeviceSelectField($parameters, 'sm');
 		$formField .= $this->getDeviceSelectField($parameters, 'md');
 
+		$formField .= '<div class="clearfix"></div>';
+
 		$formField .= sprintf('
 			<script type="text/javascript">
 				(function($){
 				$(document).ready(function(){
 
-					var $formField = $(\'.%1$s\')
-						$field = $formField.find(\'.%2$s\'),
-						$fieldColumns = $formField.parents(\'.typo3-TCEforms-flexForm\').find(\'.%3$s\'),
-						$fieldDevices = $formField.find(\'.%4$s\');
-
+					var $formField = $(\'.%1$s\'),
+						$field = $formField.find(\'.%1$s\'),
+						$fieldColumns = $formField.parents(\'.typo3-TCEforms-flexForm, .t3js-formengine-field-item\').find(\'.%2$s\'),
+						$fieldDevices = $formField.find(\'.%3$s\');
+console.log($fieldDevices);
 					// Hide expert mode fields.
-					$fieldColumns.parents(\'.t3-form-field-container.t3-form-field-container-flex\').hide();
+					$fieldColumns.closest(\'.form-section\').hide();
 
 					// Get simple mode values from expert mode fields.
 					var devices = [];
@@ -111,7 +113,6 @@ class Backend {
 				})(TYPO3.jQuery);
 			</script>',
 			$formFieldClass,
-			$fieldClass,
 			$fieldColumnsClass,
 			$fieldDevicesClass
 		);
@@ -133,8 +134,8 @@ class Backend {
 		$fieldDevicesClass = 'tx-adxtwitterbootstrap-device';
 		$onchange = htmlspecialchars(implode('', $parameters['fieldChangeFunc']));
 
-		$formField  = '<span class="t3-form-palette-field-container" style="display: block;">';
-		$formField .= '<label class="t3-form-palette-field-label class-main3">' . \TYPO3\CMS\Extbase\Utility\LocalizationUtility::translate('LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.columns.grid.span.' . $device, 'adx_twitter_bootstrap') . '</label>';
+		$formField  = '<span class="t3-form-palette-field-container col-sm-3" style="display: block;">';
+		$formField .= '<label class="t3-form-palette-field-label class-main3" style="font-weight: normal;">' . \TYPO3\CMS\Extbase\Utility\LocalizationUtility::translate('LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.columns.grid.span.' . $device, 'adx_twitter_bootstrap') . '</label>';
 		$formField .= '<span class="t3-form-palette-field class-main5"><div class="t3-form-field-item">';
 		$formField .= '<select class="select ' . $fieldDevicesClass . '" onchange="' . $onchange . '">';
 
@@ -171,7 +172,25 @@ class Backend {
 		$formField .= $this->getDeviceSelectFieldExpert($parameters, 'md', $valueMd);
 		$formField .= $this->getDeviceSelectFieldExpert($parameters, 'lg', $valueLg);
 
+		$formField .= '<div class="clearfix"></div>';
+
 		return $formField;
+	}
+
+	/**
+	 * getModalInfo
+	 *
+	 * @param array $parameters
+	 * @param \TYPO3\CMS\Backend\Form\FormEngine $formEngine
+	 * @return string
+	 */
+	public function getModalInfo($parameters, \TYPO3\CMS\Backend\Form\FormEngine $formEngine) {
+		return (strpos('NEW', $parameters['row']['uid']) === FALSE)
+			? sprintf('<div class="alert alert-info">Use following code to open the modal with a button:<br />
+<pre>&lt;button class="btn btn-primary btn-lg" data-target="#modal-%1$s" data-toggle="modal" type="button"&gt;Button title&lt;/button&gt;</pre>
+or as a link:<br />
+<pre>&lt;a data-target="#modal-%1$s" data-toggle="modal" href="#modal-%1$s"&gt;Link title&lt;/a&gt;</pre></div>', $parameters['row']['uid'])
+			: '<div class="alert alert-warning">Save record to get a description how to use.</div>';
 	}
 
 	/**
@@ -188,8 +207,8 @@ class Backend {
 		$fieldDevicesClass = 'tx-adxtwitterbootstrap-device-' . md5($parameters['itemFormElID']);
 		$onchange = 'var fieldValues = []; TYPO3.jQuery(\'.' . $fieldDevicesClass . '\').each(function(index, element){ if (element.value) fieldValues.push(element.value); }); document.editform[\'' . $parameters['itemFormElName'] . '\'].value = fieldValues.join(\',\');' . htmlspecialchars(implode('', $parameters['fieldChangeFunc']));
 
-		$formField  = '<span class="tx-adxtwitterbootstrap-span-column t3-form-palette-field-container">';
-		$formField .= '<label class="t3-form-palette-field-label class-main3">' . \TYPO3\CMS\Extbase\Utility\LocalizationUtility::translate('LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.columns.grid.span.' . $device, 'adx_twitter_bootstrap') . '</label>';
+		$formField  = '<span class="tx-adxtwitterbootstrap-span-column t3-form-palette-field-container col-sm-3">';
+		$formField .= '<label class="t3-form-palette-field-label class-main3" style="font-weight: normal;">' . \TYPO3\CMS\Extbase\Utility\LocalizationUtility::translate('LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.columns.grid.span.' . $device, 'adx_twitter_bootstrap') . '</label>';
 		$formField .= '<span class="t3-form-palette-field class-main5"><div class="t3-form-field-item">';
 		$formField .= '<select class="select ' . $fieldDevicesClass . '" onchange="' . $onchange . '">';
 		$formField .= '<option value="-1">' . \TYPO3\CMS\Extbase\Utility\LocalizationUtility::translate('LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:flexform.columns.grid.span.inherit', 'adx_twitter_bootstrap') . '</option>';

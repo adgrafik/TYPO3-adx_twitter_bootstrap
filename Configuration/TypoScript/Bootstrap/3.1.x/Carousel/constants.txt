@@ -1,0 +1,11 @@
+
+plugin.tx_adxtwitterbootstrap {
+
+	# activate Bootstrap carousel
+	components.animations = 1
+	components.carousel = 1
+
+	carousel {
+		templateFile = EXT:adx_twitter_bootstrap/Resources/Private/Templates/Bootstrap/3.1.x/Carousel.html
+	}
+}

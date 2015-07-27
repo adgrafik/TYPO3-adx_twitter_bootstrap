@@ -1,0 +1,92 @@
+
+{namespace vh=Tx_Powermail_ViewHelpers}
+
+<div id="powermail_fieldwrap_{field.uid}" class="powermail_fieldwrap powermail_fieldwrap_check {field.css} {field.offsetClass} {field.spanClass} {vh:Misc.ErrorClass(field: '{field}', class: 'powermail_field_error')}">
+	<div class="form-group">
+		<f:if condition="{page.layout} == 'form-horizontal'">
+			<f:then>
+				<f:if condition="{0: field.hideLabel} != {0: 'invisible'}">
+					<label class="control-label {page.labelToFieldRatioClass.label}{f:if( condition: '{field.hideLabel}', then: ' sr-only' )}">{field.title -> vh:string.RawAndRemoveXss()}<f:if condition="{field.mandatory}"><span class="mandatory">*</span></f:if></label>
+				</f:if>
+				<div class="{page.labelToFieldRatioClass.field}">
+					<fieldset>
+						<f:if condition="{field.checkboxInline} > 0">
+							<div class="row">
+						</f:if>
+						<f:for each="{field.settings}" as="setting" iteration="loop">
+							<f:if condition="{field.checkboxInline} > 0">
+								<div class="{field.checkboxInlineClass}">
+							</f:if>
+							<f:if condition="{field.checkboxInline} != -1">
+								<div class="powermail_check_inner_{loop.cycle} checkbox">
+							</f:if>
+							<label for="powermail_field_{field.marker}_{loop.cycle}" class="{f:if( condition: '{field.checkboxInline} == -1', then: 'checkbox-inline' )}">
+								<f:form.checkbox id="powermail_field_{field.marker}_{loop.cycle}" class="{vh:Misc.ValidationClass(field: '{field}')}" name="field[{field.uid}][{loop.loop}]" value="{setting.value}" checked="{vh:Misc.PrefillField(field: '{field}', cycle: '{loop.cycle}')}" />
+								{setting.label -> vh:string.RawAndRemoveXss()}
+							</label>
+							<f:if condition="{field.checkboxInline} != -1">
+								</div>
+							</f:if>
+							<f:if condition="{field.checkboxInline} > 0">
+								</div>
+								<f:if condition="{loop.cycle} != 1">
+									<f:if condition="{loop.cycle} != {loop.total}">
+										<f:if condition="{loop.cycle} % {field.checkboxInline}">
+											<f:else>
+												</div>
+												<div class="row">
+											</f:else>
+										</f:if>
+									</f:if>
+								</f:if>
+							</f:if>
+						</f:for>
+						<f:if condition="{field.checkboxInline} > 0">
+							</div>
+						</f:if>
+					</fieldset>
+				</div>
+			</f:then>
+			<f:else>
+				<f:if condition="{0: field.hideLabel} != {0: 'invisible'}">
+					<label class="control-label{f:if( condition: '{field.hideLabel}', then: ' sr-only' )}" for="powermail_field_{field.marker}">{field.title -> vh:string.RawAndRemoveXss()}<f:if condition="{field.mandatory}"><span class="mandatory">*</span></f:if></label>
+				</f:if>
+				<fieldset>
+					<div class="{f:if( condition: '{field.checkboxInline} > 0', then: 'row' )}">
+						<f:for each="{field.settings}" as="setting" iteration="loop">
+							<f:if condition="{field.checkboxInline} > 0">
+								<div class="{field.checkboxInlineClass}">
+							</f:if>
+							<f:if condition="{field.checkboxInline} != -1">
+								<div class="powermail_checkbox_inner_{loop.cycle} checkbox">
+							</f:if>
+							<label for="powermail_field_{field.marker}_{loop.cycle}" class="{f:if( condition: '{field.checkboxInline} == -1', then: 'checkbox-inline' )}">
+								<f:form.checkbox id="powermail_field_{field.marker}_{loop.cycle}" class="{vh:Misc.ValidationClass(field: '{field}')}" name="field[{field.uid}]" value="{setting.value}" checked="{vh:Misc.PrefillField(field: '{field}', cycle: '{loop.cycle}')}" /> 
+								{setting.label -> vh:string.RawAndRemoveXss()}
+							</label>
+							<f:if condition="{field.checkboxInline} != -1">
+								</div>
+							</f:if>
+							<f:if condition="{field.checkboxInline} > 0">
+								</div>
+								<f:if condition="{loop.cycle} != 1">
+									<f:if condition="{loop.cycle} != {loop.total}">
+										<f:if condition="{loop.cycle} % {field.checkboxInline}">
+											<f:else>
+												</div>
+												<div class="row">
+											</f:else>
+										</f:if>
+									</f:if>
+								</f:if>
+							</f:if>
+						</f:for>
+					</div>
+				</fieldset>
+			</f:else>
+		</f:if>
+	</div>
+</div>
+<f:if condition="{field.clear}">
+	<div class="clearfix"></div>
+</f:if>

@@ -18,6 +18,7 @@ CREATE TABLE tt_content (
 CREATE TABLE tx_powermail_domain_model_forms (
 	tx_adxtwitterbootstrap_span varchar(16) NOT NULL DEFAULT '-1,-1,-1,-1',
 	tx_adxtwitterbootstrap_offset varchar(16) NOT NULL DEFAULT '-1,-1,-1,-1',
+	tx_adxtwitterbootstrap_header_layout tinyint(4) DEFAULT '0' NOT NULL,
 );
 
 #
@@ -26,6 +27,7 @@ CREATE TABLE tx_powermail_domain_model_forms (
 CREATE TABLE tx_powermail_domain_model_pages (
 	tx_adxtwitterbootstrap_layout varchar(16) NOT NULL DEFAULT '',
 	tx_adxtwitterbootstrap_hide_legend varchar(16) NOT NULL DEFAULT '',
+	tx_adxtwitterbootstrap_element_size varchar(2) NOT NULL DEFAULT '',
 	tx_adxtwitterbootstrap_span varchar(2) NOT NULL DEFAULT '',
 	tx_adxtwitterbootstrap_span_breakpoint varchar(2) NOT NULL DEFAULT '',
 	tx_adxtwitterbootstrap_offset varchar(2) NOT NULL DEFAULT '',

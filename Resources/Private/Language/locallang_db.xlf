@@ -432,6 +432,71 @@
 			<trans-unit id="flexform.tabs.behaviour.ajaxLoading" xml:space="preserve">
 				<source>Load content via AJAX</source>
 			</trans-unit>
+
+            <!-- Configuration/TSconfig/Components/Modal.ts -->
+            <trans-unit id="TSconfig.modal.title" xml:space="preserve">
+                <source>Modal</source>
+            </trans-unit>
+            <trans-unit id="TSconfig.modal.description" xml:space="preserve">
+                <source>Container for modal content elements.</source>
+            </trans-unit>
+            <trans-unit id="TSconfig.modal.column1" xml:space="preserve">
+                <source>Modal elements</source>
+            </trans-unit>
+
+			<!-- Configuration/FlexForm/Components/Modal.xml -->
+			<trans-unit id="flexform.modal.appearance.sheetTitle" xml:space="preserve">
+				<source>Appearance</source>
+			</trans-unit>
+			<trans-unit id="flexform.modal.appearance.layout" xml:space="preserve">
+				<source>Layout</source>
+			</trans-unit>
+			<trans-unit id="flexform.modal.appearance.layout.0" xml:space="preserve">
+				<source>Default</source>
+			</trans-unit>
+			<trans-unit id="flexform.modal.appearance.layout.1" xml:space="preserve">
+				<source>Layout 1</source>
+			</trans-unit>
+			<trans-unit id="flexform.modal.appearance.layout.2" xml:space="preserve">
+				<source>Layout 2</source>
+			</trans-unit>
+			<trans-unit id="flexform.modal.appearance.layout.3" xml:space="preserve">
+				<source>Layout 3</source>
+			</trans-unit>
+			<trans-unit id="flexform.modal.appearance.size" xml:space="preserve">
+				<source>Size</source>
+			</trans-unit>
+			<trans-unit id="flexform.modal.appearance.size.sm" xml:space="preserve">
+				<source>small</source>
+			</trans-unit>
+			<trans-unit id="flexform.modal.appearance.size.md" xml:space="preserve">
+				<source>medium</source>
+			</trans-unit>
+			<trans-unit id="flexform.modal.appearance.size.lg" xml:space="preserve">
+				<source>large</source>
+			</trans-unit>
+			<trans-unit id="flexform.modal.appearance.showCloseButton" xml:space="preserve">
+				<source>Show close button</source>
+			</trans-unit>
+			<trans-unit id="flexform.modal.appearance.info" xml:space="preserve">
+				<source>Info</source>
+			</trans-unit>
+
+            <trans-unit id="flexform.modal.behaviour.sheetTitle" xml:space="preserve">
+                <source>Behaviour</source>
+            </trans-unit>
+			<trans-unit id="flexform.modal.behaviour.backdrop" xml:space="preserve">
+				<source>Include a modal-backdrop element</source>
+			</trans-unit>
+			<trans-unit id="flexform.modal.behaviour.keyboard" xml:space="preserve">
+				<source>Closes the modal when escape key is pressed</source>
+			</trans-unit>
+			<trans-unit id="flexform.modal.behaviour.show" xml:space="preserve">
+				<source>Show modal when initialized</source>
+			</trans-unit>
+			<trans-unit id="flexform.modal.behaviour.fade" xml:space="preserve">
+				<source>Enable fade effect</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

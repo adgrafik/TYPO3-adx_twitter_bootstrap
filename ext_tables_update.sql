@@ -1,6 +1,6 @@
 
 #
-# Update from > 1.1.0
+# Update from > 1.0.0
 # WARNING! Perform backup of you database first !!!
 #
 

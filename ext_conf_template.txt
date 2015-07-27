@@ -1,12 +1,12 @@
 
-# cat=versions; type=options[3.1.x,3.0.x]; label=Bootstrap Version
-versions.bootstrap = 3.1.x
+# cat=versions; type=options[3.0.x,3.1.x,3.2.x,3.3.x]; label=Bootstrap Version
+versions.bootstrap = 3.3.x
 
-# cat=versions; type=options[1.2.x]; label=Bootstrap Datepicker Version
-versions.bootstrapDatepicker = 1.2.x
+# cat=versions; type=options[1.2.x,1.4.x]; label=Bootstrap Datepicker Version
+versions.bootstrapDatepicker = 1.4.x
 
-# cat=versions; type=options[≥ 2.0.10=2.0.10]; label=Powermail Version
-versions.powermail = 2.0.10
+# cat=versions; type=options[2.0.x,2.1.x,2.4.x]; label=Powermail Version
+versions.powermail = 2.4.x
 
 # cat=components; type=boolean; label=Activate Responsive Image: Activate responsive image for the backend. (Static TypoScript have to be activated additionally.)
 components.activateResponsiveImage = 1
@@ -25,6 +25,9 @@ components.activateCarousel = 1
 
 # cat=components; type=boolean; label=Activate Tabs Component: Activate the tabs component for the backend. (jQuery component and static TypoScript have to be activated additionally.)
 components.activateTabs = 1
+
+# cat=components; type=boolean; label=Activate Modal Component: Activate the modal component for the backend. (jQuery component and static TypoScript have to be activated additionally.)
+components.activateModal = 1
 
 # cat=components; type=boolean; label=Activate Accordion Component: Activate the accordion component for the backend. (jQuery component and static TypoScript have to be activated additionally.)
 components.activateAccordion = 1

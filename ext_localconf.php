@@ -22,6 +22,9 @@ if ($extensionConfiguration['components.']['activateTabs']) {
 if ($extensionConfiguration['components.']['activateAccordion']) {
 	\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig('<INCLUDE_TYPOSCRIPT: source="FILE:EXT:' . $_EXTKEY . '/Configuration/TSconfig/Bootstrap/Accordion.ts">');
 }
+if ($extensionConfiguration['components.']['activateModal']) {
+	\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig('<INCLUDE_TYPOSCRIPT: source="FILE:EXT:' . $_EXTKEY . '/Configuration/TSconfig/Bootstrap/Modal.ts">');
+}
 
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig('<INCLUDE_TYPOSCRIPT: source="FILE:EXT:' . $_EXTKEY . '/Configuration/TSconfig/Bootstrap/ResponsiveImage.ts">');
 
@@ -29,15 +32,5 @@ if ($extensionConfiguration['components.']['activateAccordion']) {
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addUserTSConfig('
 	TCAdefaults.tt_content.imagecols = 1
 ');
-
-
-/**
- * Powermail settings.
- */
-if ($extensionConfiguration['extensions.']['activatePowermail'] && \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('powermail')) {
-	// Register signal slot dispatcher.
-	$signalSlotDispatcher = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance('TYPO3\\CMS\\Extbase\\SignalSlot\\Dispatcher');
-	$signalSlotDispatcher->connect('Tx_Powermail_Controller_FormsController', 'formActionBeforeRenderView', 'AdGrafik\\AdxTwitterBootstrap\\Hooks\\Powermail\\FormsController', 'formActionBeforeRenderView');
-}
 
 ?>

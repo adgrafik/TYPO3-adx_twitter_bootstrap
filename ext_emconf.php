@@ -12,11 +12,11 @@
 
 $EM_CONF[$_EXTKEY] = array (
 	'title' => 'ad: Twitter Bootstrap',
-	'description' => 'Twitter Bootstrap (http://twitter.github.com/bootstrap/)',
+	'description' => 'Adds new content elements based on gridelements and powermail styles for the framework Bootstrap (http://twitter.github.com/bootstrap/)',
 	'category' => 'plugin',
 	'shy' => 0,
 	'version' => '1.1.1',
-	'dependencies' => 'cms,version,adx_less,gridelements',
+	'dependencies' => 'cms,version,adx_less,gridelements,powermail',
 	'conflicts' => '',
 	'priority' => '',
 	'loadOrder' => '',
@@ -36,12 +36,11 @@ $EM_CONF[$_EXTKEY] = array (
 	array (
 		'depends' => 
 		array (
+			'typo3' => '6.2.0-7.99.99',
+			'extbase' => '6.2.0-7.99.99',
 			'cms' => '',
-			'version' => '',
-			'php' => '5.3.3-0.0.0',
-			'typo3' => '6.1.0-6.1.99',
-			'adx_less' => '1.1.0-1.1.99',
-			'gridelements' => '2.0.2-2.0.99',
+			'adx_less' => '1.1.0-1.2.99',
+			'gridelements' => '2.0.2-4.99.99',
 		),
 		'conflicts' => 
 		array (
@@ -49,6 +48,7 @@ $EM_CONF[$_EXTKEY] = array (
 		'suggests' => 
 		array (
 			't3jquery' => '2.7.0-2.7.99',
+			'powermail' => '2.1.12-2.99.99',
 		),
 	),
 	'suggests' => 

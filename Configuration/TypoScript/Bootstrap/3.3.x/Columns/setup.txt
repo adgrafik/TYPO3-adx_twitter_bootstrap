@@ -1,0 +1,129 @@
+
+plugin.tx_gridelements_pi1.setup {
+
+	#
+	# Two columns grid.
+	#
+	tx_adxtwitterbootstrap_twocolumns {
+
+		columns.default.renderObj =< tt_content
+
+		cObject = FLUIDTEMPLATE
+		cObject {
+
+			file = {$plugin.tx_adxtwitterbootstrap.columns.templateFile}
+
+			variables {
+
+				# Set the row classes.
+				classes = COA
+				classes {
+
+					10 = TEXT
+					10.value = row
+
+					20 = TEXT
+					20.field = flexform_tx_adxtwitterbootstrap_twocolumns_layout
+					20.required = 1
+					20.noTrimWrap = | ||
+
+					30 = TEXT
+					30.value = equal-height
+					30.fieldRequired = flexform_tx_adxtwitterbootstrap_twocolumns_equal_height
+					30.noTrimWrap = | ||
+				}
+
+				# Set classes for the columns.
+				column1Classes = COA
+				column1Classes {
+
+					10 = USER
+					10 {
+
+						userFunc = AdGrafik\AdxTwitterBootstrap\UserFunc\Frontend->renderColumnClasses
+
+						deviceSpan.field = flexform_tx_adxtwitterbootstrap_twocolumns_span_column0
+						reverseOrder.field = flexform_tx_adxtwitterbootstrap_twocolumns_reverse_order
+					}
+
+					20 = USER
+					20 {
+
+						userFunc = AdGrafik\AdxTwitterBootstrap\UserFunc\Frontend->renderVisibilityClasses
+
+						visibility.field = flexform_tx_adxtwitterbootstrap_twocolumns_visibility_column0
+
+						stdWrap.required = 1
+						stdWrap.noTrimWrap = | ||
+					}
+				}
+
+				# Set clear class for columns.
+				clearAfterColumn1 = USER
+				clearAfterColumn1 {
+					userFunc = AdGrafik\AdxTwitterBootstrap\UserFunc\Frontend->renderClearfixClasses
+					clear.field = flexform_tx_adxtwitterbootstrap_twocolumns_clear_column0
+					clear.fieldRequired = flexform_tx_adxtwitterbootstrap_twocolumns_expert_mode
+				}
+
+				# Set classes for the columns.
+				column2Classes < .column1Classes
+				column2Classes.10.deviceSpan.field = flexform_tx_adxtwitterbootstrap_twocolumns_span_column1
+				column2Classes.20.visibility.field = flexform_tx_adxtwitterbootstrap_twocolumns_visibility_column1
+			}
+		}
+	}
+
+	#
+	# Three columns grid.
+	#
+	tx_adxtwitterbootstrap_threecolumns < .tx_adxtwitterbootstrap_twocolumns
+	tx_adxtwitterbootstrap_threecolumns.cObject.variables {
+
+		column1Classes.10.deviceSpan.field = flexform_tx_adxtwitterbootstrap_threecolumns_span_column0
+		column1Classes.20.visibility.field = flexform_tx_adxtwitterbootstrap_threecolumns_visibility_column0
+
+		clearAfterColumn1.clear.field = flexform_tx_adxtwitterbootstrap_threecolumns_clear_column0
+
+		column2Classes.10.deviceSpan.field = flexform_tx_adxtwitterbootstrap_threecolumns_span_column1
+		column2Classes.20.visibility.field = flexform_tx_adxtwitterbootstrap_threecolumns_visibility_column1
+
+		# Add clear after second column.
+		clearAfterColumn2 < .clearAfterColumn1
+		clearAfterColumn2.clear.field = flexform_tx_adxtwitterbootstrap_threecolumns_clear_column1
+
+		# Add third column.
+		column3Classes < .column2Classes
+		column3Classes.10.deviceSpan.field = flexform_tx_adxtwitterbootstrap_threecolumns_span_column2
+		column3Classes.20.visibility.field = flexform_tx_adxtwitterbootstrap_threecolumns_visibility_column2
+	}
+
+	#
+	# Four columns grid.
+	#
+	tx_adxtwitterbootstrap_fourcolumns < .tx_adxtwitterbootstrap_threecolumns
+	tx_adxtwitterbootstrap_fourcolumns.cObject.variables {
+
+		column1Classes.10.deviceSpan.field = flexform_tx_adxtwitterbootstrap_fourcolumns_span_column0
+		column1Classes.20.visibility.field = flexform_tx_adxtwitterbootstrap_fourcolumns_visibility_column0
+
+		clearAfterColumn1.clear.field = flexform_tx_adxtwitterbootstrap_fourcolumns_clear_column0
+
+		column2Classes.10.deviceSpan.field = flexform_tx_adxtwitterbootstrap_fourcolumns_span_column1
+		column2Classes.20.visibility.field = flexform_tx_adxtwitterbootstrap_fourcolumns_visibility_column1
+
+		clearAfterColumn2.clear.field = flexform_tx_adxtwitterbootstrap_fourcolumns_clear_column1
+
+		column3Classes.10.deviceSpan.field = flexform_tx_adxtwitterbootstrap_fourcolumns_span_column2
+		column3Classes.20.visibility.field = flexform_tx_adxtwitterbootstrap_fourcolumns_visibility_column2
+
+		# Add clear after third column.
+		clearAfterColumn3 < .clearAfterColumn1
+		clearAfterColumn3.clear.field = flexform_tx_adxtwitterbootstrap_fourcolumns_clear_column2
+
+		# Add fourth column.
+		column4Classes < .column3Classes
+		column4Classes.10.deviceSpan.field = flexform_tx_adxtwitterbootstrap_fourcolumns_span_column3
+		column4Classes.20.visibility.field = flexform_tx_adxtwitterbootstrap_fourcolumns_visibility_column3
+	}
+}
