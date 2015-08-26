@@ -176,7 +176,7 @@ class Field extends \In2code\Powermail\Domain\Model\Field {
 	 */
 	public function setPlaceholder($placeholder) {
 		// Check for newer versions.
-		foreach (class_parents($this) as &$parent) {
+		foreach (class_parents($this) as $parent) {
 			if (method_exists($parent, 'setPlaceholder')) {
 				parent::setPlaceholder($placeholder);
 				break;
@@ -194,7 +194,7 @@ class Field extends \In2code\Powermail\Domain\Model\Field {
 	public function getPlaceholder() {
 		// Check for newer versions.
 		$placeholder = '';
-		foreach (class_parents($this) as &$parent) {
+		foreach (class_parents($this) as $parent) {
 			if (method_exists($parent, 'setPlaceholder')) {
 				$placeholder = parent::getPlaceholder();
 				break;
