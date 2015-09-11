@@ -14,7 +14,7 @@
 				<div class="{page.labelToFieldRatioClass.field}">
 					<vh:Form.MultiUpload
 						id="powermail_field_{field.marker}"
-						class="powermail_field powermail_file form-control{f:if( condition: '{field.elementSize}', then: ' input-{field.elementSize}' )}"
+						class="powermail_field powermail_file{f:if( condition: '{field.elementSize}', then: ' input-{field.elementSize}' )}"
 						property="{field.marker}"
 						additionalAttributes="{vh:Validation.UploadAttributes(field:field)}" />
 				</div>
@@ -27,7 +27,7 @@
 				</f:if>
 				<vh:Form.MultiUpload
 					id="powermail_field_{field.marker}"
-					class="powermail_field powermail_file form-control{f:if( condition: '{field.elementSize}', then: ' input-{field.elementSize}' )}"
+					class="powermail_field powermail_file{f:if( condition: '{field.elementSize}', then: ' input-{field.elementSize}' )}"
 					property="{field.marker}"
 					additionalAttributes="{vh:Validation.UploadAttributes(field:field)}" />
 			</f:else>
