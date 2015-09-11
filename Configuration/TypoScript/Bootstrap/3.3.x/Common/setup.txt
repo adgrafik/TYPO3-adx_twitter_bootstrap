@@ -819,7 +819,7 @@ page {
 	includeJSlibs {
 
 		# Add html5shiv
-		html5shiv = https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js
+		html5shiv = https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js
 		html5shiv.external = 1
 		html5shiv.excludeFromConcatenation = 1
 		html5shiv.disableCompression = 1
@@ -827,7 +827,7 @@ page {
 		html5shiv.allWrap = <!--[if lt IE 9]>|<![endif]-->
 
 		# Add respond
-		respond = https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js
+		respond = https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js
 		respond.external = 1
 		respond.excludeFromConcatenation = 1
 		respond.disableCompression = 1
