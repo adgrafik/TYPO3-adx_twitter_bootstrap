@@ -25,6 +25,7 @@ namespace AdGrafik\AdxTwitterBootstrap\UserFunc;
  *  This copyright notice MUST APPEAR in all copies of the script!
  ***************************************************************/
 
+use TYPO3\CMS\Backend\Form\Element\UserElement;
 
 class Backend {
 
@@ -32,10 +33,10 @@ class Backend {
 	 * getSpanColumnFields
 	 *
 	 * @param array $parameters
-	 * @param \TYPO3\CMS\Backend\Form\FormEngine $formEngine
+	 * @param \TYPO3\CMS\Backend\Form\Element\UserElement $userElement
 	 * @return string
 	 */
-	public function getSpanColumnFields($parameters, \TYPO3\CMS\Backend\Form\FormEngine $formEngine) {
+	public function getSpanColumnFields($parameters, UserElement $userElement) {
 
 		// Translate option labels first.
 		foreach ($parameters['parameters']['segments'] as &$segment) {
@@ -65,7 +66,7 @@ class Backend {
 						$field = $formField.find(\'.%1$s\'),
 						$fieldColumns = $formField.parents(\'.typo3-TCEforms-flexForm, .t3js-formengine-field-item\').find(\'.%2$s\'),
 						$fieldDevices = $formField.find(\'.%3$s\');
-console.log($fieldDevices);
+
 					// Hide expert mode fields.
 					$fieldColumns.closest(\'.form-section\').hide();
 
@@ -154,10 +155,10 @@ console.log($fieldDevices);
 	 * getSpanColumnFields
 	 *
 	 * @param array $parameters
-	 * @param \TYPO3\CMS\Backend\Form\FormEngine $formEngine
+	 * @param \TYPO3\CMS\Backend\Form\Element\UserElement $userElement
 	 * @return string
 	 */
-	public function getSpanColumnFieldsExpert($parameters, \TYPO3\CMS\Backend\Form\FormEngine $formEngine) {
+	public function getSpanColumnFieldsExpert($parameters, UserElement $userElement) {
 
 		$valueXs = preg_replace('/(-?\d+),-?\d+,-?\d+,-?\d+/', '$1', $parameters['itemFormElValue']);
 		$valueSm = preg_replace('/-?\d+,(-?\d+),-?\d+,-?\d+/', '$1', $parameters['itemFormElValue']);
@@ -181,10 +182,10 @@ console.log($fieldDevices);
 	 * getModalInfo
 	 *
 	 * @param array $parameters
-	 * @param \TYPO3\CMS\Backend\Form\FormEngine $formEngine
+	 * @param \TYPO3\CMS\Backend\Form\Element\UserElement $userElement
 	 * @return string
 	 */
-	public function getModalInfo($parameters, \TYPO3\CMS\Backend\Form\FormEngine $formEngine) {
+	public function getModalInfo($parameters, UserElement $userElement) {
 		return (strpos('NEW', $parameters['row']['uid']) === FALSE)
 			? sprintf('<div class="alert alert-info">Use following code to open the modal with a button:<br />
 <pre>&lt;button class="btn btn-primary btn-lg" data-target="#modal-%1$s" data-toggle="modal" type="button"&gt;Button title&lt;/button&gt;</pre>
