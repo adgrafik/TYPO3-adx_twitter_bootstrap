@@ -27,7 +27,7 @@ CREATE TABLE tx_powermail_domain_model_forms (
 CREATE TABLE tx_powermail_domain_model_pages (
 	tx_adxtwitterbootstrap_layout varchar(16) NOT NULL DEFAULT '',
 	tx_adxtwitterbootstrap_hide_legend varchar(16) NOT NULL DEFAULT '',
-	tx_adxtwitterbootstrap_element_size varchar(2) NOT NULL DEFAULT '',
+	tx_adxtwitterbootstrap_element_size varchar(16) NOT NULL DEFAULT '',
 	tx_adxtwitterbootstrap_span varchar(2) NOT NULL DEFAULT '',
 	tx_adxtwitterbootstrap_span_breakpoint varchar(2) NOT NULL DEFAULT '',
 	tx_adxtwitterbootstrap_offset varchar(2) NOT NULL DEFAULT '',
