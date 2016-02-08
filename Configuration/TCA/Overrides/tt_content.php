@@ -43,7 +43,7 @@ $tempColumns = array(
 		'config' => array(
 			'type' => 'select',
 			'items' => array(
-				array('', ''),
+				array('', 0),
 				array('LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:tx_adxtwitterbootstrap_inherit.1', 1),
 				array('LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:tx_adxtwitterbootstrap_inherit.2', 2),
 			),
