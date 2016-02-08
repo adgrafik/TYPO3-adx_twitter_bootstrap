@@ -1,4 +1,4 @@
-{namespace vh=Tx_Powermail_ViewHelpers}
+{namespace vh=In2code\Powermail\ViewHelpers}
 
 <div id="powermail_fieldwrap_{field.uid}" class="powermail_fieldwrap powermail_fieldwrap_submit powermail_fieldwrap_{field.uid} {field.spanClass} {field.offsetClass} {field.css}">
 	<button id="powermail_field_{field.marker}" class="{field.buttonClass}{f:if( condition: '{field.elementSize}', then: ' input-{field.elementSize}' )}{f:if( condition: '{field.buttonBlock}', then: ' btn-block' )}" type="submit"><vh:string.RawAndRemoveXss>{field.title}</vh:string.RawAndRemoveXss></button>
