@@ -144,6 +144,26 @@ class Page extends \In2code\Powermail\Domain\Model\Page {
 	}
 
 	/**
+	 * Set elementSize
+	 *
+	 * @param string $elementSize
+	 * @return \AdGrafik\AdxTwitterBootstrap\Domain\Model\Page
+	 */
+	public function setElementSize($elementSize) {
+		$this->elementSize = $elementSize;
+		return $this;
+	}
+
+	/**
+	 * Get elementSize
+	 *
+	 * @return string
+	 */
+	public function getElementSize() {
+		return $this->elementSize;
+	}
+
+	/**
 	 * Set span
 	 *
 	 * @param string $span

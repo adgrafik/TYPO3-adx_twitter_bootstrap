@@ -32,6 +32,14 @@ namespace AdGrafik\AdxTwitterBootstrap\Domain\Model;
  */
 class Field extends \In2code\Powermail\Domain\Model\Field {
 
+    /**
+     * pages
+     *
+     * @var \AdGrafik\AdxTwitterBootstrap\Domain\Model\Page
+     * @lazy
+     */
+    protected $pages = null;
+
 	/**
 	 * @var string $hideLabel
 	 */
@@ -166,6 +174,26 @@ class Field extends \In2code\Powermail\Domain\Model\Field {
 	 * @var string $datepickerLanguage
 	 */
 	protected $datepickerLanguage;
+
+	/**
+	 * Set pages
+	 *
+	 * @param \AdGrafik\AdxTwitterBootstrap\Domain\Model\Page $pages
+	 * @return \AdGrafik\AdxTwitterBootstrap\Domain\Model\Fields
+	 */
+	public function setPages($pages) {
+		$this->pages = $pages;
+		return $this;
+	}
+
+	/**
+	 * Get page
+	 *
+	 * @return \AdGrafik\AdxTwitterBootstrap\Domain\Model\Page
+	 */
+	public function getPages() {
+		return $this->pages;
+	}
 
 
 	/**

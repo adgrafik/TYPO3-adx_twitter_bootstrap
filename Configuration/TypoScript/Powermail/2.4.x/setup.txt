@@ -32,6 +32,7 @@ config.tx_extbase {
 					columns {
 						tx_adxtwitterbootstrap_layout.mapOnProperty = layout
 						tx_adxtwitterbootstrap_hide_legend.mapOnProperty = hideLegend
+						tx_adxtwitterbootstrap_element_size.mapOnProperty = elementSize
 						tx_adxtwitterbootstrap_offset.mapOnProperty = offset
 						tx_adxtwitterbootstrap_offset_breakpoint.mapOnProperty = offsetBreakpoint
 						tx_adxtwitterbootstrap_span.mapOnProperty = span
