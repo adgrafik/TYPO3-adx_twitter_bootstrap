@@ -50,5 +50,3 @@ class GroupArrayViewHelper extends \TYPO3\CMS\Fluid\Core\ViewHelper\AbstractView
 	}
 
 }
-
-?>

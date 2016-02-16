@@ -920,5 +920,3 @@ class Field extends \In2code\Powermail\Domain\Model\Field {
 	}
 
 }
-
-?>

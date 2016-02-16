@@ -102,5 +102,3 @@ if ($extensionConfiguration['components.']['activateResponsiveImage']) {
 
 // Get rid of width and height limitation of images.
 unset($TCA['tt_content']['columns']['imagewidth']['config']['range'], $TCA['tt_content']['columns']['imageheight']['config']['range']);
-
-?>

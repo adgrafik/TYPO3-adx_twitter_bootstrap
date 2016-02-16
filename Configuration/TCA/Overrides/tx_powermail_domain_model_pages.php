@@ -160,5 +160,3 @@ if ($extensionConfiguration['extensions.']['activatePowermail'] && \TYPO3\CMS\Co
 	\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTCAcolumns('tx_powermail_domain_model_pages', $tempColumns);
 	\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes('tx_powermail_domain_model_pages', '--div--;LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db_powermail.xlf:tx_powermail_domain_model_forms.palette.apperance,--palette--;LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db_powermail.xlf:tx_powermail_domain_model_forms.palette.apperance;apperance', '', 'after:css');
 }
-
-?>

@@ -79,5 +79,3 @@ if ($extensionConfiguration['extensions.']['activatePowermail'] && \TYPO3\CMS\Co
 	\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes('tx_powermail_domain_model_forms', '--palette--;;header', '', 'replace:title');
 	\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes('tx_powermail_domain_model_forms', '--palette--;LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db_powermail.xlf:tx_powermail_domain_model_forms.palette.apperance;layout', '', 'replace:css');
 }
-
-?>

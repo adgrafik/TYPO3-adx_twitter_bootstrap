@@ -129,4 +129,3 @@ class Form extends \In2code\Powermail\Domain\Model\Form {
 	}
 
 }
-?>

@@ -432,5 +432,3 @@ if ($extensionConfiguration['extensions.']['activatePowermail'] && \TYPO3\CMS\Co
 		\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addFieldsToPalette('tx_powermail_domain_model_fields', '3', '--linebreak--,tx_adxtwitterbootstrap_placeholder', 'after:feuser_value');
 	}
 }
-
-?>

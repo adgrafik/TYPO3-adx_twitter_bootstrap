@@ -351,4 +351,3 @@ class Page extends \In2code\Powermail\Domain\Model\Page {
 	}
 
 }
-?>

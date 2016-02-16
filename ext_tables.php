@@ -60,5 +60,3 @@ if ($extensionConfiguration['extensions.']['activatePowermail'] && \TYPO3\CMS\Co
 			break;
 	}
 }
-
-?>

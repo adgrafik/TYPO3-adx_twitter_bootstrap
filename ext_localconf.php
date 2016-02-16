@@ -32,5 +32,3 @@ if ($extensionConfiguration['components.']['activateModal']) {
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addUserTSConfig('
 	TCAdefaults.tt_content.imagecols = 1
 ');
-
-?>
