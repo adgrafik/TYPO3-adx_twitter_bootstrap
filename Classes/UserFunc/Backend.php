@@ -25,7 +25,7 @@ namespace AdGrafik\AdxTwitterBootstrap\UserFunc;
  *  This copyright notice MUST APPEAR in all copies of the script!
  ***************************************************************/
 
-use TYPO3\CMS\Backend\Form\Element\UserElement;
+use TYPO3\CMS\Backend\Form\FormEngine;
 
 class Backend {
 
@@ -33,10 +33,10 @@ class Backend {
 	 * getSpanColumnFields
 	 *
 	 * @param array $parameters
-	 * @param \TYPO3\CMS\Backend\Form\Element\UserElement $userElement
+	 * @param mixed $formEngine
 	 * @return string
 	 */
-	public function getSpanColumnFields($parameters, UserElement $userElement) {
+	public function getSpanColumnFields($parameters, $formEngine) {
 
 		// Translate option labels first.
 		foreach ($parameters['parameters']['segments'] as &$segment) {
@@ -155,10 +155,10 @@ class Backend {
 	 * getSpanColumnFields
 	 *
 	 * @param array $parameters
-	 * @param \TYPO3\CMS\Backend\Form\Element\UserElement $userElement
+	 * @param mixed $formEngine
 	 * @return string
 	 */
-	public function getSpanColumnFieldsExpert($parameters, UserElement $userElement) {
+	public function getSpanColumnFieldsExpert($parameters, $formEngine) {
 
 		$valueXs = preg_replace('/(-?\d+),-?\d+,-?\d+,-?\d+/', '$1', $parameters['itemFormElValue']);
 		$valueSm = preg_replace('/-?\d+,(-?\d+),-?\d+,-?\d+/', '$1', $parameters['itemFormElValue']);
@@ -182,10 +182,10 @@ class Backend {
 	 * getModalInfo
 	 *
 	 * @param array $parameters
-	 * @param \TYPO3\CMS\Backend\Form\Element\UserElement $userElement
+	 * @param mixed $formEngine
 	 * @return string
 	 */
-	public function getModalInfo($parameters, UserElement $userElement) {
+	public function getModalInfo($parameters, $formEngine) {
 		return (strpos('NEW', $parameters['row']['uid']) === FALSE)
 			? sprintf('<div class="alert alert-info">Use following code to open the modal with a button:<br />
 <pre>&lt;button class="btn btn-primary btn-lg" data-target="#modal-%1$s" data-toggle="modal" type="button"&gt;Button title&lt;/button&gt;</pre>
