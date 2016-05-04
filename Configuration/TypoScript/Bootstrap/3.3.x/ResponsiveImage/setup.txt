@@ -215,58 +215,62 @@ tt_content.image.20 {
 
 
 # Fix inline column space.
-plugin.tx_cssstyledcontent._CSS_DEFAULT_STYLE := appendString(div.csc-textpic .csc-textpic-imagewrap .csc-textpic-image { font-size: 0; });
-plugin.tx_cssstyledcontent._CSS_DEFAULT_STYLE := appendString(div.csc-textpic .csc-textpic-imagewrap .csc-textpic-caption { font-size: 1rem; });
+plugin.tx_cssstyledcontent._CSS_DEFAULT_STYLE := appendString(div.csc-textpic .csc-textpic-imagewrap .csc-textpic-image { font-size: 0; })
+plugin.tx_cssstyledcontent._CSS_DEFAULT_STYLE := appendString(div.csc-textpic .csc-textpic-imagewrap .csc-textpic-caption { font-size: 1rem; })
 
 # IE8 fix for responsive image class.
-plugin.tx_cssstyledcontent._CSS_DEFAULT_STYLE := appendString(.img-responsive { width: auto; });
-plugin.tx_cssstyledcontent._CSS_DEFAULT_STYLE := appendString(div.csc-textpic .csc-textpic-imagewrap .csc-textpic-image { display: inline-block; width: 100%; });
+plugin.tx_cssstyledcontent._CSS_DEFAULT_STYLE := appendString(.img-responsive { width: auto; })
+plugin.tx_cssstyledcontent._CSS_DEFAULT_STYLE := appendString(div.csc-textpic .csc-textpic-imagewrap .csc-textpic-image { display: inline-block; width: 100%; })
 
 # Remove image border pre defenitions.
-plugin.tx_cssstyledcontent._CSS_DEFAULT_STYLE := removeString(div.csc-textpic .csc-textpic-imagewrap img { border: none; display: block; });
+plugin.tx_cssstyledcontent._CSS_DEFAULT_STYLE := removeString(div.csc-textpic .csc-textpic-imagewrap img { border: none; display: block; })
 
 # Captions.
-plugin.tx_cssstyledcontent._CSS_DEFAULT_STYLE := removeString(figcaption.csc-textpic-caption { display: table-caption; });
-plugin.tx_cssstyledcontent._CSS_DEFAULT_STYLE := replaceString(.csc-textpic-caption { text-align: left; caption-side: bottom; }|.csc-textpic-caption { text-align: left; });
+plugin.tx_cssstyledcontent._CSS_DEFAULT_STYLE := removeString(figcaption.csc-textpic-caption { display: table-caption; })
+plugin.tx_cssstyledcontent._CSS_DEFAULT_STYLE := replaceString(.csc-textpic-caption { text-align: left; caption-side: bottom; }|.csc-textpic-caption { text-align: left; })
 
 # Remove floating columns.
-plugin.tx_cssstyledcontent._CSS_DEFAULT_STYLE := replaceString(div.csc-textpic div.csc-textpic-imagecolumn { float: left; }|div.csc-textpic div.csc-textpic-imagecolumn { display: inline-block; max-width: 100%; vertical-align: top; });
-plugin.tx_cssstyledcontent._CSS_DEFAULT_STYLE := appendString(div.csc-textpic .csc-textpic-imagewrap .csc-textpic-imagecolumn .csc-textpic-image { display: block; });
+plugin.tx_cssstyledcontent._CSS_DEFAULT_STYLE := replaceString(div.csc-textpic div.csc-textpic-imagecolumn { float: left; }|div.csc-textpic div.csc-textpic-imagecolumn { display: inline-block; max-width: 100%; vertical-align: top; })
+plugin.tx_cssstyledcontent._CSS_DEFAULT_STYLE := appendString(div.csc-textpic .csc-textpic-imagewrap .csc-textpic-imagecolumn .csc-textpic-image { display: block; })
 # Remove redundant figure table definition.
-plugin.tx_cssstyledcontent._CSS_DEFAULT_STYLE := removeString(div.csc-textpic .csc-textpic-imagewrap figure, div.csc-textpic figure.csc-textpic-imagewrap { margin: 0; display: table; });
+plugin.tx_cssstyledcontent._CSS_DEFAULT_STYLE := removeString(div.csc-textpic .csc-textpic-imagewrap figure, div.csc-textpic figure.csc-textpic-imagewrap { margin: 0; display: table; })
 
 # Center (above or below)
-plugin.tx_cssstyledcontent._CSS_DEFAULT_STYLE := removeString(div.csc-textpic-center .csc-textpic-center-outer { position: relative; float: right; right: 50%; });
-plugin.tx_cssstyledcontent._CSS_DEFAULT_STYLE := replaceString(div.csc-textpic-center .csc-textpic-center-inner { position: relative; float: right; right: -50%; }|div.csc-textpic-center .csc-textpic-center-inner { text-align: center; });
-plugin.tx_cssstyledcontent._CSS_DEFAULT_STYLE := removeString(div.csc-textpic-center .csc-textpic-imagewrap, div.csc-textpic-center figure.csc-textpic-imagewrap { overflow: hidden; });
+plugin.tx_cssstyledcontent._CSS_DEFAULT_STYLE := removeString(div.csc-textpic-center .csc-textpic-center-outer { position: relative; float: right; right: 50%; })
+plugin.tx_cssstyledcontent._CSS_DEFAULT_STYLE := replaceString(div.csc-textpic-center .csc-textpic-center-inner { position: relative; float: right; right: -50%; }|div.csc-textpic-center .csc-textpic-center-inner { text-align: center; })
+plugin.tx_cssstyledcontent._CSS_DEFAULT_STYLE := removeString(div.csc-textpic-center .csc-textpic-imagewrap, div.csc-textpic-center figure.csc-textpic-imagewrap { overflow: hidden; })
 
 # Right (above or below)
-plugin.tx_cssstyledcontent._CSS_DEFAULT_STYLE := appendString(div.csc-textpic-right { text-align: right; });
-plugin.tx_cssstyledcontent._CSS_DEFAULT_STYLE := replaceString(div.csc-textpic-right .csc-textpic-imagewrap { float: right; }|div.csc-textpic-right .csc-textpic-imagewrap { display: inline-block; max-width: 100%; });
+plugin.tx_cssstyledcontent._CSS_DEFAULT_STYLE := appendString(div.csc-textpic-right { text-align: right; })
+plugin.tx_cssstyledcontent._CSS_DEFAULT_STYLE := replaceString(div.csc-textpic-right .csc-textpic-imagewrap { float: right; }|div.csc-textpic-right .csc-textpic-imagewrap { display: inline-block; max-width: 100%; })
 
 # Left (above or below)
-plugin.tx_cssstyledcontent._CSS_DEFAULT_STYLE := appendString(div.csc-textpic-left { text-align: left; });
-plugin.tx_cssstyledcontent._CSS_DEFAULT_STYLE := replaceString(div.csc-textpic-left .csc-textpic-imagewrap { float: left; }|div.csc-textpic-right .csc-textpic-imagewrap { display: inline-block; max-width: 100%; });
+plugin.tx_cssstyledcontent._CSS_DEFAULT_STYLE := appendString(div.csc-textpic-left { text-align: left; })
+plugin.tx_cssstyledcontent._CSS_DEFAULT_STYLE := replaceString(div.csc-textpic-left .csc-textpic-imagewrap { float: left; }|div.csc-textpic-right .csc-textpic-imagewrap { display: inline-block; max-width: 100%; })
 
 # Right (in text)
-plugin.tx_cssstyledcontent._CSS_DEFAULT_STYLE := replaceString(div.csc-textpic-intext-right .csc-textpic-imagewrap { float: right; }|div.csc-textpic-intext-right .csc-textpic-imagewrap { float: right; max-width: 100%; });
-plugin.tx_cssstyledcontent._CSS_DEFAULT_STYLE := appendString(div.csc-textpic-intext-right .csc-textpic-text, div.csc-textpic-intext-right .csc-textpic-imagewrap { padding-right: {$styles.content.imgtext.colSpace}px; padding-left: {$styles.content.imgtext.colSpace}px; } div.csc-textpic-intext-right .csc-textpic-imagewrap { margin-left: {$styles.content.imgtext.colSpace}px;});
+plugin.tx_cssstyledcontent._CSS_DEFAULT_STYLE := replaceString(div.csc-textpic-intext-right .csc-textpic-imagewrap { float: right; }|div.csc-textpic-intext-right .csc-textpic-imagewrap { float: right; max-width: 100%; })
+plugin.tx_cssstyledcontent._CSS_DEFAULT_STYLE := appendString(div.csc-textpic-intext-right .csc-textpic-text, div.csc-textpic-intext-right .csc-textpic-imagewrap { padding-right: {$styles.content.imgtext.colSpace}px; padding-left: {$styles.content.imgtext.colSpace}px; } div.csc-textpic-intext-right .csc-textpic-imagewrap { margin-left: {$styles.content.imgtext.colSpace}px;})
 
 # Left (in text)
-plugin.tx_cssstyledcontent._CSS_DEFAULT_STYLE := replaceString(div.csc-textpic-intext-left .csc-textpic-imagewrap { float: left; }|div.csc-textpic-intext-left .csc-textpic-imagewrap { float: left; max-width: 100%; });
-plugin.tx_cssstyledcontent._CSS_DEFAULT_STYLE := appendString(div.csc-textpic-intext-left .csc-textpic-text, div.csc-textpic-intext-left .csc-textpic-imagewrap { padding-right: {$styles.content.imgtext.colSpace}px; padding-left: {$styles.content.imgtext.colSpace}px; } div.csc-textpic-intext-left .csc-textpic-imagewrap { margin-right: {$styles.content.imgtext.colSpace}px;});
+plugin.tx_cssstyledcontent._CSS_DEFAULT_STYLE := replaceString(div.csc-textpic-intext-left .csc-textpic-imagewrap { float: left; }|div.csc-textpic-intext-left .csc-textpic-imagewrap { float: left; max-width: 100%; })
+plugin.tx_cssstyledcontent._CSS_DEFAULT_STYLE := appendString(div.csc-textpic-intext-left .csc-textpic-text, div.csc-textpic-intext-left .csc-textpic-imagewrap { padding-right: {$styles.content.imgtext.colSpace}px; padding-left: {$styles.content.imgtext.colSpace}px; } div.csc-textpic-intext-left .csc-textpic-imagewrap { margin-right: {$styles.content.imgtext.colSpace}px;})
 
 # Right (in text, no wrap around)
-plugin.tx_cssstyledcontent._CSS_DEFAULT_STYLE := replaceString(div.csc-textpic-intext-right-nowrap .csc-textpic-imagewrap { float: right; }|div.csc-textpic-intext-right-nowrap .csc-textpic-imagewrap { float: right; max-width: 100%; });
-plugin.tx_cssstyledcontent._CSS_DEFAULT_STYLE := appendString(.csc-textpic-intext-right-nowrap .csc-textpic-text { margin-right: 0 !important; } div.csc-textpic-intext-right-nowrap .csc-textpic-text, div.csc-textpic-intext-right-nowrap .csc-textpic-imagewrap { padding-right: {$styles.content.imgtext.colSpace}px; padding-left: {$styles.content.imgtext.colSpace}px; } div.csc-textpic-intext-right-nowrap .csc-textpic-text { overflow: hidden; });
+plugin.tx_cssstyledcontent._CSS_DEFAULT_STYLE := replaceString(div.csc-textpic-intext-right-nowrap .csc-textpic-imagewrap { float: right; }|div.csc-textpic-intext-right-nowrap .csc-textpic-imagewrap { float: right; max-width: 100%; })
+plugin.tx_cssstyledcontent._CSS_DEFAULT_STYLE := appendString(.csc-textpic-intext-right-nowrap .csc-textpic-text { margin-right: 0 !important; } div.csc-textpic-intext-right-nowrap .csc-textpic-text, div.csc-textpic-intext-right-nowrap .csc-textpic-imagewrap { padding-right: {$styles.content.imgtext.colSpace}px; padding-left: {$styles.content.imgtext.colSpace}px; } div.csc-textpic-intext-right-nowrap .csc-textpic-text { overflow: hidden; })
 
 # Left (in text, no wrap around)
-plugin.tx_cssstyledcontent._CSS_DEFAULT_STYLE := replaceString(div.csc-textpic-intext-left-nowrap .csc-textpic-imagewrap { float: left; }|div.csc-textpic-intext-left-nowrap .csc-textpic-imagewrap { float: left; max-width: 100%; });
-plugin.tx_cssstyledcontent._CSS_DEFAULT_STYLE := appendString(.csc-textpic-intext-left-nowrap .csc-textpic-text { margin-left: 0 !important; } div.csc-textpic-intext-left-nowrap .csc-textpic-text, div.csc-textpic-intext-left-nowrap .csc-textpic-imagewrap { padding-right: {$styles.content.imgtext.colSpace}px; padding-left: {$styles.content.imgtext.colSpace}px; } div.csc-textpic-intext-left-nowrap .csc-textpic-text { overflow: hidden; });
+plugin.tx_cssstyledcontent._CSS_DEFAULT_STYLE := replaceString(div.csc-textpic-intext-left-nowrap .csc-textpic-imagewrap { float: left; }|div.csc-textpic-intext-left-nowrap .csc-textpic-imagewrap { float: left; max-width: 100%; })
+plugin.tx_cssstyledcontent._CSS_DEFAULT_STYLE := appendString(.csc-textpic-intext-left-nowrap .csc-textpic-text { margin-left: 0 !important; } div.csc-textpic-intext-left-nowrap .csc-textpic-text, div.csc-textpic-intext-left-nowrap .csc-textpic-imagewrap { padding-right: {$styles.content.imgtext.colSpace}px; padding-left: {$styles.content.imgtext.colSpace}px; } div.csc-textpic-intext-left-nowrap .csc-textpic-text { overflow: hidden; })
 # Remove margins in beside text.
-plugin.tx_cssstyledcontent._CSS_DEFAULT_STYLE := removeString(		margin-right: {$styles.content.imgtext.textMargin}px;);
-plugin.tx_cssstyledcontent._CSS_DEFAULT_STYLE := removeString(		margin-left: {$styles.content.imgtext.textMargin}px;);
+plugin.tx_cssstyledcontent._CSS_DEFAULT_STYLE := removeString(		margin-right: {$styles.content.imgtext.textMargin}px;)
+plugin.tx_cssstyledcontent._CSS_DEFAULT_STYLE := removeString(		margin-left: {$styles.content.imgtext.textMargin}px;)
 
 # colSpace around image columns
-plugin.tx_cssstyledcontent._CSS_DEFAULT_STYLE := replaceString(div.csc-textpic-imagecolumn, td.csc-textpic-imagecolumn .csc-textpic-image { margin-right: {$styles.content.imgtext.colSpace}px; }|div.csc-textpic-imagecolumn, td.csc-textpic-imagecolumn .csc-textpic-image { padding-right: {$styles.content.imgtext.colSpace}px; padding-left: {$styles.content.imgtext.colSpace}px; });
-plugin.tx_cssstyledcontent._CSS_DEFAULT_STYLE := appendString(div.csc-textpic div.csc-textpic-imagerow { margin-right: -{$styles.content.imgtext.colSpace}px; margin-left: -{$styles.content.imgtext.colSpace}px; });
+plugin.tx_cssstyledcontent._CSS_DEFAULT_STYLE := replaceString(div.csc-textpic-imagecolumn, td.csc-textpic-imagecolumn .csc-textpic-image { margin-right: {$styles.content.imgtext.colSpace}px; }|div.csc-textpic-imagecolumn, td.csc-textpic-imagecolumn .csc-textpic-image { padding-right: {$styles.content.imgtext.colSpace}px; padding-left: {$styles.content.imgtext.colSpace}px; })
+plugin.tx_cssstyledcontent._CSS_DEFAULT_STYLE := appendString(div.csc-textpic div.csc-textpic-imagerow { margin-right: -{$styles.content.imgtext.colSpace}px; margin-left: -{$styles.content.imgtext.colSpace}px; })
+
+# Space below each image (also in-between rows) respect collapsing rows.
+plugin.tx_cssstyledcontent._CSS_DEFAULT_STYLE := removeString(div.csc-textpic .csc-textpic-imagewrap .csc-textpic-imagerow-last .csc-textpic-image { margin-bottom: 0; })
+plugin.tx_cssstyledcontent._CSS_DEFAULT_STYLE := replaceString(div.csc-textpic div.csc-textpic-imagerow-last, div.csc-textpic div.csc-textpic-imagerow-none div.csc-textpic-last { margin-bottom: 0; }|div.csc-textpic div.csc-textpic-imagerow-last, div.csc-textpic div.csc-textpic-imagerow-none div.csc-textpic-last { margin-bottom: -{$styles.content.imgtext.rowSpace}px; })
