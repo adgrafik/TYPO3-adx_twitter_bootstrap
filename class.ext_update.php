@@ -123,8 +123,151 @@ class ext_update {
 					pi_flexform = REPLACE(pi_flexform, \'_column2\', \'_column1\'),
 					pi_flexform = REPLACE(pi_flexform, \'_column3\', \'_column2\'),
 					pi_flexform = REPLACE(pi_flexform, \'_column4\', \'_column3\'),
-					pi_flexform = REPLACE(pi_flexform, \'columns_hide_column\', \'columns_visibility_column\')
+					pi_flexform = REPLACE(pi_flexform, \'columns_hide_column\', \'columns_visibility_column\'),
+					pi_flexform = REPLACE(pi_flexform, \'adxtwitterbootstrap_columns_\', \'adxtwitterbootstrap_\')
 				WHERE pi_flexform LIKE \'%<field index="tx_adxtwitterbootstrap_%columns_span_column1">%\' AND pi_flexform NOT LIKE \'%<field index="tx_adxtwitterbootstrap_%columns_span_column0">%\';
+			');
+			if ($this->databaseConnection->sql_error()) {
+				$this->messageArray[] = array(FlashMessage::ERROR, 'Error: ' . $this->databaseConnection->sql_error());
+			}
+			$this->messageArray[] = array(
+				FlashMessage::NOTICE,
+				'Update from v1.0.x: Update value of gridelements field "tx_gridelements_backend_layout".'
+			);
+			$this->databaseConnection->admin_query('
+				UPDATE tt_content
+				SET tx_gridelements_backend_layout = REPLACE(tx_gridelements_backend_layout, \'tx_adxtwitterbootstrap_columns_\', \'tx_adxtwitterbootstrap_\')
+				WHERE tx_gridelements_backend_layout LIKE \'tx_adxtwitterbootstrap_columns_%\';
+			');
+			if ($this->databaseConnection->sql_error()) {
+				$this->messageArray[] = array(FlashMessage::ERROR, 'Error: ' . $this->databaseConnection->sql_error());
+			}
+			$this->messageArray[] = array(
+				FlashMessage::NOTICE,
+				'Update from v1.0.x: Change segmentation to advanced spans.'
+			);
+			$allTwoColumns = '
+                <field index="tx_adxtwitterbootstrap_twocolumns_reverse_order">
+                    <value index="vDEF"></value>
+                </field>
+                <field index="tx_adxtwitterbootstrap_twocolumns_expert_mode">
+                    <value index="vDEF">0</value>
+                </field>';
+			$allThreeColumns = '
+                <field index="tx_adxtwitterbootstrap_threecolumns_reverse_order">
+                    <value index="vDEF"></value>
+                </field>
+                <field index="tx_adxtwitterbootstrap_threecolumns_expert_mode">
+                    <value index="vDEF">0</value>
+                </field>';
+			$allFourColumns = '
+                <field index="tx_adxtwitterbootstrap_fourcolumns_reverse_order">
+                    <value index="vDEF"></value>
+                </field>
+                <field index="tx_adxtwitterbootstrap_fourcolumns_expert_mode">
+                    <value index="vDEF">0</value>
+                </field>';
+			$this->databaseConnection->admin_query('
+				UPDATE tt_content
+				SET pi_flexform = REPLACE(pi_flexform, \'<field index="tx_adxtwitterbootstrap_twocolumns_segmentation">
+                    <value index="vDEF">1212</value>
+                </field>\', \'<field index="tx_adxtwitterbootstrap_twocolumns_span_column0">
+                    <value index="vDEF">-1,6,-1,-1</value>
+                </field>
+                <field index="tx_adxtwitterbootstrap_twocolumns_span_column1">
+                    <value index="vDEF">-1,6,-1,-1</value>
+                </field>' . $allTwoColumns . '\'),
+                	pi_flexform = REPLACE(pi_flexform, \'<field index="tx_adxtwitterbootstrap_twocolumns_segmentation">
+                    <value index="vDEF">1323</value>
+                </field>\', \'<field index="tx_adxtwitterbootstrap_twocolumns_span_column0">
+                    <value index="vDEF">-1,4,-1,-1</value>
+                </field>
+                <field index="tx_adxtwitterbootstrap_twocolumns_span_column1">
+                    <value index="vDEF">-1,8,-1,-1</value>
+                </field>' . $allTwoColumns . '\'),
+                	pi_flexform = REPLACE(pi_flexform, \'<field index="tx_adxtwitterbootstrap_twocolumns_segmentation">
+                    <value index="vDEF">2313</value>
+                </field>\', \'<field index="tx_adxtwitterbootstrap_twocolumns_span_column0">
+                    <value index="vDEF">-1,8,-1,-1</value>
+                </field>
+                <field index="tx_adxtwitterbootstrap_twocolumns_span_column1">
+                    <value index="vDEF">-1,4,-1,-1</value>
+                </field>' . $allTwoColumns . '\'),
+                	pi_flexform = REPLACE(pi_flexform, \'<field index="tx_adxtwitterbootstrap_twocolumns_segmentation">
+                    <value index="vDEF">1434</value>
+                </field>\', \'<field index="tx_adxtwitterbootstrap_twocolumns_span_column0">
+                    <value index="vDEF">-1,3,-1,-1</value>
+                </field>
+                <field index="tx_adxtwitterbootstrap_twocolumns_span_column1">
+                    <value index="vDEF">-1,9,-1,-1</value>
+                </field>' . $allTwoColumns . '\'),
+                	pi_flexform = REPLACE(pi_flexform, \'<field index="tx_adxtwitterbootstrap_twocolumns_segmentation">
+                    <value index="vDEF">3414</value>
+                </field>\', \'<field index="tx_adxtwitterbootstrap_twocolumns_span_column0">
+                    <value index="vDEF">-1,9,-1,-1</value>
+                </field>
+                <field index="tx_adxtwitterbootstrap_twocolumns_span_column1">
+                    <value index="vDEF">-1,3,-1,-1</value>
+                </field>' . $allTwoColumns . '\'),
+                	pi_flexform = REPLACE(pi_flexform, \'<field index="tx_adxtwitterbootstrap_threecolumns_segmentation">
+                    <value index="vDEF">131313</value>
+                </field>\', \'<field index="tx_adxtwitterbootstrap_threecolumns_span_column0">
+                    <value index="vDEF">-1,4,-1,-1</value>
+                </field>
+                <field index="tx_adxtwitterbootstrap_threecolumns_span_column1">
+                    <value index="vDEF">-1,4,-1,-1</value>
+                </field>
+                <field index="tx_adxtwitterbootstrap_threecolumns_span_column2">
+                    <value index="vDEF">-1,4,-1,-1</value>
+                </field>' . $allThreeColumns . '\'),
+                	pi_flexform = REPLACE(pi_flexform, \'<field index="tx_adxtwitterbootstrap_threecolumns_segmentation">
+                    <value index="vDEF">121414</value>
+                </field>\', \'<field index="tx_adxtwitterbootstrap_threecolumns_span_column0">
+                    <value index="vDEF">-1,6,-1,-1</value>
+                </field>
+                <field index="tx_adxtwitterbootstrap_threecolumns_span_column1">
+                    <value index="vDEF">-1,3,-1,-1</value>
+                </field>
+                <field index="tx_adxtwitterbootstrap_threecolumns_span_column2">
+                    <value index="vDEF">-1,3,-1,-1</value>
+                </field>' . $allThreeColumns . '\'),
+                	pi_flexform = REPLACE(pi_flexform, \'<field index="tx_adxtwitterbootstrap_threecolumns_segmentation">
+                    <value index="vDEF">141214</value>
+                </field>\', \'<field index="tx_adxtwitterbootstrap_threecolumns_span_column0">
+                    <value index="vDEF">-1,3,-1,-1</value>
+                </field>
+                <field index="tx_adxtwitterbootstrap_threecolumns_span_column1">
+                    <value index="vDEF">-1,6,-1,-1</value>
+                </field>
+                <field index="tx_adxtwitterbootstrap_threecolumns_span_column2">
+                    <value index="vDEF">-1,3,-1,-1</value>
+                </field>' . $allThreeColumns . '\'),
+                	pi_flexform = REPLACE(pi_flexform, \'<field index="tx_adxtwitterbootstrap_threecolumns_segmentation">
+                    <value index="vDEF">141412</value>
+                </field>\', \'<field index="tx_adxtwitterbootstrap_threecolumns_span_column0">
+                    <value index="vDEF">-1,3,-1,-1</value>
+                </field>
+                <field index="tx_adxtwitterbootstrap_threecolumns_span_column1">
+                    <value index="vDEF">-1,3,-1,-1</value>
+                </field>
+                <field index="tx_adxtwitterbootstrap_threecolumns_span_column2">
+                    <value index="vDEF">-1,6,-1,-1</value>
+                </field>' . $allThreeColumns . '\'),
+                	pi_flexform = REPLACE(pi_flexform, \'<field index="tx_adxtwitterbootstrap_fourcolumns_segmentation">
+                    <value index="vDEF">14141414</value>
+                </field>\', \'<field index="tx_adxtwitterbootstrap_fourcolumns_span_column0">
+                    <value index="vDEF">-1,3,-1,-1</value>
+                </field>
+                <field index="tx_adxtwitterbootstrap_fourcolumns_span_column1">
+                    <value index="vDEF">-1,3,-1,-1</value>
+                </field>
+                <field index="tx_adxtwitterbootstrap_fourcolumns_span_column2">
+                    <value index="vDEF">-1,3,-1,-1</value>
+                </field>
+                <field index="tx_adxtwitterbootstrap_fourcolumns_span_column3">
+                    <value index="vDEF">-1,3,-1,-1</value>
+                </field>' . $allFourColumns . '\')
+				WHERE pi_flexform LIKE \'%<field index="tx_adxtwitterbootstrap_%_segmentation">%\';
 			');
 			if ($this->databaseConnection->sql_error()) {
 				$this->messageArray[] = array(FlashMessage::ERROR, 'Error: ' . $this->databaseConnection->sql_error());
@@ -158,6 +301,17 @@ class ext_update {
 				)
 				WHERE FIND_IN_SET( \'0\', tx_adxtwitterbootstrap_span ) AND NOT FIND_IN_SET( \'-1\', tx_adxtwitterbootstrap_span );
 			');
+			if ($this->databaseConnection->sql_error()) {
+				$this->messageArray[] = array(FlashMessage::ERROR, 'Error: ' . $this->databaseConnection->sql_error());
+			}
+			$this->databaseConnection->admin_query('
+				UPDATE tt_content
+				SET tx_adxtwitterbootstrap_span = CONCAT_WS( \',\', -1, tx_adxtwitterbootstrap_span, -1, -1 )
+				WHERE NOT tx_adxtwitterbootstrap_span LIKE \'%,%\';
+			');
+			if ($this->databaseConnection->sql_error()) {
+				$this->messageArray[] = array(FlashMessage::ERROR, 'Error: ' . $this->databaseConnection->sql_error());
+			}
 			$this->messageArray[] = array(
 				FlashMessage::NOTICE,
 				'Update from v1.1.0: Change offset values from "", "0" to "-1,-1,-1,-1" in field "tx_adxtwitterbootstrap_offset" of table "tt_content".'
@@ -185,6 +339,17 @@ class ext_update {
 				)
 				WHERE FIND_IN_SET( \'0\', tx_adxtwitterbootstrap_offset ) AND NOT FIND_IN_SET( \'-1\', tx_adxtwitterbootstrap_offset );
 			');
+			if ($this->databaseConnection->sql_error()) {
+				$this->messageArray[] = array(FlashMessage::ERROR, 'Error: ' . $this->databaseConnection->sql_error());
+			}
+			$this->databaseConnection->admin_query('
+				UPDATE tt_content
+				SET tx_adxtwitterbootstrap_offset = CONCAT_WS( \',\', -1, tx_adxtwitterbootstrap_offset, -1, -1 )
+				WHERE NOT tx_adxtwitterbootstrap_offset LIKE \'%,%\';
+			');
+			if ($this->databaseConnection->sql_error()) {
+				$this->messageArray[] = array(FlashMessage::ERROR, 'Error: ' . $this->databaseConnection->sql_error());
+			}
 		}
 	}
 
