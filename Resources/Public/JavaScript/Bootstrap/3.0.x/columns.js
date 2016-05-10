@@ -11,12 +11,15 @@
 
 
 (function($){
-
 	// Equals height of grid boxes.
 	$.fn.adxEqualColumnHeight = function(){
 		this.each(function(index, element){
-			$(element).find('> [class*="col-"]').height(Math.max.apply($(element), $.map($(element), function(element){ return $(element).height() })));
+			var $element = $(element),
+				$target = $element.find('> [class*="col-"]');
+			if ($element.data('target')){
+				$target = $element.find($element.data('target'));
+			}
+			$target.height(Math.max.apply($target, $.map($target, function(element){ return $target.height() })));
 		});
 	}
-
 })(jQuery);
