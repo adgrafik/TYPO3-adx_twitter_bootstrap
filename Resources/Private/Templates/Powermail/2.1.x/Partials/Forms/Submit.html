@@ -1,9 +1,0 @@
-
-{namespace vh=Tx_Powermail_ViewHelpers}
-
-<div id="powermail_fieldwrap_{field.uid}" class="powermail_fieldwrap powermail_fieldwrap_submit {field.css} {field.offsetClass} {field.spanClass} {vh:Misc.ErrorClass(field: '{field}', class: 'powermail_field_error')}">
-	<button id="powermail_field_{field.marker}" class="{field.buttonClass}{f:if( condition: '{field.elementSize}', then: ' input-{field.elementSize}' )}{f:if( condition: '{field.buttonBlock}', then: ' btn-block' )}" type="submit">{field.title -> vh:string.RawAndRemoveXss()}</button>
-</div>
-<f:if condition="{field.clear}">
-	<div class="clearfix"></div>
-</f:if>
