@@ -13,18 +13,18 @@ CREATE TABLE tt_content (
 );
 
 #
-# Table structure for table 'tx_powermail_domain_model_forms'
+# Table structure for table 'tx_powermail_domain_model_form'
 #
-CREATE TABLE tx_powermail_domain_model_forms (
+CREATE TABLE tx_powermail_domain_model_form (
 	tx_adxtwitterbootstrap_span varchar(16) NOT NULL DEFAULT '-1,-1,-1,-1',
 	tx_adxtwitterbootstrap_offset varchar(16) NOT NULL DEFAULT '-1,-1,-1,-1',
 	tx_adxtwitterbootstrap_header_layout tinyint(4) DEFAULT '0' NOT NULL,
 );
 
 #
-# Table structure for table 'tx_powermail_domain_model_pages'
+# Table structure for table 'tx_powermail_domain_model_page'
 #
-CREATE TABLE tx_powermail_domain_model_pages (
+CREATE TABLE tx_powermail_domain_model_page (
 	tx_adxtwitterbootstrap_layout varchar(16) NOT NULL DEFAULT '',
 	tx_adxtwitterbootstrap_hide_legend varchar(16) NOT NULL DEFAULT '',
 	tx_adxtwitterbootstrap_element_size varchar(16) NOT NULL DEFAULT '',
@@ -38,12 +38,12 @@ CREATE TABLE tx_powermail_domain_model_pages (
 );
 
 #
-# Table structure for table 'tx_powermail_domain_model_fields'
+# Table structure for table 'tx_powermail_domain_model_field'
 #
-CREATE TABLE tx_powermail_domain_model_fields (
+CREATE TABLE tx_powermail_domain_model_field (
 	tx_adxtwitterbootstrap_placeholder varchar(255) DEFAULT NULL,
 	tx_adxtwitterbootstrap_hide_label varchar(16) NOT NULL DEFAULT '',
-	tx_adxtwitterbootstrap_element_size varchar(2) NOT NULL DEFAULT '',
+	tx_adxtwitterbootstrap_element_size varchar(16) NOT NULL DEFAULT '',
 	tx_adxtwitterbootstrap_button_class varchar(255) NOT NULL DEFAULT '',
 	tx_adxtwitterbootstrap_button_block tinyint(4) NOT NULL DEFAULT '0',
 	tx_adxtwitterbootstrap_span varchar(2) NOT NULL DEFAULT '',

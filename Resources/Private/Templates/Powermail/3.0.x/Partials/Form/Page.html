@@ -1,0 +1,18 @@
+<html data-namespace-typo3-fluid="true"
+	  xmlns:vh="http://typo3.org/ns/In2code/Powermail/ViewHelpers">
+
+	<fieldset class="powermail_fieldset powermail_fieldset_{page.uid} {page.layout} {page.spanClass} {page.offsetClass} {page.css}">
+		<f:if condition="{0: page.hideLegend} != {0: 'invisible'}">
+			<legend class="powermail_legend{f:if( condition: '{page.hideLegend}', then: ' sr-only' )}">{page.title}</legend>
+		</f:if>
+		<div class="row">
+			<f:for each="{page.fields}" as="field">
+				<f:render partial="Form/Field/{vh:String.Upper(string:field.type)}" arguments="{form: form, page: page, field: field}" />
+			</f:for>
+		</div>
+	</fieldset>
+	<f:if condition="{page.clear}">
+		<div class="clearfix"></div>
+	</f:if>
+
+</html>

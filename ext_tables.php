@@ -47,6 +47,9 @@ if ($extensionConfiguration['extensions.']['activatePowermail'] && \TYPO3\CMS\Co
 	// Add static TypoScript
 	$versionPowermail = \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::getExtensionVersion('powermail');
 	switch (TRUE) {
+		case version_compare($versionPowermail, '3.0', '>='):
+			\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile($_EXTKEY, 'Configuration/TypoScript/Powermail/3.0.x/', 'ad: Bootstrap for powermail');
+			break;
 		case version_compare($versionPowermail, '2.4', '>='):
 			\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile($_EXTKEY, 'Configuration/TypoScript/Powermail/2.4.x/', 'ad: Bootstrap for powermail');
 			break;

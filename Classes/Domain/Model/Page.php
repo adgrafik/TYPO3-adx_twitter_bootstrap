@@ -49,6 +49,21 @@ class Page extends \In2code\Powermail\Domain\Model\Page {
 	protected $hideLegend;
 
 	/**
+	 * @var string $elementSize
+	 */
+	protected $elementSize;
+
+	/**
+	 * @var string $span
+	 */
+	protected $span;
+
+	/**
+	 * @var string $spanBreakpoint
+	 */
+	protected $spanBreakpoint;
+
+	/**
 	 * @var string $offset
 	 */
 	protected $offset;
@@ -57,21 +72,6 @@ class Page extends \In2code\Powermail\Domain\Model\Page {
 	 * @var string $offsetBreakpoint
 	 */
 	protected $offsetBreakpoint;
-
-	/**
-	 * @var string $span
-	 */
-	protected $span;
-
-	/**
-	 * @var string $spanClass
-	 */
-	protected $spanClass;
-
-	/**
-	 * @var string $spanBreakpoint
-	 */
-	protected $spanBreakpoint;
 
 	/**
 	 * @var boolean $clear
@@ -89,7 +89,7 @@ class Page extends \In2code\Powermail\Domain\Model\Page {
 	protected $labelToFieldRatioBreakpoint;
 
 	/**
-	 * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\AdGrafik\AdxTwitterBootstrap\Domain\Model\Fields> $fields
+	 * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\AdGrafik\AdxTwitterBootstrap\Domain\Model\Field> $fields
 	 * @return void
 	 */
 	public function setFields($fields) {
@@ -97,7 +97,7 @@ class Page extends \In2code\Powermail\Domain\Model\Page {
 	}
 
 	/**
-	 * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\AdGrafik\AdxTwitterBootstrap\Domain\Model\Fields>
+	 * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\AdGrafik\AdxTwitterBootstrap\Domain\Model\Field>
 	 */
 	public function getFields() {
 		return $this->fields;
@@ -209,9 +209,9 @@ class Page extends \In2code\Powermail\Domain\Model\Page {
 	 * @return string
 	 */
 	public function getSpanClass() {
-		$class = $this->getSpan()
-			? sprintf('col-%s-%s', $this->getSpanBreakpoint(), $this->getSpan())
-			: 'col-xs-12';
+		$span = $this->getSpan() ?: 12;
+		$spanBreakpoint = $this->getSpanBreakpoint() ?: 'xs';
+		$class = sprintf('col-%s-%s', $spanBreakpoint, $span);
 		return $class;
 	}
 

@@ -3,7 +3,7 @@
 	<file source-language="en" datatype="plaintext" original="messages" date="2012-06-13T20:22:32Z" product-name="adx_twitter_bootstrap">
 		<header/>
 		<body>
-			<trans-unit id="tx_powermail_domain_model_forms.palette.apperance" xml:space="preserve">
+			<trans-unit id="tx_powermail_domain_model_form.palette.apperance" xml:space="preserve">
 				<source>Apperance</source>
 			</trans-unit>
 			<trans-unit id="tx_adxtwitterbootstrap_layout" xml:space="preserve">
@@ -54,26 +54,41 @@
 			<trans-unit id="tx_adxtwitterbootstrap_span.runIn" xml:space="preserve">
 				<source>Run In</source>
 			</trans-unit>
-			<trans-unit id="tx_adxtwitterbootstrap_span.16" xml:space="preserve">
+			<trans-unit id="tx_adxtwitterbootstrap_span.1" xml:space="preserve">
+				<source>1 Columns</source>
+			</trans-unit>
+			<trans-unit id="tx_adxtwitterbootstrap_span.2" xml:space="preserve">
 				<source>2 Columns (1/6)</source>
 			</trans-unit>
-			<trans-unit id="tx_adxtwitterbootstrap_span.14" xml:space="preserve">
+			<trans-unit id="tx_adxtwitterbootstrap_span.3" xml:space="preserve">
 				<source>3 Columns (1/4)</source>
 			</trans-unit>
-			<trans-unit id="tx_adxtwitterbootstrap_span.13" xml:space="preserve">
+			<trans-unit id="tx_adxtwitterbootstrap_span.4" xml:space="preserve">
 				<source>4 Columns (1/3)</source>
 			</trans-unit>
-			<trans-unit id="tx_adxtwitterbootstrap_span.12" xml:space="preserve">
+			<trans-unit id="tx_adxtwitterbootstrap_span.5" xml:space="preserve">
+				<source>5 Columns</source>
+			</trans-unit>
+			<trans-unit id="tx_adxtwitterbootstrap_span.6" xml:space="preserve">
 				<source>6 Columns (1/2)</source>
 			</trans-unit>
-			<trans-unit id="tx_adxtwitterbootstrap_span.23" xml:space="preserve">
+			<trans-unit id="tx_adxtwitterbootstrap_span.7" xml:space="preserve">
+				<source>7 Columns</source>
+			</trans-unit>
+			<trans-unit id="tx_adxtwitterbootstrap_span.8" xml:space="preserve">
 				<source>8 Columns (2/3)</source>
 			</trans-unit>
-			<trans-unit id="tx_adxtwitterbootstrap_span.34" xml:space="preserve">
+			<trans-unit id="tx_adxtwitterbootstrap_span.9" xml:space="preserve">
 				<source>9 Columns (3/4)</source>
 			</trans-unit>
-			<trans-unit id="tx_adxtwitterbootstrap_span.56" xml:space="preserve">
+			<trans-unit id="tx_adxtwitterbootstrap_span.10" xml:space="preserve">
 				<source>10 Columns (5/6)</source>
+			</trans-unit>
+			<trans-unit id="tx_adxtwitterbootstrap_span.11" xml:space="preserve">
+				<source>11 Columns</source>
+			</trans-unit>
+			<trans-unit id="tx_adxtwitterbootstrap_span.12" xml:space="preserve">
+				<source>12 Columns</source>
 			</trans-unit>
             <trans-unit id="tx_adxtwitterbootstrap_offset" xml:space="preserve">
                 <source>Left Indent</source>
@@ -153,7 +168,7 @@
 				<source>As Block</source>
 			</trans-unit>
 
-			<trans-unit id="tx_powermail_domain_model_fields.palette.datepicker" xml:space="preserve">
+			<trans-unit id="tx_powermail_domain_model_field.palette.datepicker" xml:space="preserve">
 				<source>Datepicker</source>
 			</trans-unit>
 			<trans-unit id="tx_adxtwitterbootstrap_datepicker_type" xml:space="preserve">

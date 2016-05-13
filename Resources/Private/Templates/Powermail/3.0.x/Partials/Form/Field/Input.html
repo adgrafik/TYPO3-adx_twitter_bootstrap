@@ -1,0 +1,45 @@
+<html data-namespace-typo3-fluid="true"
+	  xmlns:vh="http://typo3.org/ns/In2code/Powermail/ViewHelpers">
+
+	<div id="powermail_fieldwrap_{field.uid}" class="powermail_fieldwrap powermail_fieldwrap_input {field.spanClass} {field.offsetClass} {field.css} {settings.styles.framework.fieldAndLabelWrappingClasses} {vh:Validation.ErrorClass( field: field, class: 'powermail_field_error has-error' )}">
+		<div class="form-group">
+			<f:if condition="{page.layout} == 'form-horizontal'">
+				<f:then>
+					<div class="{page.labelToFieldRatioClass.label}">
+						<f:render section="label" arguments="{_all}" />
+					</div>
+					<div class="{page.labelToFieldRatioClass.field}">
+						<f:render section="field" arguments="{_all}" />
+					</div>
+				</f:then>
+				<f:else>
+					<f:render section="label" arguments="{_all}" />
+					<f:render section="field" arguments="{_all}" />
+				</f:else>
+			</f:if>
+		</div>
+	</div>
+	<f:if condition="{field.clear}">
+		<div class="clearfix"></div>
+	</f:if>
+
+	<f:section name="label">
+		<f:if condition="{field.hideLabel} != 'invisible'">
+			<label for="powermail_field_{field.marker}" class="powermail_label control-label{f:if( condition: '{field.hideLabel}', then: ' sr-only' )} {settings.styles.framework.labelClasses}" title="{field.description}">
+				{field.title -> vh:string.RawAndRemoveXss()}<f:if condition="{field.mandatory}"><span class="mandatory">*</span></f:if>
+			</label>
+		</f:if>
+	</f:section>
+
+	<f:section name="field">
+		<f:form.textfield
+			id="powermail_field_{field.marker}"
+			class="powermail_field powermail_input form-control{f:if( condition: '{field.elementSize}', then: ' input-{field.elementSize}' )} {settings.styles.framework.fieldClasses}" 
+			type="{vh:Validation.FieldTypeFromValidation(field:field)}"
+			property="{field.marker}"
+			placeholder="{field.placeholder}"
+			value="{vh:Misc.PrefillField( field: field, mail: mail )}"
+			additionalAttributes="{vh:Validation.ValidationDataAttribute( field: field )}" />
+	</f:section>
+
+</html>

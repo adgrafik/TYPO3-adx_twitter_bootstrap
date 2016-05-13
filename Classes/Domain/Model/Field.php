@@ -179,7 +179,7 @@ class Field extends \In2code\Powermail\Domain\Model\Field {
 	 * Set pages
 	 *
 	 * @param \AdGrafik\AdxTwitterBootstrap\Domain\Model\Page $pages
-	 * @return \AdGrafik\AdxTwitterBootstrap\Domain\Model\Fields
+	 * @return \AdGrafik\AdxTwitterBootstrap\Domain\Model\Field
 	 */
 	public function setPages($pages) {
 		$this->pages = $pages;
@@ -195,42 +195,6 @@ class Field extends \In2code\Powermail\Domain\Model\Field {
 		return $this->pages;
 	}
 
-
-	/**
-	 * Set placeholder
-	 *
-	 * @param string $placeholder
-	 * @return \AdGrafik\AdxTwitterBootstrap\Domain\Model\Fields
-	 */
-	public function setPlaceholder($placeholder) {
-		// Check for newer versions.
-		foreach (class_parents($this) as $parent) {
-			if (method_exists($parent, 'setPlaceholder')) {
-				parent::setPlaceholder($placeholder);
-				break;
-			}
-		}
-		$this->placeholder = $placeholder;
-		return $this;
-	}
-
-	/**
-	 * Get placeholder
-	 *
-	 * @return string
-	 */
-	public function getPlaceholder() {
-		// Check for newer versions.
-		$placeholder = '';
-		foreach (class_parents($this) as $parent) {
-			if (method_exists($parent, 'setPlaceholder')) {
-				$placeholder = parent::getPlaceholder();
-				break;
-			}
-		}
-		return $placeholder ?: $this->placeholder;
-	}
-
 	/**
 	 * Get required
 	 *
@@ -243,7 +207,7 @@ class Field extends \In2code\Powermail\Domain\Model\Field {
 				? $this->getPlaceholder()
 				: $this->getTitle();
 		}
-		if ($this->getMandatory()) {
+		if ($this->isMandatory()) {
 			$additionalAttributes['required'] = 'required';
 		}
 		return $additionalAttributes;
@@ -370,7 +334,7 @@ class Field extends \In2code\Powermail\Domain\Model\Field {
 	 * @return string
 	 */
 	public function getSpanBreakpoint() {
-		return $this->spanBreakpoint ?: 'mx';
+		return $this->spanBreakpoint ?: 'sm';
 	}
 
 	/**
@@ -379,9 +343,9 @@ class Field extends \In2code\Powermail\Domain\Model\Field {
 	 * @return string
 	 */
 	public function getSpanClass() {
-		$class = $this->getSpan()
-			? sprintf('col-%s-%s', $this->getSpanBreakpoint(), $this->getSpan())
-			: 'col-xs-12';
+		$span = $this->getSpan() ?: 12;
+		$spanBreakpoint = $this->getSpanBreakpoint() ?: 'xs';
+		$class = sprintf('col-%s-%s', $spanBreakpoint, $span);
 		return $class;
 	}
 
@@ -422,7 +386,7 @@ class Field extends \In2code\Powermail\Domain\Model\Field {
 	 * @return string
 	 */
 	public function getOffsetBreakpoint() {
-		return $this->offsetBreakpoint ?: 'mx';
+		return $this->offsetBreakpoint ?: 'sm';
 	}
 
 	/**

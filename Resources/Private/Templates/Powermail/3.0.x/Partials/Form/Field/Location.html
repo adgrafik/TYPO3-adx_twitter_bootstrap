@@ -1,0 +1,49 @@
+<html data-namespace-typo3-fluid="true"
+	  xmlns:vh="http://typo3.org/ns/In2code/Powermail/ViewHelpers">
+
+	<f:comment>
+		{vh:Form.Countries()} will try to get the country list from the extension static_info_tables (and _de, _fr etc...)
+		If static_info_tables is not installed, a static list of countries and the ISO3 code will be shown in frontent
+		If you want to change sorting, Value or Label, please install static_info_tables
+	</f:comment>
+
+	<div id="powermail_fieldwrap_{field.uid}" class="powermail_fieldwrap powermail_fieldwrap_country {field.spanClass} {field.offsetClass} {field.css} {settings.styles.framework.fieldAndLabelWrappingClasses} {vh:Validation.ErrorClass( field: field, class: 'powermail_field_error has-error' )}">
+		<div class="form-group">
+			<f:if condition="{page.layout} == 'form-horizontal'">
+				<f:then>
+					<div class="{page.labelToFieldRatioClass.label}">
+						<f:render section="label" arguments="{_all}" />
+					</div>
+					<div class="{page.labelToFieldRatioClass.field}">
+						<f:render section="field" arguments="{_all}" />
+					</div>
+				</f:then>
+				<f:else>
+					<f:render section="label" arguments="{_all}" />
+					<f:render section="field" arguments="{_all}" />
+				</f:else>
+			</f:if>
+		</div>
+	</div>
+	<f:if condition="{field.clear}">
+		<div class="clearfix"></div>
+	</f:if>
+
+	<f:section name="label">
+		<f:if condition="{0: field.hideLabel} != {0: 'invisible'}">
+			<label class="control-label{f:if( condition: '{field.hideLabel}', then: ' sr-only' )} {settings.styles.framework.labelClasses}" for="powermail_field_{field.marker}">
+				{field.title -> vh:string.RawAndRemoveXss()}<f:if condition="{field.mandatory}"><span class="mandatory">*</span></f:if>
+			</label>
+		</f:if>
+	</f:section>
+
+	<f:section name="field">
+		<f:form.textfield
+			id="powermail_field_{field.marker}"
+			class="powermail_field powermail_input form-control{f:if( condition: '{field.elementSize}', then: ' input-{field.elementSize}' )} {settings.styles.framework.fieldClasses}" 
+			property="{field.marker}"
+			value="{vh:Misc.PrefillField( field: field, mail:mail )}"
+			additionalAttributes="{vh:Validation.ValidationDataAttribute( field: field )}" />
+	</f:section>
+
+</html>

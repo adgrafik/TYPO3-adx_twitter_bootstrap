@@ -3,7 +3,7 @@
 	<file source-language="de" datatype="plaintext" original="messages" date="2012-06-13T20:22:32Z" product-name="adx_twitter_bootstrap">
 		<header/>
 		<body>
-			<trans-unit id="tx_powermail_domain_model_forms.palette.apperance" xml:space="preserve">
+			<trans-unit id="tx_powermail_domain_model_form.palette.apperance" xml:space="preserve">
 				<source>Apperance</source>
 				<target state="translated">Erscheinungsbild</target>
 			</trans-unit>

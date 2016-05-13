@@ -1,0 +1,21 @@
+<html data-namespace-typo3-fluid="true"
+	  xmlns:vh="http://typo3.org/ns/In2code/Powermail/ViewHelpers">
+
+	<f:comment>
+		Per default the HTML-Output is parsed through a removeXSS function for security reasons.
+		If you are aware of possible security issues from your editory and you don't want the removeXSS parsing, disable it with TypoScript:
+			plugin.tx_powermail.settings.setup.misc.disableRemoveXss = 1
+	</f:comment>
+
+<div id="powermail_fieldwrap_{field.uid}" class="powermail_fieldwrap powermail_fieldwrap_html {field.spanClass} {field.offsetClass} {field.css} {settings.styles.framework.fieldAndLabelWrappingClasses}">
+	<f:if condition="{settings.misc.disableRemoveXss}">
+		<f:then>
+			{field.text -> f:format.raw()}
+		</f:then>
+		<f:else>
+			{field.text -> vh:string.RawAndRemoveXss()}
+		</f:else>
+	</f:if>
+</div>
+
+</html>

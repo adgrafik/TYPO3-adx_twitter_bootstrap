@@ -36,8 +36,8 @@ $EM_CONF[$_EXTKEY] = array (
 	array (
 		'depends' => 
 		array (
-			'typo3' => '6.2.0-7.99.99',
-			'adx_less' => '1.1.2-1.2.99',
+			'typo3' => '7.6.1-8.99.99',
+			'adx_less' => '1.1.4-1.2.99',
 			'gridelements' => '4.0.0-4.99.99',
 		),
 		'conflicts' => 
@@ -45,8 +45,8 @@ $EM_CONF[$_EXTKEY] = array (
 		),
 		'suggests' => 
 		array (
-			't3jquery' => '2.7.0-2.7.99',
-			'powermail' => '2.1.12-2.99.99',
+			't3jquery' => '2.7.0-3.99.99',
+			'powermail' => '3.0.0-3.99.99',
 		),
 	),
 	'suggests' => 
