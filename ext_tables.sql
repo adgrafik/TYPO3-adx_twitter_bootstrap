@@ -41,7 +41,6 @@ CREATE TABLE tx_powermail_domain_model_page (
 # Table structure for table 'tx_powermail_domain_model_field'
 #
 CREATE TABLE tx_powermail_domain_model_field (
-	tx_adxtwitterbootstrap_placeholder varchar(255) DEFAULT NULL,
 	tx_adxtwitterbootstrap_hide_label varchar(16) NOT NULL DEFAULT '',
 	tx_adxtwitterbootstrap_element_size varchar(16) NOT NULL DEFAULT '',
 	tx_adxtwitterbootstrap_button_class varchar(255) NOT NULL DEFAULT '',

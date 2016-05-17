@@ -19,7 +19,7 @@
 			if ($element.data('target')){
 				$target = $element.find($element.data('target'));
 			}
-			$target.height(Math.max.apply($target, $.map($target, function(element){ return $target.height() })));
+			$target.height(Math.max.apply($target, $.map($target, function(element){ return $(element).height() })));
 		});
 	}
 })(jQuery);
