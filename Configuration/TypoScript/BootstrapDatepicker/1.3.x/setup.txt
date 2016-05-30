@@ -1,9 +1,0 @@
-
-/**
- * Include bootstrap datepicker.
- */
-page {
-	includeCSS {
-		adxtwitterbootstrap_datepicker = EXT:adx_twitter_bootstrap/Resources/Private/LESS/BootstrapDatepicker/1.3.x/datepicker3.less
-	}
-}
