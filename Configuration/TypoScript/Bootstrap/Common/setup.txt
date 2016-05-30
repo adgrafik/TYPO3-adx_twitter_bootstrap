@@ -6,7 +6,7 @@ plugin.tx_adxless {
 
 	lessphp {
 
-		importDirectories := addToList( EXT:adx_twitter_bootstrap/Resources/Private/LESS/Bootstrap/3.3.x/ )
+		importDirectories := addToList( EXT:adx_twitter_bootstrap/Resources/Private/LESS/Bootstrap/ )
 
 		variables {
 
@@ -793,7 +793,7 @@ lib.stdheader.if.negate = 1
 page {
 
 	# Include bootstrap base LESS file.
-	includeCSS.tx_adxtwitterbootstrap = EXT:adx_twitter_bootstrap/Resources/Private/LESS/Bootstrap/3.3.x/bootstrap.less
+	includeCSS.tx_adxtwitterbootstrap = EXT:adx_twitter_bootstrap/Resources/Private/LESS/Bootstrap/bootstrap.less
 
 	# Set viewport for bootstrap.
 	headerData.1352997637 = TEXT

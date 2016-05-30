@@ -221,7 +221,7 @@ plugin.tx_adxtwitterbootstrap {
 		#
 
 		# cat=adx_twitter_bootstrap variables/04_iconography/01; type=string; label=@icon-font-path
-		icon-font-path = "../typo3conf/ext/adx_twitter_bootstrap/Resources/Public/Fonts/3.3.x/"
+		icon-font-path = "../typo3conf/ext/adx_twitter_bootstrap/Resources/Public/Fonts/"
 		# cat=adx_twitter_bootstrap variables/04_iconography/02; type=string; label=@icon-font-name
 		icon-font-name = "glyphicons-halflings-regular"
 		# cat=adx_twitter_bootstrap variables/04_iconography/03; type=string; label=@icon-font-svg-id

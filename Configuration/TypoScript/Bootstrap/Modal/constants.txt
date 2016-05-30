@@ -7,6 +7,6 @@ plugin.tx_adxtwitterbootstrap {
 	components.animations = 1
 
 	modal {
-		templateFile = EXT:adx_twitter_bootstrap/Resources/Private/Templates/Bootstrap/3.3.x/Modal.html
+		templateFile = EXT:adx_twitter_bootstrap/Resources/Private/Bootstrap/Templates/Modal.html
 	}
 }

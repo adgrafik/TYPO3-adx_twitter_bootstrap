@@ -9,34 +9,33 @@ $versionGridelements = \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::getEx
 
 
 // Add static TypoScript
-$bootstrapBranch = $extensionConfiguration['versions.']['bootstrap'] ?: '3.3.x';
 $bootstrapDatepickerBranch = $extensionConfiguration['versions.']['bootstrapDatepicker'] ?: '1.2.x';
 
-\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile($_EXTKEY, 'Configuration/TypoScript/Bootstrap/' . $bootstrapBranch . '/Common/', 'ad: Bootstrap common');
-\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile($_EXTKEY, 'Configuration/TypoScript/Bootstrap/' . $bootstrapBranch . '/DeviceVisibility/', 'ad: Bootstrap content device visibility');
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile($_EXTKEY, 'Configuration/TypoScript/Bootstrap/Common/', 'ad: Bootstrap common');
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile($_EXTKEY, 'Configuration/TypoScript/Bootstrap/DeviceVisibility/', 'ad: Bootstrap content device visibility');
 
 if ($extensionConfiguration['components.']['activateResponsiveImage']) {
-	\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile($_EXTKEY, 'Configuration/TypoScript/Bootstrap/' . $bootstrapBranch . '/ResponsiveImage/', 'ad: Bootstrap responsive image');
+	\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile($_EXTKEY, 'Configuration/TypoScript/Bootstrap/ResponsiveImage/', 'ad: Bootstrap responsive image');
 }
 
 if ($extensionConfiguration['components.']['activateTwoColumns'] || $extensionConfiguration['components.']['activateThreeColumns'] || $extensionConfiguration['components.']['activateFourColumns']) {
-	\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile($_EXTKEY, 'Configuration/TypoScript/Bootstrap/' . $bootstrapBranch . '/Columns/', 'ad: Bootstrap columns');
+	\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile($_EXTKEY, 'Configuration/TypoScript/Bootstrap/Columns/', 'ad: Bootstrap columns');
 }
 
 if ($extensionConfiguration['components.']['activateCarousel']) {
-	\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile($_EXTKEY, 'Configuration/TypoScript/Bootstrap/' . $bootstrapBranch . '/Carousel/', 'ad: Bootstrap carousel');
+	\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile($_EXTKEY, 'Configuration/TypoScript/Bootstrap/Carousel/', 'ad: Bootstrap carousel');
 }
 
 if ($extensionConfiguration['components.']['activateTabs']) {
-	\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile($_EXTKEY, 'Configuration/TypoScript/Bootstrap/' . $bootstrapBranch . '/Tabs/', 'ad: Bootstrap tabs');
+	\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile($_EXTKEY, 'Configuration/TypoScript/Bootstrap/Tabs/', 'ad: Bootstrap tabs');
 }
 
 if ($extensionConfiguration['components.']['activateAccordion']) {
-	\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile($_EXTKEY, 'Configuration/TypoScript/Bootstrap/' . $bootstrapBranch . '/Accordion/', 'ad: Bootstrap accordion');
+	\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile($_EXTKEY, 'Configuration/TypoScript/Bootstrap/Accordion/', 'ad: Bootstrap accordion');
 }
 
 if ($extensionConfiguration['components.']['activateModal']) {
-	\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile($_EXTKEY, 'Configuration/TypoScript/Bootstrap/' . $bootstrapBranch . '/Modal/', 'ad: Bootstrap modal');
+	\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile($_EXTKEY, 'Configuration/TypoScript/Bootstrap/Modal/', 'ad: Bootstrap modal');
 }
 
 if ($extensionConfiguration['components.']['activateDatepicker']) {

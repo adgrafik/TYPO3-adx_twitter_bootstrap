@@ -1,7 +1,4 @@
 
-# cat=versions; type=options[3.3.x]; label=Bootstrap Version
-versions.bootstrap = 3.3.x
-
 # cat=versions; type=options[1.4.x]; label=Bootstrap Datepicker Version
 versions.bootstrapDatepicker = 1.4.x
 
