@@ -1,0 +1,8 @@
+<html data-namespace-typo3-fluid="true"
+	  xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+
+	<f:if condition="{data.date}">
+		<p><time datetime="{data.date -> f:format.date( format: '%Y-%m-%d' )}">{data.date -> f:format.date( format: '%B %e, %Y' )}</time></p>
+	</f:if>
+
+</html>

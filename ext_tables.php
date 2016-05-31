@@ -12,6 +12,7 @@ $versionGridelements = \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::getEx
 $bootstrapDatepickerBranch = $extensionConfiguration['versions.']['bootstrapDatepicker'] ?: '1.2.x';
 
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile($_EXTKEY, 'Configuration/TypoScript/Bootstrap/Common/', 'ad: Bootstrap common');
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile($_EXTKEY, 'Configuration/TypoScript/Bootstrap/ContentElements/', 'ad: Bootstrap content elements');
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile($_EXTKEY, 'Configuration/TypoScript/Bootstrap/DeviceVisibility/', 'ad: Bootstrap content device visibility');
 
 if ($extensionConfiguration['components.']['activateResponsiveImage']) {

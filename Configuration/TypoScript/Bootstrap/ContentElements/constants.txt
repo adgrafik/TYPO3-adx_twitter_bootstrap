@@ -1,0 +1,6 @@
+
+plugin.tx_adxtwitterbootstrap {
+	content.layoutRootPath = 
+	content.templateRootPath = 
+	content.partialRootPath = 
+}

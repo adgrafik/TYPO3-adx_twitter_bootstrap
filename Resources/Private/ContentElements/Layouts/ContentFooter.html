@@ -1,0 +1,13 @@
+<html data-namespace-typo3-fluid="true"
+	  xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+
+	<adx:grid.row span="{data.tx_adxtwitterbootstrap_span}" offset="{data.tx_adxtwitterbootstrap_offset}">
+		<adx:grid.column deviceSpan="{data.tx_adxtwitterbootstrap_span}" deviceOffset="{data.tx_adxtwitterbootstrap_offset}">
+			<div id="c{data.uid}">
+				<f:render section="content" />
+				<f:render partial="Footer" arguments="{_all}" />
+			</div>
+		</adx:grid.column>
+	</adx:grid.row>
+
+</html>

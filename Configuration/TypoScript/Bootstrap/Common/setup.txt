@@ -848,10 +848,18 @@ tt_content.stdWrap {
 	outerWrap.if.value = -1,-1,-1,-1#-1,-1,-1,-1
 	outerWrap.if.equals.dataWrap = {field: tx_adxtwitterbootstrap_span}#{field: tx_adxtwitterbootstrap_offset}
 	outerWrap.if.negate = 1
+	# TODO: Remove when CE are ready.
+	outerWrap.stdWrap.if.value = header
+	outerWrap.stdWrap.if.isInList.field = CType
+	outerWrap.stdWrap.if.negate = 1
 
 	# Add span and offset support.
 	outerWrap.append = LOAD_REGISTER
 	outerWrap.append.columnClasses.cObject = COA
+	# TODO: Remove when CE are ready.
+	outerWrap.append.columnClasses.if.value = header
+	outerWrap.append.columnClasses.if.isInList.field = CType
+	outerWrap.append.columnClasses.if.negate = 1
 	outerWrap.append.columnClasses.cObject {
 
 		# Render the span column classes.

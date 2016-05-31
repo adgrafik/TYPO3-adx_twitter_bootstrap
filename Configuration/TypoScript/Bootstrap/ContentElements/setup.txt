@@ -1,0 +1,41 @@
+
+/*
+tt_content = CASE
+tt_content {
+	key {
+		field = CType
+	}
+	stdWrap {
+		# Setup the edit panel for all content elements
+		editPanel = 1
+		editPanel {
+			allow = move, new, edit, hide, delete
+			label = %s
+			onlyCurrentPid = 1
+			previewBorder = 1
+			edit.displayRecord = 1
+		}
+	}
+
+	# The "default" content element, which will be called when no rendering definition can be found
+	default =< lib.content
+}
+*/
+
+<INCLUDE_TYPOSCRIPT: source="FILE:./Library/DefaultContent.ts">
+
+tt_content {
+	header >
+	header =< lib.defaultContent
+	header {
+		templateName = Header
+		stdWrap {
+			# Setup the edit icon for content element "header"
+			editIcons = tt_content: header [header_layout|header_link], subheader, date
+			editIcons {
+				beforeLastTag = 1
+				iconTitle.data = LLL:EXT:fluid_styled_content/Resources/Private/Language/FrontendEditing.xlf:editIcon.header
+			}
+		}
+	}
+}
