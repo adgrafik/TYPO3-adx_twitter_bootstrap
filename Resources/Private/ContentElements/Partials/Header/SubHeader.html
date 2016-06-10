@@ -1,7 +1,7 @@
 <html data-namespace-typo3-fluid="true"
 	  xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
-	<f:switch expression="{layout}">
+	<f:switch expression="{headerType}">
 		<f:case value="1">
 			<h2{f:if( condition: align, then: ' class="text-{align}"' )}>{subheader}</h2>
 		</f:case>
@@ -21,7 +21,7 @@
 			<f:if condition="{default}">
 				<f:render partial="Header/SubHeader" arguments="{
 					subheader: subheader,
-					layout: default}",
+					headerType: default}",
 					align: align />
 			</f:if>
 		</f:case>

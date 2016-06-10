@@ -18,6 +18,8 @@ lib.defaultContent {
 	}
 	settings {
 		defaultHeaderType = {$styles.content.defaultHeaderType}
+		defaultSpaceBefore = {$styles.content.defaultSpaceBefore}
+		defaultSpaceAfter = {$styles.content.defaultSpaceAfter}
 /*
 		media {
 			popup {

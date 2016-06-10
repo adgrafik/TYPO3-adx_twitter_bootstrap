@@ -101,4 +101,73 @@ if ($extensionConfiguration['components.']['activateResponsiveImage']) {
 }
 
 // Get rid of width and height limitation of images.
-unset($TCA['tt_content']['columns']['imagewidth']['config']['range'], $TCA['tt_content']['columns']['imageheight']['config']['range']);
+unset($GLOBALS['TCA']['tt_content']['columns']['imagewidth']['config']['range'], $GLOBALS['TCA']['tt_content']['columns']['imageheight']['config']['range']);
+
+// Add bootstrap layouts.
+$GLOBALS['TCA']['tt_content']['columns']['layout']['config']['items'] = array(
+	array('LLL:EXT:lang/locallang_general.xlf:LGL.default_value', ''),
+);
+
+// Add bootstrap frames.
+$GLOBALS['TCA']['tt_content']['columns']['section_frame']['config']['items'] = array(
+	array('LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:sectionFrame.none', ''),
+	array('LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:sectionFrame.well', 'well'),
+	array('LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:sectionFrame.well.sm', 'well well-sm'),
+	array('LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:sectionFrame.well.lg', 'well well-lg'),
+	array('LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:sectionFrame.jumbotron', 'jumbotron'),
+	array('LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:sectionFrame.background.primary', 'bg-primary'),
+	array('LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:sectionFrame.background.success', 'bg-success'),
+	array('LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:sectionFrame.background.info', 'bg-info'),
+	array('LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:sectionFrame.background.warning', 'bg-warning'),
+	array('LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:sectionFrame.background.danger', 'bg-danger'),
+	array('LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:sectionFrame.alert.success', 'alert alert-success'),
+	array('LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:sectionFrame.alert.info', 'alert alert-info'),
+	array('LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:sectionFrame.alert.warning', 'alert alert-warning'),
+	array('LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:sectionFrame.alert.danger', 'alert alert-danger'),
+);
+
+// Allow negativ values of content space.
+unset($GLOBALS['TCA']['tt_content']['columns']['spaceBefore']['config']['range'], $GLOBALS['TCA']['tt_content']['columns']['spaceAfter']['config']['range']);
+
+// Add responsive margin.
+$GLOBALS['TCA']['tt_content']['columns']['spaceBefore']['config']['eval'] = 'null';
+$GLOBALS['TCA']['tt_content']['columns']['spaceAfter']['config']['eval'] = 'null';
+
+$tempColumns = array(
+	'tx_adxtwitterbootstrap_space_before' => array(
+		'label' => 'LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:spaceBefore',
+		'displayCond' => 'FIELD:spaceBefore:=:',
+		'exclude' => TRUE,
+		'config' => array(
+			'type' => 'select',
+			'items' => array(
+				array('LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:spaceAfter.default', ''),
+				array('LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:spaceAfter.lg', 'margin-lg'),
+				array('LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:spaceAfter.md', 'margin-md'),
+				array('LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:spaceAfter.sm', 'margin-sm'),
+				array('LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:spaceAfter.xs', 'margin-xs'),
+			),
+		),
+	),
+	'tx_adxtwitterbootstrap_space_after' => array(
+		'label' => 'LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:spaceAfter',
+		'displayCond' => 'FIELD:spaceAfter:=:',
+		'exclude' => TRUE,
+		'config' => array(
+			'type' => 'select',
+			'items' => array(
+				array('LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:spaceAfter.default', ''),
+				array('LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:spaceAfter.lg', 'margin-lg'),
+				array('LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:spaceAfter.md', 'margin-md'),
+				array('LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:spaceAfter.sm', 'margin-sm'),
+				array('LLL:EXT:adx_twitter_bootstrap/Resources/Private/Language/locallang_db.xlf:spaceAfter.xs', 'margin-xs'),
+			),
+		),
+	),
+);
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTCAcolumns('tt_content', $tempColumns);
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addFieldsToPalette('tt_content', 'frames', '--linebreak--', 'before:spaceBefore');
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addFieldsToPalette('tt_content', 'frames', 'tx_adxtwitterbootstrap_space_before', 'after:spaceBefore');
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addFieldsToPalette('tt_content', 'frames', '--linebreak--', 'before:spaceAfter');
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addFieldsToPalette('tt_content', 'frames', 'tx_adxtwitterbootstrap_space_after', 'replace:section_frame');
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addFieldsToPalette('tt_content', 'frames', 'section_frame, --linebreak--', 'after:layout');

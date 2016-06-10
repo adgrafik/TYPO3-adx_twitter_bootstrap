@@ -3,6 +3,12 @@
 # Table structure for table 'tt_content'
 #
 CREATE TABLE tt_content (
+	layout varchar(255) DEFAULT '' NOT NULL,
+	section_frame varchar(255) DEFAULT '' NOT NULL,
+	spaceBefore smallint(5) DEFAULT NULL,
+	spaceAfter smallint(5) DEFAULT NULL,
+	tx_adxtwitterbootstrap_space_before varchar(255) DEFAULT '' NOT NULL,
+	tx_adxtwitterbootstrap_space_after varchar(255) DEFAULT '' NOT NULL,
 	tx_adxtwitterbootstrap_span varchar(16) NOT NULL DEFAULT '-1,-1,-1,-1',
 	tx_adxtwitterbootstrap_offset varchar(16) NOT NULL DEFAULT '-1,-1,-1,-1',
 	tx_adxtwitterbootstrap_link_content_element tinyint(4) DEFAULT '0' NOT NULL,

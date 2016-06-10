@@ -18,7 +18,7 @@ tt_content {
 	}
 
 	# The "default" content element, which will be called when no rendering definition can be found
-	default =< lib.content
+	default =< lib.defaultContent
 }
 */
 
@@ -35,6 +35,43 @@ tt_content {
 			editIcons {
 				beforeLastTag = 1
 				iconTitle.data = LLL:EXT:fluid_styled_content/Resources/Private/Language/FrontendEditing.xlf:editIcon.header
+			}
+		}
+	}
+	text >
+	text =< lib.defaultContent
+	text {
+		templateName = Text
+		stdWrap {
+			# Setup the edit icon for content element "textmedia"
+			editIcons = tt_content: header [header_layout], bodytext
+			editIcons {
+				iconTitle.data = LLL:EXT:fluid_styled_content/Resources/Private/Language/FrontendEditing.xlf:editIcon.textmedia
+			}
+		}
+	}
+	div >
+	div =< lib.defaultContent
+	div {
+		templateName = Div
+	}
+	uploads >
+	uploads =< lib.defaultContent
+	uploads {
+		templateName = Uploads
+		dataProcessing {
+			10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+			10 {
+				references.fieldName = media
+				collections.field = file_collections
+				sorting.field = filelink_sorting
+			}
+		}
+		stdWrap {
+			# Setup the edit icon for content element "uploads"
+			editIcons = tt_content: header [header_layout], media, file_collections, filelink_sorting, [filelink_size|uploads_description|uploads_type]
+			editIcons {
+				iconTitle.data = LLL:EXT:fluid_styled_content/Resources/Private/Language/FrontendEditing.xlf:editIcon.uploads
 			}
 		}
 	}

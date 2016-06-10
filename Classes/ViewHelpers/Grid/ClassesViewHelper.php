@@ -16,61 +16,33 @@ namespace AdGrafik\AdxTwitterBootstrap\ViewHelpers\Grid;
 
 use \TYPO3\CMS\Core\Utility\GeneralUtility;
 
-class ColumnViewHelper extends \TYPO3\CMS\Fluid\Core\ViewHelper\AbstractTagBasedViewHelper {
-	/**
-	 * @var string
-	 */
-	protected $tagName = 'div';
+class ClassesViewHelper extends \TYPO3\CMS\Fluid\Core\ViewHelper\AbstractViewHelper {
 
 	/**
-	 * Arguments initialization
-	 *
-	 * @return void
-	 */
-	public function initializeArguments() {
-		$this->registerUniversalTagAttributes();
-	}
-
-	/**
-	 * Will only render a row with columns if necessary.
-	 *
-	 * @param string $deviceSpan
-	 * @param string $deviceOffset
+	 * @param string $span
+	 * @param string $offset
 	 * @return string
 	 */
-	public function render($deviceSpan = NULL, $deviceOffset = NULL) {
-		// Nothing else to do, if nothing set.
-		if ($deviceSpan === '-1,-1,-1,-1' && $deviceOffset === '-1,-1,-1,-1') {
-			return $this->renderChildren();
-		}
+	public function render($span = NULL, $offset = NULL) {
 
 		$classes = array();
-		$deviceSpan = $this->resolveSpanByDevice($deviceSpan);
+		$deviceSpan = $this->resolveSpanByDevice($span);
 		foreach ($deviceSpan as $device => $span) {
 			if ($span !== -1) {
 				$classes[] = sprintf('col-%s-%s', $device, $span);
 			}
 		}
-		$deviceOffset = $this->resolveSpanByDevice($deviceOffset);
+		$deviceOffset = $this->resolveSpanByDevice($offset);
 		foreach ($deviceOffset as $device => $span) {
 			if ($span !== -1) {
 				$classes[] = sprintf('col-%s-offset-%s', $device, $span);
 			}
 		}
 
-		if (count($classes) === 0) {
-			return $this->renderChildren();
-		}
-
-		$this->tag->addAttribute('class', implode(' ', $classes));
-		$this->tag->setContent($this->renderChildren());
-		$this->tag->forceClosingTag(true);
-		return $this->tag->render();
+		return implode(' ', $classes);
 	}
 
 	/**
-	 * resolveSpanByDevice
-	 *
 	 * @param string $span
 	 * @return array
 	 */

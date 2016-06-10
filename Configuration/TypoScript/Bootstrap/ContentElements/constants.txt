@@ -4,3 +4,9 @@ plugin.tx_adxtwitterbootstrap {
 	content.templateRootPath = 
 	content.partialRootPath = 
 }
+
+styles.content.default {
+	defaultHeaderType = 1
+	defaultSpaceBefore = 
+	defaultSpaceAfter = margin-sm
+}

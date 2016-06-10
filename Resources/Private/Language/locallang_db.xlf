@@ -4,6 +4,72 @@
 		<header/>
 		<body>
 			<!-- tt_content fields -->
+			<trans-unit id="sectionFrame.none" xml:space="preserve">
+				<source>None</source>
+			</trans-unit>
+			<trans-unit id="sectionFrame.well" xml:space="preserve">
+				<source>Well</source>
+			</trans-unit>
+			<trans-unit id="sectionFrame.well.sm" xml:space="preserve">
+				<source>Well small</source>
+			</trans-unit>
+			<trans-unit id="sectionFrame.well.lg" xml:space="preserve">
+				<source>Well large</source>
+			</trans-unit>
+			<trans-unit id="sectionFrame.jumbotron" xml:space="preserve">
+				<source>Jumbotron</source>
+			</trans-unit>
+			<trans-unit id="sectionFrame.background.primary" xml:space="preserve">
+				<source>Background primary</source>
+			</trans-unit>
+			<trans-unit id="sectionFrame.background.primary" xml:space="preserve">
+				<source>Background primary</source>
+			</trans-unit>
+			<trans-unit id="sectionFrame.background.success" xml:space="preserve">
+				<source>Background success</source>
+			</trans-unit>
+			<trans-unit id="sectionFrame.background.info" xml:space="preserve">
+				<source>Background info</source>
+			</trans-unit>
+			<trans-unit id="sectionFrame.background.warning" xml:space="preserve">
+				<source>Background warning</source>
+			</trans-unit>
+			<trans-unit id="sectionFrame.background.danger" xml:space="preserve">
+				<source>Background danger</source>
+			</trans-unit>
+			<trans-unit id="sectionFrame.alert.success" xml:space="preserve">
+				<source>Alert success</source>
+			</trans-unit>
+			<trans-unit id="sectionFrame.alert.info" xml:space="preserve">
+				<source>Alert info</source>
+			</trans-unit>
+			<trans-unit id="sectionFrame.alert.warning" xml:space="preserve">
+				<source>Alert warning</source>
+			</trans-unit>
+			<trans-unit id="sectionFrame.alert.danger" xml:space="preserve">
+				<source>Alert danger</source>
+			</trans-unit>
+			<trans-unit id="spaceBefore" xml:space="preserve">
+				<source>Responsive margin before</source>
+			</trans-unit>
+			<trans-unit id="spaceAfter" xml:space="preserve">
+				<source>Responsive margin after</source>
+			</trans-unit>
+			<trans-unit id="spaceAfter.default" xml:space="preserve">
+				<source>Default</source>
+			</trans-unit>
+			<trans-unit id="spaceAfter.lg" xml:space="preserve">
+				<source>large</source>
+			</trans-unit>
+			<trans-unit id="spaceAfter.md" xml:space="preserve">
+				<source>medium</source>
+			</trans-unit>
+			<trans-unit id="spaceAfter.sm" xml:space="preserve">
+				<source>small</source>
+			</trans-unit>
+			<trans-unit id="spaceAfter.xs" xml:space="preserve">
+				<source>extra small</source>
+			</trans-unit>
 			<trans-unit id="tx_adxtwitterbootstrap_span" xml:space="preserve">
 				<source>Span</source>
 			</trans-unit>

@@ -64,6 +64,7 @@ class ext_update {
 			'v1.0.x-segmentation' => 'pi_flexform LIKE \'%_segmentation">%\'',
 			'v1.0.x-span' => 'NOT tx_adxtwitterbootstrap_span LIKE \'%,%\'',
 			'v1.0.x-offset' => 'NOT tx_adxtwitterbootstrap_offset LIKE \'%,%\'',
+//			'v1.1.x-accordion' => 'pi_flexform LIKE \'%<sheet index="tx_adxtwitterbootstrap_accordion_general">%\'',
 			// v1.1.x
 			'v1.1.x-columns' => 'pi_flexform LIKE \'%<field index="tx_adxtwitterbootstrap_%columns_span_column1">%\' AND pi_flexform NOT LIKE \'%<field index="tx_adxtwitterbootstrap_%columns_span_column0">%\'',
 			'v1.1.x-span' => 'FIND_IN_SET( \'0\', tx_adxtwitterbootstrap_span ) AND NOT FIND_IN_SET( \'-1\', tx_adxtwitterbootstrap_span )',
@@ -694,7 +695,15 @@ class ext_update {
 				$this->messageArray[] = array(FlashMessage::ERROR, 'Error: ' . $this->databaseConnection->sql_error());
 			}
 		}
-
+/*
+		// Update accordions
+		if ($this->databaseConnection->exec_SELECTcountRows('DISTINCT uid', 'tt_content', $this->constraints['tt_content']['v1.0.x-accordion'])) {
+			$fields = array(
+				'pi_flexform' => 'REPLACE( pi_flexform, \'tx_adxtwitterbootstrap_accordion_general\', \'tx_adxtwitterbootstrap_accordion_appearance\' )',
+			);
+			$this->databaseConnection->exec_UPDATEquery('tt_content', $this->constraints['tt_content']['v1.0.x-accordion'], $fields);
+		}
+*/
 		// Update powermail
 		if ($this->powermailIsActive && $this->databaseConnection->exec_SELECTcountRows('DISTINCT uid', 'tx_powermail_domain_model_form', $this->constraints['tx_powermail_domain_model_form']['v1.0.x-css-to-layout'])) {
 			$rows = $this->databaseConnection->exec_SELECTgetRows('uid, css', 'tx_powermail_domain_model_form', $this->constraints['tx_powermail_domain_model_form']['v1.0.x-css-to-layout']);

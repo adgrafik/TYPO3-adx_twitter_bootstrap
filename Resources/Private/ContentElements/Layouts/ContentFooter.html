@@ -1,13 +1,37 @@
 <html data-namespace-typo3-fluid="true"
-	  xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+	  xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+	  xmlns:tb="http://typo3.org/ns/AdGrafik/AdxTwitterBootstrap/ViewHelpers">
 
-	<adx:grid.row span="{data.tx_adxtwitterbootstrap_span}" offset="{data.tx_adxtwitterbootstrap_offset}">
-		<adx:grid.column deviceSpan="{data.tx_adxtwitterbootstrap_span}" deviceOffset="{data.tx_adxtwitterbootstrap_offset}">
-			<div id="c{data.uid}">
+	<f:comment><!--
+		Base content wrapper
+		Handles row, column, margin, layout and frame settings from content element.
+	--></f:comment>
+
+	<f:comment><!-- Show row and column DIVs only if set --></f:comment>
+	<tb:tag condition="{data.tx_adxtwitterbootstrap_span} != '-1,-1,-1,-1'" conditionOr="{data.tx_adxtwitterbootstrap_offset} != '-1,-1,-1,-1'" class="row">
+		<tb:tag condition="{data.tx_adxtwitterbootstrap_span} != '-1,-1,-1,-1'" conditionOr="{data.tx_adxtwitterbootstrap_offset} != '-1,-1,-1,-1'"
+				classes="{
+					0: '{tb:grid.classes( span: data.tx_adxtwitterbootstrap_span )}',
+					1: '{tb:grid.classes( offset: data.tx_adxtwitterbootstrap_offset )}'
+				}">
+			<f:comment><!-- Show responsive margin DIV only if set --></f:comment>
+			<tb:tag conditionKey="hasAttributes"
+					class="{f:if( condition: '{data.spaceBefore} == {null}', then: '{f:if( condition: data.tx_adxtwitterbootstrap_space_before, then: data.tx_adxtwitterbootstrap_space_before, else: settings.defaultSpaceBefore )}' )}"
+					style="{f:if( condition: '{data.spaceBefore} != {null}', then: 'margin-top: {data.spaceBefore}px;' )}" />
+			<tb:tag id="c{data.uid}"
+					classes="{
+						0: '{f:if( condition: data.layout, then: \'{data.layout}\' )}',
+						1: '{f:if( condition: data.layout, then: \'{data.section_frame}\' )}',
+						2: '{f:if( condition: data.tx_adxtwitterbootstrap_link_content_element, then: \'link-content-element\' )}'
+					}">
 				<f:render section="content" />
 				<f:render partial="Footer" arguments="{_all}" />
-			</div>
-		</adx:grid.column>
-	</adx:grid.row>
+			</tb:tag>
+			<f:comment><!-- Show responsive margin DIV only if set --></f:comment>
+			<tb:tag conditionKey="hasAttributes"
+					class="{f:if( condition: '{data.spaceAfter} == {null}', then: '{f:if( condition: data.tx_adxtwitterbootstrap_space_after, then: data.tx_adxtwitterbootstrap_space_after, else: settings.defaultSpaceAfter )}' )}"
+					style="{f:if( condition: '{data.spaceAfter} != {null}', then: 'margin-bottom: {data.spaceAfter}px;' )}" />
+		</tb:tag>
+	</tb:tag>
 
 </html>
